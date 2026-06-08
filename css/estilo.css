@@ -1,0 +1,647 @@
+/* ============================================================
+   estilo.css — Estilos compartidos para talleresSexto
+   Colegio San Luis · Grado Sexto
+   ============================================================ */
+
+/* --- Fuente y reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+  color: #2c3e50;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* --- Encabezado --- */
+header {
+  background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%);
+  color: white;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+header h1 span {
+  color: #fdd835;
+}
+
+header .subtitulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* --- Navegación entre sub-talleres --- */
+nav.subtaller-nav {
+  background: white;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #1a73e8;
+}
+
+nav.subtaller-nav a,
+nav.subtaller-nav span {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+nav.subtaller-nav a:hover {
+  background: #e8f0fe;
+  transform: translateY(-1px);
+}
+
+nav.subtaller-nav a.activo {
+  background: #1a73e8;
+  color: white;
+}
+
+nav.subtaller-nav .separador {
+  color: #ccc;
+  padding: 0;
+}
+
+/* --- Contenedor principal --- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* --- Tarjetas --- */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+/* --- Lectura / texto educativo --- */
+.lectura p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.lectura .destacado {
+  background: #fff8e1;
+  border-left: 4px solid #fdd835;
+  padding: 1rem 1.2rem;
+  border-radius: 0 12px 12px 0;
+  margin: 1rem 0;
+}
+
+.lectura .ejemplo {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  padding: 1rem 1.2rem;
+  border-radius: 0 12px 12px 0;
+  margin: 1rem 0;
+}
+
+.lectura ul, .lectura ol {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.lectura li {
+  margin-bottom: 0.4rem;
+  font-size: 1.02rem;
+}
+
+/* --- Tablas --- */
+.tabla-didactica {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.tabla-didactica th {
+  background: #1a73e8;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.tabla-didactica td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.tabla-didactica tr:nth-child(even) {
+  background: #f8faff;
+}
+
+.tabla-didactica tr:hover {
+  background: #e8f0fe;
+}
+
+/* --- Preguntas de selección múltiple --- */
+.pregunta {
+  background: #f8faff;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.pregunta.correcta {
+  border-color: #4caf50;
+  background: #f1f8e9;
+}
+
+.pregunta.incorrecta {
+  border-color: #e53935;
+  background: #fce4ec;
+}
+
+.pregunta p {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.pregunta .opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pregunta .opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.pregunta .opcion:hover {
+  background: #e8f0fe;
+}
+
+.pregunta .opcion input[type="radio"] {
+  accent-color: #1a73e8;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.pregunta .feedback {
+  margin-top: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: none;
+}
+
+.pregunta.correcta .feedback {
+  display: block;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.pregunta.incorrecta .feedback {
+  display: block;
+  background: #fce4ec;
+  color: #c62828;
+}
+
+/* --- Sopa de Letras --- */
+.sopa-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sopa-grilla {
+  display: inline-grid;
+  gap: 2px;
+  background: #e0e7f0;
+  padding: 4px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.sopa-celda {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  color: #2c3e50;
+}
+
+.sopa-celda:hover {
+  background: #e3f2fd;
+  transform: scale(1.08);
+}
+
+.sopa-celda.seleccionada {
+  background: #bbdefb !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px #1a73e8;
+}
+
+.sopa-celda.encontrada {
+  background: #a5d6a7 !important;
+  color: #1b5e20;
+  cursor: default;
+}
+
+.sopa-celda.solucion {
+  background: #ffcc80 !important;
+  color: #e65100;
+  animation: pulse 0.6s ease-in-out;
+}
+
+.sopa-celda.encontrada.solucion {
+  background: #a5d6a7 !important;
+  color: #1b5e20;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+/* --- Lista de palabras --- */
+.sopa-palabras {
+  min-width: 200px;
+  flex: 1;
+}
+
+.sopa-palabras h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #1a73e8;
+}
+
+.sopa-palabras ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sopa-palabras li {
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.4rem;
+  background: #f8faff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  border-left: 3px solid #1a73e8;
+}
+
+.sopa-palabras li.encontrada {
+  text-decoration: line-through;
+  color: #4caf50;
+  background: #e8f5e9;
+  border-left-color: #4caf50;
+}
+
+.sopa-palabras li.no-encontrada {
+  color: #e53935;
+  background: #fce4ec;
+  border-left-color: #e53935;
+}
+
+/* --- Botones de la sopa --- */
+.sopa-botones {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primario {
+  background: #1a73e8;
+  color: white;
+}
+
+.btn-primario:hover {
+  background: #1557b0;
+}
+
+.btn-secundario {
+  background: #fdd835;
+  color: #2c3e50;
+}
+
+.btn-secundario:hover {
+  background: #fbc02d;
+}
+
+.btn-peligro {
+  background: #e53935;
+  color: white;
+}
+
+.btn-peligro:hover {
+  background: #c62828;
+}
+
+.btn-exito {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-exito:hover {
+  background: #388e3c;
+}
+
+/* --- Contador de palabras --- */
+.contador-palabras {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a73e8;
+}
+
+.contador-palabras span {
+  background: #e8f0fe;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #78909c;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+footer span {
+  color: #e53935;
+}
+
+/* --- Portada de tema --- */
+.portada-tema {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.portada-tema .icono {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.portada-tema h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portada-tema p {
+  font-size: 1.1rem;
+  color: #546e7a;
+  margin-bottom: 2rem;
+}
+
+.portada-tema .sub-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.portada-tema .sub-item {
+  background: #f8faff;
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 700;
+  transition: all 0.25s;
+  border: 2px solid transparent;
+}
+
+.portada-tema .sub-item:hover {
+  border-color: #1a73e8;
+  background: #e8f0fe;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(26, 115, 232, 0.15);
+}
+
+.portada-tema .sub-item .sub-num {
+  display: block;
+  font-size: 0.85rem;
+  color: #1a73e8;
+  margin-bottom: 0.3rem;
+}
+
+/* --- Index principal (lista de temas) --- */
+.lista-temas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.tema-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: #2c3e50;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tema-card:hover {
+  border-color: #1a73e8;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(26, 115, 232, 0.15);
+}
+
+.tema-card .tema-icono {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.tema-card .tema-titulo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.tema-card .tema-descripcion {
+  font-size: 0.95rem;
+  color: #78909c;
+}
+
+.tema-card .tema-count {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #1a73e8;
+  font-weight: 700;
+  background: #e8f0fe;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  main {
+    padding: 1rem 0.8rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+    border-radius: 14px;
+  }
+
+  .sopa-celda {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .sopa-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sopa-palabras {
+    width: 100%;
+  }
+
+  .portada-tema .sub-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-temas {
+    grid-template-columns: 1fr;
+  }
+
+  nav.subtaller-nav {
+    padding: 0.6rem 1rem;
+    gap: 0.3rem;
+  }
+
+  nav.subtaller-nav a,
+  nav.subtaller-nav span {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sopa-celda {
+    width: 26px;
+    height: 26px;
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .contador-palabras {
+    font-size: 1rem;
+  }
+}
