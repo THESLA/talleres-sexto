@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La radio y la televisión — Historia de la Conectividad · Sub-taller 3</title>
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <style>
+    /* --- Estilos adicionales específicos para este sub-taller --- */
+
+    /* Línea de tiempo comparativa */
+    .timeline-compare {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+
+    .timeline-col {
+      flex: 1;
+      min-width: 220px;
+      border-radius: 16px;
+      padding: 1.2rem;
+    }
+
+    .timeline-col.radio {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      border-left: 5px solid #1565c0;
+    }
+
+    .timeline-col.tv {
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      border-left: 5px solid #c62828;
+    }
+
+    .timeline-col h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 800;
+    }
+
+    .timeline-col.radio h4 { color: #1565c0; }
+    .timeline-col.tv h4 { color: #c62828; }
+
+    .timeline-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .timeline-col li {
+      padding: 0.4rem 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.1);
+      font-size: 0.95rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .timeline-col li .year {
+      font-weight: 800;
+      color: inherit;
+      min-width: 50px;
+    }
+
+    /* Recuadro del Titanic */
+    .destacado-titanic {
+      background: #e3f2fd;
+      border: 2px solid #1565c0;
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      position: relative;
+    }
+
+    .destacado-titanic h4 {
+      color: #1565c0;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .destacado-titanic .badge {
+      display: inline-block;
+      background: #1565c0;
+      color: white;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Glosario visual */
+    .glosario-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1rem 0;
+      justify-content: center;
+    }
+
+    .glosario-mini .term {
+      background: #e8f0fe;
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #1a73e8;
+      border: 2px solid #bbdefb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       ENCABEZADO
+       ============================================================ -->
+  <header>
+    <h1>📻 La radio y la <span>televisión</span></h1>
+    <div class="subtitulo">Historia de la Conectividad · Sub-taller 3</div>
+  </header>
+
+  <!-- ============================================================
+       NAVEGACIÓN ENTRE SUB-TALLERES
+       ============================================================ -->
+  <nav class="subtaller-nav">
+    <a href="../../index.html">🏠 Inicio</a>
+    <span class="separador">|</span>
+    <a href="../index.html">📋 Portada</a>
+    <span class="separador">|</span>
+    <a href="sub01.html">Sub-1</a>
+    <a href="sub02.html">Sub-2</a>
+    <a href="sub03.html" class="activo">Sub-3</a>
+    <a href="sub04.html">Sub-4</a>
+    <a href="sub05.html">Sub-5</a>
+    <a href="sub06.html">Sub-6</a>
+  </nav>
+
+  <!-- ============================================================
+       CONTENIDO PRINCIPAL
+       ============================================================ -->
+  <main>
+
+    <!-- ========================================================
+         PARTE 1 — LECTURA Y CONTEXTO
+         ======================================================== -->
+    <section class="card lectura">
+
+      <h2>📖 La radio y la televisión</h2>
+
+      <p>
+        Hoy en día estamos acostumbrados a prender la radio o la televisión y al instante
+        escuchar música, ver noticias o disfrutar de una película. Pero ¿sabías que estas
+        dos tecnologías cambiaron por completo la forma en que las personas se conectan
+        con el mundo? En este taller descubriremos cómo nacieron y por qué son tan importantes.
+      </p>
+
+      <h3>🔬 El descubrimiento de las ondas electromagnéticas</h3>
+
+      <p>
+        Todo comenzó en 1887, cuando un científico alemán llamado <strong>Heinrich Hertz</strong>
+        logró demostrar que existían unas ondas invisibles capaces de viajar por el aire.
+        Estas ondas, llamadas <strong>ondas electromagnéticas</strong>, son las mismas que hoy
+        usamos para la radio, la televisión, el wifi y hasta los microondas. ¡Qué curioso!
+        Hertz descubrió algo sin imaginar todo lo que vendría después.
+      </p>
+
+      <h3>📡 Guillermo Marconi y la primera transmisión de radio</h3>
+
+      <p>
+        Un joven italiano llamado <strong>Guillermo Marconi</strong> tomó los experimentos de
+        Hertz y construyó el primer <strong>telégrafo sin cables</strong>. En 1895 logró enviar
+        señales a unos cuantos metros, pero no se detuvo ahí. El gran momento llegó en
+        <strong>1901</strong>, cuando Marconi envió una señal de radio desde Inglaterra hasta
+        Canadá, ¡cruzando el océano Atlántico! Por primera vez en la historia, la información
+        viajaba sin necesidad de cables. Había nacido la <strong>radio</strong>.
+      </p>
+
+      <h3>🚢 La radio al rescate: el Titanic</h3>
+
+      <!-- Recuadro destacado: Titanic SOS -->
+      <div class="destacado-titanic">
+        <span class="badge">⚡ Historia real</span>
+        <h4>🆘 El SOS del Titanic</h4>
+        <p>
+          En la noche del 14 al 15 de abril de 1912, el enorme transatlántico <em>Titanic</em>
+          chocó contra un iceberg mientras navegaba por el Atlántico Norte. Los operadores de
+          radio del barco, Jack Phillips y Harold Bride, enviaron repetidamente señales de
+          auxilio usando el código <strong>🎯 CQD</strong> y luego el nuevo código
+          <strong>🎯 SOS</strong>. Gracias a la radio, el barco <em>Carpathia</em> recibió
+          la señal y navegó rápidamente al rescate, salvando a más de 700 personas.
+          Este trágico evento demostró al mundo lo vital que era la radio para la seguridad
+          en el mar.
+        </p>
+      </div>
+
+      <h3>🖥️ John Logie Baird y la televisión</h3>
+
+      <p>
+        Si la radio permitía escuchar sonidos a distancia, el siguiente paso era obvio:
+        <strong>ver imágenes en movimiento</strong>. En 1925, un inventor escocés llamado
+        <strong>John Logie Baird</strong> logró transmitir la primera imagen de televisión
+        en blanco y negro. La primera "estrella" de la televisión fue un muñeco de ventrílocuo
+        llamado <em>Stooky Bill</em>, porque Baird necesitaba un "modelo" que aguantara quieto
+        bajo luces muy brillantes. ¡Pronto la televisión se volvió el invento más fascinante
+        del hogar!
+      </p>
+
+      <h3>🎨 La evolución de la televisión</h3>
+
+      <p>
+        La televisión no siempre fue como la conocemos hoy. Primero llegó la
+        <strong>televisión en blanco y negro</strong> (años 1930–1950). Luego, en la década
+        de 1950, apareció la <strong>televisión a color</strong>, que hizo que ver programas
+        fuera mucho más emocionante. Más adelante, la <strong>señal digital</strong> reemplazó
+        a la señal analógica, ofreciendo una calidad de imagen mucho más nítida. Hoy tenemos
+        televisiones inteligentes (<em>Smart TV</em>) que se conectan a internet y nos permiten
+        ver contenido bajo demanda.
+      </p>
+
+      <h3>🌍 El impacto social: noticias, entretenimiento y educación</h3>
+
+      <p>
+        Tanto la radio como la televisión transformaron la sociedad. Por primera vez, las
+        personas podían <strong>escuchar noticias en vivo</strong> desde cualquier parte del
+        mundo. La radio llevó música, deportes y novelas a los hogares. La televisión agregó
+        imágenes: shows, series, documentales y eventos históricos como la llegada del hombre
+        a la Luna en 1969, que fue vista por millones de personas en todo el planeta.
+        También se convirtieron en herramientas poderosas de <strong>educación a distancia</strong>,
+        llevando clases y cursos a lugares donde no había escuelas.
+      </p>
+
+      <!-- Línea de tiempo comparativa -->
+      <h3>⏳ Línea del tiempo: radio vs. televisión</h3>
+
+      <div class="timeline-compare">
+        <div class="timeline-col radio">
+          <h4>📻 La Radio</h4>
+          <ul>
+            <li><span class="year">1887</span> Hertz descubre las ondas electromagnéticas</li>
+            <li><span class="year">1895</span> Marconi envía la primera señal de radio</li>
+            <li><span class="year">1901</span> Primera transmisión transatlántica</li>
+            <li><span class="year">1912</span> El Titanic usa la radio para pedir auxilio</li>
+            <li><span class="year">1920</span> Nacen las primeras emisoras comerciales</li>
+            <li><span class="year">1930</span> La radio llega a millones de hogares</li>
+          </ul>
+        </div>
+        <div class="timeline-col tv">
+          <h4>📺 La Televisión</h4>
+          <ul>
+            <li><span class="year">1925</span> Baird transmite la primera imagen</li>
+            <li><span class="year">1936</span> Inician las transmisiones regulares en Reino Unido</li>
+            <li><span class="year">1951</span> Primeras transmisiones a color en EE.UU.</li>
+            <li><span class="year">1969</span> La llegada a la Luna se ve en TV mundial</li>
+            <li><span class="year">1990</span> Transición a señal digital</li>
+            <li><span class="year">2010</span> Smart TV y contenido en internet</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Glosario de conceptos clave -->
+      <div class="glosario-mini">
+        <span class="term">📡 Ondas electromagnéticas</span>
+        <span class="term">📻 Transmisión</span>
+        <span class="term">🔊 Frecuencia</span>
+        <span class="term">📺 Señal analógica</span>
+        <span class="term">💾 Señal digital</span>
+        <span class="term">🖥️ Televisor</span>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         PREGUNTAS DE COMPRENSIÓN
+         ======================================================== -->
+    <section class="card">
+
+      <h2>❓ Preguntas de comprensión</h2>
+      <p style="margin-bottom: 1rem; color: #546e7a;">
+        Selecciona la respuesta correcta para cada pregunta.
+      </p>
+
+      <!-- Pregunta 1 -->
+      <div class="pregunta" id="preg1">
+        <p>1. ¿Quién descubrió las ondas electromagnéticas en 1887?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="p1" value="A" onchange="verificarPregunta('preg1', 'B')">
+            A. Guillermo Marconi
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p1" value="B" onchange="verificarPregunta('preg1', 'B')">
+            B. Heinrich Hertz
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p1" value="C" onchange="verificarPregunta('preg1', 'B')">
+            C. John Logie Baird
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p1" value="D" onchange="verificarPregunta('preg1', 'B')">
+            D. Albert Einstein
+          </label>
+        </div>
+        <div class="feedback" id="fb-preg1"></div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="pregunta" id="preg2">
+        <p>2. ¿En qué año logró Marconi enviar una señal de radio cruzando el océano Atlántico?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="p2" value="A" onchange="verificarPregunta('preg2', 'C')">
+            A. 1887
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p2" value="B" onchange="verificarPregunta('preg2', 'C')">
+            B. 1895
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p2" value="C" onchange="verificarPregunta('preg2', 'C')">
+            C. 1901
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p2" value="D" onchange="verificarPregunta('preg2', 'C')">
+            D. 1925
+          </label>
+        </div>
+        <div class="feedback" id="fb-preg2"></div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="pregunta" id="preg3">
+        <p>3. ¿Qué código de auxilio usaron los operadores de radio del Titanic?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="p3" value="A" onchange="verificarPregunta('p3', 'D')">
+            A. SAV y HELP
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p3" value="B" onchange="verificarPregunta('p3', 'D')">
+            B. OK y ROGER
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p3" value="C" onchange="verificarPregunta('p3', 'D')">
+            C. MAYDAY y PAN-PAN
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p3" value="D" onchange="verificarPregunta('p3', 'D')">
+            D. CQD y SOS
+          </label>
+        </div>
+        <div class="feedback" id="fb-preg3"></div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="pregunta" id="preg4">
+        <p>4. ¿Qué logró John Logie Baird en 1925?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="p4" value="A" onchange="verificarPregunta('p4', 'C')">
+            A. Inventar la radio a color
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p4" value="B" onchange="verificarPregunta('p4', 'C')">
+            B. Enviar la primera señal transatlántica
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p4" value="C" onchange="verificarPregunta('p4', 'C')">
+            C. Transmitir la primera imagen de televisión
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p4" value="D" onchange="verificarPregunta('p4', 'C')">
+            D. Descubrir las ondas electromagnéticas
+          </label>
+        </div>
+        <div class="feedback" id="fb-preg4"></div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         PARTE 2 — SOPA DE LETRAS INTERACTIVA
+         ======================================================== -->
+    <section class="card">
+
+      <h2>🔍 Sopa de letras</h2>
+      <p style="margin-bottom: 0.5rem; color: #546e7a;">
+        Encuentra las 8 palabras clave escondidas en la sopa de letras.
+        Haz clic en las letras para seleccionarlas y formar las palabras.
+        ¡Buena suerte!
+      </p>
+
+      <!-- Contenedor donde se renderizará la sopa de letras -->
+      <div id="sopa03"></div>
+
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>❤️</span> para nuestros estudiantes
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+
+  <!-- Función para verificar preguntas de comprensión -->
+  <script>
+    /**
+     * Verifica si la respuesta seleccionada es correcta y muestra feedback.
+     * @param {string} preguntaId - ID del div de la pregunta
+     * @param {string} correcta - Valor de la opción correcta (A, B, C o D)
+     */
+    function verificarPregunta(preguntaId, correcta) {
+      const pregunta = document.getElementById(preguntaId);
+      const seleccionado = pregunta.querySelector('input[type="radio"]:checked');
+      const feedback = pregunta.querySelector('.feedback');
+
+      if (!seleccionado) return;
+
+      const valor = seleccionado.value;
+
+      // Remover clases anteriores
+      pregunta.classList.remove('correcta', 'incorrecta');
+
+      if (valor === correcta) {
+        pregunta.classList.add('correcta');
+        feedback.textContent = '✅ ¡Correcto! Muy bien.';
+      } else {
+        pregunta.classList.add('incorrecta');
+        feedback.textContent = '❌ Incorrecto. Vuelve a intentarlo.';
+      }
+    }
+  </script>
+
+  <!-- Cargar el motor de la sopa de letras -->
+  <script src="../../js/sopa.js"></script>
+
+  <!-- Inicializar la sopa de letras con las 8 palabras clave -->
+  <script>
+    crearSopa('sopa03', ['RADIO','MARCONI','ONDAS','TELEVISION','ANTENA','FRECUENCIA','AUDIO','IMAGEN'], 12);
+  </script>
+
+</body>
+</html>

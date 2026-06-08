@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-taller 1: Las primeras formas de comunicación — Historia de la Conectividad</title>
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <!-- Google Fonts Nunito (respaldo por si el CSS no carga) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* --- Estilos adicionales específicos para este sub-taller --- */
+    .curiosidad {
+      background: #e3f2fd;
+      border-left: 4px solid #1a73e8;
+      border-radius: 0 16px 16px 0;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(26, 115, 232, 0.1);
+    }
+
+    .curiosidad h4 {
+      color: #1a73e8;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .curiosidad p {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+    .timeline-simple {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+      margin: 1.2rem 0;
+    }
+
+    .timeline-simple .hito {
+      background: #f8faff;
+      border-radius: 12px;
+      padding: 0.6rem 1rem;
+      border: 1px solid #e0e7f0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      flex: 1 1 120px;
+    }
+
+    .timeline-simple .hito .ano {
+      color: #1a73e8;
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    /* Ajustes para la tabla en móviles */
+    .tabla-didactica {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .tabla-didactica th,
+      .tabla-didactica td {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Pequeña mejora visual para las preguntas */
+    .pregunta .opcion label {
+      cursor: pointer;
+      flex: 1;
+    }
+
+    /* Sopa de letras - título decorativo */
+    .sopa-titulo {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .sopa-titulo h2 {
+      font-size: 1.8rem;
+    }
+
+    .sopa-titulo p {
+      color: #78909c;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       ENCABEZADO
+       ============================================================ -->
+  <header>
+    <h1>🌐 Historia de la <span>Conectividad</span></h1>
+    <div class="subtitulo">Tecnología e Informática · Grado Sexto</div>
+  </header>
+
+  <!-- ============================================================
+       NAVEGACIÓN ENTRE SUB-TALLERES
+       ============================================================ -->
+  <nav class="subtaller-nav">
+    <a href="../../index.html">🏠 Inicio</a>
+    <span class="separador">|</span>
+    <a href="../index.html">📋 Portada del tema</a>
+    <span class="separador">|</span>
+    <a href="sub01.html" class="activo">1</a>
+    <a href="sub02.html">2</a>
+    <a href="sub03.html">3</a>
+    <a href="sub04.html">4</a>
+    <a href="sub05.html">5</a>
+    <a href="sub06.html">6</a>
+  </nav>
+
+  <!-- ============================================================
+       CONTENIDO PRINCIPAL
+       ============================================================ -->
+  <main>
+
+    <!-- ============================================================
+         PARTE 1 — LECTURA Y CONTEXTO
+         ============================================================ -->
+    <article class="card lectura">
+
+      <h2>📯 Las primeras formas de comunicación</h2>
+      <p style="color: #78909c; font-weight: 600; margin-top: -0.5rem; margin-bottom: 1.5rem;">
+        Historia de la Conectividad · Sub-taller 1
+      </p>
+
+      <!-- Párrafo 1 -->
+      <p>
+        ¿Te imaginas vivir en un mundo sin celulares, sin internet y sin cartas? 
+        Hace muchísimos años, los seres humanos no tenían ninguna de estas cosas 
+        para comunicarse. Al principio, las personas se entendían con <strong>gestos</strong>, 
+        <strong>sonidos</strong> y <strong>gruñidos</strong>, muy parecido a como 
+        se comunican algunos animales. Con el tiempo, empezaron a dibujar en las 
+        paredes de las cuevas lo que veían a su alrededor. Esas fueron las primeras 
+        <strong>pinturas rupestres</strong>, una especie de "mensajes" que duraban 
+        muchísimos años y le contaban a otras personas cómo era la vida en ese entonces.
+      </p>
+
+      <!-- Párrafo 2 -->
+      <p>
+        Pero las personas necesitaban enviar mensajes a larga distancia, no solo 
+        a quien estuviera cerca. Así nacieron las <strong>primeras señales a distancia</strong>. 
+        Las <strong>señales de humo</strong> eran muy comunes: se hacía una fogata 
+        y se tapaba con una manta para soltar el humo en forma de nubes. ¡Así se 
+        podía decir "estamos bien" o "peligro, váyanse" a varias colinas de distancia! 
+        En África, los <strong>tambores</strong> se usaban para imitar el ritmo del 
+        lenguaje y enviar mensajes de aldea en aldea. También se usaban 
+        <strong>espejos reflectantes</strong> para destellos de luz con el sol.
+      </p>
+
+      <!-- Párrafo 3 -->
+      <p>
+        Otro invento genial fue el <strong>correo en la antigüedad</strong>. 
+        ¿Sabías que las <strong>palomas mensajeras</strong> se usaban desde el 
+        año 3000 antes de Cristo? Estas aves tienen un increíble sentido de 
+        orientación y siempre vuelven a su hogar, por eso la gente las llevaba 
+        a otro lugar, ataba un mensajito a su pata y las soltaba. ¡Ellas solas 
+        encontraban el camino de regreso! También existía el <strong>correo a caballo</strong>: 
+        los persas crearon un sistema de mensajeros que cabalgaban sin parar, 
+        pasando el mensaje de uno a otro como en una carrera de relevos.
+      </p>
+
+      <!-- Párrafo 4 -->
+      <p>
+        En América, el Imperio Inca tenía un servicio postal increíble: los 
+        <strong>chasquis</strong>. Eran corredores entrenados desde jóvenes que 
+        llevaban mensajes a lo largo de los caminos incas. Corrían por los Andes 
+        a gran velocidad y, al llegar a un puesto, otro chasqui continuaba la 
+        carrera. ¡Podían llevar un mensaje desde Cusco hasta Quito (unos 2000 km) 
+        en solo 5 días! Otro famoso mensajero de la historia es el soldado griego 
+        que corrió desde <strong>Maratón hasta Atenas</strong> (42 kilómetros) 
+        para anunciar una victoria y luego cayó exhausto. De allí viene el nombre 
+        de la carrera de <strong>maratón</strong>.
+      </p>
+
+      <!-- Párrafo 5 -->
+      <p>
+        La gran revolución llegó con la <strong>invención de la escritura</strong>. 
+        Hacia el año 3500 antes de Cristo, los <strong>sumerios</strong> (en la 
+        antigua Mesopotamia) crearon la escritura cuneiforme, que consistía en 
+        marcar tablillas de arcilla con un punzón. De pronto, la información podía 
+        guardarse y viajar sin necesidad de que una persona la memorizara. Más 
+        tarde, los egipcios inventaron el <strong>papiro</strong>, un material 
+        parecido al papel hecho con una planta. Escribir se volvió más fácil y 
+        los mensajes podían enrollarse y transportarse.
+      </p>
+
+      <!-- Párrafo 6 -->
+      <p>
+        Pero el verdadero "internet de la época" llegó con la <strong>imprenta</strong>, 
+        inventada por Johannes Gutenberg en el siglo XV (alrededor del año 1450). 
+        Antes de la imprenta, los libros se copiaban a mano, uno por uno, lo que 
+        tomaba meses o años. Con la imprenta, se podían hacer cientos de copias 
+        de un mismo libro en pocos días. Esto permitió que el conocimiento se 
+        distribuyera por todo el mundo. ¡La gente podía leer las mismas ideas 
+        estuviera donde estuviera! Fue el primer gran paso hacia la 
+        <strong>conectividad global</strong>.
+      </p>
+
+      <!-- Párrafo 7 - Conclusión -->
+      <p>
+        Como ves, la comunicación humana ha recorrido un largo camino: desde 
+        gestos y pinturas en cuevas, hasta señales de humo, palomas mensajeras, 
+        chasquis, la escritura y la imprenta. Cada uno de estos inventos fue 
+        como un ladrillo que construyó el camino hacia la conectividad que 
+        tenemos hoy. Sin ellos, no habría sido posible llegar al telégrafo, 
+        el teléfono, la radio, el internet y todo lo que usamos actualmente. 
+        ¡En los próximos sub-talleres seguiremos este fascinante viaje!
+      </p>
+
+      <!-- Línea de tiempo visual -->
+      <div class="timeline-simple">
+        <div class="hito">
+          <span class="ano">3000 a.C.</span>
+          Palomas mensajeras
+        </div>
+        <div class="hito">
+          <span class="ano">3500 a.C.</span>
+          Escritura sumeria
+        </div>
+        <div class="hito">
+          <span class="ano">1450</span>
+          Imprenta de Gutenberg
+        </div>
+        <div class="hito">
+          <span class="ano">Siglo XV</span>
+          Chasquis incas
+        </div>
+      </div>
+
+      <!-- Tabla comparativa didáctica -->
+      <h3>📊 Tabla comparativa: Métodos de comunicación antiguos</h3>
+      <div style="overflow-x: auto;">
+        <table class="tabla-didactica">
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Época aproximada</th>
+              <th>Distancia que alcanzaba</th>
+              <th>Velocidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Señales de humo</td>
+              <td>Desde la prehistoria</td>
+              <td>Varios kilómetros (dependía de la vista)</td>
+              <td>Inmediata (velocidad de la luz)</td>
+            </tr>
+            <tr>
+              <td>Tambores africanos</td>
+              <td>Desde la antigüedad</td>
+              <td>1–5 km entre aldeas</td>
+              <td>Velocidad del sonido</td>
+            </tr>
+            <tr>
+              <td>Palomas mensajeras</td>
+              <td>Desde 3000 a.C.</td>
+              <td>Hasta 1000 km</td>
+              <td>60–80 km/h</td>
+            </tr>
+            <tr>
+              <td>Chasquis (incas)</td>
+              <td>Siglo XV (1400 d.C.)</td>
+              <td>Hasta 2000 km (red de caminos)</td>
+              <td>~400 km/día (relevos)</td>
+            </tr>
+            <tr>
+              <td>Correo a caballo (persas)</td>
+              <td>500 a.C.</td>
+              <td>Hasta 2500 km</td>
+              <td>~300 km/día</td>
+            </tr>
+            <tr>
+              <td>Escritura en papiro</td>
+              <td>Desde 3000 a.C.</td>
+              <td>Viajaba con personas o barcos</td>
+              <td>Dependía del transporte</td>
+            </tr>
+            <tr>
+              <td>Imprenta (libros)</td>
+              <td>1450 d.C.</td>
+              <td>Todo el mundo (distribución masiva)</td>
+              <td>Dependía del transporte</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Recuadro de curiosidad -->
+      <div class="curiosidad">
+        <h4>💡 ¿Sabías que...?</h4>
+        <p>
+          La palabra <strong>"maratón"</strong> viene de una historia real. En el año 490 a.C., 
+          un soldado griego llamado <strong>Filípides</strong> corrió aproximadamente 42 km 
+          desde la ciudad de Maratón hasta Atenas para anunciar que los griegos habían 
+          ganado una batalla. Cuando llegó, dijo "¡Hemos vencido!" y cayó muerto por el 
+          esfuerzo. Hoy, las carreras de maratón tienen exactamente <strong>42.195 km</strong> 
+          en honor a esta hazaña. ¡Imagínate correr todo eso sin un celular para pedir ayuda!
+        </p>
+      </div>
+
+      <!-- ============================================================
+           PREGUNTAS DE COMPRENSIÓN
+           ============================================================ -->
+      <h3 style="margin-top: 2rem;">📝 Preguntas de comprensión</h3>
+      <p style="color: #78909c; margin-bottom: 1.2rem;">
+        Lee cada pregunta con atención y selecciona la respuesta correcta.
+      </p>
+
+      <!-- Pregunta 1 -->
+      <div class="pregunta" id="preg1">
+        <p>1. ¿Qué usaban los humanos antes de inventar la escritura para comunicarse?</p>
+        <div class="opciones">
+          <div class="opcion" data-pregunta="preg1" data-correcta="false">
+            <input type="radio" name="preg1" value="A" id="preg1a">
+            <label for="preg1a">A. Solo se comunicaban con palomas mensajeras</label>
+          </div>
+          <div class="opcion" data-pregunta="preg1" data-correcta="false">
+            <input type="radio" name="preg1" value="B" id="preg1b">
+            <label for="preg1b">B. Escribían cartas en papel</label>
+          </div>
+          <div class="opcion" data-pregunta="preg1" data-correcta="true">
+            <input type="radio" name="preg1" value="C" id="preg1c">
+            <label for="preg1c">C. Gestos, sonidos y pinturas rupestres</label>
+          </div>
+          <div class="opcion" data-pregunta="preg1" data-correcta="false">
+            <input type="radio" name="preg1" value="D" id="preg1d">
+            <label for="preg1d">D. Usaban el telégrafo</label>
+          </div>
+        </div>
+        <div class="feedback" id="fb-preg1"></div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="pregunta" id="preg2">
+        <p>2. ¿Cuál era la función de los chasquis en el Imperio Inca?</p>
+        <div class="opciones">
+          <div class="opcion" data-pregunta="preg2" data-correcta="false">
+            <input type="radio" name="preg2" value="A" id="preg2a">
+            <label for="preg2a">A. Eran guerreros que peleaban en las montañas</label>
+          </div>
+          <div class="opcion" data-pregunta="preg2" data-correcta="true">
+            <input type="radio" name="preg2" value="B" id="preg2b">
+            <label for="preg2b">B. Eran corredores que llevaban mensajes a lo largo de los caminos incas</label>
+          </div>
+          <div class="opcion" data-pregunta="preg2" data-correcta="false">
+            <input type="radio" name="preg2" value="C" id="preg2c">
+            <label for="preg2c">C. Criaban palomas mensajeras para el imperio</label>
+          </div>
+          <div class="opcion" data-pregunta="preg2" data-correcta="false">
+            <input type="radio" name="preg2" value="D" id="preg2d">
+            <label for="preg2d">D. Encendían fogatas para hacer señales de humo</label>
+          </div>
+        </div>
+        <div class="feedback" id="fb-preg2"></div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="pregunta" id="preg3">
+        <p>3. ¿Qué invento permitió que el conocimiento se distribuyera por todo el mundo en el siglo XV?</p>
+        <div class="opciones">
+          <div class="opcion" data-pregunta="preg3" data-correcta="false">
+            <input type="radio" name="preg3" value="A" id="preg3a">
+            <label for="preg3a">A. El teléfono</label>
+          </div>
+          <div class="opcion" data-pregunta="preg3" data-correcta="false">
+            <input type="radio" name="preg3" value="B" id="preg3b">
+            <label for="preg3b">B. La escritura cuneiforme</label>
+          </div>
+          <div class="opcion" data-pregunta="preg3" data-correcta="true">
+            <input type="radio" name="preg3" value="C" id="preg3c">
+            <label for="preg3c">C. La imprenta de Gutenberg</label>
+          </div>
+          <div class="opcion" data-pregunta="preg3" data-correcta="false">
+            <input type="radio" name="preg3" value="D" id="preg3d">
+            <label for="preg3d">D. Las señales de humo</label>
+          </div>
+        </div>
+        <div class="feedback" id="fb-preg3"></div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="pregunta" id="preg4">
+        <p>4. ¿Por qué las palomas mensajeras eran útiles para enviar mensajes?</p>
+        <div class="opciones">
+          <div class="opcion" data-pregunta="preg4" data-correcta="false">
+            <input type="radio" name="preg4" value="A" id="preg4a">
+            <label for="preg4a">A. Porque podían hablar como los humanos</label>
+          </div>
+          <div class="opcion" data-pregunta="preg4" data-correcta="false">
+            <input type="radio" name="preg4" value="B" id="preg4b">
+            <label for="preg4b">B. Porque volaban muy rápido y llevaban muchos papeles</label>
+          </div>
+          <div class="opcion" data-pregunta="preg4" data-correcta="true">
+            <input type="radio" name="preg4" value="C" id="preg4c">
+            <label for="preg4c">C. Porque tienen un gran sentido de orientación y siempre vuelven a su hogar</label>
+          </div>
+          <div class="opcion" data-pregunta="preg4" data-correcta="false">
+            <input type="radio" name="preg4" value="D" id="preg4d">
+            <label for="preg4d">D. Porque se llevaban bien con los caballos</label>
+          </div>
+        </div>
+        <div class="feedback" id="fb-preg4"></div>
+      </div>
+
+    </article>
+
+    <!-- ============================================================
+         PARTE 2 — SOPA DE LETRAS INTERACTIVA
+         ============================================================ -->
+    <section class="card">
+
+      <div class="sopa-titulo">
+        <h2>🧩 Sopa de Letras</h2>
+        <p>Encuentra las 8 palabras clave relacionadas con la lectura. Haz clic en las letras para seleccionarlas.</p>
+      </div>
+
+      <!-- Contenedor donde sopa.js renderizará la sopa -->
+      <div id="sopa01"></div>
+
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>❤️</span> para nuestros estudiantes
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <!-- Incluir el motor de la sopa de letras -->
+  <script src="../../js/sopa.js"></script>
+
+  <!-- Script específico de la página -->
+  <script>
+    // ============================================================
+    // 1. INICIALIZAR LA SOPA DE LETRAS
+    // ============================================================
+    // Lista de palabras clave con tildes y Ñ para mostrar
+    var palabrasClave = ['SEÑALES', 'PALOMAS', 'TAMBORES', 'MENSAJERO', 'PAPIRO', 'ESCRITURA', 'IMPRENTA', 'CHASQUIS'];
+
+    // La grilla es de 12x12
+    crearSopa('sopa01', palabrasClave, 12);
+
+    // ============================================================
+    // 2. LÓGICA DE LAS PREGUNTAS DE COMPRENSIÓN
+    // ============================================================
+    // Definir las respuestas correctas y sus explicaciones
+    var preguntas = {
+      preg1: {
+        correcta: 'C',
+        explicacion: 'Los humanos se comunicaban con gestos, sonidos y pinturas rupestres antes de inventar la escritura.'
+      },
+      preg2: {
+        correcta: 'B',
+        explicacion: 'Los chasquis eran corredores entrenados que llevaban mensajes a lo largo de los caminos del Imperio Inca.'
+      },
+      preg3: {
+        correcta: 'C',
+        explicacion: 'La imprenta de Gutenberg (siglo XV) permitió hacer cientos de copias de libros en poco tiempo, distribuyendo el conocimiento por todo el mundo.'
+      },
+      preg4: {
+        correcta: 'C',
+        explicacion: 'Las palomas mensajeras tienen un increíble sentido de orientación y siempre regresan a su hogar, por eso se ataba un mensaje a su pata y se soltaba.'
+      }
+    };
+
+    // Función para mostrar feedback en una pregunta
+    function mostrarFeedback(preguntaId, seleccion, esCorrecta) {
+      var feedbackDiv = document.getElementById('fb-' + preguntaId);
+      var preguntaDiv = document.getElementById(preguntaId);
+
+      // Remover clases previas
+      preguntaDiv.classList.remove('correcta', 'incorrecta');
+
+      var mensaje = '';
+      if (esCorrecta) {
+        preguntaDiv.classList.add('correcta');
+        mensaje = '✅ ¡Correcto! ' + preguntas[preguntaId].explicacion;
+      } else {
+        preguntaDiv.classList.add('incorrecta');
+        mensaje = '❌ La respuesta correcta es ' + preguntas[preguntaId].correcta + '. ' + preguntas[preguntaId].explicacion;
+      }
+
+      feedbackDiv.textContent = mensaje;
+      feedbackDiv.style.display = 'block';
+    }
+
+    // Función para reiniciar feedback de una pregunta
+    function reiniciarFeedback(preguntaId) {
+      var feedbackDiv = document.getElementById('fb-' + preguntaId);
+      feedbackDiv.style.display = 'none';
+      feedbackDiv.textContent = '';
+      var preguntaDiv = document.getElementById(preguntaId);
+      preguntaDiv.classList.remove('correcta', 'incorrecta');
+    }
+
+    // Conectar eventos a todas las opciones
+    document.addEventListener('DOMContentLoaded', function() {
+      var opciones = document.querySelectorAll('.opcion input[type="radio"]');
+      opciones.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          // Encontrar el contenedor de la opción
+          var opcionDiv = this.closest('.opcion');
+          var preguntaId = opcionDiv.dataset.pregunta;
+          var esCorrecta = opcionDiv.dataset.correcta === 'true';
+
+          // Deshabilitar todos los radios de esta pregunta para que no puedan cambiar
+          var radiosPregunta = document.querySelectorAll('input[name="' + preguntaId + '"]');
+          radiosPregunta.forEach(function(r) {
+            r.disabled = true;
+          });
+
+          // Mostrar feedback
+          mostrarFeedback(preguntaId, this.value, esCorrecta);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
