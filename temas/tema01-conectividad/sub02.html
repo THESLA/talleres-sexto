@@ -474,7 +474,7 @@
     <section class="card">
       <h2>Sopa de letras</h2>
       <p style="margin-bottom: 1rem; color: #546e7a;">
-        Encuentra las 8 palabras clave relacionadas con el tel&eacute;grafo 
+        Encuentra las 25 palabras clave relacionadas con el tel&eacute;grafo 
         y el tel&eacute;fono. Haz clic en las letras para seleccionarlas 
         y formar la palabra. &iexcl;Suerte!
       </p>
@@ -538,20 +538,17 @@
 
     // Esperamos a que el DOM esté completamente cargado
     document.addEventListener('DOMContentLoaded', function() {
-      // Palabras clave del tema
+      // Palabras clave del tema — ahora 25 palabras para grilla 20x20
       var palabras = [
-        'TELEGRAFO',
-        'MORSE',
-        'CABLES',
-        'TELEFONO',
-        'BELL',
-        'SEÑAL',
-        'INVENTO',
-        'MENSAJE'
+        'TELEGRAFO', 'MORSE', 'CABLES', 'TELEFONO', 'BELL',
+        'SEÑAL', 'INVENTO', 'MENSAJE', 'CORRIENTE', 'ELECTRICO',
+        'CODIGO', 'PUNTOS', 'RAYAS', 'WATSON', 'LLAMADA',
+        'CENTRAL', 'SUBMARINO', 'DISTANCIA', 'ALAMBRE', 'RECEPTOR',
+        'TRANSMITIR', 'CONEXION', 'OPERADOR', 'TIMBRE', 'COMUNICAR'
       ];
 
-      // Crear la sopa de letras en el contenedor 'sopa02' con grilla 12x12
-      crearSopa('sopa02', palabras, 12);
+      // Crear la sopa de letras en el contenedor 'sopa02' con grilla 20x20
+      crearSopa('sopa02', palabras, 20);
     });
   </script>
 

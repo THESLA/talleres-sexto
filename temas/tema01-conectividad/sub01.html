@@ -450,11 +450,17 @@
     // ============================================================
     // 1. INICIALIZAR LA SOPA DE LETRAS
     // ============================================================
-    // Lista de palabras clave con tildes y Ñ para mostrar
-    var palabrasClave = ['SEÑALES', 'PALOMAS', 'TAMBORES', 'MENSAJERO', 'PAPIRO', 'ESCRITURA', 'IMPRENTA', 'CHASQUIS'];
+    // 25 palabras clave del tema
+    var palabrasClave = [
+      'SEÑALES', 'PALOMAS', 'TAMBORES', 'MENSAJERO', 'PAPIRO',
+      'ESCRITURA', 'IMPRENTA', 'CHASQUIS', 'PINTURA', 'RUPESTRE',
+      'MARATON', 'MENSAJE', 'COMUNICAR', 'DISTANCIA', 'SEÑAL',
+      'FUEGO', 'SONIDO', 'SIMBOLOS', 'ALFABETO', 'LIBRO',
+      'ORAL', 'GESTOS', 'CARTA', 'CUEVA', 'JEROGLIFICO'
+    ];
 
-    // La grilla es de 12x12
-    crearSopa('sopa01', palabrasClave, 12);
+    // Grilla de 20x20 con 25 palabras
+    crearSopa('sopa01', palabrasClave, 20);
 
     // ============================================================
     // 2. LÓGICA DE LAS PREGUNTAS DE COMPRENSIÓN

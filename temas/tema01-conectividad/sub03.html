@@ -441,9 +441,16 @@
   <!-- Cargar el motor de la sopa de letras -->
   <script src="../../js/sopa.js"></script>
 
-  <!-- Inicializar la sopa de letras con las 8 palabras clave -->
+  <!-- Inicializar la sopa de letras con las 25 palabras clave -->
   <script>
-    crearSopa('sopa03', ['RADIO','MARCONI','ONDAS','TELEVISION','ANTENA','FRECUENCIA','AUDIO','IMAGEN'], 12);
+    var palabras03 = [
+      'RADIO', 'MARCONI', 'ONDAS', 'TELEVISION', 'ANTENA',
+      'FRECUENCIA', 'AUDIO', 'IMAGEN', 'HERTZ', 'TRANSMISION',
+      'SEÑAL', 'SINTONIZAR', 'CANAL', 'EMISORA', 'RECEPTOR',
+      'PANTALLA', 'VOLUMEN', 'BOTON', 'PROGRAMA', 'NOTICIAS',
+      'COLOR', 'ENTRETENER', 'INFORMAR', 'PIONERO', 'INALAMBRICO'
+    ];
+    crearSopa('sopa03', palabras03, 20);
   </script>
 
 </body>

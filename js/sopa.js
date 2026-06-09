@@ -3,14 +3,16 @@
    Colegio San Luis · Grado Sexto
    ============================================================
    Función principal:
-     crearSopa(contenedorId, palabras, tamanoGrilla)
+     crearSopa(contenedorId, palabras, tamanoGrilla, nombresVisibles)
    
    - contenedorId: ID del div donde se renderiza la sopa
-   - palabras: array de strings con las palabras a encontrar
+   - palabras: array de strings (sin espacios) con las palabras a buscar en la grilla
    - tamanoGrilla: número (ej: 12 para grilla 12×12)
+   - nombresVisibles: (opcional) array con cómo mostrar cada palabra en la lista.
+                      Si no se provee, se usa el array 'palabras' tal cual.
    ============================================================ */
 
-function crearSopa(contenedorId, palabras, tamanoGrilla) {
+function crearSopa(contenedorId, palabras, tamanoGrilla, nombresVisibles) {
   // --- Referencia al contenedor ---
   const contenedor = document.getElementById(contenedorId);
   if (!contenedor) {
@@ -24,13 +26,16 @@ function crearSopa(contenedorId, palabras, tamanoGrilla) {
   // --- Normalizar palabras (mayúsculas, sin tildes) ---
   const palabrasNormalizadas = palabras.map(p => normalizar(p));
 
+  // --- Nombres para mostrar (si no se proveen, usar las palabras originales) ---
+  const palabrasMostrar = nombresVisibles ? nombresVisibles : palabras.slice();
+
   // --- Estado interno ---
   const estado = {
     grilla: [],              // matriz con las letras
     solucion: [],            // matriz con índices de palabra o -1
     tamano: tamanoGrilla,
     palabras: palabrasNormalizadas,
-    palabrasOriginales: palabras,  // conservamos las originales para mostrar
+    palabrasOriginales: palabrasMostrar,  // lo que se muestra al alumno
     encontradas: new Array(palabras.length).fill(false),
     seleccion: [],           // celdas seleccionadas actualmente [{f, c}]
     seleccionando: false,    // si el usuario está seleccionando
@@ -68,7 +73,7 @@ function crearSopa(contenedorId, palabras, tamanoGrilla) {
       const palabra = estado.palabras[p];
       let colocada = false;
       let intentos = 0;
-      const maxIntentos = 200;
+      const maxIntentos = 500;
 
       while (!colocada && intentos < maxIntentos) {
         intentos++;
