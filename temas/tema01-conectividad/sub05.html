@@ -259,6 +259,30 @@
         </div>
         <div class="feedback" id="fb-preg4"></div>
       </div>
+
+      <!-- Pregunta 5 -->
+      <div class="pregunta" id="preg5">
+        <p>5. ¿Qué ventaja tiene la fibra óptica frente al cable de cobre tradicional?</p>
+        <div class="opciones">
+          <div class="opcion">
+            <input type="radio" name="p5" value="A" id="p5a" onchange="verificarPregunta('preg5', 'B')">
+            <label for="p5a">A. Es más económica pero más lenta</label>
+          </div>
+          <div class="opcion">
+            <input type="radio" name="p5" value="B" id="p5b" onchange="verificarPregunta('preg5', 'B')">
+            <label for="p5b">B. Transmite datos mediante pulsos de luz a velocidades mucho mayores</label>
+          </div>
+          <div class="opcion">
+            <input type="radio" name="p5" value="C" id="p5c" onchange="verificarPregunta('preg5', 'B')">
+            <label for="p5c">C. No necesita electricidad para funcionar</label>
+          </div>
+          <div class="opcion">
+            <input type="radio" name="p5" value="D" id="p5d" onchange="verificarPregunta('preg5', 'B')">
+            <label for="p5d">D. Solo funciona en interiores</label>
+          </div>
+        </div>
+        <div class="feedback" id="fb-preg5"></div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -267,7 +291,7 @@
     <section class="card">
       <h2>🔍 Sopa de letras — Conectividad moderna</h2>
       <p style="margin-bottom: 1rem; color: #546e7a;">
-        Encuentra las <strong>8 palabras</strong> relacionadas con la era digital.
+        Encuentra las <strong>25 palabras</strong> relacionadas con la era digital.
         Haz clic en las letras para seleccionarlas (en horizontal, vertical o diagonal)
         y luego valida tu palabra. ¡A jugar!
       </p>
@@ -311,7 +335,12 @@
 
       if (valor === correcta) {
         pregunta.classList.add('correcta');
-        feedback.textContent = '✅ ¡Correcto! Muy bien.';
+        // Mensaje específico según la pregunta
+        if (preguntaId === 'preg5') {
+          feedback.textContent = '✅ ¡Correcto! La fibra óptica usa hilos de vidrio y pulsos de luz para transmitir datos a velocidades de hasta 300 Mbps o más, mucho más rápido que el cable de cobre tradicional.';
+        } else {
+          feedback.textContent = '✅ ¡Correcto! Muy bien.';
+        }
       } else {
         pregunta.classList.add('incorrecta');
         feedback.textContent = '❌ Incorrecto. Revisa la lectura e intenta de nuevo.';

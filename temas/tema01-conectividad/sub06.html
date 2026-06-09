@@ -309,6 +309,30 @@
         </div>
         <div class="feedback" id="fb-p4"></div>
       </div>
+
+      <!-- Pregunta 5 -->
+      <div class="pregunta" id="p5">
+        <p>5. ¿Qué es el Internet de las Cosas (IoT)?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="p5" value="a" onclick="verificar('p5','a')">
+            Una red social para objetos perdidos
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p5" value="b" onclick="verificar('p5','b')">
+            Un tipo de computador muy pequeño
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p5" value="c" onclick="verificar('p5','c')">
+            Objetos cotidianos conectados a internet (neveras, bombillas, relojes)
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p5" value="d" onclick="verificar('p5','d')">
+            Un cable especial para conectar dispositivos
+          </label>
+        </div>
+        <div class="feedback" id="fb-p5"></div>
+      </div>
     </div>
 
     <!-- ============================================================
@@ -348,7 +372,8 @@
         p1: 'a',  // Internet de las Cosas
         p2: 'b',  // 6G
         p3: 'a',  // Almacenar archivos en internet
-        p4: 'a'   // Internet en lugares remotos
+        p4: 'a',  // Internet en lugares remotos
+        p5: 'c'   // Objetos cotidianos conectados a internet
       };
 
       // Feedback para cada opción
@@ -376,6 +401,12 @@
           b: '❌ No, la televisión en blanco y negro es cosa del pasado.',
           c: '❌ No, las cartas físicas no se envían con satélites.',
           d: '❌ Los celulares no desaparecerán, al contrario, funcionarán mejor con estos satélites.'
+        },
+        p5: {
+          a: '❌ No es una red social. IoT se refiere a objetos físicos conectados a internet.',
+          b: '❌ No es un computador pequeño. IoT son objetos cotidianos con conexión a internet.',
+          c: '✅ ¡Correcto! El Internet de las Cosas (IoT) conecta objetos cotidianos como neveras, bombillas, relojes y hasta carros a internet para que puedan comunicarse y ser controlados de forma inteligente.',
+          d: '❌ No es un cable especial. IoT usa la conexión a internet que ya tenemos (wifi, datos móviles, etc.).'
         }
       };
 

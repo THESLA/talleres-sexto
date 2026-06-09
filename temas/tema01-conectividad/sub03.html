@@ -377,6 +377,30 @@
         <div class="feedback" id="fb-preg4"></div>
       </div>
 
+      <!-- Pregunta 5 -->
+      <div class="pregunta" id="preg5">
+        <p>5. ¿Por qué fue importante la radio durante el hundimiento del Titanic en 1912?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="p5" value="A" id="p5a" onchange="verificarPregunta('preg5', 'B')">
+            A. Porque los pasajeros pidieron ayuda con señales de humo
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p5" value="B" id="p5b" onchange="verificarPregunta('preg5', 'B')">
+            B. Porque el operador de radio del Titanic envió señales de auxilio (CQD y SOS)
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p5" value="C" id="p5c" onchange="verificarPregunta('preg5', 'B')">
+            C. Porque tenían un televisor a bordo
+          </label>
+          <label class="opcion">
+            <input type="radio" name="p5" value="D" id="p5d" onchange="verificarPregunta('preg5', 'B')">
+            D. Porque el capitán llamó por teléfono a la costa
+          </label>
+        </div>
+        <div class="feedback" id="fb-preg5"></div>
+      </div>
+
     </section>
 
     <!-- ========================================================
@@ -386,7 +410,7 @@
 
       <h2>🔍 Sopa de letras</h2>
       <p style="margin-bottom: 0.5rem; color: #546e7a;">
-        Encuentra las 8 palabras clave escondidas en la sopa de letras.
+        Encuentra las 25 palabras clave escondidas en la sopa de letras.
         Haz clic en las letras para seleccionarlas y formar las palabras.
         ¡Buena suerte!
       </p>
@@ -430,7 +454,12 @@
 
       if (valor === correcta) {
         pregunta.classList.add('correcta');
-        feedback.textContent = '✅ ¡Correcto! Muy bien.';
+        // Feedback específico según la pregunta
+        if (preguntaId === 'preg5') {
+          feedback.textContent = '✅ ¡Correcto! El operador de radio del Titanic, Jack Phillips, envió señales CQD y SOS que fueron recibidas por otros barcos, permitiendo rescatar a los sobrevivientes.';
+        } else {
+          feedback.textContent = '✅ ¡Correcto! Muy bien.';
+        }
       } else {
         pregunta.classList.add('incorrecta');
         feedback.textContent = '❌ Incorrecto. Vuelve a intentarlo.';

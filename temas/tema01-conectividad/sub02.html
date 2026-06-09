@@ -466,6 +466,30 @@
         </div>
         <div class="feedback" id="fb4"></div>
       </div>
+
+      <!-- Pregunta 5 -->
+      <div class="pregunta" id="preg5">
+        <p>5. &iquest;Qu&eacute; signific&oacute; el tel&eacute;fono para la comunicaci&oacute;n humana?</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="radio" name="q5" value="A" onchange="verificarPregunta(5, 'B')">
+            A) Solo serv&iacute;a para enviar telegramas
+          </label>
+          <label class="opcion">
+            <input type="radio" name="q5" value="B" onchange="verificarPregunta(5, 'B')">
+            B) Las personas pod&iacute;an hablar en tiempo real a larga distancia
+          </label>
+          <label class="opcion">
+            <input type="radio" name="q5" value="C" onchange="verificarPregunta(5, 'B')">
+            C) Reemplaz&oacute; por completo al correo postal
+          </label>
+          <label class="opcion">
+            <input type="radio" name="q5" value="D" onchange="verificarPregunta(5, 'B')">
+            D) Solo lo usaban los militares
+          </label>
+        </div>
+        <div class="feedback" id="fb5"></div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -524,7 +548,12 @@
       if (valor === correcta) {
         // Respuesta correcta
         preguntaDiv.classList.add('correcta');
-        feedbackDiv.textContent = '¡Correcto! Muy bien.';
+        // Mensaje personalizado para cada pregunta
+        if (numPregunta === 5) {
+          feedbackDiv.textContent = '¡Correcto! El teléfono permitió por primera vez que dos personas hablaran en tiempo real aunque estuvieran muy lejos, algo revolucionario para la época.';
+        } else {
+          feedbackDiv.textContent = '¡Correcto! Muy bien.';
+        }
       } else {
         // Respuesta incorrecta
         preguntaDiv.classList.add('incorrecta');
