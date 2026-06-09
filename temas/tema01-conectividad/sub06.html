@@ -403,20 +403,21 @@
     }
 
     /* ============================================================
-       Inicializar la sopa de letras
+       Inicializar la sopa de letras (25 palabras, 20x20)
        ============================================================ */
-    document.addEventListener('DOMContentLoaded', function() {
-      // Crear la sopa de letras con las 8 palabras clave
-      crearSopa('sopa06', ['SEISG', 'IOT', 'FUTURO', 'ROBOTICA', 'METAVERSO', 'NUBE', 'VIRTUAL', 'IA'], 12);
-
-      // Mostrar "6G" en vez de "SEISG" en la lista visual
-      var palabra0 = document.getElementById('palabra-sopa06-0');
-      if (palabra0) {
-        palabra0.textContent = '6G';
-      }
-
-      // "IA" ya se muestra como "IA", no necesita cambio
-    });
+    crearSopa('sopa06', [
+      'SEISG', 'IOT', 'FUTURO', 'ROBOTICA', 'METAVERSO',
+      'NUBE', 'VIRTUAL', 'INTELIGENCIA', 'ARTIFICIAL', 'AUTOMATICO',
+      'SENSORES', 'DISPOSITIVO', 'VEHICULO', 'AUTONOMO', 'SATELITE',
+      'ORBITA', 'REALIDAD', 'ASISTENTE', 'TRADUCIR', 'SEGURIDAD',
+      'CONECTIVIDAD', 'DIGITAL', 'ROBOT', 'CHATBOT', 'CIBERNETICO'
+    ], 20, [
+      '6G', 'IoT', 'FUTURO', 'ROBÓTICA', 'METAVERSO',
+      'NUBE', 'VIRTUAL', 'INTELIGENCIA', 'ARTIFICIAL', 'AUTOMÁTICO',
+      'SENSORES', 'DISPOSITIVO', 'VEHÍCULO', 'AUTÓNOMO', 'SATÉLITE',
+      'ÓRBITA', 'REALIDAD', 'ASISTENTE', 'TRADUCIR', 'SEGURIDAD',
+      'CONECTIVIDAD', 'DIGITAL', 'ROBOT', 'CHATBOT', 'CIBERNÉTICO'
+    ]);
   </script>
 
 </body>
