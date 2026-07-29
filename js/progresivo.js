@@ -84,7 +84,10 @@ const progresivo = (function() {
       feedback.textContent = '❌ Incorrecto. Debes volver a leer el texto anterior.';
       feedback.style.display = 'block';
       const btnReintentar = pasoDiv.querySelector('.btn-reintentar');
-      if (btnReintentar) btnReintentar.style.display = 'inline-flex';
+      if (btnReintentar) btnReintentar.style.display = 'none';
+      const radios = pasoDiv.querySelectorAll('input[type="radio"]');
+      radios.forEach(r => r.disabled = true);
+      setTimeout(function() { irAtras(contenedorId); }, 2000);
     }
   }
 
