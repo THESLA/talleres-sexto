@@ -72,7 +72,7 @@
 
   <main>
 
-    <article class="card" id="progresivo-sub04">
+    <article class="card" id="sub04">
 
       <h2 style="text-align:center;">🌐 El nacimiento de Internet</h2>
       <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Historia de la Conectividad · Sub-taller 4</p>
@@ -479,7 +479,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       progresivo.iniciar('sub04');
 
-      document.querySelectorAll('#progresivo-sub04 .pregunta .opcion').forEach(function(opcion) {
+      document.querySelectorAll('#sub04 .pregunta .opcion').forEach(function(opcion) {
         opcion.addEventListener('click', function() {
           var radio = this.querySelector('input[type="radio"]');
           if (radio.disabled) return;

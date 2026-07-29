@@ -18,7 +18,7 @@
     <a href="sub04.html">4</a><a href="sub05.html">5</a><a href="sub06.html" class="activo">6</a>
   </nav>
   <main>
-    <article class="card" id="progresivo-sub06">
+    <article class="card" id="sub06">
 
       <!-- PÁGINA 0 — TEXTO 1 -->
       <div class="paso-pagina" data-paso="0">
@@ -179,7 +179,7 @@
     crearSopa('sopa06', ['WIFI','ETHERNET','NUBE','HUELLA','SEGURIDAD','DATOS','CELULAR','CLOUD','DRIVE','CONTRASENA'], 12, ['WIFI','ETHERNET','NUBE','HUELLA','SEGURIDAD','DATOS','CELULAR','CLOUD','DRIVE','CONTRASEÑA']);
     document.addEventListener('DOMContentLoaded', function() {
       progresivo.iniciar('sub06');
-      document.querySelectorAll('#progresivo-sub06 .pregunta .opcion').forEach(function(o) {
+      document.querySelectorAll('#sub06 .pregunta .opcion').forEach(function(o) {
         o.addEventListener('click', function() {
           var r = this.querySelector('input[type="radio"]');
           if (r.disabled) return;

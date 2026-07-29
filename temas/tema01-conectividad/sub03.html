@@ -37,7 +37,7 @@
     <a href="sub04.html">4</a><a href="sub05.html">5</a><a href="sub06.html">6</a>
   </nav>
   <main>
-    <article class="card" id="progresivo-sub03">
+    <article class="card" id="sub03">
       <h2 style="text-align:center;">📖 La radio y la televisión</h2>
       <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Historia de la Conectividad · Sub-taller 3</p>
 
@@ -275,7 +275,7 @@
     crearSopa('sopa03', palabras03, 20);
     document.addEventListener('DOMContentLoaded', function() {
       progresivo.iniciar('sub03');
-      document.querySelectorAll('#progresivo-sub03 .pregunta .opcion').forEach(function(opcion) {
+      document.querySelectorAll('#sub03 .pregunta .opcion').forEach(function(opcion) {
         opcion.addEventListener('click', function() {
           var radio = this.querySelector('input[type="radio"]');
           if (radio.disabled) return;
