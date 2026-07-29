@@ -13,14 +13,17 @@ const progresivo = (function() {
 
   function barajarOpciones(contenedor) {
     contenedor.querySelectorAll('.paso-opciones').forEach(function(grupo) {
-      var hijos = Array.from(grupo.children);
-      for (var i = hijos.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = hijos[i];
-        hijos[i] = hijos[j];
-        hijos[j] = temp;
-      }
-      hijos.forEach(function(h) { grupo.appendChild(h); });
+      var labels = Array.from(grupo.children);
+      labels.sort(function() { return Math.random() - 0.5; });
+      labels.forEach(function(l) { grupo.appendChild(l); });
+      var letras = ['A', 'B', 'C', 'D'];
+      grupo.querySelectorAll('label').forEach(function(label, i) {
+        label.childNodes.forEach(function(n) {
+          if (n.nodeType === 3) {
+            n.textContent = n.textContent.replace(/ [A-D](\.)/, ' ' + letras[i] + '$1');
+          }
+        });
+      });
     });
   }
 
