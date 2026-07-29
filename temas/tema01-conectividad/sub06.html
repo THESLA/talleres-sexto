@@ -6,14 +6,12 @@
   <title>Sub-taller 6: El futuro de la conectividad · Sexto</title>
   <link rel="stylesheet" href="../../css/estilo.css">
   <style>
-    /* --- Estilos específicos para sub-taller 6 --- */
     .futuro-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       margin: 1.2rem 0;
     }
-
     .futuro-card {
       background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
       border-radius: 14px;
@@ -22,68 +20,32 @@
       border: 2px solid transparent;
       transition: all 0.3s;
     }
-
     .futuro-card:hover {
       border-color: #1a73e8;
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(26, 115, 232, 0.12);
     }
-
-    .futuro-card .icono-tec {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
+    .futuro-card .icono-tec { font-size: 2.5rem; margin-bottom: 0.5rem; }
     .futuro-card h4 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #1a73e8;
-      margin-bottom: 0.4rem;
+      font-size: 1.1rem; font-weight: 800; color: #1a73e8; margin-bottom: 0.4rem;
     }
-
-    .futuro-card p {
-      font-size: 0.92rem;
-      color: #455a64;
-      margin: 0;
-    }
-
+    .futuro-card p { font-size: 0.92rem; color: #455a64; margin: 0; }
     .reflexion {
       background: linear-gradient(135deg, #f3e5f5 0%, #e8f0fe 100%);
-      border-radius: 18px;
-      padding: 1.5rem 2rem;
-      margin: 1.5rem 0 1rem;
-      text-align: center;
-      border: 2px dashed #7c4dff;
+      border-radius: 18px; padding: 1.5rem 2rem; margin: 1.5rem 0 1rem;
+      text-align: center; border: 2px dashed #7c4dff;
     }
-
-    .reflexion h3 {
-      color: #7c4dff;
-      font-size: 1.3rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .reflexion p {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #512da8;
-      margin: 0;
-    }
+    .reflexion h3 { color: #7c4dff; font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .reflexion p { font-size: 1.1rem; font-weight: 600; color: #512da8; margin: 0; }
   </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       ENCABEZADO
-       ============================================================ -->
   <header>
     <h1>🚀 El futuro de la <span>conectividad</span></h1>
     <div class="subtitulo">Historia de la Conectividad · Sub-taller 6</div>
   </header>
 
-  <!-- ============================================================
-       NAVEGACIÓN ENTRE SUB-TALLERES
-       ============================================================ -->
   <nav class="subtaller-nav">
     <a href="../../index.html">🏠 Inicio</a>
     <span class="separador">|</span>
@@ -97,426 +59,424 @@
     <a href="sub06.html" class="activo">6</a>
   </nav>
 
-  <!-- ============================================================
-       CONTENIDO PRINCIPAL
-       ============================================================ -->
   <main>
 
-    <!-- ============================================================
-         PARTE 1 — LECTURA Y CONTEXTO
-         ============================================================ -->
-    <div class="card lectura">
+    <div class="card lectura" id="progresivo-sub06">
+
       <h2>📖 El futuro de la conectividad</h2>
 
-      <!-- Ilustración SVG: Futuro de la conectividad -->
-      <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e0f7fa,#b2ebf2); padding:10px;">
-          <defs>
-            <style>
-              .tit-il6 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#006064; }
-              .lab-il6 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#00838f; }
-            </style>
-          </defs>
-          <text x="350" y="25" text-anchor="middle" class="tit-il6">🚀 El futuro: inteligencia, automatización y conexión total</text>
-
-          <!-- IoT - Internet de las Cosas (izquierda) -->
-          <rect x="15" y="40" width="200" height="170" rx="14" fill="white" opacity="0.7"/>
-          <text x="115" y="62" text-anchor="middle" class="lab-il6" style="font-size:12px;">🏠 IoT — Hogar Inteligente</text>
-          <!-- Casa -->
-          <rect x="80" y="130" width="70" height="50" rx="3" fill="#ffcc80"/>
-          <polygon points="75,130 115,100 155,130" fill="#e65100" opacity="0.7"/>
-          <rect x="100" y="150" width="20" height="30" rx="2" fill="#795548"/>
-          <rect x="85" y="145" width="12" height="12" rx="1" fill="#90caf9"/>
-          <!-- Señal wifi en la casa -->
-          <path d="M115,115 Q108,108 115,102" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.6"/>
-          <path d="M115,120 Q105,112 115,104" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.5"/>
-          <!-- Dispositivos IoT -->
-          <rect x="40" y="80" width="18" height="14" rx="2" fill="#4caf50" opacity="0.7"/>
-          <text x="49" y="91" text-anchor="middle" class="lab-il6" style="font-size:7px; fill:white;">💡</text>
-          <rect x="155" y="85" width="18" height="14" rx="2" fill="#e53935" opacity="0.7"/>
-          <text x="164" y="96" text-anchor="middle" class="lab-il6" style="font-size:7px; fill:white;">🌡️</text>
-          <circle cx="48" cy="140" r="8" fill="#fdd835" opacity="0.7"/>
-          <text x="200" y="195" text-anchor="middle" class="lab-il6" style="font-size:9px;">Objetos cotidianos conectados</text>
-          <text x="115" y="210" text-anchor="middle" class="lab-il6" style="font-size:9px;">Neveras · Bombillas · Relojes</text>
-
-          <!-- ROBOT / IA (centro) -->
-          <rect x="250" y="40" width="200" height="170" rx="14" fill="white" opacity="0.7"/>
-          <text x="350" y="62" text-anchor="middle" class="lab-il6" style="font-size:12px;">🤖 Inteligencia Artificial</text>
-          <!-- Robot -->
-          <rect x="310" y="100" width="80" height="60" rx="10" fill="#e0e0e0" stroke="#90a4ae" stroke-width="2"/>
-          <rect x="325" y="105" width="50" height="25" rx="5" fill="#bbdefb" stroke="#90a4ae" stroke-width="1.5"/>
-          <!-- Ojos robot -->
-          <circle cx="338" cy="117" r="5" fill="#1a73e8"/>
-          <circle cx="362" cy="117" r="5" fill="#1a73e8"/>
-          <circle cx="338" cy="117" r="2" fill="white"/>
-          <circle cx="362" cy="117" r="2" fill="white"/>
-          <!-- Bocina -->
-          <rect x="335" y="135" width="30" height="3" rx="1" fill="#90a4ae"/>
-          <!-- Antena -->
-          <line x1="350" y1="100" x2="350" y2="85" stroke="#90a4ae" stroke-width="2"/>
-          <circle cx="350" cy="83" r="4" fill="#e53935"/>
-          <!-- Brazos -->
-          <line x1="310" y1="120" x2="280" y2="135" stroke="#90a4ae" stroke-width="3" stroke-linecap="round"/>
-          <line x1="390" y1="120" x2="420" y2="135" stroke="#90a4ae" stroke-width="3" stroke-linecap="round"/>
-          <!-- Piernas -->
-          <rect x="325" y="160" width="15" height="25" rx="3" fill="#90a4ae"/>
-          <rect x="360" y="160" width="15" height="25" rx="3" fill="#90a4ae"/>
-          <text x="350" y="200" text-anchor="middle" class="lab-il6" style="font-size:9px;">🧠 Asistentes virtuales</text>
-          <text x="350" y="212" text-anchor="middle" class="lab-il6" style="font-size:9px;">Chatbots · Traducción automática</text>
-
-          <!-- SATÉLITES Y METAVERSO (derecha) -->
-          <rect x="485" y="40" width="200" height="170" rx="14" fill="white" opacity="0.7"/>
-          <!-- Satélite -->
-          <text x="585" y="62" text-anchor="middle" class="lab-il6" style="font-size:12px;">🛰️ Conectividad total</text>
-          <rect x="570" y="72" width="30" height="18" rx="3" fill="#546e7a"/>
-          <rect x="575" y="68" width="20" height="4" rx="2" fill="#546e7a"/>
-          <!-- Paneles solares -->
-          <rect x="555" y="75" width="12" height="6" rx="1" fill="#1565c0" opacity="0.7"/>
-          <rect x="603" y="75" width="12" height="6" rx="1" fill="#1565c0" opacity="0.7"/>
-          <!-- Señal satélite -->
-          <path d="M585,90 Q585,100 570,110" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.6"/>
-          <path d="M585,90 Q585,105 555,120" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.5"/>
-          <path d="M585,90 Q585,110 540,130" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.4"/>
-          <!-- Lentes VR -->
-          <ellipse cx="570" cy="150" rx="20" ry="12" fill="#78909c"/>
-          <ellipse cx="570" cy="150" rx="16" ry="9" fill="#90caf9"/>
-          <ellipse cx="600" cy="150" rx="20" ry="12" fill="#78909c"/>
-          <ellipse cx="600" cy="150" rx="16" ry="9" fill="#90caf9"/>
-          <rect x="565" y="145" width="40" height="10" rx="2" fill="#455a64"/>
-          <text x="585" y="130" text-anchor="middle" class="lab-il6" style="font-size:10px;">🌍 Internet para todo el planeta</text>
-          <text x="585" y="185" text-anchor="middle" class="lab-il6" style="font-size:10px;">🥽 Realidad virtual · Metaverso</text>
-          <text x="585" y="200" text-anchor="middle" class="lab-il6" style="font-size:10px;">🚗 Vehículos autónomos · 6G</text>
-        </svg>
+      <!-- Barra de progreso -->
+      <div class="progreso-barra">
+        <div class="progreso-pasos">
+          <span class="paso" id="sub06-paso-0">1</span>
+          <span class="paso" id="sub06-paso-1">2</span>
+          <span class="paso" id="sub06-paso-2">3</span>
+        </div>
+        <div class="barra-progreso-linea">
+          <div class="barra-progreso-llena" id="barra-sub06"></div>
+        </div>
       </div>
-
-      <p>
-        ¡Hola, explorador del futuro! Hoy vamos a imaginar cómo será la comunicación
-        en los próximos años. La tecnología avanza tan rápido que lo que hoy parece
-        ciencia ficción, mañana será parte de nuestra vida cotidiana. ¿Te subes a
-        esta máquina del tiempo?
-      </p>
-
-      <h3>🌐 Internet de las Cosas (IoT)</h3>
-      <p>
-        Imagina que tu nevera te avise cuando se acabe la leche, que las bombillas
-        de tu casa se enciendan solas al llegar, o que tu reloj le envíe un mensaje
-        a tu mamá si detecta que tuviste una caída. Esto ya existe y se llama
-        <strong>Internet de las Cosas (IoT)</strong>. Consiste en tener objetos
-        cotidianos conectados a internet para que puedan comunicarse entre sí y
-        con nosotros. Desde una lavadora hasta un semáforo, todo puede ser
-        "inteligente" si está conectado.
-      </p>
-
-      <h3>📶 6G: la próxima revolución</h3>
-      <p>
-        Hoy tenemos 5G en muchos celulares, pero los científicos ya están creando
-        el <strong>6G</strong>. ¿Te imaginas descargar una película completa en
-        menos de un segundo? ¿O tener una videollamada tan real que parezca que
-        la otra persona está a tu lado? El 6G será entre 50 y 100 veces más rápido
-        que el 5G y permitirá cosas que aún no podemos ni imaginar.
-      </p>
-
-      <h3>🤖 Inteligencia Artificial y comunicación</h3>
-      <p>
-        Cuando le preguntas algo a Siri, Alexa o Google Assistant, estás usando
-        <strong>Inteligencia Artificial (IA)</strong>. Estos asistentes aprenden
-        de ti para entenderte mejor cada día. En el futuro, la IA traducirá
-        cualquier idioma al instante mientras conversas, escribirá tus correos
-        por ti y hasta podrá mantener una charla como si fuera un amigo. ¡Los
-        chatbots cada vez son más inteligentes!
-      </p>
-
-      <h3>🥽 Realidad virtual y metaverso</h3>
-      <p>
-        ¿Has visto esos lentes de realidad virtual que te transportan a otro mundo?
-        Así funciona el <strong>metaverso</strong>: un universo digital donde
-        puedes reunirte con tus amigos, jugar, estudiar e incluso trabajar, todo
-        sin salir de tu casa. En lugar de verte en una pantalla, podrás sentir
-        que realmente estás en ese lugar. Las clases del futuro podrían ser
-        excursiones al espacio o al fondo del mar, ¡sin moverte del salón!
-      </p>
-
-      <h3>☁️ Computación en la nube</h3>
-      <p>
-        Seguro has usado Google Drive, Dropbox o iCloud. Eso es
-        <strong>computación en la nube</strong>: tus archivos, fotos y programas
-        no están en tu computador, sino en internet. Puedes acceder a ellos desde
-        cualquier dispositivo, en cualquier lugar. En el futuro, los juegos y
-        programas más pesados funcionarán en la nube, por lo que no necesitarás
-        un computador súper potente. ¡Todo estará en internet!
-      </p>
-
-      <h3>🛰️ Satélites de órbita baja</h3>
-      <p>
-        Empresas como Starlink están lanzando miles de satélites pequeños que
-        viajan muy cerca de la Tierra. Su objetivo es llevar internet a cada
-        rincón del planeta: desde una selva en Amazonas hasta una isla perdida
-        en el océano. Pronto no habrá lugar en la Tierra sin conexión. ¡La
-        conectividad será para todos!
-      </p>
-
-      <h3>🚗 Vehículos autónomos</h3>
-      <p>
-        Los carros que se conducen solos ya no son cosa de películas. Estos
-        <strong>vehículos autónomos</strong> se comunican entre sí para evitar
-        choques, respetar semáforos y encontrar la mejor ruta. En el futuro,
-        podrás leer, dormir o jugar mientras el carro te lleva a tu destino.
-        Además, como se comunican entre ellos, los accidentes de tránsito podrían
-        desaparecer casi por completo.
-      </p>
-
-      <!-- Recuadro destacado de reflexión -->
-      <div class="reflexion">
-        <h3>💭 ¿Cómo te imaginas la comunicación en 20 años?</h3>
-        <p>
-          ¿Crees que las personas se comunicarán con el pensamiento? ¿Los hologramas
-          reemplazarán las pantallas? ¿Podremos enviar mensajes a otros planetas?
-          Todo es posible. Tú eres parte de esta historia: los inventores del futuro
-          están sentados hoy en los salones de clase. ¡Sueña en grande!
-        </p>
-      </div>
-
-      <p>
-        La conectividad sigue evolucionando y cada vez es más rápida, más inteligente
-        y más accesible. Desde las señales de humo de nuestros antepasados hasta
-        los satélites que orbitan la Tierra, la humanidad nunca ha dejado de buscar
-        nuevas formas de conectarse. Y lo mejor está por venir: <strong>tú puedes
-        ser quien invente la próxima gran revolución en la comunicación</strong>.
-        El futuro no es algo que espera, es algo que se construye. ¿Qué vas a
-        construir tú?
-      </p>
 
       <!-- ============================================================
-           PREGUNTAS DE COMPRENSIÓN
+           SECCIÓN 1 — IoT + 6G + IA
            ============================================================ -->
-      <h3 style="margin-top: 2rem;">📝 Preguntas de comprensión</h3>
-      <p style="color: #546e7a; margin-bottom: 1rem;">
-        Lee cada pregunta y selecciona la respuesta correcta. Al hacer clic
-        sabrás si acertaste.
-      </p>
+      <div class="seccion-contenido">
 
-      <!-- Pregunta 1 -->
-      <div class="pregunta" id="p1">
-        <p>1. ¿Qué significa IoT?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p1" value="a" onclick="verificar('p1','a')">
-            Internet de las Cosas
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p1" value="b" onclick="verificar('p1','b')">
-            Instituto de Tecnología
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p1" value="c" onclick="verificar('p1','c')">
-            Información y Telecomunicaciones
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p1" value="d" onclick="verificar('p1','d')">
-            Interfaz de Transferencia
-          </label>
+        <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e0f7fa,#b2ebf2); padding:10px;">
+            <defs>
+              <style>
+                .tit-il6 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#006064; }
+                .lab-il6 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#00838f; }
+              </style>
+            </defs>
+            <text x="350" y="25" text-anchor="middle" class="tit-il6">🚀 El futuro: inteligencia, automatización y conexión total</text>
+            <rect x="15" y="40" width="200" height="170" rx="14" fill="white" opacity="0.7"/>
+            <text x="115" y="62" text-anchor="middle" class="lab-il6" style="font-size:12px;">🏠 IoT — Hogar Inteligente</text>
+            <rect x="80" y="130" width="70" height="50" rx="3" fill="#ffcc80"/>
+            <polygon points="75,130 115,100 155,130" fill="#e65100" opacity="0.7"/>
+            <rect x="100" y="150" width="20" height="30" rx="2" fill="#795548"/>
+            <rect x="85" y="145" width="12" height="12" rx="1" fill="#90caf9"/>
+            <path d="M115,115 Q108,108 115,102" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.6"/>
+            <path d="M115,120 Q105,112 115,104" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.5"/>
+            <rect x="40" y="80" width="18" height="14" rx="2" fill="#4caf50" opacity="0.7"/>
+            <text x="49" y="91" text-anchor="middle" class="lab-il6" style="font-size:7px; fill:white;">💡</text>
+            <rect x="155" y="85" width="18" height="14" rx="2" fill="#e53935" opacity="0.7"/>
+            <text x="164" y="96" text-anchor="middle" class="lab-il6" style="font-size:7px; fill:white;">🌡️</text>
+            <circle cx="48" cy="140" r="8" fill="#fdd835" opacity="0.7"/>
+            <text x="200" y="195" text-anchor="middle" class="lab-il6" style="font-size:9px;">Objetos cotidianos conectados</text>
+            <text x="115" y="210" text-anchor="middle" class="lab-il6" style="font-size:9px;">Neveras · Bombillas · Relojes</text>
+            <rect x="250" y="40" width="200" height="170" rx="14" fill="white" opacity="0.7"/>
+            <text x="350" y="62" text-anchor="middle" class="lab-il6" style="font-size:12px;">🤖 Inteligencia Artificial</text>
+            <rect x="310" y="100" width="80" height="60" rx="10" fill="#e0e0e0" stroke="#90a4ae" stroke-width="2"/>
+            <rect x="325" y="105" width="50" height="25" rx="5" fill="#bbdefb" stroke="#90a4ae" stroke-width="1.5"/>
+            <circle cx="338" cy="117" r="5" fill="#1a73e8"/>
+            <circle cx="362" cy="117" r="5" fill="#1a73e8"/>
+            <circle cx="338" cy="117" r="2" fill="white"/>
+            <circle cx="362" cy="117" r="2" fill="white"/>
+            <rect x="335" y="135" width="30" height="3" rx="1" fill="#90a4ae"/>
+            <line x1="350" y1="100" x2="350" y2="85" stroke="#90a4ae" stroke-width="2"/>
+            <circle cx="350" cy="83" r="4" fill="#e53935"/>
+            <line x1="310" y1="120" x2="280" y2="135" stroke="#90a4ae" stroke-width="3" stroke-linecap="round"/>
+            <line x1="390" y1="120" x2="420" y2="135" stroke="#90a4ae" stroke-width="3" stroke-linecap="round"/>
+            <rect x="325" y="160" width="15" height="25" rx="3" fill="#90a4ae"/>
+            <rect x="360" y="160" width="15" height="25" rx="3" fill="#90a4ae"/>
+            <text x="350" y="200" text-anchor="middle" class="lab-il6" style="font-size:9px;">🧠 Asistentes virtuales</text>
+            <text x="350" y="212" text-anchor="middle" class="lab-il6" style="font-size:9px;">Chatbots · Traducción automática</text>
+            <rect x="485" y="40" width="200" height="170" rx="14" fill="white" opacity="0.7"/>
+            <text x="585" y="62" text-anchor="middle" class="lab-il6" style="font-size:12px;">🛰️ Conectividad total</text>
+            <rect x="570" y="72" width="30" height="18" rx="3" fill="#546e7a"/>
+            <rect x="575" y="68" width="20" height="4" rx="2" fill="#546e7a"/>
+            <rect x="555" y="75" width="12" height="6" rx="1" fill="#1565c0" opacity="0.7"/>
+            <rect x="603" y="75" width="12" height="6" rx="1" fill="#1565c0" opacity="0.7"/>
+            <path d="M585,90 Q585,100 570,110" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.6"/>
+            <path d="M585,90 Q585,105 555,120" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.5"/>
+            <path d="M585,90 Q585,110 540,130" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.4"/>
+            <ellipse cx="570" cy="150" rx="20" ry="12" fill="#78909c"/>
+            <ellipse cx="570" cy="150" rx="16" ry="9" fill="#90caf9"/>
+            <ellipse cx="600" cy="150" rx="20" ry="12" fill="#78909c"/>
+            <ellipse cx="600" cy="150" rx="16" ry="9" fill="#90caf9"/>
+            <rect x="565" y="145" width="40" height="10" rx="2" fill="#455a64"/>
+            <text x="585" y="130" text-anchor="middle" class="lab-il6" style="font-size:10px;">🌍 Internet para todo el planeta</text>
+            <text x="585" y="185" text-anchor="middle" class="lab-il6" style="font-size:10px;">🥽 Realidad virtual · Metaverso</text>
+            <text x="585" y="200" text-anchor="middle" class="lab-il6" style="font-size:10px;">🚗 Vehículos autónomos · 6G</text>
+          </svg>
         </div>
-        <div class="feedback" id="fb-p1"></div>
-      </div>
 
-      <!-- Pregunta 2 -->
-      <div class="pregunta" id="p2">
-        <p>2. ¿Cuál es la próxima generación de internet móvil que promete ser muchísimo más rápida que la actual?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p2" value="a" onclick="verificar('p2','a')">
-            5G
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p2" value="b" onclick="verificar('p2','b')">
-            6G
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p2" value="c" onclick="verificar('p2','c')">
-            4G LTE
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p2" value="d" onclick="verificar('p2','d')">
-            7G
-          </label>
+        <p>
+          ¡Hola, explorador del futuro! Hoy vamos a imaginar cómo será la comunicación
+          en los próximos años. La tecnología avanza tan rápido que lo que hoy parece
+          ciencia ficción, mañana será parte de nuestra vida cotidiana. ¿Te subes a
+          esta máquina del tiempo?
+        </p>
+
+        <h3>🌐 Internet de las Cosas (IoT)</h3>
+        <p>
+          Imagina que tu nevera te avise cuando se acabe la leche, que las bombillas
+          de tu casa se enciendan solas al llegar, o que tu reloj le envíe un mensaje
+          a tu mamá si detecta que tuviste una caída. Esto ya existe y se llama
+          <strong>Internet de las Cosas (IoT)</strong>. Consiste en tener objetos
+          cotidianos conectados a internet para que puedan comunicarse entre sí y
+          con nosotros. Desde una lavadora hasta un semáforo, todo puede ser
+          "inteligente" si está conectado.
+        </p>
+
+        <h3>📶 6G: la próxima revolución</h3>
+        <p>
+          Hoy tenemos 5G en muchos celulares, pero los científicos ya están creando
+          el <strong>6G</strong>. ¿Te imaginas descargar una película completa en
+          menos de un segundo? ¿O tener una videollamada tan real que parezca que
+          la otra persona está a tu lado? El 6G será entre 50 y 100 veces más rápido
+          que el 5G y permitirá cosas que aún no podemos ni imaginar.
+        </p>
+
+        <h3>🤖 Inteligencia Artificial y comunicación</h3>
+        <p>
+          Cuando le preguntas algo a Siri, Alexa o Google Assistant, estás usando
+          <strong>Inteligencia Artificial (IA)</strong>. Estos asistentes aprenden
+          de ti para entenderte mejor cada día. En el futuro, la IA traducirá
+          cualquier idioma al instante mientras conversas, escribirá tus correos
+          por ti y hasta podrá mantener una charla como si fuera un amigo. ¡Los
+          chatbots cada vez son más inteligentes!
+        </p>
+
+        <div class="seccion-divisor">· · ·</div>
+
+        <div class="checkpoint" id="sub06-chk-0-0">
+          <h4>🔐 Verificación de lectura — Parte 1</h4>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">Responde correctamente para desbloquear la siguiente parte.</p>
+          <p><strong>¿Qué significa IoT?</strong></p>
+          <div class="chk-opciones">
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk0" value="A" onchange="progresivo.verificar('sub06',0,0,this.value)">
+              A. Internet de las Cosas
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk0" value="B" onchange="progresivo.verificar('sub06',0,0,this.value)">
+              B. Instituto de Tecnología
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk0" value="C" onchange="progresivo.verificar('sub06',0,0,this.value)">
+              C. Información y Telecomunicaciones
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk0" value="D" onchange="progresivo.verificar('sub06',0,0,this.value)">
+              D. Interfaz de Transferencia
+            </label>
+          </div>
+          <div class="chk-fb"></div>
+          <button class="btn btn-primario btn-continuar" id="sub06-sig-0" onclick="progresivo.siguiente('sub06')">➡️ Continuar leyendo</button>
         </div>
-        <div class="feedback" id="fb-p2"></div>
-      </div>
 
-      <!-- Pregunta 3 -->
-      <div class="pregunta" id="p3">
-        <p>3. ¿Para qué sirve la computación en la nube?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p3" value="a" onclick="verificar('p3','a')">
-            Para almacenar archivos y programas en internet y acceder desde cualquier lugar
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p3" value="b" onclick="verificar('p3','b')">
-            Para conectar el computador a las nubes del cielo y tener mejor señal
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p3" value="c" onclick="verificar('p3','c')">
-            Para reemplazar todos los cables del planeta por señales de humo
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p3" value="d" onclick="verificar('p3','d')">
-            Para tener internet solo cuando esté nublado
-          </label>
+      </div><!-- /seccion-contenido 1 -->
+
+      <!-- ============================================================
+           SECCIÓN 2 — Realidad virtual + Nube + Satélites + Vehículos
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <div class="seccion-divisor">⭐</div>
+
+        <h3>🥽 Realidad virtual y metaverso</h3>
+        <p>
+          ¿Has visto esos lentes de realidad virtual que te transportan a otro mundo?
+          Así funciona el <strong>metaverso</strong>: un universo digital donde
+          puedes reunirte con tus amigos, jugar, estudiar e incluso trabajar, todo
+          sin salir de tu casa. En lugar de verte en una pantalla, podrás sentir
+          que realmente estás en ese lugar. Las clases del futuro podrían ser
+          excursiones al espacio o al fondo del mar, ¡sin moverte del salón!
+        </p>
+
+        <h3>☁️ Computación en la nube</h3>
+        <p>
+          Seguro has usado Google Drive, Dropbox o iCloud. Eso es
+          <strong>computación en la nube</strong>: tus archivos, fotos y programas
+          no están en tu computador, sino en internet. Puedes acceder a ellos desde
+          cualquier dispositivo, en cualquier lugar. En el futuro, los juegos y
+          programas más pesados funcionarán en la nube, por lo que no necesitarás
+          un computador súper potente. ¡Todo estará en internet!
+        </p>
+
+        <h3>🛰️ Satélites de órbita baja</h3>
+        <p>
+          Empresas como Starlink están lanzando miles de satélites pequeños que
+          viajan muy cerca de la Tierra. Su objetivo es llevar internet a cada
+          rincón del planeta: desde una selva en Amazonas hasta una isla perdida
+          en el océano. Pronto no habrá lugar en la Tierra sin conexión. ¡La
+          conectividad será para todos!
+        </p>
+
+        <h3>🚗 Vehículos autónomos</h3>
+        <p>
+          Los carros que se conducen solos ya no son cosa de películas. Estos
+          <strong>vehículos autónomos</strong> se comunican entre sí para evitar
+          choques, respetar semáforos y encontrar la mejor ruta. En el futuro,
+          podrás leer, dormir o jugar mientras el carro te lleva a tu destino.
+          Además, como se comunican entre ellos, los accidentes de tránsito podrían
+          desaparecer casi por completo.
+        </p>
+
+        <div class="reflexion">
+          <h3>💭 ¿Cómo te imaginas la comunicación en 20 años?</h3>
+          <p>
+            ¿Crees que las personas se comunicarán con el pensamiento? ¿Los hologramas
+            reemplazarán las pantallas? ¿Podremos enviar mensajes a otros planetas?
+            Todo es posible. Tú eres parte de esta historia: los inventores del futuro
+            están sentados hoy en los salones de clase. ¡Sueña en grande!
+          </p>
         </div>
-        <div class="feedback" id="fb-p3"></div>
-      </div>
 
-      <!-- Pregunta 4 -->
-      <div class="pregunta" id="p4">
-        <p>4. ¿Qué permiten los satélites de órbita baja como los de Starlink?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p4" value="a" onclick="verificar('p4','a')">
-            Llevar internet a lugares remotos del planeta donde antes no había conexión
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p4" value="b" onclick="verificar('p4','b')">
-            Ver canales de televisión en blanco y negro
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p4" value="c" onclick="verificar('p4','c')">
-            Enviar cartas físicas por correo más rápido
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p4" value="d" onclick="verificar('p4','d')">
-            Reemplazar todos los celulares del mundo
-          </label>
+        <p>
+          La conectividad sigue evolucionando y cada vez es más rápida, más inteligente
+          y más accesible. Desde las señales de humo de nuestros antepasados hasta
+          los satélites que orbitan la Tierra, la humanidad nunca ha dejado de buscar
+          nuevas formas de conectarse. Y lo mejor está por venir: <strong>tú puedes
+          ser quien invente la próxima gran revolución en la comunicación</strong>.
+          El futuro no es algo que espera, es algo que se construye. ¿Qué vas a
+          construir tú?
+        </p>
+
+        <div class="seccion-divisor">· · ·</div>
+
+        <div class="checkpoint" id="sub06-chk-1-0">
+          <h4>🔐 Verificación de lectura — Parte 2</h4>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">Responde correctamente para desbloquear la siguiente parte.</p>
+          <p><strong>¿Cuál es la próxima generación de internet móvil que promete ser muchísimo más rápida que la actual?</strong></p>
+          <div class="chk-opciones">
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk1" value="A" onchange="progresivo.verificar('sub06',1,0,this.value)">
+              A. 5G
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk1" value="B" onchange="progresivo.verificar('sub06',1,0,this.value)">
+              B. 6G
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk1" value="C" onchange="progresivo.verificar('sub06',1,0,this.value)">
+              C. 4G LTE
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub06-chk1" value="D" onchange="progresivo.verificar('sub06',1,0,this.value)">
+              D. 7G
+            </label>
+          </div>
+          <div class="chk-fb"></div>
+          <button class="btn btn-primario btn-continuar" id="sub06-sig-1" onclick="progresivo.siguiente('sub06')">➡️ Continuar leyendo</button>
         </div>
-        <div class="feedback" id="fb-p4"></div>
-      </div>
 
-      <!-- Pregunta 5 -->
-      <div class="pregunta" id="p5">
-        <p>5. ¿Qué es el Internet de las Cosas (IoT)?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p5" value="a" onclick="verificar('p5','a')">
-            Una red social para objetos perdidos
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p5" value="b" onclick="verificar('p5','b')">
-            Un tipo de computador muy pequeño
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p5" value="c" onclick="verificar('p5','c')">
-            Objetos cotidianos conectados a internet (neveras, bombillas, relojes)
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p5" value="d" onclick="verificar('p5','d')">
-            Un cable especial para conectar dispositivos
-          </label>
+      </div><!-- /seccion-contenido 2 -->
+
+      <!-- ============================================================
+           SECCIÓN 3 — Preguntas finales + sopa de letras
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <div class="seccion-divisor">⭐</div>
+
+        <h3 style="margin-top: 1.5rem;">📝 Preguntas de comprensión</h3>
+        <p style="color: #546e7a; margin-bottom: 1rem;">
+          Lee cada pregunta y selecciona la respuesta correcta.
+        </p>
+
+        <div class="pregunta" id="p1">
+          <p>1. ¿Qué significa IoT?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p1" value="a" onclick="verificar('p1','a')">
+              Internet de las Cosas
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p1" value="b" onclick="verificar('p1','b')">
+              Instituto de Tecnología
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p1" value="c" onclick="verificar('p1','c')">
+              Información y Telecomunicaciones
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p1" value="d" onclick="verificar('p1','d')">
+              Interfaz de Transferencia
+            </label>
+          </div>
+          <div class="feedback" id="fb-p1"></div>
         </div>
-        <div class="feedback" id="fb-p5"></div>
-      </div>
-    </div>
 
-    <!-- ============================================================
-         PARTE 2 — SOPA DE LETRAS INTERACTIVA
-         ============================================================ -->
-    <div class="card">
-      <h2>🔍 Sopa de Letras — El futuro de la conectividad</h2>
-      <p style="color: #546e7a; margin-bottom: 1rem;">
-        Encuentra las <strong>8 palabras</strong> relacionadas con el futuro de la
-        conectividad. Haz clic en las letras para seleccionarlas (puedes arrastrar
-        en horizontal, vertical o diagonal) y luego presiona "Validar palabra".
-        ¡Buena suerte!
-      </p>
-      <div id="sopa06"></div>
+        <div class="pregunta" id="p2">
+          <p>2. ¿Cuál es la próxima generación de internet móvil que promete ser muchísimo más rápida que la actual?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p2" value="a" onclick="verificar('p2','a')">
+              5G
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p2" value="b" onclick="verificar('p2','b')">
+              6G
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p2" value="c" onclick="verificar('p2','c')">
+              4G LTE
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p2" value="d" onclick="verificar('p2','d')">
+              7G
+            </label>
+          </div>
+          <div class="feedback" id="fb-p2"></div>
+        </div>
+
+        <div class="pregunta" id="p3">
+          <p>3. ¿Para qué sirve la computación en la nube?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p3" value="a" onclick="verificar('p3','a')">
+              Para almacenar archivos y programas en internet y acceder desde cualquier lugar
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p3" value="b" onclick="verificar('p3','b')">
+              Para conectar el computador a las nubes del cielo
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p3" value="c" onclick="verificar('p3','c')">
+              Para reemplazar todos los cables por señales de humo
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p3" value="d" onclick="verificar('p3','d')">
+              Para tener internet solo cuando esté nublado
+            </label>
+          </div>
+          <div class="feedback" id="fb-p3"></div>
+        </div>
+
+        <div class="pregunta" id="p4">
+          <p>4. ¿Qué permiten los satélites de órbita baja como los de Starlink?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p4" value="a" onclick="verificar('p4','a')">
+              Llevar internet a lugares remotos del planeta
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p4" value="b" onclick="verificar('p4','b')">
+              Ver canales de TV en blanco y negro
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p4" value="c" onclick="verificar('p4','c')">
+              Enviar cartas físicas por correo más rápido
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p4" value="d" onclick="verificar('p4','d')">
+              Reemplazar todos los celulares del mundo
+            </label>
+          </div>
+          <div class="feedback" id="fb-p4"></div>
+        </div>
+
+        <div class="pregunta" id="p5">
+          <p>5. ¿Qué es el Internet de las Cosas (IoT)?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p5" value="a" onclick="verificar('p5','a')">
+              Una red social para objetos perdidos
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p5" value="b" onclick="verificar('p5','b')">
+              Un tipo de computador muy pequeño
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p5" value="c" onclick="verificar('p5','c')">
+              Objetos cotidianos conectados a internet
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p5" value="d" onclick="verificar('p5','d')">
+              Un cable especial para conectar dispositivos
+            </label>
+          </div>
+          <div class="feedback" id="fb-p5"></div>
+        </div>
+
+        <!-- Sopa de letras -->
+        <div style="margin-top: 2rem;">
+          <h2>🔍 Sopa de Letras — El futuro de la conectividad</h2>
+          <p style="color: #546e7a; margin-bottom: 1rem;">
+            Encuentra las palabras relacionadas con el futuro de la conectividad.
+          </p>
+          <div id="sopa06"></div>
+        </div>
+
+      </div><!-- /seccion-contenido 3 -->
+
     </div>
 
   </main>
 
-  <!-- ============================================================
-       PIE DE PÁGINA
-       ============================================================ -->
   <footer>
     Colegio San Luis · Tecnología e Informática · Grado Sexto
   </footer>
 
-  <!-- ============================================================
-       SCRIPTS
-       ============================================================ -->
   <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
   <script>
-    /* ============================================================
-       Lógica de verificación de preguntas
-       ============================================================ */
     function verificar(preguntaId, respuesta) {
-      // Definir respuestas correctas
       const respuestas = {
-        p1: 'a',  // Internet de las Cosas
-        p2: 'b',  // 6G
-        p3: 'a',  // Almacenar archivos en internet
-        p4: 'a',  // Internet en lugares remotos
-        p5: 'c'   // Objetos cotidianos conectados a internet
+        p1: 'a', p2: 'b', p3: 'a', p4: 'a', p5: 'c'
       };
-
-      // Feedback para cada opción
       const feedbacks = {
-        p1: {
-          a: '✅ ¡Correcto! IoT significa Internet de las Cosas (Internet of Things).',
-          b: '❌ No es Instituto de Tecnología. IoT viene del inglés Internet of Things.',
-          c: '❌ No es Información y Telecomunicaciones. Recuerda: Internet de las Cosas.',
-          d: '❌ No es Interfaz de Transferencia. IoT se refiere a objetos conectados a internet.'
-        },
-        p2: {
-          a: '❌ El 5G es la generación actual. La que viene después es el 6G.',
-          b: '✅ ¡Muy bien! El 6G será la próxima generación y será mucho más rápido.',
-          c: '❌ 4G LTE es la generación anterior al 5G. La del futuro es 6G.',
-          d: '❌ Todavía no se habla de 7G. La siguiente después del 5G es 6G.'
-        },
-        p3: {
-          a: '✅ ¡Exacto! La nube permite guardar archivos y usar programas en internet.',
-          b: '❌ No tiene que ver con nubes del cielo. Es una "nube" de servidores en internet.',
-          c: '❌ No, los cables no desaparecerán. La nube usa servidores conectados por cables.',
-          d: '❌ ¡No! La nube funciona siempre, sin importar el clima.'
-        },
-        p4: {
-          a: '✅ ¡Correcto! Los satélites de órbita baja llevan internet a zonas sin cobertura.',
-          b: '❌ No, la televisión en blanco y negro es cosa del pasado.',
-          c: '❌ No, las cartas físicas no se envían con satélites.',
-          d: '❌ Los celulares no desaparecerán, al contrario, funcionarán mejor con estos satélites.'
-        },
-        p5: {
-          a: '❌ No es una red social. IoT se refiere a objetos físicos conectados a internet.',
-          b: '❌ No es un computador pequeño. IoT son objetos cotidianos con conexión a internet.',
-          c: '✅ ¡Correcto! El Internet de las Cosas (IoT) conecta objetos cotidianos como neveras, bombillas, relojes y hasta carros a internet para que puedan comunicarse y ser controlados de forma inteligente.',
-          d: '❌ No es un cable especial. IoT usa la conexión a internet que ya tenemos (wifi, datos móviles, etc.).'
-        }
+        p1: { a: '✅ ¡Correcto! IoT significa Internet of Things.', b: '❌ No es Instituto de Tecnología.', c: '❌ No es Información y Telecomunicaciones.', d: '❌ No es Interfaz de Transferencia.' },
+        p2: { a: '❌ El 5G es la generación actual.', b: '✅ ¡Muy bien! El 6G será la próxima generación.', c: '❌ 4G LTE es anterior al 5G.', d: '❌ Todavía no se habla de 7G.' },
+        p3: { a: '✅ ¡Exacto! La nube permite guardar archivos en internet.', b: '❌ No tiene que ver con nubes del cielo.', c: '❌ No, los cables no desaparecerán.', d: '❌ ¡No! La nube funciona siempre.' },
+        p4: { a: '✅ ¡Correcto! Llevan internet a zonas sin cobertura.', b: '❌ No, eso es cosa del pasado.', c: '❌ No, las cartas no se envían con satélites.', d: '❌ Los celulares no desaparecerán.' },
+        p5: { a: '❌ No es una red social.', b: '❌ No es un computador pequeño.', c: '✅ ¡Correcto! IoT conecta objetos cotidianos a internet.', d: '❌ No es un cable especial.' }
       };
-
       const pregunta = document.getElementById(preguntaId);
       const feedback = document.getElementById('fb-' + preguntaId);
       const correcta = respuestas[preguntaId];
-
-      // Reiniciar estilos
       pregunta.classList.remove('correcta', 'incorrecta');
-
-      // Mostrar feedback
       feedback.textContent = feedbacks[preguntaId][respuesta];
-
-      if (respuesta === correcta) {
-        pregunta.classList.add('correcta');
-      } else {
-        pregunta.classList.add('incorrecta');
-      }
-
-      // Deshabilitar todos los radios de esta pregunta después de responder
+      if (respuesta === correcta) pregunta.classList.add('correcta');
+      else pregunta.classList.add('incorrecta');
       const radios = pregunta.querySelectorAll('input[type="radio"]');
-      radios.forEach(function(r) {
-        r.disabled = true;
-      });
+      radios.forEach(function(r) { r.disabled = true; });
     }
 
-    /* ============================================================
-       Inicializar la sopa de letras (25 palabras, 20x20)
-       ============================================================ */
     crearSopa('sopa06', [
       'SEISG', 'IOT', 'FUTURO', 'ROBOTICA', 'METAVERSO',
       'NUBE', 'VIRTUAL', 'INTELIGENCIA', 'ARTIFICIAL', 'AUTOMATICO',
@@ -530,6 +490,13 @@
       'ÓRBITA', 'REALIDAD', 'ASISTENTE', 'TRADUCIR', 'SEGURIDAD',
       'CONECTIVIDAD', 'DIGITAL', 'ROBOT', 'CHATBOT', 'CIBERNÉTICO'
     ]);
+
+    progresivo.iniciar('sub06', {
+      preguntas: {
+        0: [{ correcta: 'A', explicacion: 'IoT significa Internet de las Cosas (Internet of Things).' }],
+        1: [{ correcta: 'B', explicacion: 'El 6G será la próxima generación de internet móvil, entre 50 y 100 veces más rápido que el 5G.' }]
+      }
+    });
   </script>
 
 </body>
