@@ -573,6 +573,242 @@ footer span {
   border-radius: 20px;
 }
 
+/* --- Sistema Progresivo (desbloqueo de secciones) --- */
+.seccion-contenido {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.seccion-oculta {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.seccion-activa {
+  display: block;
+  animation: aparecer 0.6s ease forwards;
+}
+
+.seccion-completada {
+  display: block;
+  opacity: 0.5;
+  pointer-events: none;
+  position: relative;
+}
+
+.seccion-completada::after {
+  content: '✅ Completado';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Barra de progreso */
+.progreso-barra {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid #e8f0fe;
+}
+
+.progreso-pasos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.paso {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  background: #e0e7f0;
+  color: #78909c;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.paso::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: calc(100% + 0.5rem);
+  height: 3px;
+  background: #e0e7f0;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.progreso-pasos .paso:last-child::after {
+  display: none;
+}
+
+.paso-activo {
+  background: #1a73e8;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.2);
+}
+
+.paso-activo::after {
+  background: #e0e7f0;
+}
+
+.paso-completado {
+  background: #4caf50;
+  color: white;
+}
+
+.paso-completado::after {
+  background: #4caf50;
+}
+
+.barra-progreso-linea {
+  width: 100%;
+  height: 6px;
+  background: #e0e7f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barra-progreso-llena {
+  height: 100%;
+  background: linear-gradient(90deg, #1a73e8, #4caf50);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 700;
+  min-width: 0;
+}
+
+/* Checkpoint (preguntas entre secciones) */
+.checkpoint {
+  background: #f8faff;
+  border: 2px solid #e8f0fe;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 4px solid #1a73e8;
+}
+
+.checkpoint h4 {
+  color: #1a73e8;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.checkpoint .chk-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.checkpoint .chk-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+
+.checkpoint .chk-opcion:hover {
+  background: #e8f0fe;
+}
+
+.checkpoint .chk-opcion input[type="radio"] {
+  accent-color: #1a73e8;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.checkpoint .chk-fb {
+  margin-top: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: none;
+  font-size: 0.9rem;
+}
+
+.checkpoint.chk-ok .chk-fb {
+  display: block;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.checkpoint.chk-err .chk-fb {
+  display: block;
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.checkpoint.chk-ok {
+  border-color: #4caf50;
+  border-top-color: #4caf50;
+}
+
+.checkpoint.chk-err {
+  border-color: #e53935;
+  border-top-color: #e53935;
+}
+
+/* Botón continuar (oculto hasta responder bien) */
+.btn-continuar {
+  display: none;
+  margin-top: 1rem;
+}
+
+.btn-continuar.btn-visible {
+  display: inline-flex;
+}
+
+/* Separador visual entre secciones dentro de la lectura */
+.seccion-divisor {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #bbdefb;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   header {

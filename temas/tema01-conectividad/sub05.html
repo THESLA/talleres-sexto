@@ -5,21 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sub-taller 5: La era digital y la conectividad moderna — Historia de la Conectividad · Sexto</title>
   <link rel="stylesheet" href="../../css/estilo.css">
-  <!-- Google Fonts Nunito (cargado desde estilo.css con @import) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ============================================================
-       ENCABEZADO
-       ============================================================ -->
   <header>
     <h1>📱 La era digital y la <span>conectividad moderna</span></h1>
     <div class="subtitulo">Historia de la Conectividad · Sub-taller 5</div>
   </header>
 
-  <!-- ============================================================
-       NAVEGACIÓN
-       ============================================================ -->
   <nav class="subtaller-nav">
     <a href="../../index.html">🏠 Inicio</a>
     <span class="separador">|</span>
@@ -33,385 +27,442 @@
     <a href="sub06.html">6</a>
   </nav>
 
-  <!-- ============================================================
-       CONTENIDO PRINCIPAL
-       ============================================================ -->
   <main>
 
-    <!-- ============================================================
-         PARTE 1 — LECTURA Y CONTEXTO
-         ============================================================ -->
-    <section class="card lectura">
-      <h2>📖 La era digital y la conectividad moderna</h2>
+    <article class="card lectura" id="progresivo-sub05">
 
-      <!-- Ilustración SVG: Era digital moderna -->
-      <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#fce4ec,#f8bbd0); padding:10px;">
-          <defs>
-            <style>
-              .tit-il5 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#880e4f; }
-              .lab-il5 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#ad1457; }
-            </style>
-          </defs>
-          <text x="350" y="25" text-anchor="middle" class="tit-il5">📱 La era digital: conectividad en el bolsillo</text>
+      <h2>📱 La era digital y la conectividad moderna</h2>
 
-          <!-- SMARTPHONE (centro-grande) -->
-          <rect x="260" y="60" width="80" height="130" rx="12" fill="#212121"/>
-          <rect x="265" y="65" width="70" height="115" rx="8" fill="#e3f2fd"/>
-          <rect x="267" y="67" width="66" height="111" rx="6" fill="white"/>
-          <!-- Pantalla del smartphone -->
-          <rect x="270" y="72" width="60" height="100" rx="4" fill="#bbdefb"/>
-          <!-- Cámara -->
-          <circle cx="300" cy="70" r="2" fill="#333"/>
-          <!-- Botón home -->
-          <circle cx="300" cy="176" r="5" fill="#90a4ae"/>
-          <!-- App icons en pantalla -->
-          <rect x="277" y="80" width="14" height="14" rx="3" fill="#1a73e8"/>
-          <rect x="295" y="80" width="14" height="14" rx="3" fill="#4caf50"/>
-          <rect x="313" y="80" width="14" height="14" rx="3" fill="#fdd835"/>
-          <rect x="277" y="98" width="14" height="14" rx="3" fill="#e53935"/>
-          <rect x="295" y="98" width="14" height="14" rx="3" fill="#ff6f00"/>
-          <rect x="313" y="98" width="14" height="14" rx="3" fill="#9c27b0"/>
-          <rect x="277" y="116" width="14" height="14" rx="3" fill="#00bcd4"/>
-          <rect x="295" y="116" width="14" height="14" rx="3" fill="#8bc34a"/>
-          <rect x="313" y="116" width="14" height="14" rx="3" fill="#ff5722"/>
-          <!-- Barra de estado -->
-          <rect x="275" y="73" width="50" height="6" rx="2" fill="#333" opacity="0.2"/>
-          <text x="300" y="160" text-anchor="middle" class="lab-il5" style="font-size:8px;">¡Hola!</text>
-
-          <!-- WiFi (izquierda) -->
-          <text x="120" y="85" text-anchor="middle" class="lab-il5" style="font-size:12px;">📶 WiFi</text>
-          <path d="M100,105 Q120,90 140,105" fill="none" stroke="#1a73e8" stroke-width="3"/>
-          <path d="M108,115 Q120,105 132,115" fill="none" stroke="#1a73e8" stroke-width="2.5"/>
-          <path d="M115,125 Q120,118 125,125" fill="none" stroke="#1a73e8" stroke-width="2"/>
-          <circle cx="120" cy="133" r="4" fill="#1a73e8"/>
-          <text x="120" y="155" text-anchor="middle" class="lab-il5" style="font-size:10px;">Internet inalámbrico</text>
-          <text x="120" y="170" text-anchor="middle" class="lab-il5" style="font-size:9px;">(1999)</text>
-
-          <!-- FIBRA ÓPTICA (derecha) -->
-          <text x="560" y="85" text-anchor="middle" class="lab-il5" style="font-size:12px;">🔦 Fibra Óptica</text>
-          <!-- Cable de fibra -->
-          <rect x="520" y="100" width="80" height="12" rx="6" fill="#311b92" opacity="0.8"/>
-          <rect x="525" y="103" width="70" height="6" rx="3" fill="#7c4dff" opacity="0.6"/>
-          <!-- Rayo de luz -->
-          <line x1="525" y1="106" x2="535" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.9"/>
-          <line x1="545" y1="106" x2="555" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.7"/>
-          <line x1="565" y1="106" x2="575" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.5"/>
-          <line x1="585" y1="106" x2="590" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.3"/>
-          <text x="560" y="140" text-anchor="middle" class="lab-il5" style="font-size:10px;">💡 Pulsos de luz</text>
-          <text x="560" y="155" text-anchor="middle" class="lab-il5" style="font-size:9px;">300 Mbps - 1 Gbps</text>
-
-          <!-- 5G (abajo) -->
-          <text x="350" y="200" text-anchor="middle" class="lab-il5" style="font-size:12px;">📡 5G · Banda ancha · Streaming · Redes sociales</text>
-
-          <!-- SATÉLITE (arriba izquierda) -->
-          <rect x="30" y="50" width="50" height="30" rx="5" fill="#546e7a" opacity="0.6"/>
-          <rect x="40" y="45" width="30" height="5" rx="2" fill="#546e7a" opacity="0.6"/>
-          <line x1="55" y1="50" x2="55" y2="42" stroke="#546e7a" stroke-width="2" opacity="0.6"/>
-          <circle cx="55" cy="40" r="4" fill="#ff8f00" opacity="0.7"/>
-          <line x1="35" y1="60" x2="25" y2="60" stroke="#546e7a" stroke-width="2" opacity="0.6"/>
-          <line x1="75" y1="60" x2="85" y2="60" stroke="#546e7a" stroke-width="2" opacity="0.6"/>
-          <text x="55" y="80" text-anchor="middle" class="lab-il5" style="font-size:8px;">🛰️ Satélite</text>
-
-          <!-- BLUETOOTH (arriba derecha) -->
-          <text x="630" y="75" text-anchor="middle" class="lab-il5" style="font-size:12px;">🔷 BT</text>
-          <path d="M625,85 L635,95 L625,105 M635,85 L625,95 L635,105" fill="none" stroke="#1a73e8" stroke-width="2" opacity="0.7"/>
-          <text x="630" y="120" text-anchor="middle" class="lab-il5" style="font-size:9px;">Bluetooth</text>
-        </svg>
-      </div>
-
-      <p>
-        ¿Te imaginas tener que esperar <strong>varios minutos</strong> para cargar una sola foto?
-        Así era el internet hace apenas 25 años. Desde entonces, la conectividad ha avanzado
-        a pasos agigantados y hoy llevamos el mundo entero en nuestro bolsillo.
-      </p>
-
-      <p>
-        <strong>Del dial-up a la banda ancha.</strong> En los años 90, la mayoría de las personas
-        se conectaban a internet mediante un <strong>módem dial-up</strong> que usaba la línea
-        telefónica. La velocidad máxima era de <strong>56 Kbps</strong> (kilobits por segundo).
-        ¡Eso es más de 100 veces más lento que un internet normal de hoy! Además, mientras
-        navegabas, no podías usar el teléfono. Luego llegó la <strong>banda ancha</strong>
-        (ADSL, cable) con velocidades de 10 a 100 Mbps, y todo cambió: podías navegar
-        y hablar por teléfono al mismo tiempo.
-      </p>
-
-      <p>
-        <strong>WiFi: la revolución sin cables.</strong> En 1999 nació el <strong>WiFi</strong>,
-        una tecnología que permitía conectarse a internet sin necesidad de cables.
-        ¿Cómo funciona? Un <strong>enrutador</strong> (router) recibe la señal de internet
-        por cable y la convierte en <strong>ondas de radio</strong> que viajan por el aire.
-        Tu celular, tableta o computador captan esas ondas y ¡listo! Puedes navegar desde
-        cualquier lugar de la casa. Las versiones más recientes (WiFi 6 y 7) alcanzan
-        velocidades de varios gigabits por segundo.
-      </p>
-
-      <p>
-        <strong>Fibra óptica: la luz como medio de transmisión.</strong> La fibra óptica
-        utiliza <strong>hilos de vidrio o plástico</strong> delgadísimos por los que viaja
-        la información en forma de <strong>pulsos de luz</strong>. Esto permite velocidades
-        increíbles, de 300 Mbps a 1 Gbps o más. La luz rebota dentro de la fibra y recorre
-        grandes distancias sin perder fuerza. Es por eso que hoy podemos ver videos en
-        4K, hacer videollamadas nítidas y jugar en línea sin demoras.
-      </p>
-
-      <div class="destacado">
-        <strong>📊 Tabla comparativa de velocidades</strong>
-        <table class="tabla-didactica">
-          <thead>
-            <tr>
-              <th>Tecnología</th>
-              <th>Velocidad típica</th>
-              <th>¿Qué podías hacer?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>🚀 Dial-up (módem)</td>
-              <td>56 Kbps</td>
-              <td>Enviar correos, cargar una página en 30 segundos</td>
-            </tr>
-            <tr>
-              <td>🌐 Banda ancha (ADSL/cable)</td>
-              <td>10 Mbps</td>
-              <td>Ver videos en SD, descargar música rápido</td>
-            </tr>
-            <tr>
-              <td>💡 Fibra óptica</td>
-              <td>300 Mbps</td>
-              <td>Streaming en 4K, videollamadas, juegos en línea</td>
-            </tr>
-            <tr>
-              <td>📶 5G (móvil)</td>
-              <td>1 Gbps</td>
-              <td>Descargar una película en segundos, realidad virtual</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p>
-        <strong>Smartphones: el internet en el bolsillo.</strong> En 2007, Steve Jobs presentó
-        el <strong>iPhone</strong>, un teléfono que no solo servía para llamar, sino que
-        era como una computadora pequeña con pantalla táctil. Poco después llegó
-        <strong>Android</strong> (2008), el sistema de Google que muchos fabricantes usan hoy.
-        Gracias a los smartphones, siempre estamos conectados: podemos buscar información,
-        tomar fotos, chatear y ver videos desde cualquier lugar.
-      </p>
-
-      <p>
-        <strong>Redes sociales y aplicaciones.</strong> Plataformas como <strong>Facebook</strong>
-        (2004), <strong>YouTube</strong> (2005), <strong>WhatsApp</strong> (2009),
-        <strong>Instagram</strong> (2010) y <strong>TikTok</strong> cambiaron la forma en
-        que nos comunicamos. Ya no solo llamamos o enviamos mensajes de texto: compartimos
-        fotos, hacemos videollamadas, vemos transmisiones en vivo y seguimos a creadores
-        de contenido de todo el mundo. Las redes sociales nos conectan con personas que
-        están lejos, pero también nos retan a usarlas con responsabilidad.
-      </p>
-
-      <p>
-        <strong>4G, 5G y satélites: internet en todas partes.</strong> El internet móvil
-        ha evolucionado desde el lento 2G hasta el <strong>4G LTE</strong> (que ya es muy
-        rápido) y ahora el <strong>5G</strong>, que alcanza velocidades de hasta 1 Gbps
-        con una <strong>latencia</strong> (demora) muy baja. ¿Y qué hay de los lugares
-        remotos? Empresas como <strong>Starlink</strong> (de SpaceX) lanzan miles de
-        <strong>satélites de comunicación</strong> que orbitan la Tierra para llevar
-        internet a zonas rurales, montañas y hasta al medio del océano. ¡El futuro
-        promete conectividad para todos!
-      </p>
-
-      <p>
-        <strong>El impacto en nuestra vida diaria.</strong> Gracias a la conectividad
-        moderna hoy podemos hacer <strong>streaming</strong> de películas y series
-        (Netflix, Disney+), realizar <strong>videollamadas</strong> con familiares
-        en otros países, <strong>trabajar desde casa</strong> (teletrabajo) y estudiar
-        mediante <strong>educación virtual</strong>. La pandemia del 2020 aceleró aún
-        más estos cambios. La era digital ha transformado la forma en que vivimos,
-        aprendemos y nos relacionamos.
-      </p>
-    </section>
-
-    <!-- ============================================================
-         PREGUNTAS DE COMPRENSIÓN (4)
-         ============================================================ -->
-    <section class="card">
-      <h2>📝 Preguntas de comprensión</h2>
-      <p style="margin-bottom: 1rem; color: #546e7a;">
-        Selecciona la respuesta correcta para cada pregunta. Al hacer clic sabrás si acertaste.
-      </p>
-
-      <!-- Pregunta 1 -->
-      <div class="pregunta" id="preg1">
-        <p>1. ¿Qué velocidad máxima ofrecía el módem dial-up en los años 90?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p1" value="A" onchange="verificarPregunta('preg1', 'B')">
-            A) 1 Mbps
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p1" value="B" onchange="verificarPregunta('preg1', 'B')">
-            B) 56 Kbps
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p1" value="C" onchange="verificarPregunta('preg1', 'B')">
-            C) 10 Mbps
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p1" value="D" onchange="verificarPregunta('preg1', 'B')">
-            D) 300 Mbps
-          </label>
+      <!-- Barra de progreso -->
+      <div class="progreso-barra">
+        <div class="progreso-pasos">
+          <span class="paso" id="sub05-paso-0">1</span>
+          <span class="paso" id="sub05-paso-1">2</span>
+          <span class="paso" id="sub05-paso-2">3</span>
         </div>
-        <div class="feedback" id="fb-preg1"></div>
-      </div>
-
-      <!-- Pregunta 2 -->
-      <div class="pregunta" id="preg2">
-        <p>2. ¿En qué año nació la tecnología WiFi?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p2" value="A" onchange="verificarPregunta('preg2', 'C')">
-            A) 1990
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p2" value="B" onchange="verificarPregunta('preg2', 'C')">
-            B) 1995
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p2" value="C" onchange="verificarPregunta('preg2', 'C')">
-            C) 1999
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p2" value="D" onchange="verificarPregunta('preg2', 'C')">
-            D) 2005
-          </label>
+        <div class="barra-progreso-linea">
+          <div class="barra-progreso-llena" id="barra-sub05"></div>
         </div>
-        <div class="feedback" id="fb-preg2"></div>
       </div>
 
-      <!-- Pregunta 3 -->
-      <div class="pregunta" id="preg3">
-        <p>3. ¿Qué medio de transmisión utiliza la fibra óptica para enviar datos?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p3" value="A" onchange="verificarPregunta('preg3', 'C')">
-            A) Ondas de radio
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p3" value="B" onchange="verificarPregunta('preg3', 'C')">
-            B) Señales eléctricas
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p3" value="C" onchange="verificarPregunta('preg3', 'C')">
-            C) Pulsos de luz
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p3" value="D" onchange="verificarPregunta('preg3', 'C')">
-            D) Microondas
-          </label>
+      <!-- ============================================================
+           SECCIÓN 1 — Intro + dial-up + banda ancha + WiFi
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <!-- Ilustración SVG -->
+        <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#fce4ec,#f8bbd0); padding:10px;">
+            <defs>
+              <style>
+                .tit-il5 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#880e4f; }
+                .lab-il5 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#ad1457; }
+              </style>
+            </defs>
+            <text x="350" y="25" text-anchor="middle" class="tit-il5">📱 La era digital: conectividad en el bolsillo</text>
+            <rect x="260" y="60" width="80" height="130" rx="12" fill="#212121"/>
+            <rect x="265" y="65" width="70" height="115" rx="8" fill="#e3f2fd"/>
+            <rect x="267" y="67" width="66" height="111" rx="6" fill="white"/>
+            <rect x="270" y="72" width="60" height="100" rx="4" fill="#bbdefb"/>
+            <circle cx="300" cy="70" r="2" fill="#333"/>
+            <circle cx="300" cy="176" r="5" fill="#90a4ae"/>
+            <rect x="277" y="80" width="14" height="14" rx="3" fill="#1a73e8"/>
+            <rect x="295" y="80" width="14" height="14" rx="3" fill="#4caf50"/>
+            <rect x="313" y="80" width="14" height="14" rx="3" fill="#fdd835"/>
+            <rect x="277" y="98" width="14" height="14" rx="3" fill="#e53935"/>
+            <rect x="295" y="98" width="14" height="14" rx="3" fill="#ff6f00"/>
+            <rect x="313" y="98" width="14" height="14" rx="3" fill="#9c27b0"/>
+            <rect x="277" y="116" width="14" height="14" rx="3" fill="#00bcd4"/>
+            <rect x="295" y="116" width="14" height="14" rx="3" fill="#8bc34a"/>
+            <rect x="313" y="116" width="14" height="14" rx="3" fill="#ff5722"/>
+            <rect x="275" y="73" width="50" height="6" rx="2" fill="#333" opacity="0.2"/>
+            <text x="300" y="160" text-anchor="middle" class="lab-il5" style="font-size:8px;">¡Hola!</text>
+            <text x="120" y="85" text-anchor="middle" class="lab-il5" style="font-size:12px;">📶 WiFi</text>
+            <path d="M100,105 Q120,90 140,105" fill="none" stroke="#1a73e8" stroke-width="3"/>
+            <path d="M108,115 Q120,105 132,115" fill="none" stroke="#1a73e8" stroke-width="2.5"/>
+            <path d="M115,125 Q120,118 125,125" fill="none" stroke="#1a73e8" stroke-width="2"/>
+            <circle cx="120" cy="133" r="4" fill="#1a73e8"/>
+            <text x="120" y="155" text-anchor="middle" class="lab-il5" style="font-size:10px;">Internet inalámbrico</text>
+            <text x="120" y="170" text-anchor="middle" class="lab-il5" style="font-size:9px;">(1999)</text>
+            <text x="560" y="85" text-anchor="middle" class="lab-il5" style="font-size:12px;">🔦 Fibra Óptica</text>
+            <rect x="520" y="100" width="80" height="12" rx="6" fill="#311b92" opacity="0.8"/>
+            <rect x="525" y="103" width="70" height="6" rx="3" fill="#7c4dff" opacity="0.6"/>
+            <line x1="525" y1="106" x2="535" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.9"/>
+            <line x1="545" y1="106" x2="555" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.7"/>
+            <line x1="565" y1="106" x2="575" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.5"/>
+            <line x1="585" y1="106" x2="590" y2="106" stroke="#ffeb3b" stroke-width="3" opacity="0.3"/>
+            <text x="560" y="140" text-anchor="middle" class="lab-il5" style="font-size:10px;">💡 Pulsos de luz</text>
+            <text x="560" y="155" text-anchor="middle" class="lab-il5" style="font-size:9px;">300 Mbps - 1 Gbps</text>
+            <text x="350" y="200" text-anchor="middle" class="lab-il5" style="font-size:12px;">📡 5G · Banda ancha · Streaming · Redes sociales</text>
+            <rect x="30" y="50" width="50" height="30" rx="5" fill="#546e7a" opacity="0.6"/>
+            <rect x="40" y="45" width="30" height="5" rx="2" fill="#546e7a" opacity="0.6"/>
+            <line x1="55" y1="50" x2="55" y2="42" stroke="#546e7a" stroke-width="2" opacity="0.6"/>
+            <circle cx="55" cy="40" r="4" fill="#ff8f00" opacity="0.7"/>
+            <line x1="35" y1="60" x2="25" y2="60" stroke="#546e7a" stroke-width="2" opacity="0.6"/>
+            <line x1="75" y1="60" x2="85" y2="60" stroke="#546e7a" stroke-width="2" opacity="0.6"/>
+            <text x="55" y="80" text-anchor="middle" class="lab-il5" style="font-size:8px;">🛰️ Satélite</text>
+            <text x="630" y="75" text-anchor="middle" class="lab-il5" style="font-size:12px;">🔷 BT</text>
+            <path d="M625,85 L635,95 L625,105 M635,85 L625,95 L635,105" fill="none" stroke="#1a73e8" stroke-width="2" opacity="0.7"/>
+            <text x="630" y="120" text-anchor="middle" class="lab-il5" style="font-size:9px;">Bluetooth</text>
+          </svg>
         </div>
-        <div class="feedback" id="fb-preg3"></div>
-      </div>
 
-      <!-- Pregunta 4 -->
-      <div class="pregunta" id="preg4">
-        <p>4. ¿Cuál de los siguientes NO es un ejemplo de conectividad moderna mencionado en la lectura?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="p4" value="A" onchange="verificarPregunta('p4', 'D')">
-            A) 5G
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p4" value="B" onchange="verificarPregunta('p4', 'D')">
-            B) Fibra óptica
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p4" value="C" onchange="verificarPregunta('p4', 'D')">
-            C) Starlink (satélites)
-          </label>
-          <label class="opcion">
-            <input type="radio" name="p4" value="D" onchange="verificarPregunta('p4', 'D')">
-            D) Palomas mensajeras
-          </label>
-        </div>
-        <div class="feedback" id="fb-preg4"></div>
-      </div>
+        <p>
+          ¿Te imaginas tener que esperar <strong>varios minutos</strong> para cargar una sola foto?
+          Así era el internet hace apenas 25 años. Desde entonces, la conectividad ha avanzado
+          a pasos agigantados y hoy llevamos el mundo entero en nuestro bolsillo.
+        </p>
 
-      <!-- Pregunta 5 -->
-      <div class="pregunta" id="preg5">
-        <p>5. ¿Qué ventaja tiene la fibra óptica frente al cable de cobre tradicional?</p>
-        <div class="opciones">
-          <div class="opcion">
-            <input type="radio" name="p5" value="A" id="p5a" onchange="verificarPregunta('preg5', 'B')">
-            <label for="p5a">A. Es más económica pero más lenta</label>
+        <p>
+          <strong>Del dial-up a la banda ancha.</strong> En los años 90, la mayoría de las personas
+          se conectaban a internet mediante un <strong>módem dial-up</strong> que usaba la línea
+          telefónica. La velocidad máxima era de <strong>56 Kbps</strong> (kilobits por segundo).
+          ¡Eso es más de 100 veces más lento que un internet normal de hoy! Además, mientras
+          navegabas, no podías usar el teléfono. Luego llegó la <strong>banda ancha</strong>
+          (ADSL, cable) con velocidades de 10 a 100 Mbps, y todo cambió: podías navegar
+          y hablar por teléfono al mismo tiempo.
+        </p>
+
+        <p>
+          <strong>WiFi: la revolución sin cables.</strong> En 1999 nació el <strong>WiFi</strong>,
+          una tecnología que permitía conectarse a internet sin necesidad de cables.
+          ¿Cómo funciona? Un <strong>enrutador</strong> (router) recibe la señal de internet
+          por cable y la convierte en <strong>ondas de radio</strong> que viajan por el aire.
+          Tu celular, tableta o computador captan esas ondas y ¡listo! Puedes navegar desde
+          cualquier lugar de la casa. Las versiones más recientes (WiFi 6 y 7) alcanzan
+          velocidades de varios gigabits por segundo.
+        </p>
+
+        <div class="seccion-divisor">· · ·</div>
+
+        <!-- CHECKPOINT 1 -->
+        <div class="checkpoint" id="sub05-chk-0-0">
+          <h4>🔐 Verificación de lectura — Parte 1</h4>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">
+            Responde correctamente para desbloquear la siguiente parte.
+          </p>
+          <p><strong>¿Qué velocidad máxima ofrecía el módem dial-up en los años 90?</strong></p>
+          <div class="chk-opciones">
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk0" value="A" onchange="progresivo.verificar('sub05',0,0,this.value)">
+              A) 1 Mbps
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk0" value="B" onchange="progresivo.verificar('sub05',0,0,this.value)">
+              B) 56 Kbps
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk0" value="C" onchange="progresivo.verificar('sub05',0,0,this.value)">
+              C) 10 Mbps
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk0" value="D" onchange="progresivo.verificar('sub05',0,0,this.value)">
+              D) 300 Mbps
+            </label>
           </div>
-          <div class="opcion">
-            <input type="radio" name="p5" value="B" id="p5b" onchange="verificarPregunta('preg5', 'B')">
-            <label for="p5b">B. Transmite datos mediante pulsos de luz a velocidades mucho mayores</label>
-          </div>
-          <div class="opcion">
-            <input type="radio" name="p5" value="C" id="p5c" onchange="verificarPregunta('preg5', 'B')">
-            <label for="p5c">C. No necesita electricidad para funcionar</label>
-          </div>
-          <div class="opcion">
-            <input type="radio" name="p5" value="D" id="p5d" onchange="verificarPregunta('preg5', 'B')">
-            <label for="p5d">D. Solo funciona en interiores</label>
-          </div>
+          <div class="chk-fb"></div>
+          <button class="btn btn-primario btn-continuar" id="sub05-sig-0" onclick="progresivo.siguiente('sub05')">
+            ➡️ Continuar leyendo
+          </button>
         </div>
-        <div class="feedback" id="fb-preg5"></div>
-      </div>
-    </section>
 
-    <!-- ============================================================
-         PARTE 2 — SOPA DE LETRAS
-         ============================================================ -->
-    <section class="card">
-      <h2>🔍 Sopa de letras — Conectividad moderna</h2>
-      <p style="margin-bottom: 1rem; color: #546e7a;">
-        Encuentra las <strong>25 palabras</strong> relacionadas con la era digital.
-        Haz clic en las letras para seleccionarlas (en horizontal, vertical o diagonal)
-        y luego valida tu palabra. ¡A jugar!
-      </p>
+      </div><!-- /seccion-contenido 1 -->
 
-      <!-- Contenedor donde se renderiza la sopa de letras -->
-      <div id="sopa05"></div>
-    </section>
+      <!-- ============================================================
+           SECCIÓN 2 — Fibra óptica + tabla + smartphones + 4G/5G/satélites + impacto
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <div class="seccion-divisor">⭐</div>
+
+        <p>
+          <strong>Fibra óptica: la luz como medio de transmisión.</strong> La fibra óptica
+          utiliza <strong>hilos de vidrio o plástico</strong> delgadísimos por los que viaja
+          la información en forma de <strong>pulsos de luz</strong>. Esto permite velocidades
+          increíbles, de 300 Mbps a 1 Gbps o más. La luz rebota dentro de la fibra y recorre
+          grandes distancias sin perder fuerza. Es por eso que hoy podemos ver videos en
+          4K, hacer videollamadas nítidas y jugar en línea sin demoras.
+        </p>
+
+        <div class="destacado">
+          <strong>📊 Tabla comparativa de velocidades</strong>
+          <table class="tabla-didactica">
+            <thead>
+              <tr>
+                <th>Tecnología</th>
+                <th>Velocidad típica</th>
+                <th>¿Qué podías hacer?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🚀 Dial-up (módem)</td>
+                <td>56 Kbps</td>
+                <td>Enviar correos, cargar una página en 30 segundos</td>
+              </tr>
+              <tr>
+                <td>🌐 Banda ancha (ADSL/cable)</td>
+                <td>10 Mbps</td>
+                <td>Ver videos en SD, descargar música rápido</td>
+              </tr>
+              <tr>
+                <td>💡 Fibra óptica</td>
+                <td>300 Mbps</td>
+                <td>Streaming en 4K, videollamadas, juegos en línea</td>
+              </tr>
+              <tr>
+                <td>📶 5G (móvil)</td>
+                <td>1 Gbps</td>
+                <td>Descargar una película en segundos, realidad virtual</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>Smartphones: el internet en el bolsillo.</strong> En 2007, Steve Jobs presentó
+          el <strong>iPhone</strong>, un teléfono que no solo servía para llamar, sino que
+          era como una computadora pequeña con pantalla táctil. Poco después llegó
+          <strong>Android</strong> (2008), el sistema de Google que muchos fabricantes usan hoy.
+          Gracias a los smartphones, siempre estamos conectados: podemos buscar información,
+          tomar fotos, chatear y ver videos desde cualquier lugar.
+        </p>
+
+        <p>
+          <strong>Redes sociales y aplicaciones.</strong> Plataformas como <strong>Facebook</strong>
+          (2004), <strong>YouTube</strong> (2005), <strong>WhatsApp</strong> (2009),
+          <strong>Instagram</strong> (2010) y <strong>TikTok</strong> cambiaron la forma en
+          que nos comunicamos. Ya no solo llamamos o enviamos mensajes de texto: compartimos
+          fotos, hacemos videollamadas, vemos transmisiones en vivo y seguimos a creadores
+          de contenido de todo el mundo. Las redes sociales nos conectan con personas que
+          están lejos, pero también nos retan a usarlas con responsabilidad.
+        </p>
+
+        <p>
+          <strong>4G, 5G y satélites: internet en todas partes.</strong> El internet móvil
+          ha evolucionado desde el lento 2G hasta el <strong>4G LTE</strong> (que ya es muy
+          rápido) y ahora el <strong>5G</strong>, que alcanza velocidades de hasta 1 Gbps
+          con una <strong>latencia</strong> (demora) muy baja. ¿Y qué hay de los lugares
+          remotos? Empresas como <strong>Starlink</strong> (de SpaceX) lanzan miles de
+          <strong>satélites de comunicación</strong> que orbitan la Tierra para llevar
+          internet a zonas rurales, montañas y hasta al medio del océano. ¡El futuro
+          promete conectividad para todos!
+        </p>
+
+        <p>
+          <strong>El impacto en nuestra vida diaria.</strong> Gracias a la conectividad
+          moderna hoy podemos hacer <strong>streaming</strong> de películas y series
+          (Netflix, Disney+), realizar <strong>videollamadas</strong> con familiares
+          en otros países, <strong>trabajar desde casa</strong> (teletrabajo) y estudiar
+          mediante <strong>educación virtual</strong>. La pandemia del 2020 aceleró aún
+          más estos cambios. La era digital ha transformado la forma en que vivimos,
+          aprendemos y nos relacionamos.
+        </p>
+
+        <div class="seccion-divisor">· · ·</div>
+
+        <!-- CHECKPOINT 2 -->
+        <div class="checkpoint" id="sub05-chk-1-0">
+          <h4>🔐 Verificación de lectura — Parte 2</h4>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">
+            Responde correctamente para desbloquear la siguiente parte.
+          </p>
+          <p><strong>¿Qué medio usa la fibra óptica para transmitir?</strong></p>
+          <div class="chk-opciones">
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk1" value="A" onchange="progresivo.verificar('sub05',1,0,this.value)">
+              A) Ondas de radio
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk1" value="B" onchange="progresivo.verificar('sub05',1,0,this.value)">
+              B) Señales eléctricas
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk1" value="C" onchange="progresivo.verificar('sub05',1,0,this.value)">
+              C) Pulsos de luz
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub05-chk1" value="D" onchange="progresivo.verificar('sub05',1,0,this.value)">
+              D) Microondas
+            </label>
+          </div>
+          <div class="chk-fb"></div>
+          <button class="btn btn-primario btn-continuar" id="sub05-sig-1" onclick="progresivo.siguiente('sub05')">
+            ➡️ Continuar leyendo
+          </button>
+        </div>
+
+      </div><!-- /seccion-contenido 2 -->
+
+      <!-- ============================================================
+           SECCIÓN 3 — Preguntas finales + sopa de letras
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <div class="seccion-divisor">⭐</div>
+
+        <!-- ============================================================
+             PREGUNTAS DE COMPRENSIÓN FINALES
+             ============================================================ -->
+        <h3 style="margin-top: 1rem;">📝 Preguntas de comprensión</h3>
+        <p style="margin-bottom: 1rem; color: #546e7a;">
+          Selecciona la respuesta correcta para cada pregunta. Al hacer clic sabrás si acertaste.
+        </p>
+
+        <!-- Pregunta 1 -->
+        <div class="pregunta" id="preg1">
+          <p>1. ¿Qué velocidad máxima ofrecía el módem dial-up en los años 90?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p1" value="A" onchange="verificarPregunta('preg1', 'B')">
+              A) 1 Mbps
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p1" value="B" onchange="verificarPregunta('preg1', 'B')">
+              B) 56 Kbps
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p1" value="C" onchange="verificarPregunta('preg1', 'B')">
+              C) 10 Mbps
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p1" value="D" onchange="verificarPregunta('preg1', 'B')">
+              D) 300 Mbps
+            </label>
+          </div>
+          <div class="feedback" id="fb-preg1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta" id="preg2">
+          <p>2. ¿En qué año nació la tecnología WiFi?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p2" value="A" onchange="verificarPregunta('preg2', 'C')">
+              A) 1990
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p2" value="B" onchange="verificarPregunta('preg2', 'C')">
+              B) 1995
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p2" value="C" onchange="verificarPregunta('preg2', 'C')">
+              C) 1999
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p2" value="D" onchange="verificarPregunta('preg2', 'C')">
+              D) 2005
+            </label>
+          </div>
+          <div class="feedback" id="fb-preg2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta" id="preg3">
+          <p>3. ¿Qué medio de transmisión utiliza la fibra óptica para enviar datos?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p3" value="A" onchange="verificarPregunta('preg3', 'C')">
+              A) Ondas de radio
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p3" value="B" onchange="verificarPregunta('preg3', 'C')">
+              B) Señales eléctricas
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p3" value="C" onchange="verificarPregunta('preg3', 'C')">
+              C) Pulsos de luz
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p3" value="D" onchange="verificarPregunta('preg3', 'C')">
+              D) Microondas
+            </label>
+          </div>
+          <div class="feedback" id="fb-preg3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta" id="preg4">
+          <p>4. ¿Cuál de los siguientes NO es un ejemplo de conectividad moderna mencionado en la lectura?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="p4" value="A" onchange="verificarPregunta('preg4', 'D')">
+              A) 5G
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p4" value="B" onchange="verificarPregunta('preg4', 'D')">
+              B) Fibra óptica
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p4" value="C" onchange="verificarPregunta('preg4', 'D')">
+              C) Starlink (satélites)
+            </label>
+            <label class="opcion">
+              <input type="radio" name="p4" value="D" onchange="verificarPregunta('preg4', 'D')">
+              D) Palomas mensajeras
+            </label>
+          </div>
+          <div class="feedback" id="fb-preg4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta" id="preg5">
+          <p>5. ¿Qué ventaja tiene la fibra óptica frente al cable de cobre tradicional?</p>
+          <div class="opciones">
+            <div class="opcion">
+              <input type="radio" name="p5" value="A" id="p5a" onchange="verificarPregunta('preg5', 'B')">
+              <label for="p5a">A. Es más económica pero más lenta</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p5" value="B" id="p5b" onchange="verificarPregunta('preg5', 'B')">
+              <label for="p5b">B. Transmite datos mediante pulsos de luz a velocidades mucho mayores</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p5" value="C" id="p5c" onchange="verificarPregunta('preg5', 'B')">
+              <label for="p5c">C. No necesita electricidad para funcionar</label>
+            </div>
+            <div class="opcion">
+              <input type="radio" name="p5" value="D" id="p5d" onchange="verificarPregunta('preg5', 'B')">
+              <label for="p5d">D. Solo funciona en interiores</label>
+            </div>
+          </div>
+          <div class="feedback" id="fb-preg5"></div>
+        </div>
+
+        <!-- ============================================================
+             SOPA DE LETRAS
+             ============================================================ -->
+        <h3 style="margin-top: 2rem;">🔍 Sopa de letras — Conectividad moderna</h3>
+        <p style="margin-bottom: 1rem; color: #546e7a;">
+          Encuentra las <strong>25 palabras</strong> relacionadas con la era digital.
+          Haz clic en las letras para seleccionarlas (en horizontal, vertical o diagonal)
+          y luego valida tu palabra. ¡A jugar!
+        </p>
+
+        <div id="sopa05"></div>
+
+      </div><!-- /seccion-contenido 3 -->
+
+    </article>
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
   <footer>
     Colegio San Luis · Tecnología e Informática · Grado Sexto
   </footer>
 
-  <!-- ============================================================
-       SCRIPTS
-       ============================================================ -->
-  <!-- Soporte de la sopa de letras -->
   <script src="../../js/sopa.js"></script>
-
-  <!-- Script para las preguntas de comprensión -->
+  <script src="../../js/progresivo.js"></script>
   <script>
-    /**
-     * Verifica una pregunta de selección múltiple y muestra feedback.
-     * @param {string} preguntaId - ID del div de la pregunta.
-     * @param {string} correcta - Letra de la opción correcta (A, B, C o D).
-     */
     function verificarPregunta(preguntaId, correcta) {
-      const pregunta = document.getElementById(preguntaId);
-      const seleccionado = pregunta.querySelector('input[type="radio"]:checked');
+      var pregunta = document.getElementById(preguntaId);
+      var seleccionado = pregunta.querySelector('input[type="radio"]:checked');
       if (!seleccionado) return;
-
-      const valor = seleccionado.value;
-      const feedback = pregunta.querySelector('.feedback');
-
-      // Limpiar clases previas
+      var valor = seleccionado.value;
+      var feedback = pregunta.querySelector('.feedback');
       pregunta.classList.remove('correcta', 'incorrecta');
-
       if (valor === correcta) {
         pregunta.classList.add('correcta');
-        // Mensaje específico según la pregunta
         if (preguntaId === 'preg5') {
           feedback.textContent = '✅ ¡Correcto! La fibra óptica usa hilos de vidrio y pulsos de luz para transmitir datos a velocidades de hasta 300 Mbps o más, mucho más rápido que el cable de cobre tradicional.';
         } else {
@@ -422,13 +473,7 @@
         feedback.textContent = '❌ Incorrecto. Revisa la lectura e intenta de nuevo.';
       }
     }
-  </script>
 
-  <!-- Script que inicializa la sopa de letras -->
-  <script>
-    // Las palabras se muestran con su formato legible.
-    // La función crearSopa las normaliza automáticamente (quita espacios y tildes)
-    // para colocarlas en la grilla, pero en la lista se ven como las escribimos aquí.
     crearSopa('sopa05', [
       'WIFI', 'SMARTPHONE', 'DIGITAL', 'SATELITE', 'BLUETOOTH',
       'STREAMING', 'VELOCIDAD', 'MEGABYTE', 'ENRUTADOR', 'ANTENA',
@@ -442,6 +487,13 @@
       'WHATSAPP', 'INSTAGRAM', 'TIKTOK', 'NUBE', 'CONECTAR',
       'FIBRA ÓPTICA', 'BANDA ANCHA', 'RED SOCIAL', 'DATOS', 'GIGABYTE'
     ]);
+
+    progresivo.iniciar('sub05', {
+      preguntas: {
+        0: [{ correcta: 'B', explicacion: 'El módem dial-up alcanzaba un máximo de 56 Kbps, más de 100 veces más lento que el internet actual.' }],
+        1: [{ correcta: 'C', explicacion: 'La fibra óptica transmite información mediante pulsos de luz a través de hilos de vidrio o plástico.' }]
+      }
+    });
   </script>
 
 </body>

@@ -139,452 +139,543 @@
   <main>
 
     <!-- ============================================================
-         PARTE 1 — LECTURA Y CONTEXTO
+         SISTEMA PROGRESIVO — CONTENEDOR PRINCIPAL
          ============================================================ -->
-    <section class="card lectura">
+    <article class="card lectura" id="progresivo-sub02">
 
       <h2>Los primeros pasos hacia la comunicación instantánea</h2>
 
-      <!-- Ilustración SVG: Telégrafo y Teléfono -->
-      <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e3f2fd,#bbdefb); padding:10px;">
-          <defs>
-            <style>
-              .tit-il2 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#1a237e; }
-              .lab-il2 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#283593; }
-              .cod-morse { font-family:monospace; font-size:9px; fill:#1565c0; }
-            </style>
-          </defs>
-          <text x="350" y="25" text-anchor="middle" class="tit-il2">⚡ La revolución de la comunicación por cable</text>
-
-          <!-- TELÉGRAFO (izquierda) -->
-          <rect x="15" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
-          <text x="115" y="62" text-anchor="middle" class="lab-il2" style="font-size:13px;">📠 Telégrafo (1837)</text>
-          <!-- Base del telégrafo -->
-          <rect x="40" y="140" width="150" height="30" rx="4" fill="#5d4037"/>
-          <rect x="45" y="135" width="140" height="8" rx="2" fill="#8d6e63"/>
-          <!-- Cilindro de papel -->
-          <rect x="50" y="110" width="50" height="25" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
-          <rect x="50" y="110" width="50" height="6" rx="2" fill="#fff9c4"/>
-          <!-- Brazo marcador -->
-          <line x1="100" y1="110" x2="115" y2="100" stroke="#424242" stroke-width="2"/>
-          <circle cx="115" cy="100" r="3" fill="#d32f2f"/>
-          <!-- Código Morse en la tira -->
-          <line x1="55" y1="128" x2="55" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="60" y1="128" x2="60" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="65" y1="131" x2="65" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="70" y1="128" x2="70" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="70" y1="131" x2="70" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="75" y1="131" x2="75" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="80" y1="128" x2="80" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="85" y1="128" x2="85" y2="134" stroke="#333" stroke-width="2"/>
-          <line x1="85" y1="131" x2="85" y2="134" stroke="#333" stroke-width="2"/>
-          <!-- Tecla de Morse -->
-          <rect x="110" y="125" width="60" height="15" rx="3" fill="#ff8f00" stroke="#e65100" stroke-width="1"/>
-          <circle cx="140" cy="120" r="6" fill="#455a64"/>
-          <circle cx="140" cy="134" r="4" fill="#455a64"/>
-          <text x="50" y="178" class="cod-morse">Código Morse:</text>
-          <text x="50" y="191" class="cod-morse">A ·−    B −···   C −·−·</text>
-          <text x="50" y="201" class="cod-morse">SOS ··· −−− ···</text>
-
-          <!-- LÍNEA DE CONEXIÓN (cable) -->
-          <line x1="215" y1="100" x2="275" y2="100" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
-          <line x1="275" y1="100" x2="275" y2="60" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
-          <line x1="275" y1="60" x2="430" y2="60" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
-          <line x1="430" y1="60" x2="430" y2="100" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
-          <line x1="430" y1="100" x2="480" y2="100" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
-          <text x="340" y="50" text-anchor="middle" class="lab-il2" style="font-size:10px; fill:#e65100;">Cables de cobre</text>
-
-          <!-- TELÉFONO (derecha) -->
-          <rect x="480" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
-          <text x="580" y="62" text-anchor="middle" class="lab-il2" style="font-size:13px;">📞 Teléfono (1876)</text>
-          <!-- Base del teléfono -->
-          <rect x="510" y="140" width="140" height="25" rx="5" fill="#2c3e50"/>
-          <rect x="515" y="135" width="130" height="8" rx="2" fill="#455a64"/>
-          <!-- Disco marcador -->
-          <circle cx="580" cy="115" r="22" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
-          <circle cx="580" cy="115" r="15" fill="none" stroke="#b0bec5" stroke-width="1"/>
-          <circle cx="580" cy="115" r="3" fill="#455a64"/>
-          <!-- Agujeros del disco -->
-          <circle cx="593" cy="103" r="2.5" fill="#90a4ae"/>
-          <circle cx="600" cy="118" r="2.5" fill="#90a4ae"/>
-          <circle cx="593" cy="132" r="2.5" fill="#90a4ae"/>
-          <circle cx="580" cy="137" r="2.5" fill="#90a4ae"/>
-          <circle cx="567" cy="132" r="2.5" fill="#90a4ae"/>
-          <circle cx="560" cy="118" r="2.5" fill="#90a4ae"/>
-          <circle cx="567" cy="103" r="2.5" fill="#90a4ae"/>
-          <!-- Auricular -->
-          <rect x="555" y="72" width="50" height="8" rx="4" fill="#2c3e50"/>
-          <circle cx="555" cy="76" r="12" fill="#37474f"/>
-          <circle cx="605" cy="76" r="8" fill="#37474f"/>
-          <!-- Cable del auricular -->
-          <path d="M605,76 Q620,95 580,110" fill="none" stroke="#455a64" stroke-width="2"/>
-          <text x="515" y="180" class="lab-il2" style="font-size:10px;">"Señor Watson, venga, lo necesito"</text>
-          <text x="515" y="193" class="lab-il2" style="font-size:10px;">— Alexander Graham Bell</text>
-        </svg>
-      </div>
-
-      <!-- Párrafo 1 -->
-      <p>
-        Imagina que vives en una época donde no hay celulares, ni internet, 
-        ni siquiera teléfonos. Si querías enviar un mensaje a alguien que 
-        vivía en otra ciudad, tenías que escribir una carta y esperar 
-        <strong>días, semanas o incluso meses</strong> para recibir respuesta. 
-        La comunicación a distancia era muy lenta. La gente usaba señales de 
-        humo, palomas mensajeras o mensajeros a caballo, pero nada funcionaba 
-        con rapidez. Todo cambió cuando dos grandes inventos llegaron para 
-        transformar el mundo: <strong>el telégrafo y el teléfono</strong>.
-      </p>
-
-      <!-- Párrafo 2 — El telégrafo -->
-      <p>
-        En 1837, un inventor estadounidense llamado <strong>Samuel Morse</strong> 
-        creó un dispositivo que permitía enviar mensajes a través de cables 
-        eléctricos: <strong>el telégrafo</strong>. La idea era brillante: 
-        un operador presionaba un interruptor que enviaba impulsos eléctricos 
-        por un cable, y al otro lado, un aparato recibía esos impulsos y los 
-        convertía en marcas sobre una tira de papel. Pero, ¿cómo se 
-        convertían esos impulsos en letras y palabras? Morse inventó un 
-        código especial basado en <strong>puntos y rayas</strong>.
-      </p>
-
-      <!-- Párrafo 3 — Cómo funcionaba el telégrafo -->
-      <p>
-        El <strong>código Morse</strong> asigna a cada letra del alfabeto una 
-        combinación única de puntos (señales cortas) y rayas (señales largas). 
-        Por ejemplo, la letra <strong>A</strong> es <em>punto — raya</em> 
-        (<code>· —</code>), y la <strong>B</strong> es <em>raya — punto — punto — punto</em> 
-        (<code>— · · ·</code>). Los operadores telegráficos aprendían este 
-        código y podían enviar mensajes a una velocidad sorprendente. 
-        El telégrafo revolucionó las comunicaciones: por primera vez en la 
-        historia, un mensaje podía viajar <strong>más rápido que una persona 
-        a caballo</strong>.
-      </p>
-
-      <!-- Recuadro de ejemplo: Alfabeto Morse básico -->
-      <div class="codigo-morse">
-        <h4>Alfabeto Morse básico</h4>
-        <table>
-          <thead>
-            <tr>
-              <th>Letra</th>
-              <th>Código Morse</th>
-              <th>Letra</th>
-              <th>Código Morse</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>A</td>
-              <td class="morse-puntos">· —</td>
-              <td>N</td>
-              <td class="morse-puntos">— ·</td>
-            </tr>
-            <tr>
-              <td>B</td>
-              <td class="morse-puntos">— · · ·</td>
-              <td>O</td>
-              <td class="morse-puntos">— — —</td>
-            </tr>
-            <tr>
-              <td>C</td>
-              <td class="morse-puntos">— · — ·</td>
-              <td>P</td>
-              <td class="morse-puntos">· — — ·</td>
-            </tr>
-            <tr>
-              <td>D</td>
-              <td class="morse-puntos">— · ·</td>
-              <td>Q</td>
-              <td class="morse-puntos">— — · —</td>
-            </tr>
-            <tr>
-              <td>E</td>
-              <td class="morse-puntos">·</td>
-              <td>R</td>
-              <td class="morse-puntos">· — ·</td>
-            </tr>
-            <tr>
-              <td>F</td>
-              <td class="morse-puntos">· · — ·</td>
-              <td>S</td>
-              <td class="morse-puntos">· · ·</td>
-            </tr>
-            <tr>
-              <td>G</td>
-              <td class="morse-puntos">— — ·</td>
-              <td>T</td>
-              <td class="morse-puntos">—</td>
-            </tr>
-            <tr>
-              <td>H</td>
-              <td class="morse-puntos">· · · ·</td>
-              <td>U</td>
-              <td class="morse-puntos">· · —</td>
-            </tr>
-            <tr>
-              <td>I</td>
-              <td class="morse-puntos">· ·</td>
-              <td>V</td>
-              <td class="morse-puntos">· · · —</td>
-            </tr>
-            <tr>
-              <td>J</td>
-              <td class="morse-puntos">· — — —</td>
-              <td>W</td>
-              <td class="morse-puntos">· — —</td>
-            </tr>
-            <tr>
-              <td>K</td>
-              <td class="morse-puntos">— · —</td>
-              <td>X</td>
-              <td class="morse-puntos">— · · —</td>
-            </tr>
-            <tr>
-              <td>L</td>
-              <td class="morse-puntos">· — · ·</td>
-              <td>Y</td>
-              <td class="morse-puntos">— · — —</td>
-            </tr>
-            <tr>
-              <td>M</td>
-              <td class="morse-puntos">— —</td>
-              <td>Z</td>
-              <td class="morse-puntos">— — · ·</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="destacado-sos">
-          SOS: · · · &nbsp; — — — &nbsp; · · · &nbsp; 
-          (¡la señal de auxilio más famosa del mundo!)
+      <!-- Barra de progreso -->
+      <div class="progreso-barra">
+        <div class="progreso-pasos">
+          <span class="paso" id="sub02-paso-0">1</span>
+          <span class="paso" id="sub02-paso-1">2</span>
+          <span class="paso" id="sub02-paso-2">3</span>
+        </div>
+        <div class="barra-progreso-linea">
+          <div class="barra-progreso-llena" id="barra-sub02"></div>
         </div>
       </div>
 
-      <!-- Párrafo 4 — Primer mensaje telegráfico -->
-      <p>
-        El 24 de mayo de 1844 ocurrió un momento histórico. Morse estaba en 
-        Washington D. C. y envió un mensaje a su colega Alfred Vail, que se 
-        encontraba en Baltimore, a más de 60 kilómetros de distancia. 
-        El mensaje decía: <strong>"What hath God wrought?"</strong> 
-        (¿Qué ha forjado Dios?). Fue la primera vez que un mensaje viajó 
-        por un cable eléctrico. Miles de personas quedaron asombradas. 
-        El mundo nunca volvería a ser el mismo.
-      </p>
+      <!-- ============================================================
+           SECCIÓN 1 — Contexto histórico + telégrafo + código Morse
+           ============================================================ -->
+      <div class="seccion-contenido">
 
-      <div class="cita">
-        "What hath God wrought?"
-        <span class="autor">— Samuel Morse, primer mensaje telegráfico, 1844</span>
-      </div>
+        <!-- Ilustración SVG: Telégrafo y Teléfono -->
+        <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e3f2fd,#bbdefb); padding:10px;">
+            <defs>
+              <style>
+                .tit-il2 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#1a237e; }
+                .lab-il2 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#283593; }
+                .cod-morse { font-family:monospace; font-size:9px; fill:#1565c0; }
+              </style>
+            </defs>
+            <text x="350" y="25" text-anchor="middle" class="tit-il2">⚡ La revolución de la comunicación por cable</text>
 
-      <!-- Párrafo 5 — El teléfono -->
-      <p>
-        Unos años después, otro inventor soñaba con algo aún más increíble: 
-        transmitir la <strong>voz humana</strong> a través de cables. 
-        En 1876, el escocés <strong>Alexander Graham Bell</strong> logró 
-        lo que parecía imposible: inventó el <strong>teléfono</strong>. 
-        La historia cuenta que Bell derramó ácido sobre su ropa y gritó: 
-        <em>"Mr. Watson, come here, I need you!"</em> 
-        ("Señor Watson, venga, lo necesito"). Su asistente, Thomas Watson, 
-        escuchó las palabras a través del dispositivo en la habitación de 
-        al lado. ¡El teléfono funcionaba!
-      </p>
+            <!-- TELÉGRAFO (izquierda) -->
+            <rect x="15" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
+            <text x="115" y="62" text-anchor="middle" class="lab-il2" style="font-size:13px;">📠 Telégrafo (1837)</text>
+            <!-- Base del telégrafo -->
+            <rect x="40" y="140" width="150" height="30" rx="4" fill="#5d4037"/>
+            <rect x="45" y="135" width="140" height="8" rx="2" fill="#8d6e63"/>
+            <!-- Cilindro de papel -->
+            <rect x="50" y="110" width="50" height="25" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+            <rect x="50" y="110" width="50" height="6" rx="2" fill="#fff9c4"/>
+            <!-- Brazo marcador -->
+            <line x1="100" y1="110" x2="115" y2="100" stroke="#424242" stroke-width="2"/>
+            <circle cx="115" cy="100" r="3" fill="#d32f2f"/>
+            <!-- Código Morse en la tira -->
+            <line x1="55" y1="128" x2="55" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="60" y1="128" x2="60" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="65" y1="131" x2="65" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="70" y1="128" x2="70" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="70" y1="131" x2="70" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="75" y1="131" x2="75" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="80" y1="128" x2="80" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="85" y1="128" x2="85" y2="134" stroke="#333" stroke-width="2"/>
+            <line x1="85" y1="131" x2="85" y2="134" stroke="#333" stroke-width="2"/>
+            <!-- Tecla de Morse -->
+            <rect x="110" y="125" width="60" height="15" rx="3" fill="#ff8f00" stroke="#e65100" stroke-width="1"/>
+            <circle cx="140" cy="120" r="6" fill="#455a64"/>
+            <circle cx="140" cy="134" r="4" fill="#455a64"/>
+            <text x="50" y="178" class="cod-morse">Código Morse:</text>
+            <text x="50" y="191" class="cod-morse">A ·−    B −···   C −·−·</text>
+            <text x="50" y="201" class="cod-morse">SOS ··· −−− ···</text>
 
-      <!-- Párrafo 6 — Cómo transformó la comunicación -->
-      <p>
-        El teléfono cambió la comunicación de una manera que el telégrafo 
-        no podía: las personas podían <strong>hablar en tiempo real</strong> 
-        con sus seres queridos, sin importar la distancia. Ya no era necesario 
-        aprender códigos ni ir a una oficina de telégrafos. Podías 
-        simplemente levantar un auricular, marcar un número y escuchar la 
-        voz de la otra persona. La comunicación se volvió más personal, 
-        más rápida y más emocionante. Las familias podían mantenerse en 
-        contacto, los negocios podían cerrar acuerdos al instante.
-      </p>
+            <!-- LÍNEA DE CONEXIÓN (cable) -->
+            <line x1="215" y1="100" x2="275" y2="100" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
+            <line x1="275" y1="100" x2="275" y2="60" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
+            <line x1="275" y1="60" x2="430" y2="60" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
+            <line x1="430" y1="60" x2="430" y2="100" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
+            <line x1="430" y1="100" x2="480" y2="100" stroke="#e65100" stroke-width="3" stroke-dasharray="6,3"/>
+            <text x="340" y="50" text-anchor="middle" class="lab-il2" style="font-size:10px; fill:#e65100;">Cables de cobre</text>
 
-      <!-- Párrafo 7 — Evolución -->
-      <p>
-        Con el paso del tiempo, el teléfono fue evolucionando. Aparecieron 
-        las <strong>centralitas telefónicas</strong>, donde operadoras 
-        conectaban manualmente las llamadas. Luego se tendieron 
-        <strong>cables submarinos</strong> que cruzaban océanos y permitían 
-        hablar entre continentes. En las zonas rurales, el teléfono llegó 
-        para conectar a comunidades que antes estaban aisladas. El telégrafo 
-        y el teléfono fueron los <strong>primeros pasos</strong> hacia el 
-        mundo conectado que conocemos hoy. Sin ellos, no existirían los 
-        celulares ni el internet.
-      </p>
-
-      <!-- Línea de tiempo visual -->
-      <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 2px dashed #bbdefb;">
-        <h3>Línea de tiempo</h3>
-        <div class="timeline-item">
-          <span class="ano">1837</span>
-          <span class="desc">Samuel Morse inventa el telégrafo</span>
+            <!-- TELÉFONO (derecha) -->
+            <rect x="480" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
+            <text x="580" y="62" text-anchor="middle" class="lab-il2" style="font-size:13px;">📞 Teléfono (1876)</text>
+            <!-- Base del teléfono -->
+            <rect x="510" y="140" width="140" height="25" rx="5" fill="#2c3e50"/>
+            <rect x="515" y="135" width="130" height="8" rx="2" fill="#455a64"/>
+            <!-- Disco marcador -->
+            <circle cx="580" cy="115" r="22" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
+            <circle cx="580" cy="115" r="15" fill="none" stroke="#b0bec5" stroke-width="1"/>
+            <circle cx="580" cy="115" r="3" fill="#455a64"/>
+            <!-- Agujeros del disco -->
+            <circle cx="593" cy="103" r="2.5" fill="#90a4ae"/>
+            <circle cx="600" cy="118" r="2.5" fill="#90a4ae"/>
+            <circle cx="593" cy="132" r="2.5" fill="#90a4ae"/>
+            <circle cx="580" cy="137" r="2.5" fill="#90a4ae"/>
+            <circle cx="567" cy="132" r="2.5" fill="#90a4ae"/>
+            <circle cx="560" cy="118" r="2.5" fill="#90a4ae"/>
+            <circle cx="567" cy="103" r="2.5" fill="#90a4ae"/>
+            <!-- Auricular -->
+            <rect x="555" y="72" width="50" height="8" rx="4" fill="#2c3e50"/>
+            <circle cx="555" cy="76" r="12" fill="#37474f"/>
+            <circle cx="605" cy="76" r="8" fill="#37474f"/>
+            <!-- Cable del auricular -->
+            <path d="M605,76 Q620,95 580,110" fill="none" stroke="#455a64" stroke-width="2"/>
+            <text x="515" y="180" class="lab-il2" style="font-size:10px;">"Señor Watson, venga, lo necesito"</text>
+            <text x="515" y="193" class="lab-il2" style="font-size:10px;">— Alexander Graham Bell</text>
+          </svg>
         </div>
-        <div class="timeline-item">
-          <span class="ano">1844</span>
-          <span class="desc">Primer mensaje telegráfico: Washington → Baltimore</span>
-        </div>
-        <div class="timeline-item">
-          <span class="ano">1876</span>
-          <span class="desc">Alexander Graham Bell inventa el teléfono</span>
-        </div>
-        <div class="timeline-item">
-          <span class="ano">1915</span>
-          <span class="desc">Primera llamada telefónica transcontinental (Nueva York ↔ San Francisco)</span>
-        </div>
-        <div class="timeline-item">
-          <span class="ano">1956</span>
-          <span class="desc">Primer cable telefónico submarino (TAT-1) cruza el Atlántico</span>
-        </div>
-      </div>
 
-    </section>
+        <!-- Párrafo 1 -->
+        <p>
+          Imagina que vives en una época donde no hay celulares, ni internet, 
+          ni siquiera teléfonos. Si querías enviar un mensaje a alguien que 
+          vivía en otra ciudad, tenías que escribir una carta y esperar 
+          <strong>días, semanas o incluso meses</strong> para recibir respuesta. 
+          La comunicación a distancia era muy lenta. La gente usaba señales de 
+          humo, palomas mensajeras o mensajeros a caballo, pero nada funcionaba 
+          con rapidez. Todo cambió cuando dos grandes inventos llegaron para 
+          transformar el mundo: <strong>el telégrafo y el teléfono</strong>.
+        </p>
 
-    <!-- ============================================================
-         PREGUNTAS DE COMPRENSIÓN
-         ============================================================ -->
-    <section class="card">
-      <h2>Preguntas de comprensión</h2>
-      <p style="margin-bottom: 1rem; color: #546e7a;">
-        Lee cada pregunta con atención y selecciona la respuesta correcta.
-      </p>
+        <!-- Párrafo 2 — El telégrafo -->
+        <p>
+          En 1837, un inventor estadounidense llamado <strong>Samuel Morse</strong> 
+          creó un dispositivo que permitía enviar mensajes a través de cables 
+          eléctricos: <strong>el telégrafo</strong>. La idea era brillante: 
+          un operador presionaba un interruptor que enviaba impulsos eléctricos 
+          por un cable, y al otro lado, un aparato recibía esos impulsos y los 
+          convertía en marcas sobre una tira de papel. Pero, ¿cómo se 
+          convertían esos impulsos en letras y palabras? Morse inventó un 
+          código especial basado en <strong>puntos y rayas</strong>.
+        </p>
 
-      <!-- Pregunta 1 -->
-      <div class="pregunta" id="preg1">
-        <p>1. &iquest;Qui&eacute;n invent&oacute; el tel&eacute;grafo?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="q1" value="A" onchange="verificarPregunta(1, 'B')">
-            A) Alexander Graham Bell
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q1" value="B" onchange="verificarPregunta(1, 'B')">
-            B) Samuel Morse
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q1" value="C" onchange="verificarPregunta(1, 'B')">
-            C) Thomas Edison
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q1" value="D" onchange="verificarPregunta(1, 'B')">
-            D) Nikola Tesla
-          </label>
+        <!-- Párrafo 3 — Cómo funcionaba el telégrafo -->
+        <p>
+          El <strong>código Morse</strong> asigna a cada letra del alfabeto una 
+          combinación única de puntos (señales cortas) y rayas (señales largas). 
+          Por ejemplo, la letra <strong>A</strong> es <em>punto — raya</em> 
+          (<code>· —</code>), y la <strong>B</strong> es <em>raya — punto — punto — punto</em> 
+          (<code>— · · ·</code>). Los operadores telegráficos aprendían este 
+          código y podían enviar mensajes a una velocidad sorprendente. 
+          El telégrafo revolucionó las comunicaciones: por primera vez en la 
+          historia, un mensaje podía viajar <strong>más rápido que una persona 
+          a caballo</strong>.
+        </p>
+
+        <!-- Recuadro de ejemplo: Alfabeto Morse básico -->
+        <div class="codigo-morse">
+          <h4>Alfabeto Morse básico</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Letra</th>
+                <th>Código Morse</th>
+                <th>Letra</th>
+                <th>Código Morse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td class="morse-puntos">· —</td>
+                <td>N</td>
+                <td class="morse-puntos">— ·</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td class="morse-puntos">— · · ·</td>
+                <td>O</td>
+                <td class="morse-puntos">— — —</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td class="morse-puntos">— · — ·</td>
+                <td>P</td>
+                <td class="morse-puntos">· — — ·</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td class="morse-puntos">— · ·</td>
+                <td>Q</td>
+                <td class="morse-puntos">— — · —</td>
+              </tr>
+              <tr>
+                <td>E</td>
+                <td class="morse-puntos">·</td>
+                <td>R</td>
+                <td class="morse-puntos">· — ·</td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td class="morse-puntos">· · — ·</td>
+                <td>S</td>
+                <td class="morse-puntos">· · ·</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td class="morse-puntos">— — ·</td>
+                <td>T</td>
+                <td class="morse-puntos">—</td>
+              </tr>
+              <tr>
+                <td>H</td>
+                <td class="morse-puntos">· · · ·</td>
+                <td>U</td>
+                <td class="morse-puntos">· · —</td>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td class="morse-puntos">· ·</td>
+                <td>V</td>
+                <td class="morse-puntos">· · · —</td>
+              </tr>
+              <tr>
+                <td>J</td>
+                <td class="morse-puntos">· — — —</td>
+                <td>W</td>
+                <td class="morse-puntos">· — —</td>
+              </tr>
+              <tr>
+                <td>K</td>
+                <td class="morse-puntos">— · —</td>
+                <td>X</td>
+                <td class="morse-puntos">— · · —</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td class="morse-puntos">· — · ·</td>
+                <td>Y</td>
+                <td class="morse-puntos">— · — —</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td class="morse-puntos">— —</td>
+                <td>Z</td>
+                <td class="morse-puntos">— — · ·</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="destacado-sos">
+            SOS: · · · &nbsp; — — — &nbsp; · · · &nbsp; 
+            (¡la señal de auxilio más famosa del mundo!)
+          </div>
         </div>
-        <div class="feedback" id="fb1"></div>
-      </div>
 
-      <!-- Pregunta 2 -->
-      <div class="pregunta" id="preg2">
-        <p>2. &iquest;Cu&aacute;l fue el primer mensaje enviado por tel&eacute;grafo?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="q2" value="A" onchange="verificarPregunta(2, 'C')">
-            A) "Hello World"
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q2" value="B" onchange="verificarPregunta(2, 'C')">
-            B) "Mr. Watson, come here"
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q2" value="C" onchange="verificarPregunta(2, 'C')">
-            C) "What hath God wrought?"
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q2" value="D" onchange="verificarPregunta(2, 'C')">
-            D) "This is London"
-          </label>
+        <div class="seccion-divisor">· · ·</div>
+
+        <!-- CHECKPOINT 1 -->
+        <div class="checkpoint" id="sub02-chk-0-0">
+          <h4>🔐 Verificación de lectura — Parte 1</h4>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">Responde correctamente para desbloquear la siguiente parte.</p>
+          <p><strong>¿Quién inventó el telégrafo en 1837?</strong></p>
+          <div class="chk-opciones">
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk0" value="A" onchange="progresivo.verificar('sub02',0,0,this.value)">
+              A. Alexander Graham Bell
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk0" value="B" onchange="progresivo.verificar('sub02',0,0,this.value)">
+              B. Samuel Morse
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk0" value="C" onchange="progresivo.verificar('sub02',0,0,this.value)">
+              C. Thomas Edison
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk0" value="D" onchange="progresivo.verificar('sub02',0,0,this.value)">
+              D. Nikola Tesla
+            </label>
+          </div>
+          <div class="chk-fb"></div>
+          <button class="btn btn-primario btn-continuar" id="sub02-sig-0" onclick="progresivo.siguiente('sub02')">➡️ Continuar leyendo</button>
         </div>
-        <div class="feedback" id="fb2"></div>
-      </div>
 
-      <!-- Pregunta 3 -->
-      <div class="pregunta" id="preg3">
-        <p>3. &iquest;En qu&eacute; a&ntilde;o invent&oacute; Alexander Graham Bell el tel&eacute;fono?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="q3" value="A" onchange="verificarPregunta(3, 'B')">
-            A) 1837
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q3" value="B" onchange="verificarPregunta(3, 'B')">
-            B) 1876
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q3" value="C" onchange="verificarPregunta(3, 'B')">
-            C) 1901
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q3" value="D" onchange="verificarPregunta(3, 'B')">
-            D) 1844
-          </label>
+      </div><!-- /seccion-contenido 1 -->
+
+      <!-- ============================================================
+           SECCIÓN 2 — Primer mensaje + teléfono + transformación
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <div class="seccion-divisor">⭐</div>
+
+        <!-- Párrafo 4 — Primer mensaje telegráfico -->
+        <p>
+          El 24 de mayo de 1844 ocurrió un momento histórico. Morse estaba en 
+          Washington D. C. y envió un mensaje a su colega Alfred Vail, que se 
+          encontraba en Baltimore, a más de 60 kilómetros de distancia. 
+          El mensaje decía: <strong>"What hath God wrought?"</strong> 
+          (¿Qué ha forjado Dios?). Fue la primera vez que un mensaje viajó 
+          por un cable eléctrico. Miles de personas quedaron asombradas. 
+          El mundo nunca volvería a ser el mismo.
+        </p>
+
+        <div class="cita">
+          "What hath God wrought?"
+          <span class="autor">— Samuel Morse, primer mensaje telegráfico, 1844</span>
         </div>
-        <div class="feedback" id="fb3"></div>
-      </div>
 
-      <!-- Pregunta 4 -->
-      <div class="pregunta" id="preg4">
-        <p>4. &iquest;C&oacute;mo transmit&iacute;a el tel&eacute;grafo los mensajes?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="q4" value="A" onchange="verificarPregunta(4, 'C')">
-            A) Mediante ondas de radio
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q4" value="B" onchange="verificarPregunta(4, 'C')">
-            B) Con se&ntilde;ales de sonido
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q4" value="C" onchange="verificarPregunta(4, 'C')">
-            C) Impulsos el&eacute;ctricos a trav&eacute;s de cables
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q4" value="D" onchange="verificarPregunta(4, 'C')">
-            D) Con se&ntilde;ales de humo
-          </label>
+        <!-- Párrafo 5 — El teléfono -->
+        <p>
+          Unos años después, otro inventor soñaba con algo aún más increíble: 
+          transmitir la <strong>voz humana</strong> a través de cables. 
+          En 1876, el escocés <strong>Alexander Graham Bell</strong> logró 
+          lo que parecía imposible: inventó el <strong>teléfono</strong>. 
+          La historia cuenta que Bell derramó ácido sobre su ropa y gritó: 
+          <em>"Mr. Watson, come here, I need you!"</em> 
+          ("Señor Watson, venga, lo necesito"). Su asistente, Thomas Watson, 
+          escuchó las palabras a través del dispositivo en la habitación de 
+          al lado. ¡El teléfono funcionaba!
+        </p>
+
+        <!-- Párrafo 6 — Cómo transformó la comunicación -->
+        <p>
+          El teléfono cambió la comunicación de una manera que el telégrafo 
+          no podía: las personas podían <strong>hablar en tiempo real</strong> 
+          con sus seres queridos, sin importar la distancia. Ya no era necesario 
+          aprender códigos ni ir a una oficina de telégrafos. Podías 
+          simplemente levantar un auricular, marcar un número y escuchar la 
+          voz de la otra persona. La comunicación se volvió más personal, 
+          más rápida y más emocionante. Las familias podían mantenerse en 
+          contacto, los negocios podían cerrar acuerdos al instante.
+        </p>
+
+        <div class="seccion-divisor">· · ·</div>
+
+        <!-- CHECKPOINT 2 -->
+        <div class="checkpoint" id="sub02-chk-1-0">
+          <h4>🔐 Verificación de lectura — Parte 2</h4>
+          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">Responde correctamente para desbloquear la siguiente parte.</p>
+          <p><strong>¿Qué logró Alexander Graham Bell en 1876?</strong></p>
+          <div class="chk-opciones">
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk1" value="A" onchange="progresivo.verificar('sub02',1,0,this.value)">
+              A. Inventar el telégrafo
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk1" value="B" onchange="progresivo.verificar('sub02',1,0,this.value)">
+              B. Inventar el teléfono
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk1" value="C" onchange="progresivo.verificar('sub02',1,0,this.value)">
+              C. Crear el código Morse
+            </label>
+            <label class="chk-opcion">
+              <input type="radio" name="sub02-chk1" value="D" onchange="progresivo.verificar('sub02',1,0,this.value)">
+              D. Enviar el primer mensaje transatlántico
+            </label>
+          </div>
+          <div class="chk-fb"></div>
+          <button class="btn btn-primario btn-continuar" id="sub02-sig-1" onclick="progresivo.siguiente('sub02')">➡️ Continuar leyendo</button>
         </div>
-        <div class="feedback" id="fb4"></div>
-      </div>
 
-      <!-- Pregunta 5 -->
-      <div class="pregunta" id="preg5">
-        <p>5. &iquest;Qu&eacute; signific&oacute; el tel&eacute;fono para la comunicaci&oacute;n humana?</p>
-        <div class="opciones">
-          <label class="opcion">
-            <input type="radio" name="q5" value="A" onchange="verificarPregunta(5, 'B')">
-            A) Solo serv&iacute;a para enviar telegramas
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q5" value="B" onchange="verificarPregunta(5, 'B')">
-            B) Las personas pod&iacute;an hablar en tiempo real a larga distancia
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q5" value="C" onchange="verificarPregunta(5, 'B')">
-            C) Reemplaz&oacute; por completo al correo postal
-          </label>
-          <label class="opcion">
-            <input type="radio" name="q5" value="D" onchange="verificarPregunta(5, 'B')">
-            D) Solo lo usaban los militares
-          </label>
+      </div><!-- /seccion-contenido 2 -->
+
+      <!-- ============================================================
+           SECCIÓN 3 — Evolución + timeline + preguntas + sopa
+           ============================================================ -->
+      <div class="seccion-contenido">
+
+        <div class="seccion-divisor">⭐</div>
+
+        <!-- Párrafo 7 — Evolución -->
+        <p>
+          Con el paso del tiempo, el teléfono fue evolucionando. Aparecieron 
+          las <strong>centralitas telefónicas</strong>, donde operadoras 
+          conectaban manualmente las llamadas. Luego se tendieron 
+          <strong>cables submarinos</strong> que cruzaban océanos y permitían 
+          hablar entre continentes. En las zonas rurales, el teléfono llegó 
+          para conectar a comunidades que antes estaban aisladas. El telégrafo 
+          y el teléfono fueron los <strong>primeros pasos</strong> hacia el 
+          mundo conectado que conocemos hoy. Sin ellos, no existirían los 
+          celulares ni el internet.
+        </p>
+
+        <!-- Línea de tiempo visual -->
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 2px dashed #bbdefb;">
+          <h3>Línea de tiempo</h3>
+          <div class="timeline-item">
+            <span class="ano">1837</span>
+            <span class="desc">Samuel Morse inventa el telégrafo</span>
+          </div>
+          <div class="timeline-item">
+            <span class="ano">1844</span>
+            <span class="desc">Primer mensaje telegráfico: Washington → Baltimore</span>
+          </div>
+          <div class="timeline-item">
+            <span class="ano">1876</span>
+            <span class="desc">Alexander Graham Bell inventa el teléfono</span>
+          </div>
+          <div class="timeline-item">
+            <span class="ano">1915</span>
+            <span class="desc">Primera llamada telefónica transcontinental (Nueva York ↔ San Francisco)</span>
+          </div>
+          <div class="timeline-item">
+            <span class="ano">1956</span>
+            <span class="desc">Primer cable telefónico submarino (TAT-1) cruza el Atlántico</span>
+          </div>
         </div>
-        <div class="feedback" id="fb5"></div>
-      </div>
-    </section>
 
-    <!-- ============================================================
-         PARTE 2 — SOPA DE LETRAS
-         ============================================================ -->
-    <section class="card">
-      <h2>Sopa de letras</h2>
-      <p style="margin-bottom: 1rem; color: #546e7a;">
-        Encuentra las 25 palabras clave relacionadas con el tel&eacute;grafo 
-        y el tel&eacute;fono. Haz clic en las letras para seleccionarlas 
-        y formar la palabra. &iexcl;Suerte!
-      </p>
+        <!-- ============================================================
+             PREGUNTAS DE COMPRENSIÓN FINALES
+             ============================================================ -->
+        <h3 style="margin-top: 2rem;">📝 Preguntas de comprensión finales</h3>
+        <p style="margin-bottom: 1rem; color: #546e7a;">
+          Ahora que has leído todo, responde estas preguntas para demostrar lo que aprendiste.
+        </p>
 
-      <!-- Contenedor donde se renderizará la sopa de letras -->
-      <div id="sopa02"></div>
-    </section>
+        <!-- Pregunta 1 -->
+        <div class="pregunta" id="preg1">
+          <p>1. &iquest;Qui&eacute;n invent&oacute; el tel&eacute;grafo?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="q1" value="A" onchange="verificarPregunta(1, 'B')">
+              A) Alexander Graham Bell
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q1" value="B" onchange="verificarPregunta(1, 'B')">
+              B) Samuel Morse
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q1" value="C" onchange="verificarPregunta(1, 'B')">
+              C) Thomas Edison
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q1" value="D" onchange="verificarPregunta(1, 'B')">
+              D) Nikola Tesla
+            </label>
+          </div>
+          <div class="feedback" id="fb1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta" id="preg2">
+          <p>2. &iquest;Cu&aacute;l fue el primer mensaje enviado por tel&eacute;grafo?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="q2" value="A" onchange="verificarPregunta(2, 'C')">
+              A) "Hello World"
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q2" value="B" onchange="verificarPregunta(2, 'C')">
+              B) "Mr. Watson, come here"
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q2" value="C" onchange="verificarPregunta(2, 'C')">
+              C) "What hath God wrought?"
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q2" value="D" onchange="verificarPregunta(2, 'C')">
+              D) "This is London"
+            </label>
+          </div>
+          <div class="feedback" id="fb2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="pregunta" id="preg3">
+          <p>3. &iquest;En qu&eacute; a&ntilde;o invent&oacute; Alexander Graham Bell el tel&eacute;fono?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="q3" value="A" onchange="verificarPregunta(3, 'B')">
+              A) 1837
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q3" value="B" onchange="verificarPregunta(3, 'B')">
+              B) 1876
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q3" value="C" onchange="verificarPregunta(3, 'B')">
+              C) 1901
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q3" value="D" onchange="verificarPregunta(3, 'B')">
+              D) 1844
+            </label>
+          </div>
+          <div class="feedback" id="fb3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="pregunta" id="preg4">
+          <p>4. &iquest;C&oacute;mo transmit&iacute;a el tel&eacute;grafo los mensajes?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="q4" value="A" onchange="verificarPregunta(4, 'C')">
+              A) Mediante ondas de radio
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q4" value="B" onchange="verificarPregunta(4, 'C')">
+              B) Con se&ntilde;ales de sonido
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q4" value="C" onchange="verificarPregunta(4, 'C')">
+              C) Impulsos el&eacute;ctricos a trav&eacute;s de cables
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q4" value="D" onchange="verificarPregunta(4, 'C')">
+              D) Con se&ntilde;ales de humo
+            </label>
+          </div>
+          <div class="feedback" id="fb4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="pregunta" id="preg5">
+          <p>5. &iquest;Qu&eacute; signific&oacute; el tel&eacute;fono para la comunicaci&oacute;n humana?</p>
+          <div class="opciones">
+            <label class="opcion">
+              <input type="radio" name="q5" value="A" onchange="verificarPregunta(5, 'B')">
+              A) Solo serv&iacute;a para enviar telegramas
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q5" value="B" onchange="verificarPregunta(5, 'B')">
+              B) Las personas pod&iacute;an hablar en tiempo real a larga distancia
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q5" value="C" onchange="verificarPregunta(5, 'B')">
+              C) Reemplaz&oacute; por completo al correo postal
+            </label>
+            <label class="opcion">
+              <input type="radio" name="q5" value="D" onchange="verificarPregunta(5, 'B')">
+              D) Solo lo usaban los militares
+            </label>
+          </div>
+          <div class="feedback" id="fb5"></div>
+        </div>
+
+        <!-- ============================================================
+             SOPA DE LETRAS
+             ============================================================ -->
+        <h2 style="margin-top: 2rem;">🧩 Sopa de letras</h2>
+        <p style="margin-bottom: 1rem; color: #546e7a;">
+          Encuentra las 25 palabras clave relacionadas con el tel&eacute;grafo 
+          y el tel&eacute;fono. Haz clic en las letras para seleccionarlas 
+          y formar la palabra. &iexcl;Suerte!
+        </p>
+
+        <!-- Contenedor donde se renderizará la sopa de letras -->
+        <div id="sopa02"></div>
+
+      </div><!-- /seccion-contenido 3 -->
+
+    </article>
 
   </main>
 
@@ -600,6 +691,7 @@
        ============================================================ -->
   <!-- Motor de la sopa de letras -->
   <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
 
   <script>
     // ============================================================
@@ -657,6 +749,16 @@
 
       // Crear la sopa de letras en el contenedor 'sopa02' con grilla 20x20
       crearSopa('sopa02', palabras, 20);
+    });
+
+    // ============================================================
+    // 3. Inicializar el sistema de desbloqueo progresivo
+    // ============================================================
+    progresivo.iniciar('sub02', {
+      preguntas: {
+        0: [{ correcta: 'B', explicacion: 'Samuel Morse inventó el telégrafo en 1837.' }],
+        1: [{ correcta: 'B', explicacion: 'Alexander Graham Bell inventó el teléfono en 1876.' }]
+      }
     });
   </script>
 
