@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="../../css/estilo.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    .portada-svg { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:1.5rem 0; }
-    .portada-svg svg { flex:1; min-width:200px; max-width:280px; border-radius:16px; }
+    .portada-svg { margin:1.5rem 0; text-align:center; }
     .pregunta .opcion label { cursor:pointer; flex:1; }
     .sopa-grilla { user-select:none; }
   </style>
@@ -47,40 +46,68 @@
 
         <div class="paso-texto">
           <div class="portada-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" style="background:#e3f2fd; padding:8px;">
-              <defs><style>.ps1{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1a237e}.ps2{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#283593}</style></defs>
-              <text x="200" y="18" text-anchor="middle" class="ps1">El telegrafo</text>
-              <rect x="130" y="35" width="80" height="30" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.5"/>
-              <rect x="130" y="35" width="80" height="7" rx="2" fill="#fff9c4"/>
-              <rect x="130" y="60" width="70" height="12" rx="2" fill="#5d4037"/>
-              <rect x="215" y="42" width="6" height="25" fill="#546e7a"/>
-              <line x1="80" y1="50" x2="125" y2="50" stroke="#333" stroke-width="2"/>
-              <line x1="225" y1="50" x2="300" y2="50" stroke="#333" stroke-width="2"/>
-              <text x="120" y="110" text-anchor="middle" class="ps2">Cables electricos y codigo Morse</text>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" style="background:#e8f5e9; padding:8px;">
-              <defs><style>.ps3{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1b5e20}.ps4{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#2e7d32}</style></defs>
-              <text x="200" y="18" text-anchor="middle" class="ps3">El telefono</text>
-              <rect x="145" y="35" width="60" height="40" rx="10" fill="#2c3e50"/>
-              <rect x="152" y="42" width="46" height="26" rx="6" fill="#455a64"/>
-              <circle cx="175" cy="55" r="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
-              <circle cx="175" cy="55" r="2.5" fill="#455a64"/>
-              <rect x="125" y="55" width="20" height="8" rx="3" fill="#37474f"/>
-              <rect x="205" y="55" width="20" height="8" rx="3" fill="#37474f"/>
-              <line x1="125" y1="75" x2="125" y2="95" stroke="#546e7a" stroke-width="2"/>
-              <line x1="225" y1="75" x2="225" y2="95" stroke="#546e7a" stroke-width="2"/>
-              <line x1="125" y1="95" x2="225" y2="95" stroke="#546e7a" stroke-width="3"/>
-              <text x="200" y="118" text-anchor="middle" class="ps4">Transmision de la voz a larga distancia</text>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" style="background:#fce4ec; padding:8px;">
-              <defs><style>.ps5{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#b71c1c}.ps6{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#c62828}</style></defs>
-              <text x="200" y="18" text-anchor="middle" class="ps5">Cables submarinos</text>
-              <rect x="100" y="50" width="200" height="25" rx="8" fill="#546e7a" opacity="0.6"/>
-              <rect x="100" y="52" width="200" height="6" rx="3" fill="#1a73e8" opacity="0.5"/>
-              <path d="M80,65 Q90,80 100,65 Q110,50 120,65 Q130,80 140,65 Q150,50 160,65 Q170,80 180,65 Q190,50 200,65 Q210,80 220,65 Q230,50 240,65 Q250,80 260,65 Q270,50 280,65 Q290,80 300,65 Q310,50 320,65" fill="none" stroke="#42a5f5" stroke-width="2" opacity="0.5"/>
-              <text x="170" y="30" text-anchor="middle" class="ps6">Europa</text>
-              <text x="230" y="30" text-anchor="middle" class="ps6">America</text>
-              <text x="200" y="115" text-anchor="middle" class="ps6">Cable transatlantico (1866)</text>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
+              <defs>
+                <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+                  <stop offset="33%" style="stop-color:#fff3e0;stop-opacity:1" />
+                  <stop offset="33%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#fce4ec;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#fce4ec;stop-opacity:1" />
+                </linearGradient>
+                <style>
+                  .u1{font-family:Nunito,sans-serif;font-size:16px;font-weight:800;fill:#2c3e50}
+                  .u2{font-family:Nunito,sans-serif;font-size:13px;font-weight:600;fill:#546e7a}
+                </style>
+              </defs>
+              <rect width="700" height="260" rx="16" fill="url(#g2)" />
+              <!-- Panel 1: Comunicarse a distancia -->
+              <rect x="12" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <circle cx="122" cy="48" r="12" fill="#ffcc80" />
+              <rect x="114" y="60" width="16" height="28" rx="4" fill="#42a5f5" />
+              <line x1="114" y1="65" x2="92" y2="72" stroke="#42a5f5" stroke-width="4" stroke-linecap="round" />
+              <line x1="130" y1="65" x2="148" y2="55" stroke="#42a5f5" stroke-width="4" stroke-linecap="round" />
+              <rect x="126" y="49" width="28" height="18" rx="2" fill="white" stroke="#90a4ae" stroke-width="1" />
+              <line x1="132" y1="55" x2="148" y2="55" stroke="#e53935" stroke-width="1.5" />
+              <line x1="132" y1="59" x2="145" y2="59" stroke="#e53935" stroke-width="1.5" />
+              <line x1="114" y1="88" x2="105" y2="112" stroke="#ff7043" stroke-width="4" stroke-linecap="round" />
+              <line x1="130" y1="88" x2="138" y2="112" stroke="#ff7043" stroke-width="4" stroke-linecap="round" />
+              <circle cx="155" cy="50" r="22" fill="none" stroke="#1a73e8" stroke-width="1.5" opacity="0.3" />
+              <line x1="170" y1="38" x2="178" y2="30" stroke="#1a73e8" stroke-width="2" />
+              <line x1="170" y1="62" x2="178" y2="70" stroke="#1a73e8" stroke-width="2" />
+              <text x="122" y="170" text-anchor="middle" class="u1">Comunicarse a distancia</text>
+              <text x="122" y="197" text-anchor="middle" class="u2">Antes: d&iacute;as o semanas</text>
+              <text x="122" y="218" text-anchor="middle" class="u2">Con el tel&eacute;grafo: segundos</text>
+              <!-- Panel 2: C&oacute;digo Morse -->
+              <rect x="241" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="312" y="45" width="56" height="20" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.5" />
+              <rect x="312" y="45" width="56" height="5" rx="2" fill="#fff9c4" />
+              <rect x="312" y="62" width="48" height="9" rx="2" fill="#5d4037" />
+              <rect x="371" y="49" width="6" height="20" fill="#546e7a" />
+              <line x1="285" y1="57" x2="308" y2="57" stroke="#333" stroke-width="2.5" />
+              <line x1="377" y1="57" x2="405" y2="57" stroke="#333" stroke-width="2.5" />
+              <text x="350" y="100" text-anchor="middle" style="font-family:monospace;font-size:22px;fill:#1565c0;font-weight:800;">&bull;&mdash;&bull;&bull;&mdash;</text>
+              <text x="350" y="118" text-anchor="middle" style="font-family:monospace;font-size:16px;fill:#c62828;font-weight:800;">S O S</text>
+              <text x="350" y="134" text-anchor="middle" style="font-family:monospace;font-size:13px;fill:#1565c0;">&bull;&bull;&bull; &mdash;&mdash;&mdash; &bull;&bull;&bull;</text>
+              <text x="350" y="170" text-anchor="middle" class="u1">C&oacute;digo Morse</text>
+              <text x="350" y="197" text-anchor="middle" class="u2">Puntos y rayas</text>
+              <text x="350" y="218" text-anchor="middle" class="u2">Primer lenguaje digital</text>
+              <!-- Panel 3: Cables submarinos -->
+              <rect x="470" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <text x="510" y="40" text-anchor="middle" style="font-family:Nunito,sans-serif;font-size:12px;font-weight:700;fill:#2c3e50">Europa</text>
+              <text x="650" y="40" text-anchor="middle" style="font-family:Nunito,sans-serif;font-size:12px;font-weight:700;fill:#2c3e50">Am&eacute;rica</text>
+              <rect x="482" y="55" width="195" height="40" rx="8" fill="#1a73e8" opacity="0.08" />
+              <rect x="482" y="58" width="195" height="5" rx="2" fill="#1a73e8" opacity="0.18" />
+              <path d="M490,80 Q520,68 540,80 Q560,92 580,80 Q600,68 620,80 Q640,92 665,80" fill="none" stroke="#ff7043" stroke-width="4" stroke-linecap="round" />
+              <circle cx="520" cy="80" r="3.5" fill="#ff7043" />
+              <circle cx="560" cy="80" r="3.5" fill="#ff7043" />
+              <circle cx="600" cy="80" r="3.5" fill="#ff7043" />
+              <circle cx="640" cy="80" r="3.5" fill="#ff7043" />
+              <path d="M500,100 Q515,115 530,100 Q545,85 560,100 Q575,115 590,100 Q605,85 620,100 Q635,115 650,100" fill="none" stroke="#42a5f5" stroke-width="2" opacity="0.4" />
+              <text x="579" y="170" text-anchor="middle" class="u1">Cables submarinos</text>
+              <text x="579" y="197" text-anchor="middle" class="u2">Cable transatl&aacute;ntico</text>
+              <text x="579" y="218" text-anchor="middle" class="u2">1866: Irlanda a Terranova</text>
             </svg>
           </div>
 
