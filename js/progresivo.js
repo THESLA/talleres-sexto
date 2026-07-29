@@ -30,10 +30,12 @@ const progresivo = (function() {
       e.pasoActual++;
       pasos[e.pasoActual].style.display = 'block';
       pasos[e.pasoActual].classList.add('paso-activo');
-      // Limpiar feedback previo en esta página por si se vuelve
+      // Limpiar feedback y radios en la página nueva
       const feedback = pasos[e.pasoActual].querySelector('.paso-feedback');
       if (feedback) { feedback.style.display = 'none'; feedback.textContent = ''; }
       pasos[e.pasoActual].querySelectorAll('.paso-pregunta').forEach(el => el.classList.remove('paso-correcta', 'paso-incorrecta'));
+      const radios = pasos[e.pasoActual].querySelectorAll('input[type="radio"]');
+      radios.forEach(function(r) { r.checked = false; r.disabled = false; });
       contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
