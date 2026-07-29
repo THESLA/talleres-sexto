@@ -3,47 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sub-taller 1: Las primeras formas de comunicación — Historia de la Conectividad</title>
+  <title>Sub-taller 1: Historia de la Conectividad — Historia de la Conectividad</title>
   <link rel="stylesheet" href="../../css/estilo.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    .curiosidad {
-      background: #e3f2fd;
-      border-left: 4px solid #1a73e8;
-      border-radius: 0 16px 16px 0;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
-      box-shadow: 0 2px 8px rgba(26, 115, 232, 0.1);
-    }
-    .curiosidad h4 { color: #1a73e8; font-size: 1.1rem; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem; }
-    .curiosidad p { margin-bottom: 0; font-size: 1rem; }
-    .timeline-simple {
-      display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin: 1.2rem 0;
-    }
-    .timeline-simple .hito {
-      background: #f8faff; border-radius: 12px; padding: 0.6rem 1rem;
-      border: 1px solid #e0e7f0; font-size: 0.9rem; font-weight: 600;
-      text-align: center; flex: 1 1 120px;
-    }
-    .timeline-simple .hito .ano { color: #1a73e8; font-size: 1.1rem; display: block; }
-    .tabla-didactica { font-size: 0.95rem; }
-    @media (max-width: 600px) {
-      .tabla-didactica th, .tabla-didactica td { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
-    }
-    .pregunta .opcion label { cursor: pointer; flex: 1; }
+    .portada-svg { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:1.5rem 0; }
+    .portada-svg svg { flex:1; min-width:200px; max-width:280px; border-radius:16px; }
+    .pregunta .opcion label { cursor:pointer; flex:1; }
+    .sopa-grilla { user-select:none; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>🌐 Historia de la <span>Conectividad</span></h1>
-    <div class="subtitulo">Tecnología e Informática · Grado Sexto</div>
+    <h1>Historia de la <span>Conectividad</span></h1>
+    <div class="subtitulo">Tecnologia e Informatica · Grado Sexto</div>
   </header>
 
   <nav class="subtaller-nav">
-    <a href="../../index.html">🏠 Inicio</a>
+    <a href="../../index.html">Inicio</a>
     <span class="separador">|</span>
-    <a href="index.html">📋 Portada del tema</a>
+    <a href="index.html">Portada del tema</a>
     <span class="separador">|</span>
     <a href="sub01.html" class="activo">1</a>
     <a href="sub02.html">2</a>
@@ -57,368 +37,539 @@
 
     <article class="card" id="sub01">
 
-      <h2 style="text-align:center;">📯 Las primeras formas de comunicación</h2>
-      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Historia de la Conectividad · Sub-taller 1</p>
+      <h2 style="text-align:center;">Historia de la Conectividad</h2>
+      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Sub-taller 1</p>
 
-      <!-- ============================================================
-           PÁGINA 0 — TEXTO 1: Comunicación primitiva
-           ============================================================ -->
+      <!-- PASO 0 — Portada -->
       <div class="paso-pagina" data-paso="0">
 
-        <div class="paso-indicador">Página <span>1</span> de 6 — Lectura</div>
+        <div class="paso-indicador">Pagina <span>1</span> de 14 — Introduccion</div>
 
         <div class="paso-texto">
-          <span class="paso-numero">📖 Parte 1 de 3</span>
+          <div class="portada-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" style="background:#fff3e0; padding:8px;">
+              <defs><style>.ps1{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#5d4037}.ps2{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#795548}</style></defs>
+              <text x="200" y="18" text-anchor="middle" class="ps1">Comunicacion antigua</text>
+              <ellipse cx="200" cy="80" rx="80" ry="35" fill="#bf360c" opacity="0.15"/>
+              <ellipse cx="200" cy="78" rx="55" ry="22" fill="#e65100" opacity="0.2"/>
+              <ellipse cx="200" cy="74" rx="35" ry="14" fill="#ff6f00" opacity="0.25"/>
+              <circle cx="175" cy="40" r="12" fill="#bcaaa4" opacity="0.3"/>
+              <circle cx="190" cy="38" r="10" fill="#bcaaa4" opacity="0.25"/>
+              <circle cx="210" cy="36" r="14" fill="#bcaaa4" opacity="0.2"/>
+              <circle cx="225" cy="35" r="11" fill="#bcaaa4" opacity="0.25"/>
+              <circle cx="200" cy="34" r="6" fill="#bcaaa4" opacity="0.35"/>
+              <text x="200" y="115" text-anchor="middle" class="ps2">Senales de humo, tambores, palomas</text>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" style="background:#e3f2fd; padding:8px;">
+              <defs><style>.ps3{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1a237e}.ps4{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#283593}</style></defs>
+              <text x="200" y="18" text-anchor="middle" class="ps3">Telegrafo y telefono</text>
+              <rect x="140" y="30" width="60" height="22" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+              <rect x="140" y="30" width="60" height="5" rx="2" fill="#fff9c4"/>
+              <rect x="200" y="30" width="8" height="22" fill="#546e7a"/>
+              <rect x="208" y="33" width="40" height="16" rx="3" fill="#2c3e50"/>
+              <circle cx="228" cy="41" r="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1"/>
+              <rect x="150" y="55" width="30" height="8" rx="2" fill="#5d4037"/>
+              <rect x="190" y="58" width="40" height="5" rx="1" fill="#795548"/>
+              <line x1="150" y1="70" x2="150" y2="85" stroke="#333" stroke-width="1.5"/>
+              <line x1="160" y1="70" x2="160" y2="85" stroke="#333" stroke-width="1.5"/>
+              <line x1="170" y1="70" x2="170" y2="85" stroke="#333" stroke-width="1.5"/>
+              <line x1="180" y1="70" x2="180" y2="85" stroke="#333" stroke-width="1.5"/>
+              <text x="200" y="115" text-anchor="middle" class="ps4">Morse, Bell, cables y corriente</text>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" style="background:#e8f5e9; padding:8px;">
+              <defs><style>.ps5{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1b5e20}.ps6{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#2e7d32}</style></defs>
+              <text x="200" y="18" text-anchor="middle" class="ps5">Radio e Internet</text>
+              <circle cx="160" cy="60" r="20" fill="#bbdefb" opacity="0.5"/>
+              <circle cx="240" cy="60" r="20" fill="#bbdefb" opacity="0.5"/>
+              <circle cx="160" cy="60" r="10" fill="#1a73e8" opacity="0.3"/>
+              <circle cx="240" cy="60" r="10" fill="#1a73e8" opacity="0.3"/>
+              <line x1="190" y1="55" x2="210" y2="55" stroke="#4caf50" stroke-width="3"/>
+              <line x1="190" y1="60" x2="210" y2="60" stroke="#4caf50" stroke-width="3"/>
+              <line x1="190" y1="65" x2="210" y2="65" stroke="#4caf50" stroke-width="3"/>
+              <rect x="155" y="80" width="10" height="20" fill="#546e7a"/>
+              <rect x="235" y="80" width="10" height="20" fill="#546e7a"/>
+              <path d="M125,100 Q140,70 155,100 Q170,70 185,100 Q200,70 215,100 Q230,70 245,100 Q260,70 275,100" fill="none" stroke="#e65100" stroke-width="2" opacity="0.6"/>
+              <text x="200" y="115" text-anchor="middle" class="ps6">Marconi, ondas, ARPANET, WWW</text>
+            </svg>
+          </div>
+
+          <p style="text-align:center; font-size:1.2rem; font-weight:600; color:#2c3e50; margin:1.5rem 0;">
+            En este taller vas a leer 6 textos sobre la historia de la comunicacion: desde las senales de humo hasta internet.
+          </p>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Empezar lectura 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 1 — Lectura 1: Linea de tiempo -->
+      <div class="paso-pagina" data-paso="1" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>2</span> de 14 — Lectura 1 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 1</span>
 
           <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#fff8e1,#fff3e0); padding:10px;">
-              <defs>
-                <style>
-                  .tit-ill { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#5d4037; }
-                  .lab-ill { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#795548; }
-                </style>
-              </defs>
-              <text x="350" y="25" text-anchor="middle" class="tit-ill">Métodos de comunicación en la antigüedad</text>
-              <rect x="20" y="45" width="140" height="140" rx="12" fill="#8d6e63" opacity="0.15"/>
-              <rect x="30" y="55" width="120" height="80" rx="8" fill="#a1887f" opacity="0.4"/>
-              <circle cx="60" cy="80" r="8" fill="#5d4037" opacity="0.6"/>
-              <circle cx="60" cy="100" r="12" fill="#5d4037" opacity="0.6"/>
-              <line x1="60" y1="60" x2="60" y2="72" stroke="#5d4037" stroke-width="2" opacity="0.6"/>
-              <line x1="60" y1="112" x2="60" y2="125" stroke="#5d4037" stroke-width="3" opacity="0.6"/>
-              <ellipse cx="100" cy="90" rx="20" ry="12" fill="none" stroke="#5d4037" stroke-width="2" opacity="0.6"/>
-              <circle cx="118" cy="85" r="4" fill="#5d4037" opacity="0.6"/>
-              <line x1="107" y1="80" x2="107" y2="70" stroke="#5d4037" stroke-width="1.5" opacity="0.6"/>
-              <text x="90" y="155" text-anchor="middle" class="lab-ill">🖌️ Pinturas rupestres</text>
-              <text x="90" y="170" text-anchor="middle" class="lab-ill">(30.000 a.C.)</text>
-              <rect x="185" y="45" width="140" height="140" rx="12" fill="#ffcc80" opacity="0.2"/>
-              <ellipse cx="255" cy="175" rx="25" ry="8" fill="#bf360c" opacity="0.5"/>
-              <ellipse cx="255" cy="170" rx="18" ry="6" fill="#e65100" opacity="0.6"/>
-              <ellipse cx="255" cy="165" rx="12" ry="5" fill="#ff6f00" opacity="0.7"/>
-              <circle cx="248" cy="125" r="12" fill="#bcaaa4" opacity="0.3"/>
-              <circle cx="260" cy="105" r="15" fill="#bcaaa4" opacity="0.25"/>
-              <circle cx="252" cy="80" r="18" fill="#bcaaa4" opacity="0.2"/>
-              <circle cx="262" cy="55" r="20" fill="#bcaaa4" opacity="0.15"/>
-              <text x="255" y="155" text-anchor="middle" class="lab-ill">🔥 Señales de humo</text>
-              <rect x="350" y="45" width="140" height="140" rx="12" fill="#e8f5e9" opacity="0.5"/>
-              <ellipse cx="420" cy="120" rx="28" ry="15" fill="#90a4ae"/>
-              <ellipse cx="420" cy="118" rx="25" ry="12" fill="#b0bec5"/>
-              <circle cx="448" cy="110" r="9" fill="#90a4ae"/>
-              <circle cx="451" cy="108" r="3" fill="#ffcc02"/>
-              <polygon points="456,108 465,106 456,110" fill="#ff8f00"/>
-              <circle cx="450" cy="108" r="1.5" fill="#333"/>
-              <ellipse cx="415" cy="115" rx="20" ry="8" fill="#78909c" transform="rotate(-15 415 115)"/>
-              <polygon points="393,120 378,110 382,125 375,120" fill="#78909c"/>
-              <rect x="435" y="128" width="12" height="8" rx="1" fill="#fff9c4" stroke="#f9a825" stroke-width="0.5"/>
-              <line x1="438" y1="130" x2="444" y2="130" stroke="#f9a825" stroke-width="0.5"/>
-              <line x1="438" y1="133" x2="443" y2="133" stroke="#f9a825" stroke-width="0.5"/>
-              <text x="420" y="155" text-anchor="middle" class="lab-ill">🐦 Palomas mensajeras</text>
-              <text x="420" y="170" text-anchor="middle" class="lab-ill">(desde 3000 a.C.)</text>
-              <rect x="515" y="45" width="140" height="140" rx="12" fill="#fce4ec" opacity="0.4"/>
-              <circle cx="585" cy="72" r="10" fill="#8d6e63"/>
-              <rect x="578" y="82" width="14" height="25" rx="4" fill="#d32f2f"/>
-              <line x1="582" y1="107" x2="575" y2="140" stroke="#8d6e63" stroke-width="4" stroke-linecap="round"/>
-              <line x1="588" y1="107" x2="595" y2="140" stroke="#8d6e63" stroke-width="4" stroke-linecap="round"/>
-              <line x1="578" y1="88" x2="560" y2="80" stroke="#8d6e63" stroke-width="3" stroke-linecap="round"/>
-              <line x1="592" y1="88" x2="608" y2="80" stroke="#8d6e63" stroke-width="3" stroke-linecap="round"/>
-              <rect x="568" y="78" width="10" height="15" rx="2" fill="#fdd835" opacity="0.8"/>
-              <ellipse cx="612" cy="78" rx="6" ry="3" fill="#fdd835" transform="rotate(20 612 78)"/>
-              <line x1="560" y1="78" x2="555" y2="140" stroke="#795548" stroke-width="2.5"/>
-              <text x="585" y="155" text-anchor="middle" class="lab-ill">🏃 Chasqui inca</text>
-              <text x="585" y="170" text-anchor="middle" class="lab-ill">(correo a pie)</text>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fce4ec; padding:8px;">
+              <defs><style>.l1t{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#5d4037}.l1l{font-family:Nunito,sans-serif;font-size:8px;font-weight:600;fill:#795548}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l1t">Linea de tiempo de la comunicacion</text>
+              <line x1="30" y1="80" x2="370" y2="80" stroke="#1a73e8" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="50" cy="80" r="10" fill="#ff7043"/><text x="50" y="65" text-anchor="middle" class="l1l">Humo</text><text x="50" y="97" text-anchor="middle" style="font-size:7px;fill:#78909c;">3000 a.C.</text>
+              <circle cx="120" cy="80" r="10" fill="#ffa726"/><text x="120" y="65" text-anchor="middle" class="l1l">Telegrafo</text><text x="120" y="97" text-anchor="middle" style="font-size:7px;fill:#78909c;">1844</text>
+              <circle cx="190" cy="80" r="10" fill="#66bb6a"/><text x="190" y="65" text-anchor="middle" class="l1l">Telefono</text><text x="190" y="97" text-anchor="middle" style="font-size:7px;fill:#78909c;">1876</text>
+              <circle cx="260" cy="80" r="10" fill="#42a5f5"/><text x="260" y="65" text-anchor="middle" class="l1l">Radio</text><text x="260" y="97" text-anchor="middle" style="font-size:7px;fill:#78909c;">1895</text>
+              <circle cx="330" cy="80" r="10" fill="#ab47bc"/><text x="330" y="65" text-anchor="middle" class="l1l">Internet</text><text x="330" y="97" text-anchor="middle" style="font-size:7px;fill:#78909c;">1969</text>
             </svg>
           </div>
 
           <div class="paso-contenido-lectura">
             <p>
-              ¿Te imaginas vivir en un mundo sin celulares, sin internet y sin cartas?
-              Hace muchísimos años, los seres humanos no tenían ninguna de estas cosas
-              para comunicarse. Al principio, las personas se entendían con <strong>gestos</strong>,
-              <strong>sonidos</strong> y <strong>gruñidos</strong>, muy parecido a como
-              se comunican algunos animales. Con el tiempo, empezaron a dibujar en las
-              paredes de las cuevas lo que veían a su alrededor. Esas fueron las primeras
-              <strong>pinturas rupestres</strong>, una especie de "mensajes" que duraban
-              muchísimos años y le contaban a otras personas cómo era la vida en ese entonces.
-            </p>
-            <p>
-              Pero las personas necesitaban enviar mensajes a larga distancia, no solo
-              a quien estuviera cerca. Así nacieron las <strong>primeras señales a distancia</strong>.
-              Las <strong>señales de humo</strong> eran muy comunes: se hacía una fogata
-              y se tapaba con una manta para soltar el humo en forma de nubes. ¡Así se
-              podía decir "estamos bien" o "peligro, váyanse" a varias colinas de distancia!
-              En África, los <strong>tambores</strong> se usaban para imitar el ritmo del
-              lenguaje y enviar mensajes de aldea en aldea. También se usaban
-              <strong>espejos reflectantes</strong> para destellos de luz con el sol.
+              La humanidad siempre ha buscado comunicarse a distancia. Primero fueron senales de humo,
+              tambores y palomas mensajeras. Luego llegaron el telegrafo, el telefono, la radio y
+              finalmente internet. Cada invento acorto las distancias y permitio que la informacion
+              viajara mas rapido. Hoy podemos hablar al instante con alguien al otro lado del mundo,
+              pero este camino empezo hace miles de anos con metodos muy sencillos.
             </p>
           </div>
         </div>
 
         <div class="paso-botones">
           <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
-            📖 Terminé de leer → Ir a preguntas
+            Termine de leer → Pregunta 1
           </button>
         </div>
 
-      </div><!-- /paso-pagina 0 -->
+      </div>
 
-      <!-- ============================================================
-           PÁGINA 1 — PREGUNTA 1
-           ============================================================ -->
-      <div class="paso-pagina" data-paso="1" style="display:none">
-
-        <div class="paso-indicador">Página <span>2</span> de 6 — Pregunta</div>
-
-        <div class="paso-pregunta-card">
-          <h3>❓ Pregunta sobre la lectura anterior</h3>
-          <p class="paso-enunciado">¿Qué usaban los humanos para comunicarse a larga distancia antes de inventar la escritura?</p>
-          <div class="paso-opciones">
-            <label><input type="radio" name="sub01-p1" value="A" onchange="progresivo.responder('sub01',1,this.value,'C','Los humanos usaban señales de humo, tambores y espejos reflectantes para comunicarse a distancia antes de la escritura.')"> A. Solo se comunicaban con palomas mensajeras</label>
-            <label><input type="radio" name="sub01-p1" value="B" onchange="progresivo.responder('sub01',1,this.value,'C','Los humanos usaban señales de humo, tambores y espejos reflectantes para comunicarse a distancia antes de la escritura.')"> B. Escribían cartas en papel</label>
-            <label><input type="radio" name="sub01-p1" value="C" onchange="progresivo.responder('sub01',1,this.value,'C','Los humanos usaban señales de humo, tambores y espejos reflectantes para comunicarse a distancia antes de la escritura.')"> C. Señales de humo, tambores y espejos reflectantes</label>
-            <label><input type="radio" name="sub01-p1" value="D" onchange="progresivo.responder('sub01',1,this.value,'C','Los humanos usaban señales de humo, tambores y espejos reflectantes para comunicarse a distancia antes de la escritura.')"> D. Usaban el telégrafo</label>
-          </div>
-          <div class="paso-feedback"></div>
-          <div class="paso-botones">
-            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">📖 Volver a leer el texto</button>
-            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">➡️ Siguiente texto</button>
-          </div>
-        </div>
-
-      </div><!-- /paso-pagina 1 -->
-
-      <!-- ============================================================
-           PÁGINA 2 — TEXTO 2: Mensajeros, escritura
-           ============================================================ -->
+      <!-- PASO 2 — Pregunta 1 -->
       <div class="paso-pagina" data-paso="2" style="display:none">
 
-        <div class="paso-indicador">Página <span>3</span> de 6 — Lectura</div>
-
-        <div class="paso-texto">
-          <span class="paso-numero">📖 Parte 2 de 3</span>
-          <div class="paso-contenido-lectura">
-            <p>
-              Otro invento genial fue el <strong>correo en la antigüedad</strong>.
-              ¿Sabías que las <strong>palomas mensajeras</strong> se usaban desde el
-              año 3000 antes de Cristo? Estas aves tienen un increíble sentido de
-              orientación y siempre vuelven a su hogar, por eso la gente las llevaba
-              a otro lugar, ataba un mensajito a su pata y las soltaba. ¡Ellas solas
-              encontraban el camino de regreso! También existía el <strong>correo a caballo</strong>:
-              los persas crearon un sistema de mensajeros que cabalgaban sin parar,
-              pasando el mensaje de uno a otro como en una carrera de relevos.
-            </p>
-            <p>
-              En América, el Imperio Inca tenía un servicio postal increíble: los
-              <strong>chasquis</strong>. Eran corredores entrenados desde jóvenes que
-              llevaban mensajes a lo largo de los caminos incas. Corrían por los Andes
-              a gran velocidad y, al llegar a un puesto, otro chasqui continuaba la
-              carrera. ¡Podían llevar un mensaje desde Cusco hasta Quito (unos 2000 km)
-              en solo 5 días! Otro famoso mensajero de la historia es el soldado griego
-              que corrió desde <strong>Maratón hasta Atenas</strong> (42 kilómetros)
-              para anunciar una victoria y luego cayó exhausto. De allí viene el nombre
-              de la carrera de <strong>maratón</strong>.
-            </p>
-            <p>
-              La gran revolución llegó con la <strong>invención de la escritura</strong>.
-              Hacia el año 3500 antes de Cristo, los <strong>sumerios</strong> (en la
-              antigua Mesopotamia) crearon la escritura cuneiforme, que consistía en
-              marcar tablillas de arcilla con un punzón. De pronto, la información podía
-              guardarse y viajar sin necesidad de que una persona la memorizara. Más
-              tarde, los egipcios inventaron el <strong>papiro</strong>, un material
-              parecido al papel hecho con una planta. Escribir se volvió más fácil y
-              los mensajes podían enrollarse y transportarse.
-            </p>
-          </div>
-        </div>
-
-        <div class="paso-botones">
-          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
-            📖 Terminé de leer → Ir a preguntas
-          </button>
-        </div>
-
-      </div><!-- /paso-pagina 2 -->
-
-      <!-- ============================================================
-           PÁGINA 3 — PREGUNTA 2
-           ============================================================ -->
-      <div class="paso-pagina" data-paso="3" style="display:none">
-
-        <div class="paso-indicador">Página <span>4</span> de 6 — Pregunta</div>
+        <div class="paso-indicador">Pagina <span>3</span> de 14 — Pregunta 1</div>
 
         <div class="paso-pregunta-card">
-          <h3>❓ Pregunta sobre la lectura anterior</h3>
-          <p class="paso-enunciado">¿Cuál era la función de los chasquis en el Imperio Inca?</p>
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Cual fue la primera forma de comunicacion a distancia mencionada?</p>
           <div class="paso-opciones">
-            <label><input type="radio" name="sub01-p2" value="A" onchange="progresivo.responder('sub01',3,this.value,'B','Los chasquis eran corredores entrenados que llevaban mensajes a lo largo de los caminos del Imperio Inca.')"> A. Eran guerreros que peleaban en las montañas</label>
-            <label><input type="radio" name="sub01-p2" value="B" onchange="progresivo.responder('sub01',3,this.value,'B','Los chasquis eran corredores entrenados que llevaban mensajes a lo largo de los caminos del Imperio Inca.')"> B. Eran corredores que llevaban mensajes por los caminos incas</label>
-            <label><input type="radio" name="sub01-p2" value="C" onchange="progresivo.responder('sub01',3,this.value,'B','Los chasquis eran corredores entrenados que llevaban mensajes a lo largo de los caminos del Imperio Inca.')"> C. Criaban palomas mensajeras para el imperio</label>
-            <label><input type="radio" name="sub01-p2" value="D" onchange="progresivo.responder('sub01',3,this.value,'B','Los chasquis eran corredores entrenados que llevaban mensajes a lo largo de los caminos del Imperio Inca.')"> D. Encendían fogatas para hacer señales de humo</label>
+            <label><input type="radio" name="sub01-p1" value="A" onchange="progresivo.responder('sub01',2,this.value,'C','Las primeras formas fueron las senales de humo y las palomas mensajeras.')"> A. El telefono</label>
+            <label><input type="radio" name="sub01-p1" value="B" onchange="progresivo.responder('sub01',2,this.value,'C','Las primeras formas fueron las senales de humo y las palomas mensajeras.')"> B. Internet</label>
+            <label><input type="radio" name="sub01-p1" value="C" onchange="progresivo.responder('sub01',2,this.value,'C','Las primeras formas fueron las senales de humo y las palomas mensajeras.')"> C. Senales de humo y palomas</label>
+            <label><input type="radio" name="sub01-p1" value="D" onchange="progresivo.responder('sub01',2,this.value,'C','Las primeras formas fueron las senales de humo y las palomas mensajeras.')"> D. La radio</label>
           </div>
           <div class="paso-feedback"></div>
           <div class="paso-botones">
-            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">📖 Volver a leer el texto</button>
-            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">➡️ Siguiente texto</button>
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
           </div>
         </div>
 
-      </div><!-- /paso-pagina 3 -->
+      </div>
 
-      <!-- ============================================================
-           PÁGINA 4 — TEXTO 3: Imprenta, conclusión + extras
-           ============================================================ -->
-      <div class="paso-pagina" data-paso="4" style="display:none">
+      <!-- PASO 3 — Lectura 2: Senales de humo y palomas -->
+      <div class="paso-pagina" data-paso="3" style="display:none">
 
-        <div class="paso-indicador">Página <span>5</span> de 6 — Lectura</div>
+        <div class="paso-indicador">Pagina <span>4</span> de 14 — Lectura 2 de 6</div>
 
         <div class="paso-texto">
-          <span class="paso-numero">📖 Parte 3 de 3</span>
+          <span class="paso-numero">Lectura 2</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fff3e0; padding:8px;">
+              <defs><style>.l2t{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#5d4037}.l2l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#795548}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l2t">Senales de humo y palomas mensajeras</text>
+              <ellipse cx="120" cy="85" rx="25" ry="12" fill="#bf360c" opacity="0.3"/>
+              <ellipse cx="120" cy="80" rx="16" ry="8" fill="#e65100" opacity="0.4"/>
+              <ellipse cx="120" cy="76" rx="10" ry="5" fill="#ff6f00" opacity="0.5"/>
+              <circle cx="112" cy="48" r="8" fill="#bcaaa4" opacity="0.25"/>
+              <circle cx="125" cy="40" r="10" fill="#bcaaa4" opacity="0.2"/>
+              <circle cx="118" cy="30" r="12" fill="#bcaaa4" opacity="0.15"/>
+              <circle cx="280" cy="55" r="14" fill="#90a4ae"/>
+              <circle cx="280" cy="55" r="1.5" fill="#333"/>
+              <line x1="280" y1="55" x2="295" y2="50" stroke="#333" stroke-width="0.8"/>
+              <polygon points="295,50 300,46 295,54" fill="#8d6e63"/>
+              <rect x="275" y="70" width="8" height="15" rx="1" fill="#d32f2f"/>
+              <line x1="278" y1="85" x2="275" y2="100" stroke="#8d6e63" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="280" y1="85" x2="285" y2="100" stroke="#8d6e63" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="200" y="112" text-anchor="middle" class="l2l">Fogatas con humo y aves mensajeras</text>
+            </svg>
+          </div>
+
           <div class="paso-contenido-lectura">
             <p>
-              Pero el verdadero "internet de la época" llegó con la <strong>imprenta</strong>,
-              inventada por Johannes Gutenberg en el siglo XV (alrededor del año 1450).
-              Antes de la imprenta, los libros se copiaban a mano, uno por uno, lo que
-              tomaba meses o años. Con la imprenta, se podían hacer cientos de copias
-              de un mismo libro en pocos días. Esto permitió que el conocimiento se
-              distribuyera por todo el mundo. ¡La gente podía leer las mismas ideas
-              estuviera donde estuviera! Fue el primer gran paso hacia la
-              <strong>conectividad global</strong>.
+              Las primeras formas de comunicacion a distancia usaban senales visuales como el humo de
+              fogatas y mensajeros animales como las palomas. Las palomas mensajeras tienen un gran
+              sentido de orientacion y siempre vuelven a su hogar, por eso se ataban mensajes a sus
+              patas y se soltaban. Eran metodos lentos y limitados, pero funcionaban.
             </p>
-            <p>
-              Como ves, la comunicación humana ha recorrido un largo camino: desde
-              gestos y pinturas en cuevas, hasta señales de humo, palomas mensajeras,
-              chasquis, la escritura y la imprenta. Cada uno de estos inventos fue
-              como un ladrillo que construyó el camino hacia la conectividad que
-              tenemos hoy. Sin ellos, no habría sido posible llegar al telégrafo,
-              el teléfono, la radio, el internet y todo lo que usamos actualmente.
-              ¡En los próximos sub-talleres seguiremos este fascinante viaje!
-            </p>
-          </div>
-
-          <!-- Línea de tiempo -->
-          <div class="timeline-simple">
-            <div class="hito"><span class="ano">3000 a.C.</span>Palomas mensajeras</div>
-            <div class="hito"><span class="ano">3500 a.C.</span>Escritura sumeria</div>
-            <div class="hito"><span class="ano">1450</span>Imprenta de Gutenberg</div>
-            <div class="hito"><span class="ano">Siglo XV</span>Chasquis incas</div>
-          </div>
-
-          <!-- Tabla comparativa -->
-          <h3>📊 Tabla comparativa: Métodos de comunicación antiguos</h3>
-          <div style="overflow-x: auto;">
-            <table class="tabla-didactica">
-              <thead>
-                <tr><th>Método</th><th>Época aprox.</th><th>Distancia</th><th>Velocidad</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Señales de humo</td><td>Prehistoria</td><td>Varios km</td><td>Velocidad de la luz</td></tr>
-                <tr><td>Tambores africanos</td><td>Antigüedad</td><td>1–5 km</td><td>Velocidad del sonido</td></tr>
-                <tr><td>Palomas mensajeras</td><td>3000 a.C.</td><td>Hasta 1000 km</td><td>60–80 km/h</td></tr>
-                <tr><td>Chasquis (incas)</td><td>Siglo XV</td><td>Hasta 2000 km</td><td>~400 km/día</td></tr>
-                <tr><td>Correo a caballo</td><td>500 a.C.</td><td>Hasta 2500 km</td><td>~300 km/día</td></tr>
-                <tr><td>Escritura en papiro</td><td>3000 a.C.</td><td>Con transporte</td><td>Variable</td></tr>
-                <tr><td>Imprenta</td><td>1450 d.C.</td><td>Mundial</td><td>Variable</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Curiosidad -->
-          <div class="curiosidad">
-            <h4>💡 ¿Sabías que...?</h4>
-            <p>La palabra <strong>"maratón"</strong> viene de una historia real. En el año 490 a.C., un soldado griego llamado <strong>Filípides</strong> corrió aproximadamente 42 km desde Maratón hasta Atenas para anunciar una victoria. Cuando llegó, dijo "¡Hemos vencido!" y cayó muerto. Hoy las carreras de maratón tienen <strong>42.195 km</strong> en honor a esta hazaña.</p>
           </div>
         </div>
 
         <div class="paso-botones">
           <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
-            📖 Terminé de leer → Ir a preguntas finales
+            Termine de leer → Pregunta 2
           </button>
         </div>
 
-      </div><!-- /paso-pagina 4 -->
+      </div>
 
-      <!-- ============================================================
-           PÁGINA 5 — PREGUNTAS FINALES + SOPA
-           ============================================================ -->
-      <div class="paso-pagina" data-paso="5" style="display:none">
+      <!-- PASO 4 — Pregunta 2 -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
 
-        <div class="paso-indicador">Página <span>6</span> de 6 — ¡Final!</div>
+        <div class="paso-indicador">Pagina <span>5</span> de 14 — Pregunta 2</div>
 
         <div class="paso-pregunta-card">
-          <h3>📝 Preguntas de comprensión finales</h3>
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Quien demostro el telegrafo electrico en 1844?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p2" value="A" onchange="progresivo.responder('sub01',4,this.value,'B','Samuel Morse demostro el telegrafo electrico en 1844.')"> A. Bell</label>
+            <label><input type="radio" name="sub01-p2" value="B" onchange="progresivo.responder('sub01',4,this.value,'B','Samuel Morse demostro el telegrafo electrico en 1844.')"> B. Morse</label>
+            <label><input type="radio" name="sub01-p2" value="C" onchange="progresivo.responder('sub01',4,this.value,'B','Samuel Morse demostro el telegrafo electrico en 1844.')"> C. Marconi</label>
+            <label><input type="radio" name="sub01-p2" value="D" onchange="progresivo.responder('sub01',4,this.value,'B','Samuel Morse demostro el telegrafo electrico en 1844.')"> D. Berners-Lee</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 5 — Lectura 3: El telegrafo -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>6</span> de 14 — Lectura 3 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 3</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e3f2fd; padding:8px;">
+              <defs><style>.l3t{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#1a237e}.l3l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#283593}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l3t">El telegrafo electrico (1844)</text>
+              <rect x="130" y="30" width="70" height="25" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.5"/>
+              <rect x="130" y="30" width="70" height="6" rx="2" fill="#fff9c4"/>
+              <rect x="130" y="50" width="60" height="10" rx="2" fill="#5d4037"/>
+              <rect x="195" y="36" width="6" height="24" fill="#546e7a"/>
+              <circle cx="190" cy="46" r="5" fill="#d32f2f"/>
+              <line x1="100" y1="46" x2="125" y2="46" stroke="#333" stroke-width="2"/>
+              <line x1="220" y1="46" x2="300" y2="46" stroke="#333" stroke-width="2"/>
+              <text x="120" y="95" text-anchor="middle" style="font-family:monospace;font-size:10px;fill:#1565c0;font-weight:700;">Codigo Morse: . - ..- .--.</text>
+              <text x="120" y="110" text-anchor="middle" style="font-family:monospace;font-size:9px;fill:#1565c0;">A .-   B -...   C -.-.</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              En 1844 Samuel Morse demostro el telegrafo electrico, un dispositivo que usaba impulsos
+              electricos para enviar mensajes en codigo Morse a traves de cables. El primer mensaje
+              fue enviado entre Washington y Baltimore. Fue la primera vez que un mensaje viajaba
+              mas rapido que una persona a caballo.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 3
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 6 — Pregunta 3 -->
+      <div class="paso-pagina" data-paso="6" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>7</span> de 14 — Pregunta 3</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">En que ano invento Bell el telefono?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p3" value="A" onchange="progresivo.responder('sub01',6,this.value,'D','Alexander Graham Bell invento el telefono en 1876.')"> A. 1844</label>
+            <label><input type="radio" name="sub01-p3" value="B" onchange="progresivo.responder('sub01',6,this.value,'D','Alexander Graham Bell invento el telefono en 1876.')"> B. 1895</label>
+            <label><input type="radio" name="sub01-p3" value="C" onchange="progresivo.responder('sub01',6,this.value,'D','Alexander Graham Bell invento el telefono en 1876.')"> C. 1900</label>
+            <label><input type="radio" name="sub01-p3" value="D" onchange="progresivo.responder('sub01',6,this.value,'D','Alexander Graham Bell invento el telefono en 1876.')"> D. 1876</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 7 — Lectura 4: El telefono -->
+      <div class="paso-pagina" data-paso="7" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>8</span> de 14 — Lectura 4 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 4</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8f5e9; padding:8px;">
+              <defs><style>.l4t{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#1b5e20}.l4l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#2e7d32}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l4t">El telefono de Bell (1876)</text>
+              <rect x="140" y="35" width="70" height="35" rx="8" fill="#2c3e50"/>
+              <rect x="148" y="42" width="54" height="21" rx="4" fill="#455a64"/>
+              <circle cx="175" cy="52" r="7" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <circle cx="175" cy="52" r="2" fill="#455a64"/>
+              <rect x="120" y="55" width="20" height="8" rx="3" fill="#37474f"/>
+              <rect x="210" y="55" width="20" height="8" rx="3" fill="#37474f"/>
+              <line x1="120" y1="75" x2="120" y2="90" stroke="#546e7a" stroke-width="2"/>
+              <line x1="230" y1="75" x2="230" y2="90" stroke="#546e7a" stroke-width="2"/>
+              <line x1="120" y1="90" x2="230" y2="90" stroke="#546e7a" stroke-width="3"/>
+              <text x="200" y="110" text-anchor="middle" class="l4l">Transmite la voz mediante senales electricas</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              En 1876 Alexander Graham Bell invento el telefono, un dispositivo que transmitia la
+              voz humana mediante senales electricas. Revoluciono la comunicacion porque ya no era
+              necesario aprender un codigo: las personas podian hablar directamente entre si a
+              larga distancia. Fue uno de los inventos mas importantes de la historia.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 4
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 8 — Pregunta 4 -->
+      <div class="paso-pagina" data-paso="8" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>9</span> de 14 — Pregunta 4</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Que invento Marconi?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p4" value="A" onchange="progresivo.responder('sub01',8,this.value,'A','Marconi invento la radio en 1895.')"> A. La radio</label>
+            <label><input type="radio" name="sub01-p4" value="B" onchange="progresivo.responder('sub01',8,this.value,'A','Marconi invento la radio en 1895.')"> B. El telefono</label>
+            <label><input type="radio" name="sub01-p4" value="C" onchange="progresivo.responder('sub01',8,this.value,'A','Marconi invento la radio en 1895.')"> C. El telegrafo</label>
+            <label><input type="radio" name="sub01-p4" value="D" onchange="progresivo.responder('sub01',8,this.value,'A','Marconi invento la radio en 1895.')"> D. Internet</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 9 — Lectura 5: La radio -->
+      <div class="paso-pagina" data-paso="9" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>10</span> de 14 — Lectura 5 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 5</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#f3e5f5; padding:8px;">
+              <defs><style>.l5t{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#4a148c}.l5l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#6a1b9a}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l5t">La radio de Marconi (1895)</text>
+              <rect x="130" y="30" width="10" height="50" rx="3" fill="#546e7a"/>
+              <rect x="120" y="55" width="30" height="8" rx="2" fill="#546e7a"/>
+              <line x1="135" y1="30" x2="115" y2="18" stroke="#546e7a" stroke-width="2"/>
+              <line x1="135" y1="30" x2="155" y2="18" stroke="#546e7a" stroke-width="2"/>
+              <circle cx="115" cy="18" r="3" fill="#d32f2f"/>
+              <circle cx="155" cy="18" r="3" fill="#d32f2f"/>
+              <path d="M170,60 Q185,50 200,60 Q215,70 230,60 Q245,50 260,60 Q275,70 290,60" fill="none" stroke="#e65100" stroke-width="2" opacity="0.6"/>
+              <path d="M180,75 Q195,65 210,75 Q225,85 240,75 Q255,65 270,75" fill="none" stroke="#e65100" stroke-width="1.5" opacity="0.4"/>
+              <text x="200" y="110" text-anchor="middle" class="l5l">Primera comunicacion inalambrica</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              En 1895 Marconi invento la radio, que usaba ondas electromagneticas para transmitir
+              informacion sin necesidad de cables. Fue la primera forma de comunicacion inalambrica.
+              En 1901 logro enviar una senal a traves del oceano Atlantico, demostrando que las
+              ondas de radio podian viajar miles de kilometros.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 5
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 10 — Pregunta 5 -->
+      <div class="paso-pagina" data-paso="10" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>11</span> de 14 — Pregunta 5</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Como se llamo el precursor de internet?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p5" value="A" onchange="progresivo.responder('sub01',10,this.value,'B','ARPANET fue el precursor de internet, creado en 1969.')"> A. World Wide Web</label>
+            <label><input type="radio" name="sub01-p5" value="B" onchange="progresivo.responder('sub01',10,this.value,'B','ARPANET fue el precursor de internet, creado en 1969.')"> B. ARPANET</label>
+            <label><input type="radio" name="sub01-p5" value="C" onchange="progresivo.responder('sub01',10,this.value,'B','ARPANET fue el precursor de internet, creado en 1969.')"> C. TCP/IP</label>
+            <label><input type="radio" name="sub01-p5" value="D" onchange="progresivo.responder('sub01',10,this.value,'B','ARPANET fue el precursor de internet, creado en 1969.')"> D. Google</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 11 — Lectura 6: Internet -->
+      <div class="paso-pagina" data-paso="11" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>12</span> de 14 — Lectura 6 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 6</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e0f7fa; padding:8px;">
+              <defs><style>.l6t{font-family:Nunito,sans-serif;font-size:10px;font-weight:600;fill:#006064}.l6l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#00838f}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l6t">Internet (1969 - ARPANET)</text>
+              <circle cx="110" cy="55" r="22" fill="#bbdefb" opacity="0.6"/>
+              <circle cx="110" cy="55" r="14" fill="#42a5f5" opacity="0.3"/>
+              <circle cx="110" cy="55" r="5" fill="#1a73e8" opacity="0.6"/>
+              <line x1="130" y1="45" x2="170" y2="40" stroke="#4caf50" stroke-width="2"/>
+              <line x1="130" y1="55" x2="170" y2="60" stroke="#4caf50" stroke-width="2"/>
+              <line x1="130" y1="65" x2="170" y2="75" stroke="#4caf50" stroke-width="2"/>
+              <rect x="170" y="35" width="12" height="12" rx="2" fill="#37474f"/>
+              <rect x="170" y="55" width="12" height="12" rx="2" fill="#37474f"/>
+              <rect x="170" y="72" width="12" height="12" rx="2" fill="#37474f"/>
+              <line x1="182" y1="41" x2="220" y2="50" stroke="#4caf50" stroke-width="2"/>
+              <line x1="182" y1="61" x2="220" y2="60" stroke="#4caf50" stroke-width="2"/>
+              <line x1="182" y1="78" x2="220" y2="70" stroke="#4caf50" stroke-width="2"/>
+              <rect x="220" y="45" width="12" height="12" rx="2" fill="#37474f"/>
+              <rect x="220" y="55" width="12" height="12" rx="2" fill="#37474f"/>
+              <rect x="220" y="66" width="12" height="12" rx="2" fill="#37474f"/>
+              <text x="200" y="110" text-anchor="middle" class="l6l">ARPANET (1969) y la World Wide Web (1989)</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              En 1969 nacio ARPANET, el precursor de internet. En 1989 Tim Berners-Lee creo la
+              World Wide Web, un sistema que permitia acceder a documentos enlazados a traves de
+              internet. Hoy internet conecta a miles de millones de personas en todo el mundo y
+              es la herramienta de comunicacion mas poderosa jamas creada.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 6
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 12 — Pregunta 6 -->
+      <div class="paso-pagina" data-paso="12" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>13</span> de 14 — Pregunta 6</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Que creo Tim Berners-Lee en 1989?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p6" value="A" onchange="progresivo.responder('sub01',12,this.value,'A','Tim Berners-Lee creo la World Wide Web en 1989.')"> A. La World Wide Web</label>
+            <label><input type="radio" name="sub01-p6" value="B" onchange="progresivo.responder('sub01',12,this.value,'A','Tim Berners-Lee creo la World Wide Web en 1989.')"> B. El telegrafo</label>
+            <label><input type="radio" name="sub01-p6" value="C" onchange="progresivo.responder('sub01',12,this.value,'A','Tim Berners-Lee creo la World Wide Web en 1989.')"> C. La radio</label>
+            <label><input type="radio" name="sub01-p6" value="D" onchange="progresivo.responder('sub01',12,this.value,'A','Tim Berners-Lee creo la World Wide Web en 1989.')"> D. ARPANET</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 13 — Pagina final -->
+      <div class="paso-pagina" data-paso="13" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>14</span> de 14 — Final</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Preguntas de comprension finales</h3>
           <p style="color:#78909c; margin-bottom:1.2rem;">Responde todas las preguntas para completar el taller.</p>
 
           <div class="pregunta" id="fpreg1">
-            <p>1. ¿Qué invento permitió distribuir el conocimiento por todo el mundo en el siglo XV?</p>
+            <p>1. Que usaban las palomas mensajeras para enviar mensajes?</p>
             <div class="opciones">
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="A"><label>A. El teléfono</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="B"><label>B. La escritura cuneiforme</label></div>
-              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg1" value="C"><label>C. La imprenta de Gutenberg</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="D"><label>D. Las señales de humo</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg1" value="A"><label>A. Viajaban llevando mensajes atados a la pata</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="B"><label>B. Hablaban</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="C"><label>C. Enviaban senales de humo</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="D"><label>D. Usaban radio</label></div>
             </div>
             <div class="feedback" style="display:none"></div>
           </div>
 
           <div class="pregunta" id="fpreg2">
-            <p>2. ¿Por qué las palomas mensajeras eran útiles para enviar mensajes?</p>
+            <p>2. El codigo Morse usa:</p>
             <div class="opciones">
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. Porque podían hablar</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="B"><label>B. Porque volaban muy rápido</label></div>
-              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="C"><label>C. Porque tienen gran sentido de orientación y vuelven a su hogar</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. Porque se llevaban bien con los caballos</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. Letras</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="B"><label>B. Puntos y rayas</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="C"><label>C. Numeros</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. Colores</label></div>
             </div>
             <div class="feedback" style="display:none"></div>
           </div>
 
           <div class="pregunta" id="fpreg3">
-            <p>3. ¿Qué método de comunicación usaban algunas culturas africanas?</p>
+            <p>3. Que transmite la voz humana mediante senales electricas?</p>
             <div class="opciones">
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="A"><label>A. Cartas con águilas entrenadas</label></div>
-              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="B"><label>B. Tambores que transmitían mensajes a distancia</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="C"><label>C. Telégrafos de bambú</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. Espejos gigantes</label></div>
-            </div>
-            <div class="feedback" style="display:none"></div>
-          </div>
-
-          <div class="pregunta" id="fpreg4">
-            <p>4. ¿Qué inventaron los sumerios hacia el año 3500 a.C.?</p>
-            <div class="opciones">
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg4" value="A"><label>A. La imprenta</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg4" value="B"><label>B. El telégrafo</label></div>
-              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg4" value="C"><label>C. La escritura cuneiforme</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg4" value="D"><label>D. Las señales de humo</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="A"><label>A. El telefono</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="B"><label>B. El telegrafo</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="C"><label>C. La radio</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. Internet</label></div>
             </div>
             <div class="feedback" style="display:none"></div>
           </div>
         </div>
 
-        <!-- Sopa de letras -->
         <div class="card" style="margin-top:0;">
-          <h2>🧩 Sopa de Letras</h2>
-          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las 25 palabras clave relacionadas con la lectura.</p>
+          <h2>Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las palabras clave relacionadas con la lectura.</p>
           <div id="sopa01"></div>
         </div>
 
-      </div><!-- /paso-pagina 5 -->
+      </div>
 
     </article>
 
   </main>
 
   <footer>
-    Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>❤️</span> para nuestros estudiantes
+    Colegio San Luis · Tecnologia e Informatica · Grado Sexto · Hecho con <span>amor</span> para nuestros estudiantes
   </footer>
 
   <script src="../../js/sopa.js"></script>
   <script src="../../js/progresivo.js"></script>
   <script>
-    var palabrasClave = [
-      'SEÑALES', 'PALOMAS', 'TAMBORES', 'MENSAJERO', 'PAPIRO',
-      'ESCRITURA', 'IMPRENTA', 'CHASQUIS', 'PINTURA', 'RUPESTRE',
-      'MARATON', 'MENSAJE', 'COMUNICAR', 'DISTANCIA', 'SEÑAL',
-      'FUEGO', 'SONIDO', 'SIMBOLOS', 'ALFABETO', 'LIBRO',
-      'ORAL', 'GESTOS', 'CARTA', 'CUEVA', 'JEROGLIFICO'
-    ];
-    crearSopa('sopa01', palabrasClave, 20);
+    crearSopa('sopa01', ['TELEGRAFO','TELEFONO','RADIO','INTERNET','MORSE'], 10, ['TELEGRAFO','TELEFONO','RADIO','INTERNET','MORSE']);
 
     document.addEventListener('DOMContentLoaded', function() {
       progresivo.iniciar('sub01');
@@ -435,10 +586,10 @@
           pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
           if (correcta) {
             pregunta.classList.add('correcta');
-            feedback.textContent = '✅ ¡Correcto!';
+            feedback.textContent = 'Correcto!';
           } else {
             pregunta.classList.add('incorrecta');
-            feedback.textContent = '❌ Revisa la lectura.';
+            feedback.textContent = 'Revisa la lectura.';
           }
           feedback.style.display = 'block';
         });

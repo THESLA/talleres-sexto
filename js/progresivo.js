@@ -1,3 +1,13 @@
+document.addEventListener('copy', function(e) {
+  if (e.target.closest('.paso-contenido-lectura')) e.preventDefault();
+});
+document.addEventListener('cut', function(e) {
+  if (e.target.closest('.paso-contenido-lectura')) e.preventDefault();
+});
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.closest('.paso-contenido-lectura')) e.preventDefault();
+});
+
 const progresivo = (function() {
   const estados = {};
 
