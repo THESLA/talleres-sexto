@@ -3,51 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El nacimiento de Internet · Sub-taller 4 · Sexto</title>
+  <title>Sub-taller 4: El nacimiento de Internet — Historia de la Conectividad</title>
   <link rel="stylesheet" href="../../css/estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* --- Estilos adicionales específicos para este sub-taller --- */
-
-    /* Timeline visual */
-    .timeline {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 1.5rem 0;
-    }
-
-    .timeline-item {
-      background: #e3f2fd;
-      border-radius: 16px;
+    .dato-curioso {
+      background: #fff3e0;
+      border-left: 4px solid #ff9800;
+      border-radius: 0 12px 12px 0;
       padding: 1rem 1.2rem;
-      text-align: center;
-      flex: 1 1 140px;
-      min-width: 120px;
-      border: 2px solid #90caf9;
-      transition: transform 0.2s;
+      margin: 1.2rem 0;
     }
-
-    .timeline-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(26, 115, 232, 0.2);
-    }
-
-    .timeline-item .año {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #0d47a1;
-      display: block;
-    }
-
-    .timeline-item .evento {
-      font-size: 0.85rem;
-      color: #1565c0;
-      font-weight: 600;
-      margin-top: 0.3rem;
-    }
-
-    /* Recuadro de ejemplo (URL) */
+    .dato-curioso strong { color: #e65100; }
     .recuadro-url {
       background: #e8f5e9;
       border: 2px dashed #4caf50;
@@ -55,14 +22,7 @@
       padding: 1.2rem 1.5rem;
       margin: 1.2rem 0;
     }
-
-    .recuadro-url h4 {
-      color: #2e7d32;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
+    .recuadro-url h4 { color: #2e7d32; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
     .recuadro-url .url-ejemplo {
       font-family: 'Courier New', Courier, monospace;
       background: #c8e6c9;
@@ -73,70 +33,30 @@
       color: #1b5e20;
       word-break: break-all;
     }
-
-    .recuadro-url p {
-      margin-bottom: 0.3rem;
+    .recuadro-url p { margin-bottom: 0.3rem; }
+    .timeline {
+      display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0;
     }
-
-    /* Dato curioso */
-    .dato-curioso {
-      background: #fff3e0;
-      border-left: 4px solid #ff9800;
-      padding: 1rem 1.2rem;
-      border-radius: 0 12px 12px 0;
-      margin: 1.2rem 0;
+    .timeline-item {
+      background: #e3f2fd; border-radius: 16px; padding: 1rem 1.2rem; text-align: center;
+      flex: 1 1 140px; min-width: 120px; border: 2px solid #90caf9;
+      transition: transform 0.2s;
     }
-
-    .dato-curioso strong {
-      color: #e65100;
-    }
-
-    /* Icono destacado en la lectura */
-    .icono-texto {
-      font-size: 1.4rem;
-      vertical-align: middle;
-      margin-right: 0.3rem;
-    }
-
-    /* Estilo para el título del sub-taller dentro del header de página */
-    .page-title h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #1a73e8;
-      margin-bottom: 0.3rem;
-    }
-
-    .page-title .sub-label {
-      font-size: 1rem;
-      color: #78909c;
-      font-weight: 600;
-    }
-
-    /* Mejora en la separación de preguntas */
-    .pregunta .opcion label {
-      cursor: pointer;
-      flex: 1;
-    }
-
-    /* Ajuste para la sopa: el contenedor debe poder recibir la grilla */
-    #sopa04 .sopa-grilla {
-      margin: 0 auto;
-    }
+    .timeline-item:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(26,115,232,0.2); }
+    .timeline-item .año { font-size: 1.3rem; font-weight: 800; color: #0d47a1; display: block; }
+    .timeline-item .evento { font-size: 0.85rem; color: #1565c0; font-weight: 600; margin-top: 0.3rem; }
+    .icono-texto { font-size: 1.4rem; vertical-align: middle; margin-right: 0.3rem; }
+    .pregunta .opcion label { cursor: pointer; flex: 1; }
+    #sopa04 .sopa-grilla { margin: 0 auto; }
   </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       ENCABEZADO
-       ============================================================ -->
   <header>
     <h1>💻 El nacimiento de <span>Internet</span></h1>
-    <div class="subtitulo">Historia de la Conectividad · Sub-taller 4</div>
+    <div class="subtitulo">Tecnología e Informática · Grado Sexto</div>
   </header>
 
-  <!-- ============================================================
-       NAVEGACIÓN ENTRE SUB-TALLERES
-       ============================================================ -->
   <nav class="subtaller-nav">
     <a href="../../index.html">🏠 Inicio</a>
     <span class="separador">|</span>
@@ -150,494 +70,403 @@
     <a href="sub06.html">6</a>
   </nav>
 
-  <!-- ============================================================
-       CONTENIDO PRINCIPAL
-       ============================================================ -->
   <main>
 
-    <!-- ============================================================
-         SISTEMA PROGRESIVO — CONTENEDOR PRINCIPAL
-         ============================================================ -->
-    <article class="card lectura" id="progresivo-sub04">
+    <article class="card" id="progresivo-sub04">
 
-      <div class="page-title">
-        <h2>🌐 El nacimiento de Internet</h2>
-        <div class="sub-label">¿Cómo pasamos de cuatro computadoras a miles de millones de dispositivos conectados?</div>
-      </div>
-
-      <!-- Barra de progreso -->
-      <div class="progreso-barra">
-        <div class="progreso-pasos">
-          <span class="paso" id="sub04-paso-0">1</span>
-          <span class="paso" id="sub04-paso-1">2</span>
-          <span class="paso" id="sub04-paso-2">3</span>
-        </div>
-        <div class="barra-progreso-linea">
-          <div class="barra-progreso-llena" id="barra-sub04"></div>
-        </div>
-      </div>
+      <h2 style="text-align:center;">🌐 El nacimiento de Internet</h2>
+      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Historia de la Conectividad · Sub-taller 4</p>
 
       <!-- ============================================================
-           SECCIÓN 1 — Párrafos 1-2-3 (Guerra Fría + ARPANET + "LO" + evolución)
+           PÁGINA 0 — TEXTO 1: Guerra Fría + ARPANET + "LO" + evolución
            ============================================================ -->
-      <div class="seccion-contenido">
+      <div class="paso-pagina" data-paso="0">
 
-        <!-- Ilustración SVG: Nacimiento de Internet -->
-        <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e8eaf6,#c5cae9); padding:10px;">
-            <defs>
-              <style>
-                .tit-il4 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#1a237e; }
-                .lab-il4 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#283593; }
-                .comp { fill:#3949ab; }
-                .conn { stroke:#1a73e8; stroke-width:2; fill:none; }
-              </style>
-            </defs>
-            <text x="350" y="25" text-anchor="middle" class="tit-il4">💻 El nacimiento de Internet: de 4 computadoras a millones</text>
+        <div class="paso-indicador">Página <span>1</span> de 6 — Lectura</div>
 
-            <!-- ARPANET - 4 computadoras -->
-            <rect x="15" y="40" width="320" height="170" rx="14" fill="white" opacity="0.7"/>
-            <text x="175" y="62" text-anchor="middle" class="lab-il4" style="font-size:13px;">🖧 ARPANET — 1969 (4 computadoras)</text>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 Parte 1 de 3</span>
 
-            <!-- Computadora 1 -->
-            <rect x="35" y="80" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
-            <rect x="40" y="85" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
-            <circle cx="59" cy="97" r="6" fill="#ff8f00"/>
-            <circle cx="59" cy="97" r="3" fill="#333"/>
-            <text x="60" y="132" text-anchor="middle" class="lab-il4" style="font-size:9px;">UCLA</text>
-
-            <!-- Computadora 2 -->
-            <rect x="260" y="80" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
-            <rect x="265" y="85" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
-            <circle cx="284" cy="97" r="6" fill="#ff8f00"/>
-            <circle cx="284" cy="97" r="3" fill="#333"/>
-            <text x="285" y="132" text-anchor="middle" class="lab-il4" style="font-size:9px;">Stanford</text>
-
-            <!-- Computadora 3 -->
-            <rect x="120" y="150" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
-            <rect x="125" y="155" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
-            <circle cx="144" cy="167" r="6" fill="#ff8f00"/>
-            <circle cx="144" cy="167" r="3" fill="#333"/>
-            <text x="145" y="200" text-anchor="middle" class="lab-il4" style="font-size:9px;">UC Santa Bárbara</text>
-
-            <!-- Computadora 4 -->
-            <rect x="220" y="150" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
-            <rect x="225" y="155" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
-            <circle cx="244" cy="167" r="6" fill="#ff8f00"/>
-            <circle cx="244" cy="167" r="3" fill="#333"/>
-            <text x="245" y="200" text-anchor="middle" class="lab-il4" style="font-size:9px;">Utah</text>
-
-            <!-- Conexiones -->
-            <line x1="85" y1="97" x2="260" y2="97" class="conn"/>
-            <line x1="60" y1="115" x2="134" y2="150" class="conn"/>
-            <line x1="285" y1="115" x2="230" y2="150" class="conn"/>
-            <line x1="145" y1="150" x2="220" y2="150" class="conn"/>
-            <circle cx="85" cy="97" r="4" fill="#4caf50"/>
-            <circle cx="260" cy="97" r="4" fill="#4caf50"/>
-            <circle cx="134" cy="150" r="4" fill="#4caf50"/>
-            <circle cx="230" cy="150" r="4" fill="#4caf50"/>
-            <text x="170" y="110" text-anchor="middle" class="lab-il4" style="font-size:9px; fill:#1a73e8;">Primer mensaje: "LO"</text>
-
-            <!-- FLECHA evolución -->
-            <text x="370" y="125" text-anchor="middle" class="lab-il4" style="font-size:24px;">➡️</text>
-
-            <!-- INTERNET HOY -->
-            <rect x="400" y="40" width="280" height="170" rx="14" fill="white" opacity="0.7"/>
-            <text x="540" y="62" text-anchor="middle" class="lab-il4" style="font-size:13px;">🌍 Internet hoy — millones de dispositivos</text>
-            <!-- Globo terráqueo -->
-            <circle cx="540" cy="120" r="45" fill="#e3f2fd" stroke="#1a73e8" stroke-width="2"/>
-            <!-- Continentes -->
-            <path d="M520,95 Q525,90 530,95 Q535,100 530,108 Q525,112 520,108 Z" fill="#4caf50" opacity="0.5"/>
-            <path d="M545,90 Q550,88 555,92 Q558,100 552,105 Q545,102 543,96 Z" fill="#4caf50" opacity="0.5"/>
-            <path d="M525,115 Q530,112 535,118 Q538,125 532,128 Q526,125 525,118 Z" fill="#4caf50" opacity="0.5"/>
-            <path d="M550,115 Q555,112 558,118 Q560,125 555,128 Q550,125 550,118 Z" fill="#4caf50" opacity="0.5"/>
-            <ellipse cx="550" cy="135" rx="12" ry="8" fill="#4caf50" opacity="0.3"/>
-            <!-- Conexiones alrededor del globo -->
-            <path d="M505,100 Q490,85 480,95" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
-            <path d="M575,100 Q590,85 600,95" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
-            <path d="M505,140 Q490,155 480,145" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
-            <path d="M575,140 Q590,155 600,145" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
-            <!-- Dispositivos pequeños -->
-            <rect x="460" y="85" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
-            <rect x="605" y="95" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
-            <rect x="470" y="145" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
-            <rect x="600" y="140" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
-            <text x="540" y="185" text-anchor="middle" class="lab-il4" style="font-size:10px;">🌐 WWW — Tim Berners-Lee (1989)</text>
-            <text x="540" y="200" text-anchor="middle" class="lab-il4" style="font-size:9px;">Navegadores · Correo · Redes sociales</text>
-          </svg>
-        </div>
-
-        <!-- Párrafo 1: Guerra Fría y ARPANET -->
-        <p>
-          <span class="icono-texto">❄️</span>
-          <strong>Todo comenzó en plena Guerra Fría.</strong> Corría el año 1969 y Estados Unidos
-          y la Unión Soviética competían en todo: en tecnología, en ciencia y en la carrera
-          espacial. El gobierno estadounidense quería una red de comunicación que pudiera
-          sobrevivir a un ataque militar. Así nació <strong>ARPANET</strong>, la abuela de
-          Internet. Era una red que conectaba solo <strong>cuatro computadoras</strong> en
-          distintas universidades del país.
-        </p>
-
-        <!-- Párrafo 2: El primer mensaje (dato curioso) -->
-        <div class="dato-curioso">
-          <strong>📡 ¿Sabías que…?</strong> El primer mensaje enviado por ARPANET fue
-          <em>"LO"</em>. Un estudiante llamado <strong>Charles Kline</strong> intentó escribir
-          <em>"LOGIN"</em> desde la Universidad de California hasta Stanford, pero el sistema
-          se cayó después de enviar las dos primeras letras. ¡El primer mensaje de la historia
-          de Internet quedó incompleto!
-        </div>
-
-        <!-- Párrafo 3: Evolución de ARPANET -->
-        <p>
-          <span class="icono-texto">📈</span>
-          Aunque comenzó con solo 4 computadoras, ARPANET creció rapidísimo. Para 1971 ya
-          conectaba <strong>15 nodos</strong> (puntos de conexión) y para 1973 había llegado
-          a otros países como Noruega e Inglaterra. Poco a poco, más universidades y centros
-          de investigación se sumaron. Las personas empezaron a darse cuenta de que esta red
-          servía para mucho más que la defensa militar: <strong>servía para compartir
-          conocimiento</strong>.
-        </p>
-
-        <div class="seccion-divisor">· · ·</div>
-
-        <!-- CHECKPOINT 1 -->
-        <div class="checkpoint" id="sub04-chk-0-0">
-          <h4>🔐 Verificación de lectura — Parte 1</h4>
-          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">
-            Responde correctamente para desbloquear la siguiente parte.
-          </p>
-          <p><strong>¿Cuál fue el primer mensaje enviado por ARPANET y por qué?</strong></p>
-          <div class="chk-opciones">
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk0" value="A" onchange="progresivo.verificar('sub04',0,0,this.value)">
-              A. "HELLO WORLD"
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk0" value="B" onchange="progresivo.verificar('sub04',0,0,this.value)">
-              B. "LO" porque el sistema falló
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk0" value="C" onchange="progresivo.verificar('sub04',0,0,this.value)">
-              C. "SOS"
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk0" value="D" onchange="progresivo.verificar('sub04',0,0,this.value)">
-              D. "OK"
-            </label>
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e8eaf6,#c5cae9); padding:10px;">
+              <defs>
+                <style>
+                  .tit-il4 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#1a237e; }
+                  .lab-il4 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#283593; }
+                  .comp { fill:#3949ab; }
+                  .conn { stroke:#1a73e8; stroke-width:2; fill:none; }
+                </style>
+              </defs>
+              <text x="350" y="25" text-anchor="middle" class="tit-il4">💻 El nacimiento de Internet: de 4 computadoras a millones</text>
+              <rect x="15" y="40" width="320" height="170" rx="14" fill="white" opacity="0.7"/>
+              <text x="175" y="62" text-anchor="middle" class="lab-il4" style="font-size:13px;">🖧 ARPANET — 1969 (4 computadoras)</text>
+              <rect x="35" y="80" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
+              <rect x="40" y="85" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
+              <circle cx="59" cy="97" r="6" fill="#ff8f00"/>
+              <circle cx="59" cy="97" r="3" fill="#333"/>
+              <text x="60" y="132" text-anchor="middle" class="lab-il4" style="font-size:9px;">UCLA</text>
+              <rect x="260" y="80" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
+              <rect x="265" y="85" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
+              <circle cx="284" cy="97" r="6" fill="#ff8f00"/>
+              <circle cx="284" cy="97" r="3" fill="#333"/>
+              <text x="285" y="132" text-anchor="middle" class="lab-il4" style="font-size:9px;">Stanford</text>
+              <rect x="120" y="150" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
+              <rect x="125" y="155" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
+              <circle cx="144" cy="167" r="6" fill="#ff8f00"/>
+              <circle cx="144" cy="167" r="3" fill="#333"/>
+              <text x="145" y="200" text-anchor="middle" class="lab-il4" style="font-size:9px;">UC Santa Bárbara</text>
+              <rect x="220" y="150" width="50" height="35" rx="5" class="comp" opacity="0.8"/>
+              <rect x="225" y="155" width="18" height="12" rx="2" fill="#e3f2fd" opacity="0.6"/>
+              <circle cx="244" cy="167" r="6" fill="#ff8f00"/>
+              <circle cx="244" cy="167" r="3" fill="#333"/>
+              <text x="245" y="200" text-anchor="middle" class="lab-il4" style="font-size:9px;">Utah</text>
+              <line x1="85" y1="97" x2="260" y2="97" class="conn"/>
+              <line x1="60" y1="115" x2="134" y2="150" class="conn"/>
+              <line x1="285" y1="115" x2="230" y2="150" class="conn"/>
+              <line x1="145" y1="150" x2="220" y2="150" class="conn"/>
+              <circle cx="85" cy="97" r="4" fill="#4caf50"/>
+              <circle cx="260" cy="97" r="4" fill="#4caf50"/>
+              <circle cx="134" cy="150" r="4" fill="#4caf50"/>
+              <circle cx="230" cy="150" r="4" fill="#4caf50"/>
+              <text x="170" y="110" text-anchor="middle" class="lab-il4" style="font-size:9px; fill:#1a73e8;">Primer mensaje: "LO"</text>
+              <text x="370" y="125" text-anchor="middle" class="lab-il4" style="font-size:24px;">➡️</text>
+              <rect x="400" y="40" width="280" height="170" rx="14" fill="white" opacity="0.7"/>
+              <text x="540" y="62" text-anchor="middle" class="lab-il4" style="font-size:13px;">🌍 Internet hoy — millones de dispositivos</text>
+              <circle cx="540" cy="120" r="45" fill="#e3f2fd" stroke="#1a73e8" stroke-width="2"/>
+              <path d="M520,95 Q525,90 530,95 Q535,100 530,108 Q525,112 520,108 Z" fill="#4caf50" opacity="0.5"/>
+              <path d="M545,90 Q550,88 555,92 Q558,100 552,105 Q545,102 543,96 Z" fill="#4caf50" opacity="0.5"/>
+              <path d="M525,115 Q530,112 535,118 Q538,125 532,128 Q526,125 525,118 Z" fill="#4caf50" opacity="0.5"/>
+              <path d="M550,115 Q555,112 558,118 Q560,125 555,128 Q550,125 550,118 Z" fill="#4caf50" opacity="0.5"/>
+              <ellipse cx="550" cy="135" rx="12" ry="8" fill="#4caf50" opacity="0.3"/>
+              <path d="M505,100 Q490,85 480,95" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
+              <path d="M575,100 Q590,85 600,95" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
+              <path d="M505,140 Q490,155 480,145" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
+              <path d="M575,140 Q590,155 600,145" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.5"/>
+              <rect x="460" y="85" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
+              <rect x="605" y="95" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
+              <rect x="470" y="145" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
+              <rect x="600" y="140" width="12" height="8" rx="2" fill="#3949ab" opacity="0.6"/>
+              <text x="540" y="185" text-anchor="middle" class="lab-il4" style="font-size:10px;">🌐 WWW — Tim Berners-Lee (1989)</text>
+              <text x="540" y="200" text-anchor="middle" class="lab-il4" style="font-size:9px;">Navegadores · Correo · Redes sociales</text>
+            </svg>
           </div>
-          <div class="chk-fb"></div>
-          <button class="btn btn-primario btn-continuar" id="sub04-sig-0" onclick="progresivo.siguiente('sub04')">
-            ➡️ Continuar leyendo
+
+          <div class="paso-contenido-lectura">
+            <p>
+              <span class="icono-texto">❄️</span>
+              <strong>Todo comenzó en plena Guerra Fría.</strong> Corría el año 1969 y Estados Unidos
+              y la Unión Soviética competían en todo: en tecnología, en ciencia y en la carrera
+              espacial. El gobierno estadounidense quería una red de comunicación que pudiera
+              sobrevivir a un ataque militar. Así nació <strong>ARPANET</strong>, la abuela de
+              Internet. Era una red que conectaba solo <strong>cuatro computadoras</strong> en
+              distintas universidades del país.
+            </p>
+
+            <div class="dato-curioso">
+              <strong>📡 ¿Sabías que…?</strong> El primer mensaje enviado por ARPANET fue
+              <em>"LO"</em>. Un estudiante llamado <strong>Charles Kline</strong> intentó escribir
+              <em>"LOGIN"</em> desde la Universidad de California hasta Stanford, pero el sistema
+              se cayó después de enviar las dos primeras letras. ¡El primer mensaje de la historia
+              de Internet quedó incompleto!
+            </div>
+
+            <p>
+              <span class="icono-texto">📈</span>
+              Aunque comenzó con solo 4 computadoras, ARPANET creció rapidísimo. Para 1971 ya
+              conectaba <strong>15 nodos</strong> (puntos de conexión) y para 1973 había llegado
+              a otros países como Noruega e Inglaterra. Poco a poco, más universidades y centros
+              de investigación se sumaron. Las personas empezaron a darse cuenta de que esta red
+              servía para mucho más que la defensa militar: <strong>servía para compartir
+              conocimiento</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            📖 Terminé de leer → Ir a preguntas
           </button>
         </div>
 
-      </div><!-- /seccion-contenido 1 -->
+      </div><!-- /paso-pagina 0 -->
 
       <!-- ============================================================
-           SECCIÓN 2 — Párrafos 4-5-6-7 (Tim Berners-Lee + WWW + correo + buscadores + Internet vs Web)
+           PÁGINA 1 — PREGUNTA 1
            ============================================================ -->
-      <div class="seccion-contenido">
+      <div class="paso-pagina" data-paso="1" style="display:none">
 
-        <div class="seccion-divisor">⭐</div>
+        <div class="paso-indicador">Página <span>2</span> de 6 — Pregunta</div>
 
-        <!-- Párrafo 4: Tim Berners-Lee y la WWW -->
-        <p>
-          <span class="icono-texto">🌍</span>
-          Pero la Internet que conocemos hoy no existiría sin <strong>Tim Berners-Lee</strong>,
-          un científico inglés que en 1989 trabajaba en el laboratorio CERN, en Suiza. Él imaginó
-          un sistema donde las personas pudieran compartir información a través de
-          <strong>páginas web</strong> enlazadas entre sí. Así nació la
-          <strong>World Wide Web (WWW)</strong>, o simplemente "la Web". También creó el
-          <strong>primer navegador web</strong> y la primera página de internet. ¡Todavía
-          puedes visitarla!
-        </p>
-
-        <!-- Párrafo 5: El correo electrónico -->
-        <p>
-          <span class="icono-texto">📧</span>
-          Mucho antes de la Web, en 1971, un ingeniero llamado <strong>Ray Tomlinson</strong>
-          inventó el <strong>correo electrónico</strong> (e-mail). Eligió el símbolo
-          <strong>@</strong> (arroba) para separar el nombre del usuario del nombre del
-          servidor. ¿Por qué la arroba? Porque en inglés significaba "at" (en), indicando que
-          el usuario estaba "en" tal servidor. El correo electrónico revolucionó la comunicación:
-          de repente podías enviar un mensaje al otro lado del mundo en segundos.
-        </p>
-
-        <!-- Párrafo 6: Los buscadores y el boom de los 90 -->
-        <p>
-          <span class="icono-texto">🔍</span>
-          Con tantas páginas web, hacer falta un mapa. Primero llegó <strong>Yahoo!</strong>
-          (1994), un directorio donde las páginas se organizaban por categorías. Luego, en
-          1998, dos estudiantes de Stanford llamados <strong>Larry Page y Sergey Brin</strong>
-          crearon <strong>Google</strong>, un buscador que ordenaba los resultados según su
-          importancia. En los años 90, Internet explotó: las personas se conectaban desde sus
-          casas usando la línea telefónica (<strong>dial-up</strong>). El sonido del módem
-          —ese ruidito característico— anunciaba la entrada a un mundo totalmente nuevo.
-        </p>
-
-        <!-- Párrafo 7: Internet vs Web y cierre -->
-        <p>
-          <span class="icono-texto">🤔</span>
-          <strong>¿Es lo mismo Internet que la Web?</strong> ¡No! <strong>Internet</strong>
-          es la red física: los cables, los routers, los servidores que conectan computadoras
-          alrededor del mundo. La <strong>Web (WWW)</strong> es un servicio que funciona
-          sobre Internet: son las páginas, los navegadores, los videos, las redes sociales.
-          Es como comparar la red de carreteras (Internet) con los autos que circulan por
-          ellas (la Web). Una no funciona sin la otra, pero son cosas distintas.
-        </p>
-
-        <div class="seccion-divisor">· · ·</div>
-
-        <!-- CHECKPOINT 2 -->
-        <div class="checkpoint" id="sub04-chk-1-0">
-          <h4>🔐 Verificación de lectura — Parte 2</h4>
-          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">
-            Responde correctamente para desbloquear la siguiente parte.
-          </p>
-          <p><strong>¿Qué diferencia hay entre Internet y la Web?</strong></p>
-          <div class="chk-opciones">
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk1" value="A" onchange="progresivo.verificar('sub04',1,0,this.value)">
-              A. Son lo mismo
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk1" value="B" onchange="progresivo.verificar('sub04',1,0,this.value)">
-              B. Internet es la red física y la Web es un servicio
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk1" value="C" onchange="progresivo.verificar('sub04',1,0,this.value)">
-              C. La Web es la red física
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub04-chk1" value="D" onchange="progresivo.verificar('sub04',1,0,this.value)">
-              D. Internet es solo EE.UU.
-            </label>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">¿Cuál fue el primer mensaje enviado por ARPANET y por qué fue tan peculiar?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p1" value="A" onchange="progresivo.responder('sub04',1,this.value,'B','El mensaje fue "LO" porque el sistema se cayó antes de completar "LOGIN". ¡Un fallo histórico!')"> A. "HELLO WORLD" — era un saludo de los científicos</label>
+            <label><input type="radio" name="sub04-p1" value="B" onchange="progresivo.responder('sub04',1,this.value,'B','El mensaje fue "LO" porque el sistema se cayó antes de completar "LOGIN". ¡Un fallo histórico!')"> B. "LO" — el sistema falló antes de completar "LOGIN"</label>
+            <label><input type="radio" name="sub04-p1" value="C" onchange="progresivo.responder('sub04',1,this.value,'B','El mensaje fue "LO" porque el sistema se cayó antes de completar "LOGIN". ¡Un fallo histórico!')"> C. "SOS" — era una señal de emergencia</label>
+            <label><input type="radio" name="sub04-p1" value="D" onchange="progresivo.responder('sub04',1,this.value,'B','El mensaje fue "LO" porque el sistema se cayó antes de completar "LOGIN". ¡Un fallo histórico!')"> D. "OK" — para probar la conexión</label>
           </div>
-          <div class="chk-fb"></div>
-          <button class="btn btn-primario btn-continuar" id="sub04-sig-1" onclick="progresivo.siguiente('sub04')">
-            ➡️ Continuar leyendo
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">📖 Volver a leer el texto</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+
+      </div><!-- /paso-pagina 1 -->
+
+      <!-- ============================================================
+           PÁGINA 2 — TEXTO 2: Tim Berners-Lee + WWW + correo + buscadores + Internet vs Web + recuadro URL
+           ============================================================ -->
+      <div class="paso-pagina" data-paso="2" style="display:none">
+
+        <div class="paso-indicador">Página <span>3</span> de 6 — Lectura</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">📖 Parte 2 de 3</span>
+          <div class="paso-contenido-lectura">
+            <p>
+              <span class="icono-texto">🌍</span>
+              Pero la Internet que conocemos hoy no existiría sin <strong>Tim Berners-Lee</strong>,
+              un científico inglés que en 1989 trabajaba en el laboratorio CERN, en Suiza. Él imaginó
+              un sistema donde las personas pudieran compartir información a través de
+              <strong>páginas web</strong> enlazadas entre sí. Así nació la
+              <strong>World Wide Web (WWW)</strong>, o simplemente "la Web". También creó el
+              <strong>primer navegador web</strong> y la primera página de internet. ¡Todavía
+              puedes visitarla!
+            </p>
+            <p>
+              <span class="icono-texto">📧</span>
+              Mucho antes de la Web, en 1971, un ingeniero llamado <strong>Ray Tomlinson</strong>
+              inventó el <strong>correo electrónico</strong> (e-mail). Eligió el símbolo
+              <strong>@</strong> (arroba) para separar el nombre del usuario del nombre del
+              servidor. ¿Por qué la arroba? Porque en inglés significaba "at" (en), indicando que
+              el usuario estaba "en" tal servidor. El correo electrónico revolucionó la comunicación:
+              de repente podías enviar un mensaje al otro lado del mundo en segundos.
+            </p>
+            <p>
+              <span class="icono-texto">🔍</span>
+              Con tantas páginas web, hacía falta un mapa. Primero llegó <strong>Yahoo!</strong>
+              (1994), un directorio donde las páginas se organizaban por categorías. Luego, en
+              1998, dos estudiantes de Stanford llamados <strong>Larry Page y Sergey Brin</strong>
+              crearon <strong>Google</strong>, un buscador que ordenaba los resultados según su
+              importancia. En los años 90, Internet explotó: las personas se conectaban desde sus
+              casas usando la línea telefónica (<strong>dial-up</strong>). El sonido del módem
+              —ese ruidito característico— anunciaba la entrada a un mundo totalmente nuevo.
+            </p>
+            <p>
+              <span class="icono-texto">🤔</span>
+              <strong>¿Es lo mismo Internet que la Web?</strong> ¡No! <strong>Internet</strong>
+              es la red física: los cables, los routers, los servidores que conectan computadoras
+              alrededor del mundo. La <strong>Web (WWW)</strong> es un servicio que funciona
+              sobre Internet: son las páginas, los navegadores, los videos, las redes sociales.
+              Es como comparar la red de carreteras (Internet) con los autos que circulan por
+              ellas (la Web). Una no funciona sin la otra, pero son cosas distintas.
+            </p>
+
+            <div class="recuadro-url">
+              <h4>🌐 ¿Qué es una dirección web (URL)?</h4>
+              <p>
+                Una <strong>URL</strong> (Localizador Uniforme de Recursos) es como la dirección
+                de tu casa, pero en Internet. Le dice al navegador exactamente dónde encontrar
+                una página.
+              </p>
+              <p><strong>Ejemplo:</strong></p>
+              <div class="url-ejemplo">
+                https://www.colegiosanluis.edu.co/talleres/index.html
+              </div>
+              <p style="margin-top: 0.6rem; font-size: 0.95rem;">
+                🔹 <strong>https://</strong> — Protocolo de seguridad (la "s" significa seguro).
+                <br>
+                🔹 <strong>www.colegiosanluis.edu.co</strong> — El dominio (el nombre del sitio).
+                <br>
+                🔹 <strong>/talleres/index.html</strong> — La ruta (dónde está el archivo).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            📖 Terminé de leer → Ir a preguntas
           </button>
         </div>
 
-      </div><!-- /seccion-contenido 2 -->
+      </div><!-- /paso-pagina 2 -->
 
       <!-- ============================================================
-           SECCIÓN 3 — Recuadro URL + timeline + preguntas finales + sopa de letras
+           PÁGINA 3 — PREGUNTA 2
            ============================================================ -->
-      <div class="seccion-contenido">
+      <div class="paso-pagina" data-paso="3" style="display:none">
 
-        <div class="seccion-divisor">⭐</div>
+        <div class="paso-indicador">Página <span>4</span> de 6 — Pregunta</div>
 
-        <!-- Recuadro de ejemplo: ¿Qué es una URL? -->
-        <div class="recuadro-url">
-          <h4>🌐 ¿Qué es una dirección web (URL)?</h4>
-          <p>
-            Una <strong>URL</strong> (Localizador Uniforme de Recursos) es como la dirección
-            de tu casa, pero en Internet. Le dice al navegador exactamente dónde encontrar
-            una página.
-          </p>
-          <p>
-            <strong>Ejemplo:</strong>
-          </p>
-          <div class="url-ejemplo">
-            https://www.colegiosanluis.edu.co/talleres/index.html
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">¿Qué diferencia hay entre Internet y la Web?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p2" value="A" onchange="progresivo.responder('sub04',3,this.value,'B','Internet es la red física (cables, routers) y la Web (WWW) es un servicio que funciona sobre esa red.')"> A. Son lo mismo, solo que Internet es el nombre en inglés</label>
+            <label><input type="radio" name="sub04-p2" value="B" onchange="progresivo.responder('sub04',3,this.value,'B','Internet es la red física (cables, routers) y la Web (WWW) es un servicio que funciona sobre esa red.')"> B. Internet es la red física y la Web es un servicio que funciona sobre ella</label>
+            <label><input type="radio" name="sub04-p2" value="C" onchange="progresivo.responder('sub04',3,this.value,'B','Internet es la red física (cables, routers) y la Web (WWW) es un servicio que funciona sobre esa red.')"> C. La Web es la red de cables y servidores; Internet son las páginas web</label>
+            <label><input type="radio" name="sub04-p2" value="D" onchange="progresivo.responder('sub04',3,this.value,'B','Internet es la red física (cables, routers) y la Web (WWW) es un servicio que funciona sobre esa red.')"> D. Internet solo existe en Estados Unidos y la Web es mundial</label>
           </div>
-          <p style="margin-top: 0.6rem; font-size: 0.95rem;">
-            🔹 <strong>https://</strong> — Protocolo de seguridad (la "s" significa seguro).
-            <br>
-            🔹 <strong>www.colegiosanluis.edu.co</strong> — El dominio (el nombre del sitio).
-            <br>
-            🔹 <strong>/talleres/index.html</strong> — La ruta (dónde está el archivo).
-          </p>
-        </div>
-
-        <!-- Línea del tiempo visual -->
-        <h3 style="margin-top: 1.5rem;">📅 Línea del tiempo</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="año">1969</span>
-            <span class="evento">ARPANET conecta 4 computadoras</span>
-          </div>
-          <div class="timeline-item">
-            <span class="año">1971</span>
-            <span class="evento">Primer correo electrónico</span>
-          </div>
-          <div class="timeline-item">
-            <span class="año">1989</span>
-            <span class="evento">Tim Berners-Lee crea la WWW</span>
-          </div>
-          <div class="timeline-item">
-            <span class="año">1994</span>
-            <span class="evento">Yahoo! — primer gran buscador</span>
-          </div>
-          <div class="timeline-item">
-            <span class="año">1998</span>
-            <span class="evento">Nace Google</span>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">📖 Volver a leer el texto</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">➡️ Siguiente texto</button>
           </div>
         </div>
 
-        <!-- ============================================================
-             PREGUNTAS DE COMPRENSIÓN FINALES
-             ============================================================ -->
-        <h3 style="margin-top: 1.5rem;">📝 Preguntas de comprensión</h3>
-        <p style="color: #78909c; font-size: 0.95rem; margin-bottom: 1rem;">
-          Selecciona la respuesta correcta para cada pregunta.
-        </p>
+      </div><!-- /paso-pagina 3 -->
 
-        <!-- Pregunta 1 -->
-        <div class="pregunta" id="preg1">
-          <p>1. ¿Qué significan las siglas ARPANET y para qué se creó originalmente?</p>
-          <div class="opciones">
-            <label class="opcion">
-              <input type="radio" name="p1" value="A" onchange="verificarPregunta('preg1', 'A')">
-              <span>Una red de computadoras personales para jugar videojuegos en línea</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p1" value="B" onchange="verificarPregunta('preg1', 'B')">
-              <span>Un proyecto militar de Estados Unidos para crear una red de comunicación que sobreviviera a un ataque</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p1" value="C" onchange="verificarPregunta('preg1', 'C')">
-              <span>Un sistema de correo electrónico inventado en Europa</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p1" value="D" onchange="verificarPregunta('preg1', 'D')">
-              <span>El primer navegador web creado por Tim Berners-Lee</span>
-            </label>
+      <!-- ============================================================
+           PÁGINA 4 — TEXTO 3: Timeline visual de fechas
+           ============================================================ -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
+
+        <div class="paso-indicador">Página <span>5</span> de 6 — Lectura</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">📖 Parte 3 de 3</span>
+          <div class="paso-contenido-lectura">
+            <p>
+              A lo largo de las últimas décadas, Internet ha evolucionado a una velocidad
+              impresionante. Desde aquella primera red de cuatro computadoras en 1969, hasta
+              los miles de millones de dispositivos conectados que usamos hoy. Cada paso
+              fue clave: la creación del correo electrónico, la invención de la World Wide Web,
+              los primeros buscadores que nos ayudaron a encontrar información, y la masificación
+              del acceso a Internet en los hogares.
+            </p>
+            <p>
+              Hoy en día, Internet es parte fundamental de nuestras vidas. Estudiamos, trabajamos,
+              nos comunicamos y nos divertimos a través de la red. Pero es importante recordar
+              que todo esto comenzó como un proyecto militar, y que gracias a la visión de
+              científicos como Tim Berners-Lee, hoy tenemos un mundo conectado como nunca
+              antes en la historia de la humanidad.
+            </p>
           </div>
-          <div class="feedback" id="feed-preg1"></div>
+
+          <!-- Línea del tiempo visual -->
+          <h3 style="margin-top: 1.5rem;">📅 Línea del tiempo</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="año">1969</span>
+              <span class="evento">ARPANET conecta 4 computadoras</span>
+            </div>
+            <div class="timeline-item">
+              <span class="año">1971</span>
+              <span class="evento">Primer correo electrónico</span>
+            </div>
+            <div class="timeline-item">
+              <span class="año">1989</span>
+              <span class="evento">Tim Berners-Lee crea la WWW</span>
+            </div>
+            <div class="timeline-item">
+              <span class="año">1994</span>
+              <span class="evento">Yahoo! — primer gran buscador</span>
+            </div>
+            <div class="timeline-item">
+              <span class="año">1998</span>
+              <span class="evento">Nace Google</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Pregunta 2 -->
-        <div class="pregunta" id="preg2">
-          <p>2. ¿Cuál fue el primer mensaje enviado a través de ARPANET y por qué fue tan peculiar?</p>
-          <div class="opciones">
-            <label class="opcion">
-              <input type="radio" name="p2" value="A" onchange="verificarPregunta('preg2', 'A')">
-              <span>"HELLO WORLD" — era un saludo de los científicos</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p2" value="B" onchange="verificarPregunta('preg2', 'B')">
-              <span>"LO" — el sistema falló antes de completar "LOGIN"</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p2" value="C" onchange="verificarPregunta('preg2', 'C')">
-              <span>"SOS" — era una señal de emergencia</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p2" value="D" onchange="verificarPregunta('preg2', 'D')">
-              <span>"OK" — para probar la conexión</span>
-            </label>
-          </div>
-          <div class="feedback" id="feed-preg2"></div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            📖 Terminé de leer → Ir a preguntas finales
+          </button>
         </div>
 
-        <!-- Pregunta 3 -->
-        <div class="pregunta" id="preg3">
-          <p>3. ¿Qué inventó Tim Berners-Lee en 1989 y en qué lugar trabajaba?</p>
-          <div class="opciones">
-            <label class="opcion">
-              <input type="radio" name="p3" value="A" onchange="verificarPregunta('preg3', 'A')">
-              <span>El correo electrónico, en la Universidad de Stanford</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p3" value="B" onchange="verificarPregunta('preg3', 'B')">
-              <span>El primer módem, en los laboratorios Bell</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p3" value="C" onchange="verificarPregunta('preg3', 'C')">
-              <span>La World Wide Web (WWW), en el CERN (Suiza)</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p3" value="D" onchange="verificarPregunta('preg3', 'D')">
-              <span>Google, en su casa en California</span>
-            </label>
+      </div><!-- /paso-pagina 4 -->
+
+      <!-- ============================================================
+           PÁGINA 5 — PREGUNTAS FINALES + SOPA
+           ============================================================ -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+
+        <div class="paso-indicador">Página <span>6</span> de 6 — ¡Final!</div>
+
+        <div class="paso-pregunta-card">
+          <h3>📝 Preguntas de comprensión finales</h3>
+          <p style="color:#78909c; margin-bottom:1.2rem;">Responde todas las preguntas para completar el taller.</p>
+
+          <div class="pregunta" id="fpreg1">
+            <p>1. ¿Qué significan las siglas ARPANET y para qué se creó originalmente?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="A"><label>A. Una red de computadoras personales para jugar videojuegos en línea</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg1" value="B"><label>B. Un proyecto militar de Estados Unidos para crear una red de comunicación que sobreviviera a un ataque</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="C"><label>C. Un sistema de correo electrónico inventado en Europa</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="D"><label>D. El primer navegador web creado por Tim Berners-Lee</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
           </div>
-          <div class="feedback" id="feed-preg3"></div>
+
+          <div class="pregunta" id="fpreg2">
+            <p>2. ¿Cuál fue el primer mensaje enviado a través de ARPANET y por qué fue tan peculiar?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. "HELLO WORLD" — era un saludo de los científicos</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="B"><label>B. "LO" — el sistema falló antes de completar "LOGIN"</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="C"><label>C. "SOS" — era una señal de emergencia</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. "OK" — para probar la conexión</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg3">
+            <p>3. ¿Qué inventó Tim Berners-Lee en 1989 y en qué lugar trabajaba?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="A"><label>A. El correo electrónico, en la Universidad de Stanford</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="B"><label>B. El primer módem, en los laboratorios Bell</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="C"><label>C. La World Wide Web (WWW), en el CERN (Suiza)</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. Google, en su casa en California</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg4">
+            <p>4. ¿Qué diferencia hay entre Internet y la World Wide Web (WWW)?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg4" value="A"><label>A. Son lo mismo, solo que Internet es el nombre en inglés</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg4" value="B"><label>B. Internet es la red física y la Web es un servicio que funciona sobre ella</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg4" value="C"><label>C. La Web es la red de cables y servidores; Internet son las páginas web</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg4" value="D"><label>D. Internet solo existe en Estados Unidos y la Web es mundial</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg5">
+            <p>5. ¿Qué inventó Ray Tomlinson y qué símbolo eligió para separar el usuario del servidor?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg5" value="A"><label>A. El primer buscador web, usó el símbolo #</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg5" value="B"><label>B. El correo electrónico, usó el símbolo @ (arroba)</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg5" value="C"><label>C. El primer navegador web, usó el símbolo &</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg5" value="D"><label>D. El módem dial-up, usó el símbolo !</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
         </div>
 
-        <!-- Pregunta 4 -->
-        <div class="pregunta" id="preg4">
-          <p>4. ¿Qué diferencia hay entre Internet y la World Wide Web (WWW)?</p>
-          <div class="opciones">
-            <label class="opcion">
-              <input type="radio" name="p4" value="A" onchange="verificarPregunta('preg4', 'A')">
-              <span>Son lo mismo, solo que Internet es el nombre en inglés</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p4" value="B" onchange="verificarPregunta('preg4', 'B')">
-              <span>Internet es la red física y la Web es un servicio que funciona sobre ella</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p4" value="C" onchange="verificarPregunta('preg4', 'C')">
-              <span>La Web es la red de cables y servidores; Internet son las páginas web</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p4" value="D" onchange="verificarPregunta('preg4', 'D')">
-              <span>Internet solo existe en Estados Unidos y la Web es mundial</span>
-            </label>
-          </div>
-          <div class="feedback" id="feed-preg4"></div>
-        </div>
-
-        <!-- Pregunta 5 -->
-        <div class="pregunta" id="preg5">
-          <p>5. ¿Qué inventó Ray Tomlinson y qué símbolo eligió para separar el usuario del servidor?</p>
-          <div class="opciones">
-            <label class="opcion">
-              <input type="radio" name="p5" value="A" onchange="verificarPregunta('preg5', 'A')">
-              <span>El primer buscador web, usó el símbolo #</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p5" value="B" onchange="verificarPregunta('preg5', 'B')">
-              <span>El correo electrónico, usó el símbolo @ (arroba)</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p5" value="C" onchange="verificarPregunta('preg5', 'C')">
-              <span>El primer navegador web, usó el símbolo &</span>
-            </label>
-            <label class="opcion">
-              <input type="radio" name="p5" value="D" onchange="verificarPregunta('preg5', 'D')">
-              <span>El módem dial-up, usó el símbolo !</span>
-            </label>
-          </div>
-          <div class="feedback" id="feed-preg5"></div>
-        </div>
-
-        <!-- ============================================================
-             SOPA DE LETRAS
-             ============================================================ -->
-        <section class="card" style="margin-top: 2rem;">
-          <h2 style="margin-top:0;">🔍 Sopa de Letras</h2>
-          <p style="color: #546e7a; margin-bottom: 1rem;">
-            Encuentra las <strong>8 palabras</strong> clave escondidas en la sopa de letras.
-            ¡Relacionan todo lo que aprendiste sobre el nacimiento de Internet!
-          </p>
+        <!-- Sopa de letras -->
+        <div class="card" style="margin-top:0;">
+          <h2>🔍 Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las palabras clave relacionadas con el nacimiento de Internet.</p>
           <div id="sopa04"></div>
-        </section>
+        </div>
 
-      </div><!-- /seccion-contenido 3 -->
+      </div><!-- /paso-pagina 5 -->
 
     </article>
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
   <footer>
     Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>❤️</span> para nuestros estudiantes
   </footer>
 
-  <!-- ============================================================
-       SCRIPTS
-       ============================================================ -->
   <script src="../../js/sopa.js"></script>
   <script src="../../js/progresivo.js"></script>
   <script>
-    /* ============================================================
-       Inicializar la sopa de letras
-       ============================================================ */
     var palabras04 = [
       'INTERNET', 'ARPANET', 'WWW', 'SERVIDOR', 'CORREO',
       'NAVEGAR', 'GOOGLE', 'PROTOCOLO', 'ORDENADOR', 'DATOS',
@@ -647,93 +476,29 @@
     ];
     crearSopa('sopa04', palabras04, 20);
 
-    /* ============================================================
-       Sistema de verificación de preguntas
-       ============================================================ */
+    document.addEventListener('DOMContentLoaded', function() {
+      progresivo.iniciar('sub04');
 
-    /**
-     * Respuestas correctas para cada pregunta.
-     */
-    const respuestas = {
-      preg1: 'B',
-      preg2: 'B',
-      preg3: 'C',
-      preg4: 'B',
-      preg5: 'B'
-    };
-
-    /**
-     * Feedback (retroalimentación) para cada opción de cada pregunta.
-     */
-    const mensajesFeedback = {
-      preg1: {
-        A: '❌ No exactamente. ARPANET no se creó para videojuegos, sino como un proyecto militar para mantener la comunicación en caso de ataque.',
-        B: '✅ ¡Correcto! ARPANET fue creada por el Departamento de Defensa de EE.UU. para que las comunicaciones sobrevivieran a un ataque nuclear.',
-        C: '❌ El correo electrónico llegó después (1971). ARPANET es la red que hizo posible el correo.',
-        D: '❌ El primer navegador web lo creó Tim Berners-Lee en 1990. ARPANET es mucho más antigua (1969).'
-      },
-      preg2: {
-        A: '❌ No fue "HELLO WORLD". Ese mensaje se usó en otros contextos de programación.',
-        B: '✅ ¡Correcto! El mensaje fue "LO" porque el sistema se cayó antes de completar "LOGIN". ¡Un fallo histórico!',
-        C: '❌ No fue una señal de emergencia. Era una prueba de inicio de sesión.',
-        D: '❌ No fue "OK". Intenta de nuevo recordando la anécdota del primer mensaje.'
-      },
-      preg3: {
-        A: '❌ El correo electrónico lo inventó Ray Tomlinson en 1971, no Tim Berners-Lee.',
-        B: '❌ El módem no fue inventado por Berners-Lee. Él trabajó en el CERN.',
-        C: '✅ ¡Correcto! Tim Berners-Lee creó la World Wide Web mientras trabajaba en el CERN en Suiza.',
-        D: '❌ Google lo crearon Larry Page y Sergey Brin en 1998, no Berners-Lee.'
-      },
-      preg4: {
-        A: '❌ No son lo mismo. Aunque van de la mano, son conceptos diferentes.',
-        B: '✅ ¡Correcto! Internet es la red física (cables, routers) y la Web es el servicio de páginas que funciona sobre esa red.',
-        C: '❌ Es al revés: Internet es la red física; la Web son las páginas.',
-        D: '❌ Internet es mundial, no solo de EE.UU. y la Web también.'
-      },
-      preg5: {
-        A: '❌ El primer buscador fue Yahoo! o Wandex. El símbolo # no se usa en correos.',
-        B: '✅ ¡Correcto! Ray Tomlinson inventó el correo electrónico y escogió la @ porque significaba "at" (en).',
-        C: '❌ El primer navegador fue creado por Tim Berners-Lee. El símbolo & no es el del correo.',
-        D: '❌ El módem dial-up no lo inventó Tomlinson. El símbolo del correo es @.'
-      }
-    };
-
-    /**
-     * Verifica la respuesta seleccionada por el alumno.
-     */
-    function verificarPregunta(preguntaId, valor) {
-      const preguntaDiv = document.getElementById(preguntaId);
-      const feedbackDiv = document.getElementById('feed-' + preguntaId);
-      const correcta = respuestas[preguntaId];
-
-      preguntaDiv.classList.remove('correcta', 'incorrecta');
-
-      if (valor === correcta) {
-        preguntaDiv.classList.add('correcta');
-        feedbackDiv.textContent = mensajesFeedback[preguntaId][valor];
-      } else {
-        preguntaDiv.classList.add('incorrecta');
-        feedbackDiv.textContent = mensajesFeedback[preguntaId][valor];
-      }
-
-      feedbackDiv.style.display = 'block';
-
-      const radios = preguntaDiv.querySelectorAll('input[type="radio"]');
-      radios.forEach(r => {
-        if (r.value !== valor) {
-          r.disabled = true;
-        }
+      document.querySelectorAll('#progresivo-sub04 .pregunta .opcion').forEach(function(opcion) {
+        opcion.addEventListener('click', function() {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio.disabled) return;
+          radio.checked = true;
+          var pregunta = this.closest('.pregunta');
+          var feedback = pregunta.querySelector('.feedback');
+          var correcta = this.dataset.correcta === 'true';
+          pregunta.classList.remove('correcta', 'incorrecta');
+          pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
+          if (correcta) {
+            pregunta.classList.add('correcta');
+            feedback.textContent = '✅ ¡Correcto!';
+          } else {
+            pregunta.classList.add('incorrecta');
+            feedback.textContent = '❌ Revisa la lectura.';
+          }
+          feedback.style.display = 'block';
+        });
       });
-    }
-
-    /* ============================================================
-       Inicializar sistema progresivo
-       ============================================================ */
-    progresivo.iniciar('sub04', {
-      preguntas: {
-        0: [{ correcta: 'B', explicacion: 'El primer mensaje fue "LO" porque el sistema se cayó antes de completar "LOGIN". ¡Un fallo histórico!' }],
-        1: [{ correcta: 'B', explicacion: 'Internet es la red física (cables, routers, servidores) y la Web (WWW) es un servicio que funciona sobre esa red.' }]
-      }
     });
   </script>
 

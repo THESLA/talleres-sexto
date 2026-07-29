@@ -7,645 +7,290 @@
   <link rel="stylesheet" href="../../css/estilo.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* --- Estilos adicionales específicos para este sub-taller --- */
-
-    /* Línea de tiempo comparativa */
-    .timeline-compare {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-      justify-content: center;
-    }
-
-    .timeline-col {
-      flex: 1;
-      min-width: 220px;
-      border-radius: 16px;
-      padding: 1.2rem;
-    }
-
-    .timeline-col.radio {
-      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-      border-left: 5px solid #1565c0;
-    }
-
-    .timeline-col.tv {
-      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-      border-left: 5px solid #c62828;
-    }
-
-    .timeline-col h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.8rem;
-      font-weight: 800;
-    }
-
-    .timeline-col.radio h4 { color: #1565c0; }
-    .timeline-col.tv h4 { color: #c62828; }
-
-    .timeline-col ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .timeline-col li {
-      padding: 0.4rem 0;
-      border-bottom: 1px dashed rgba(0,0,0,0.1);
-      font-size: 0.95rem;
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .timeline-col li .year {
-      font-weight: 800;
-      color: inherit;
-      min-width: 50px;
-    }
-
-    /* Recuadro del Titanic */
-    .destacado-titanic {
-      background: #e3f2fd;
-      border: 2px solid #1565c0;
-      border-radius: 16px;
-      padding: 1.2rem 1.5rem;
-      margin: 1.2rem 0;
-      position: relative;
-    }
-
-    .destacado-titanic h4 {
-      color: #1565c0;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .destacado-titanic .badge {
-      display: inline-block;
-      background: #1565c0;
-      color: white;
-      font-weight: 800;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.7rem;
-      border-radius: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Glosario visual */
-    .glosario-mini {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin: 1rem 0;
-      justify-content: center;
-    }
-
-    .glosario-mini .term {
-      background: #e8f0fe;
-      border-radius: 30px;
-      padding: 0.4rem 1rem;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #1a73e8;
-      border: 2px solid #bbdefb;
-    }
+    .timeline-compare { display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.5rem 0; justify-content:center; }
+    .timeline-col { flex:1; min-width:220px; border-radius:16px; padding:1.2rem; }
+    .timeline-col.radio { background:linear-gradient(135deg,#e3f2fd,#bbdefb); border-left:5px solid #1565c0; }
+    .timeline-col.tv { background:linear-gradient(135deg,#fce4ec,#f8bbd0); border-left:5px solid #c62828; }
+    .timeline-col h4 { font-size:1.1rem; margin-bottom:0.8rem; font-weight:800; }
+    .timeline-col.radio h4 { color:#1565c0; }
+    .timeline-col.tv h4 { color:#c62828; }
+    .timeline-col ul { list-style:none; padding:0; }
+    .timeline-col li { padding:0.4rem 0; border-bottom:1px dashed rgba(0,0,0,0.1); font-size:0.95rem; display:flex; gap:0.5rem; }
+    .timeline-col li .year { font-weight:800; color:inherit; min-width:50px; }
+    .destacado-titanic { background:#e3f2fd; border:2px solid #1565c0; border-radius:16px; padding:1.2rem 1.5rem; margin:1.2rem 0; }
+    .destacado-titanic h4 { color:#1565c0; font-size:1.1rem; margin-bottom:0.5rem; }
+    .destacado-titanic .badge { display:inline-block; background:#1565c0; color:white; font-weight:800; font-size:0.75rem; padding:0.2rem 0.7rem; border-radius:12px; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.5rem; }
+    .glosario-mini { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1rem 0; justify-content:center; }
+    .glosario-mini .term { background:#e8f0fe; border-radius:30px; padding:0.4rem 1rem; font-weight:700; font-size:0.9rem; color:#1a73e8; border:2px solid #bbdefb; }
+    .pregunta .opcion label { cursor:pointer; flex:1; }
   </style>
 </head>
 <body>
-
-  <!-- ============================================================
-       ENCABEZADO
-       ============================================================ -->
   <header>
     <h1>📻 La radio y la <span>televisión</span></h1>
     <div class="subtitulo">Historia de la Conectividad · Sub-taller 3</div>
   </header>
-
-  <!-- ============================================================
-       NAVEGACIÓN ENTRE SUB-TALLERES
-       ============================================================ -->
   <nav class="subtaller-nav">
-    <a href="../../index.html">🏠 Inicio</a>
-    <span class="separador">|</span>
-    <a href="index.html">📋 Portada del tema</a>
-    <span class="separador">|</span>
-    <a href="sub01.html">1</a>
-    <a href="sub02.html">2</a>
-    <a href="sub03.html" class="activo">3</a>
-    <a href="sub04.html">4</a>
-    <a href="sub05.html">5</a>
-    <a href="sub06.html">6</a>
+    <a href="../../index.html">🏠 Inicio</a><span class="separador">|</span>
+    <a href="index.html">📋 Portada del tema</a><span class="separador">|</span>
+    <a href="sub01.html">1</a><a href="sub02.html">2</a><a href="sub03.html" class="activo">3</a>
+    <a href="sub04.html">4</a><a href="sub05.html">5</a><a href="sub06.html">6</a>
   </nav>
-
-  <!-- ============================================================
-       CONTENIDO PRINCIPAL
-       ============================================================ -->
   <main>
+    <article class="card" id="progresivo-sub03">
+      <h2 style="text-align:center;">📖 La radio y la televisión</h2>
+      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Historia de la Conectividad · Sub-taller 3</p>
 
-    <!-- ============================================================
-         SISTEMA PROGRESIVO — CONTENEDOR PRINCIPAL
-         ============================================================ -->
-    <article class="card lectura" id="progresivo-sub03">
-
-      <h2>📖 La radio y la televisión</h2>
-
-      <!-- Barra de progreso -->
-      <div class="progreso-barra">
-        <div class="progreso-pasos">
-          <span class="paso" id="sub03-paso-0">1</span>
-          <span class="paso" id="sub03-paso-1">2</span>
-          <span class="paso" id="sub03-paso-2">3</span>
+      <!-- PÁGINA 0 — TEXTO 1 -->
+      <div class="paso-pagina" data-paso="0">
+        <div class="paso-indicador">Página <span>1</span> de 6 — Lectura</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 Parte 1 de 3</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e8f5e9,#c8e6c9); padding:10px;">
+              <defs><style>.tit-il3{font-family:Nunito,sans-serif;font-size:14px;font-weight:700;fill:#1b5e20}.lab-il3{font-family:Nunito,sans-serif;font-size:11px;font-weight:600;fill:#2e7d32}</style></defs>
+              <text x="350" y="25" text-anchor="middle" class="tit-il3">📻 La comunicación sin cables: Radio y Televisión</text>
+              <rect x="15" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
+              <text x="115" y="62" text-anchor="middle" class="lab-il3" style="font-size:13px;">📻 Radio (1895)</text>
+              <rect x="105" y="68" width="4" height="70" fill="#546e7a"/><rect x="95" y="73" width="24" height="4" fill="#546e7a"/>
+              <rect x="100" y="80" width="14" height="3" fill="#546e7a"/><rect x="90" y="66" width="34" height="3" fill="#546e7a"/>
+              <line x1="93" y1="66" x2="90" y2="55" stroke="#546e7a" stroke-width="2"/><line x1="121" y1="66" x2="124" y2="55" stroke="#546e7a" stroke-width="2"/>
+              <path d="M70,100 Q60,90 50,100" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.6"/>
+              <path d="M65,110 Q50,95 35,110" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.5"/>
+              <path d="M60,120 Q40,100 20,120" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.4"/>
+              <path d="M55,130 Q30,105 5,130" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.3"/>
+              <rect x="80" y="160" width="70" height="35" rx="4" fill="#5d4037"/><circle cx="100" cy="177" r="8" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+              <rect x="112" y="170" width="25" height="12" rx="2" fill="#ff8f00"/><text x="30" y="200" class="lab-il3">⚡ Marconi</text>
+              <text x="115" y="215" text-anchor="middle" class="lab-il3" style="font-size:10px;">Ondas electromagnéticas</text>
+              <text x="290" y="110" text-anchor="middle" class="lab-il3" style="font-size:12px;">📡 Ondas de radio</text>
+              <path d="M240,120 Q248,105 256,120 Q264,135 272,120 Q280,105 288,120 Q296,135 304,120 Q312,105 320,120" fill="none" stroke="#e65100" stroke-width="2.5" opacity="0.7"/>
+              <rect x="480" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
+              <text x="580" y="62" text-anchor="middle" class="lab-il3" style="font-size:13px;">📺 Televisión (1925)</text>
+              <rect x="510" y="130" width="140" height="40" rx="6" fill="#5d4037"/><rect x="515" y="135" width="130" height="30" rx="4" fill="#424242"/>
+              <rect x="525" y="170" width="6" height="15" rx="2" fill="#795548"/><rect x="630" y="170" width="6" height="15" rx="2" fill="#795548"/>
+              <rect x="522" y="80" width="116" height="55" rx="6" fill="#bbdefb"/><rect x="525" y="83" width="110" height="49" rx="4" fill="#e3f2fd"/>
+              <circle cx="580" cy="103" r="10" fill="#1a73e8" opacity="0.5"/><rect x="562" y="115" width="36" height="10" rx="2" fill="#4caf50" opacity="0.4"/>
+              <line x1="555" y1="95" x2="565" y2="95" stroke="#e53935" stroke-width="2" opacity="0.5"/>
+              <line x1="570" y1="95" x2="580" y2="95" stroke="#e53935" stroke-width="2" opacity="0.5"/>
+              <line x1="585" y1="95" x2="595" y2="95" stroke="#e53935" stroke-width="2" opacity="0.5"/>
+              <line x1="580" y1="80" x2="560" y2="55" stroke="#546e7a" stroke-width="2"/><line x1="580" y1="80" x2="600" y2="55" stroke="#546e7a" stroke-width="2"/>
+              <circle cx="560" cy="55" r="3" fill="#e53935"/><circle cx="600" cy="55" r="3" fill="#e53935"/>
+              <text x="580" y="200" text-anchor="middle" class="lab-il3">📺 Baird: primera imagen de TV (1925)</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>Hoy en día estamos acostumbrados a prender la radio o la televisión y al instante escuchar música, ver noticias o disfrutar de una película. Pero ¿sabías que estas dos tecnologías cambiaron por completo la forma en que las personas se conectan con el mundo? En este taller descubriremos cómo nacieron y por qué son tan importantes.</p>
+            <h3>🔬 El descubrimiento de las ondas electromagnéticas</h3>
+            <p>Todo comenzó en 1887, cuando un científico alemán llamado <strong>Heinrich Hertz</strong> logró demostrar que existían unas ondas invisibles capaces de viajar por el aire. Estas ondas, llamadas <strong>ondas electromagnéticas</strong>, son las mismas que hoy usamos para la radio, la televisión, el wifi y hasta los microondas. ¡Qué curioso! Hertz descubrió algo sin imaginar todo lo que vendría después.</p>
+            <h3>📡 Guillermo Marconi y la primera transmisión de radio</h3>
+            <p>Un joven italiano llamado <strong>Guillermo Marconi</strong> tomó los experimentos de Hertz y construyó el primer <strong>telégrafo sin cables</strong>. En 1895 logró enviar señales a unos cuantos metros, pero no se detuvo ahí. El gran momento llegó en <strong>1901</strong>, cuando Marconi envió una señal de radio desde Inglaterra hasta Canadá, ¡cruzando el océano Atlántico! Por primera vez en la historia, la información viajaba sin necesidad de cables. Había nacido la <strong>radio</strong>.</p>
+          </div>
         </div>
-        <div class="barra-progreso-linea">
-          <div class="barra-progreso-llena" id="barra-sub03"></div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">📖 Terminé de leer → Ir a preguntas</button>
         </div>
       </div>
 
-      <!-- ============================================================
-           SECCIÓN 1 — Hertz y Marconi (hasta "Había nacido la radio")
-           ============================================================ -->
-      <div class="seccion-contenido">
-
-        <!-- Ilustración SVG: Radio y Televisión -->
-        <div style="display:flex; justify-content:center; margin:1rem 0 1.5rem 0;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" style="width:100%; max-width:700px; border-radius:16px; background:linear-gradient(135deg,#e8f5e9,#c8e6c9); padding:10px;">
-            <defs>
-              <style>
-                .tit-il3 { font-family:Nunito,sans-serif; font-size:14px; font-weight:700; fill:#1b5e20; }
-                .lab-il3 { font-family:Nunito,sans-serif; font-size:11px; font-weight:600; fill:#2e7d32; }
-              </style>
-            </defs>
-            <text x="350" y="25" text-anchor="middle" class="tit-il3">📻 La comunicación sin cables: Radio y Televisión</text>
-
-            <!-- RADIO (izquierda) -->
-            <rect x="15" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
-            <text x="115" y="62" text-anchor="middle" class="lab-il3" style="font-size:13px;">📻 Radio (1895)</text>
-            <!-- Torre de radio -->
-            <rect x="105" y="68" width="4" height="70" fill="#546e7a"/>
-            <rect x="95" y="73" width="24" height="4" fill="#546e7a"/>
-            <rect x="100" y="80" width="14" height="3" fill="#546e7a"/>
-            <rect x="90" y="66" width="34" height="3" fill="#546e7a"/>
-            <line x1="93" y1="66" x2="90" y2="55" stroke="#546e7a" stroke-width="2"/>
-            <line x1="121" y1="66" x2="124" y2="55" stroke="#546e7a" stroke-width="2"/>
-            <!-- Ondas de radio -->
-            <path d="M70,100 Q60,90 50,100" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.6"/>
-            <path d="M65,110 Q50,95 35,110" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.5"/>
-            <path d="M60,120 Q40,100 20,120" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.4"/>
-            <path d="M55,130 Q30,105 5,130" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.3"/>
-            <!-- Radio receptor -->
-            <rect x="80" y="160" width="70" height="35" rx="4" fill="#5d4037"/>
-            <circle cx="100" cy="177" r="8" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
-            <rect x="112" y="170" width="25" height="12" rx="2" fill="#ff8f00"/>
-            <text x="30" y="200" class="lab-il3">⚡ Marconi</text>
-            <text x="115" y="215" text-anchor="middle" class="lab-il3" style="font-size:10px;">Ondas electromagnéticas</text>
-
-            <!-- FRECUENCIA / ONDA -->
-            <text x="290" y="110" text-anchor="middle" class="lab-il3" style="font-size:12px;">📡 Ondas de radio</text>
-            <path d="M240,120 Q248,105 256,120 Q264,135 272,120 Q280,105 288,120 Q296,135 304,120 Q312,105 320,120" fill="none" stroke="#e65100" stroke-width="2.5" opacity="0.7"/>
-
-            <!-- TELEVISIÓN (derecha) -->
-            <rect x="480" y="40" width="200" height="165" rx="14" fill="white" opacity="0.7"/>
-            <text x="580" y="62" text-anchor="middle" class="lab-il3" style="font-size:13px;">📺 Televisión (1925)</text>
-            <!-- TV vintage -->
-            <rect x="510" y="130" width="140" height="40" rx="6" fill="#5d4037"/>
-            <rect x="515" y="135" width="130" height="30" rx="4" fill="#424242"/>
-            <!-- Patas -->
-            <rect x="525" y="170" width="6" height="15" rx="2" fill="#795548"/>
-            <rect x="630" y="170" width="6" height="15" rx="2" fill="#795548"/>
-            <!-- Pantalla -->
-            <rect x="522" y="80" width="116" height="55" rx="6" fill="#bbdefb"/>
-            <rect x="525" y="83" width="110" height="49" rx="4" fill="#e3f2fd"/>
-            <!-- Imagen en la TV (dibujo simple) -->
-            <circle cx="580" cy="103" r="10" fill="#1a73e8" opacity="0.5"/>
-            <rect x="562" y="115" width="36" height="10" rx="2" fill="#4caf50" opacity="0.4"/>
-            <line x1="555" y1="95" x2="565" y2="95" stroke="#e53935" stroke-width="2" opacity="0.5"/>
-            <line x1="570" y1="95" x2="580" y2="95" stroke="#e53935" stroke-width="2" opacity="0.5"/>
-            <line x1="585" y1="95" x2="595" y2="95" stroke="#e53935" stroke-width="2" opacity="0.5"/>
-            <!-- Antena de TV -->
-            <line x1="580" y1="80" x2="560" y2="55" stroke="#546e7a" stroke-width="2"/>
-            <line x1="580" y1="80" x2="600" y2="55" stroke="#546e7a" stroke-width="2"/>
-            <circle cx="560" cy="55" r="3" fill="#e53935"/>
-            <circle cx="600" cy="55" r="3" fill="#e53935"/>
-            <text x="580" y="200" text-anchor="middle" class="lab-il3">📺 Baird: primera imagen de TV (1925)</text>
-          </svg>
-        </div>
-
-        <p>
-          Hoy en día estamos acostumbrados a prender la radio o la televisión y al instante
-          escuchar música, ver noticias o disfrutar de una película. Pero ¿sabías que estas
-          dos tecnologías cambiaron por completo la forma en que las personas se conectan
-          con el mundo? En este taller descubriremos cómo nacieron y por qué son tan importantes.
-        </p>
-
-        <h3>🔬 El descubrimiento de las ondas electromagnéticas</h3>
-
-        <p>
-          Todo comenzó en 1887, cuando un científico alemán llamado <strong>Heinrich Hertz</strong>
-          logró demostrar que existían unas ondas invisibles capaces de viajar por el aire.
-          Estas ondas, llamadas <strong>ondas electromagnéticas</strong>, son las mismas que hoy
-          usamos para la radio, la televisión, el wifi y hasta los microondas. ¡Qué curioso!
-          Hertz descubrió algo sin imaginar todo lo que vendría después.
-        </p>
-
-        <h3>📡 Guillermo Marconi y la primera transmisión de radio</h3>
-
-        <p>
-          Un joven italiano llamado <strong>Guillermo Marconi</strong> tomó los experimentos de
-          Hertz y construyó el primer <strong>telégrafo sin cables</strong>. En 1895 logró enviar
-          señales a unos cuantos metros, pero no se detuvo ahí. El gran momento llegó en
-          <strong>1901</strong>, cuando Marconi envió una señal de radio desde Inglaterra hasta
-          Canadá, ¡cruzando el océano Atlántico! Por primera vez en la historia, la información
-          viajaba sin necesidad de cables. Había nacido la <strong>radio</strong>.
-        </p>
-
-        <div class="seccion-divisor">· · ·</div>
-
-        <!-- CHECKPOINT 1 -->
-        <div class="checkpoint" id="sub03-chk-0-0">
-          <h4>🔐 Verificación de lectura — Parte 1</h4>
-          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">
-            Responde correctamente para desbloquear la siguiente parte.
-          </p>
-          <p><strong>¿Quién descubrió las ondas electromagnéticas en 1887?</strong></p>
-          <div class="chk-opciones">
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk0" value="A" onchange="progresivo.verificar('sub03',0,0,this.value)">
-              A. Guillermo Marconi
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk0" value="B" onchange="progresivo.verificar('sub03',0,0,this.value)">
-              B. Heinrich Hertz
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk0" value="C" onchange="progresivo.verificar('sub03',0,0,this.value)">
-              C. John Logie Baird
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk0" value="D" onchange="progresivo.verificar('sub03',0,0,this.value)">
-              D. Albert Einstein
-            </label>
+      <!-- PÁGINA 1 — PREGUNTA 1 -->
+      <div class="paso-pagina" data-paso="1" style="display:none">
+        <div class="paso-indicador">Página <span>2</span> de 6 — Pregunta</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">¿Quién descubrió las ondas electromagnéticas en 1887?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p1" value="A" onchange="progresivo.responder('sub03',1,this.value,'B','Heinrich Hertz descubrió las ondas electromagnéticas en 1887.')"> A. Guillermo Marconi</label>
+            <label><input type="radio" name="sub03-p1" value="B" onchange="progresivo.responder('sub03',1,this.value,'B','Heinrich Hertz descubrió las ondas electromagnéticas en 1887.')"> B. Heinrich Hertz</label>
+            <label><input type="radio" name="sub03-p1" value="C" onchange="progresivo.responder('sub03',1,this.value,'B','Heinrich Hertz descubrió las ondas electromagnéticas en 1887.')"> C. John Logie Baird</label>
+            <label><input type="radio" name="sub03-p1" value="D" onchange="progresivo.responder('sub03',1,this.value,'B','Heinrich Hertz descubrió las ondas electromagnéticas en 1887.')"> D. Albert Einstein</label>
           </div>
-          <div class="chk-fb"></div>
-          <button class="btn btn-primario btn-continuar" id="sub03-sig-0" onclick="progresivo.siguiente('sub03')">
-            ➡️ Continuar leyendo
-          </button>
-        </div>
-
-      </div><!-- /seccion-contenido 1 -->
-
-      <!-- ============================================================
-           SECCIÓN 2 — Titanic, Baird, evolución TV e impacto social
-           ============================================================ -->
-      <div class="seccion-contenido">
-
-        <div class="seccion-divisor">⭐</div>
-
-        <h3>🚢 La radio al rescate: el Titanic</h3>
-
-        <!-- Recuadro destacado: Titanic SOS -->
-        <div class="destacado-titanic">
-          <span class="badge">⚡ Historia real</span>
-          <h4>🆘 El SOS del Titanic</h4>
-          <p>
-            En la noche del 14 al 15 de abril de 1912, el enorme transatlántico <em>Titanic</em>
-            chocó contra un iceberg mientras navegaba por el Atlántico Norte. Los operadores de
-            radio del barco, Jack Phillips y Harold Bride, enviaron repetidamente señales de
-            auxilio usando el código <strong>🎯 CQD</strong> y luego el nuevo código
-            <strong>🎯 SOS</strong>. Gracias a la radio, el barco <em>Carpathia</em> recibió
-            la señal y navegó rápidamente al rescate, salvando a más de 700 personas.
-            Este trágico evento demostró al mundo lo vital que era la radio para la seguridad
-            en el mar.
-          </p>
-        </div>
-
-        <h3>🖥️ John Logie Baird y la televisión</h3>
-
-        <p>
-          Si la radio permitía escuchar sonidos a distancia, el siguiente paso era obvio:
-          <strong>ver imágenes en movimiento</strong>. En 1925, un inventor escocés llamado
-          <strong>John Logie Baird</strong> logró transmitir la primera imagen de televisión
-          en blanco y negro. La primera "estrella" de la televisión fue un muñeco de ventrílocuo
-          llamado <em>Stooky Bill</em>, porque Baird necesitaba un "modelo" que aguantara quieto
-          bajo luces muy brillantes. ¡Pronto la televisión se volvió el invento más fascinante
-          del hogar!
-        </p>
-
-        <h3>🎨 La evolución de la televisión</h3>
-
-        <p>
-          La televisión no siempre fue como la conocemos hoy. Primero llegó la
-          <strong>televisión en blanco y negro</strong> (años 1930–1950). Luego, en la década
-          de 1950, apareció la <strong>televisión a color</strong>, que hizo que ver programas
-          fuera mucho más emocionante. Más adelante, la <strong>señal digital</strong> reemplazó
-          a la señal analógica, ofreciendo una calidad de imagen mucho más nítida. Hoy tenemos
-          televisiones inteligentes (<em>Smart TV</em>) que se conectan a internet y nos permiten
-          ver contenido bajo demanda.
-        </p>
-
-        <h3>🌍 El impacto social: noticias, entretenimiento y educación</h3>
-
-        <p>
-          Tanto la radio como la televisión transformaron la sociedad. Por primera vez, las
-          personas podían <strong>escuchar noticias en vivo</strong> desde cualquier parte del
-          mundo. La radio llevó música, deportes y novelas a los hogares. La televisión agregó
-          imágenes: shows, series, documentales y eventos históricos como la llegada del hombre
-          a la Luna en 1969, que fue vista por millones de personas en todo el planeta.
-          También se convirtieron en herramientas poderosas de <strong>educación a distancia</strong>,
-          llevando clases y cursos a lugares donde no había escuelas.
-        </p>
-
-        <div class="seccion-divisor">· · ·</div>
-
-        <!-- CHECKPOINT 2 -->
-        <div class="checkpoint" id="sub03-chk-1-0">
-          <h4>🔐 Verificación de lectura — Parte 2</h4>
-          <p style="margin-bottom: 0.6rem; font-size: 0.95rem; color: #546e7a;">
-            Responde correctamente para desbloquear la siguiente parte.
-          </p>
-          <p><strong>¿Qué código de auxilio usaron los operadores de radio del Titanic?</strong></p>
-          <div class="chk-opciones">
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk1" value="A" onchange="progresivo.verificar('sub03',1,0,this.value)">
-              A. SAV y HELP
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk1" value="B" onchange="progresivo.verificar('sub03',1,0,this.value)">
-              B. OK y ROGER
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk1" value="C" onchange="progresivo.verificar('sub03',1,0,this.value)">
-              C. MAYDAY y PAN-PAN
-            </label>
-            <label class="chk-opcion">
-              <input type="radio" name="sub03-chk1" value="D" onchange="progresivo.verificar('sub03',1,0,this.value)">
-              D. CQD y SOS
-            </label>
-          </div>
-          <div class="chk-fb"></div>
-          <button class="btn btn-primario btn-continuar" id="sub03-sig-1" onclick="progresivo.siguiente('sub03')">
-            ➡️ Continuar leyendo
-          </button>
-        </div>
-
-      </div><!-- /seccion-contenido 2 -->
-
-      <!-- ============================================================
-           SECCIÓN 3 — Timeline, glosario, preguntas finales y sopa
-           ============================================================ -->
-      <div class="seccion-contenido">
-
-        <div class="seccion-divisor">⭐</div>
-
-        <!-- Línea de tiempo comparativa -->
-        <h3>⏳ Línea del tiempo: radio vs. televisión</h3>
-
-        <div class="timeline-compare">
-          <div class="timeline-col radio">
-            <h4>📻 La Radio</h4>
-            <ul>
-              <li><span class="year">1887</span> Hertz descubre las ondas electromagnéticas</li>
-              <li><span class="year">1895</span> Marconi envía la primera señal de radio</li>
-              <li><span class="year">1901</span> Primera transmisión transatlántica</li>
-              <li><span class="year">1912</span> El Titanic usa la radio para pedir auxilio</li>
-              <li><span class="year">1920</span> Nacen las primeras emisoras comerciales</li>
-              <li><span class="year">1930</span> La radio llega a millones de hogares</li>
-            </ul>
-          </div>
-          <div class="timeline-col tv">
-            <h4>📺 La Televisión</h4>
-            <ul>
-              <li><span class="year">1925</span> Baird transmite la primera imagen</li>
-              <li><span class="year">1936</span> Inician las transmisiones regulares en Reino Unido</li>
-              <li><span class="year">1951</span> Primeras transmisiones a color en EE.UU.</li>
-              <li><span class="year">1969</span> La llegada a la Luna se ve en TV mundial</li>
-              <li><span class="year">1990</span> Transición a señal digital</li>
-              <li><span class="year">2010</span> Smart TV y contenido en internet</li>
-            </ul>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">📖 Volver a leer el texto</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">➡️ Siguiente texto</button>
           </div>
         </div>
+      </div>
 
-        <!-- Glosario de conceptos clave -->
-        <div class="glosario-mini">
-          <span class="term">📡 Ondas electromagnéticas</span>
-          <span class="term">📻 Transmisión</span>
-          <span class="term">🔊 Frecuencia</span>
-          <span class="term">📺 Señal analógica</span>
-          <span class="term">💾 Señal digital</span>
-          <span class="term">🖥️ Televisor</span>
+      <!-- PÁGINA 2 — TEXTO 2 -->
+      <div class="paso-pagina" data-paso="2" style="display:none">
+        <div class="paso-indicador">Página <span>3</span> de 6 — Lectura</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 Parte 2 de 3</span>
+          <div class="paso-contenido-lectura">
+            <h3>🚢 La radio al rescate: el Titanic</h3>
+            <div class="destacado-titanic">
+              <span class="badge">⚡ Historia real</span>
+              <h4>🆘 El SOS del Titanic</h4>
+              <p>En la noche del 14 al 15 de abril de 1912, el enorme transatlántico <em>Titanic</em> chocó contra un iceberg mientras navegaba por el Atlántico Norte. Los operadores de radio del barco, Jack Phillips y Harold Bride, enviaron repetidamente señales de auxilio usando el código <strong>🎯 CQD</strong> y luego el nuevo código <strong>🎯 SOS</strong>. Gracias a la radio, el barco <em>Carpathia</em> recibió la señal y navegó rápidamente al rescate, salvando a más de 700 personas. Este trágico evento demostró al mundo lo vital que era la radio para la seguridad en el mar.</p>
+            </div>
+            <h3>🖥️ John Logie Baird y la televisión</h3>
+            <p>Si la radio permitía escuchar sonidos a distancia, el siguiente paso era obvio: <strong>ver imágenes en movimiento</strong>. En 1925, un inventor escocés llamado <strong>John Logie Baird</strong> logró transmitir la primera imagen de televisión en blanco y negro. La primera "estrella" de la televisión fue un muñeco de ventrílocuo llamado <em>Stooky Bill</em>, porque Baird necesitaba un "modelo" que aguantara quieto bajo luces muy brillantes. ¡Pronto la televisión se volvió el invento más fascinante del hogar!</p>
+            <h3>🎨 La evolución de la televisión</h3>
+            <p>La televisión no siempre fue como la conocemos hoy. Primero llegó la <strong>televisión en blanco y negro</strong> (años 1930-1950). Luego, en la década de 1950, apareció la <strong>televisión a color</strong>. Más adelante, la <strong>señal digital</strong> reemplazó a la señal analógica. Hoy tenemos televisiones inteligentes (<em>Smart TV</em>) que se conectan a internet.</p>
+            <h3>🌍 El impacto social</h3>
+            <p>Tanto la radio como la televisión transformaron la sociedad. Por primera vez, las personas podían <strong>escuchar noticias en vivo</strong> desde cualquier parte del mundo. La radio llevó música, deportes y novelas a los hogares. La televisión agregó imágenes: shows, series, documentales y eventos históricos como la llegada del hombre a la Luna en 1969. También se convirtieron en herramientas poderosas de <strong>educación a distancia</strong>.</p>
+          </div>
         </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">📖 Terminé de leer → Ir a preguntas</button>
+        </div>
+      </div>
 
-        <!-- ============================================================
-             PREGUNTAS DE COMPRENSIÓN FINALES
-             ============================================================ -->
-        <h3 style="margin-top: 2rem;">📝 Preguntas de comprensión finales</h3>
-        <p style="color: #78909c; margin-bottom: 1.2rem;">
-          Ahora que has leído todo, responde estas preguntas para demostrar lo que aprendiste.
-        </p>
+      <!-- PÁGINA 3 — PREGUNTA 2 -->
+      <div class="paso-pagina" data-paso="3" style="display:none">
+        <div class="paso-indicador">Página <span>4</span> de 6 — Pregunta</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">¿Qué código de auxilio usaron los operadores de radio del Titanic?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p2" value="A" onchange="progresivo.responder('sub03',3,this.value,'D','Los operadores del Titanic usaron CQD y SOS como señales de auxilio.')"> A. SAV y HELP</label>
+            <label><input type="radio" name="sub03-p2" value="B" onchange="progresivo.responder('sub03',3,this.value,'D','Los operadores del Titanic usaron CQD y SOS como señales de auxilio.')"> B. OK y ROGER</label>
+            <label><input type="radio" name="sub03-p2" value="C" onchange="progresivo.responder('sub03',3,this.value,'D','Los operadores del Titanic usaron CQD y SOS como señales de auxilio.')"> C. MAYDAY y PAN-PAN</label>
+            <label><input type="radio" name="sub03-p2" value="D" onchange="progresivo.responder('sub03',3,this.value,'D','Los operadores del Titanic usaron CQD y SOS como señales de auxilio.')"> D. CQD y SOS</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">📖 Volver a leer el texto</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+      </div>
 
-        <!-- Pregunta 1 -->
-        <div class="pregunta" id="preg1">
-          <p>1. ¿Quién descubrió las ondas electromagnéticas en 1887?</p>
-          <div class="opciones">
-            <div class="opcion" data-pregunta="preg1" data-correcta="false">
-              <input type="radio" name="preg1" value="A" id="preg1a">
-              <label for="preg1a">A. Guillermo Marconi</label>
+      <!-- PÁGINA 4 — TEXTO 3 (timeline + glosario) -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
+        <div class="paso-indicador">Página <span>5</span> de 6 — Lectura</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 Parte 3 de 3</span>
+          <div class="paso-contenido-lectura">
+            <h3>⏳ Línea del tiempo: radio vs. televisión</h3>
+            <div class="timeline-compare">
+              <div class="timeline-col radio">
+                <h4>📻 La Radio</h4>
+                <ul>
+                  <li><span class="year">1887</span> Hertz descubre las ondas electromagnéticas</li>
+                  <li><span class="year">1895</span> Marconi envía la primera señal de radio</li>
+                  <li><span class="year">1901</span> Primera transmisión transatlántica</li>
+                  <li><span class="year">1912</span> El Titanic usa la radio para pedir auxilio</li>
+                  <li><span class="year">1920</span> Nacen las primeras emisoras comerciales</li>
+                  <li><span class="year">1930</span> La radio llega a millones de hogares</li>
+                </ul>
+              </div>
+              <div class="timeline-col tv">
+                <h4>📺 La Televisión</h4>
+                <ul>
+                  <li><span class="year">1925</span> Baird transmite la primera imagen</li>
+                  <li><span class="year">1936</span> Inician las transmisiones regulares en Reino Unido</li>
+                  <li><span class="year">1951</span> Primeras transmisiones a color en EE.UU.</li>
+                  <li><span class="year">1969</span> La llegada a la Luna se ve en TV mundial</li>
+                  <li><span class="year">1990</span> Transición a señal digital</li>
+                  <li><span class="year">2010</span> Smart TV y contenido en internet</li>
+                </ul>
+              </div>
             </div>
-            <div class="opcion" data-pregunta="preg1" data-correcta="true">
-              <input type="radio" name="preg1" value="B" id="preg1b">
-              <label for="preg1b">B. Heinrich Hertz</label>
-            </div>
-            <div class="opcion" data-pregunta="preg1" data-correcta="false">
-              <input type="radio" name="preg1" value="C" id="preg1c">
-              <label for="preg1c">C. John Logie Baird</label>
-            </div>
-            <div class="opcion" data-pregunta="preg1" data-correcta="false">
-              <input type="radio" name="preg1" value="D" id="preg1d">
-              <label for="preg1d">D. Albert Einstein</label>
+            <div class="glosario-mini">
+              <span class="term">📡 Ondas electromagnéticas</span>
+              <span class="term">📻 Transmisión</span>
+              <span class="term">🔊 Frecuencia</span>
+              <span class="term">📺 Señal analógica</span>
+              <span class="term">💾 Señal digital</span>
+              <span class="term">🖥️ Televisor</span>
             </div>
           </div>
-          <div class="feedback" id="fb-preg1"></div>
         </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">📖 Terminé de leer → Ir a preguntas finales</button>
+        </div>
+      </div>
 
-        <!-- Pregunta 2 -->
-        <div class="pregunta" id="preg2">
-          <p>2. ¿En qué año logró Marconi enviar una señal de radio cruzando el océano Atlántico?</p>
-          <div class="opciones">
-            <div class="opcion" data-pregunta="preg2" data-correcta="false">
-              <input type="radio" name="preg2" value="A" id="preg2a">
-              <label for="preg2a">A. 1887</label>
+      <!-- PÁGINA 5 — PREGUNTAS FINALES + SOPA -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+        <div class="paso-indicador">Página <span>6</span> de 6 — ¡Final!</div>
+        <div class="paso-pregunta-card">
+          <h3>📝 Preguntas de comprensión finales</h3>
+          <p style="color:#78909c; margin-bottom:1.2rem;">Responde todas las preguntas para completar el taller.</p>
+          <div class="pregunta" id="fpreg1">
+            <p>1. ¿Quién descubrió las ondas electromagnéticas en 1887?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp1" value="A"><label>A. Guillermo Marconi</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp1" value="B"><label>B. Heinrich Hertz</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp1" value="C"><label>C. John Logie Baird</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp1" value="D"><label>D. Albert Einstein</label></div>
             </div>
-            <div class="opcion" data-pregunta="preg2" data-correcta="false">
-              <input type="radio" name="preg2" value="B" id="preg2b">
-              <label for="preg2b">B. 1895</label>
-            </div>
-            <div class="opcion" data-pregunta="preg2" data-correcta="true">
-              <input type="radio" name="preg2" value="C" id="preg2c">
-              <label for="preg2c">C. 1901</label>
-            </div>
-            <div class="opcion" data-pregunta="preg2" data-correcta="false">
-              <input type="radio" name="preg2" value="D" id="preg2d">
-              <label for="preg2d">D. 1925</label>
-            </div>
+            <div class="feedback"></div>
           </div>
-          <div class="feedback" id="fb-preg2"></div>
-        </div>
-
-        <!-- Pregunta 3 -->
-        <div class="pregunta" id="preg3">
-          <p>3. ¿Qué código de auxilio usaron los operadores de radio del Titanic?</p>
-          <div class="opciones">
-            <div class="opcion" data-pregunta="preg3" data-correcta="false">
-              <input type="radio" name="preg3" value="A" id="preg3a">
-              <label for="preg3a">A. SAV y HELP</label>
+          <div class="pregunta" id="fpreg2">
+            <p>2. ¿En qué año logró Marconi enviar una señal de radio cruzando el Atlántico?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp2" value="A"><label>A. 1887</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp2" value="B"><label>B. 1895</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp2" value="C"><label>C. 1901</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp2" value="D"><label>D. 1925</label></div>
             </div>
-            <div class="opcion" data-pregunta="preg3" data-correcta="false">
-              <input type="radio" name="preg3" value="B" id="preg3b">
-              <label for="preg3b">B. OK y ROGER</label>
-            </div>
-            <div class="opcion" data-pregunta="preg3" data-correcta="false">
-              <input type="radio" name="preg3" value="C" id="preg3c">
-              <label for="preg3c">C. MAYDAY y PAN-PAN</label>
-            </div>
-            <div class="opcion" data-pregunta="preg3" data-correcta="true">
-              <input type="radio" name="preg3" value="D" id="preg3d">
-              <label for="preg3d">D. CQD y SOS</label>
-            </div>
+            <div class="feedback"></div>
           </div>
-          <div class="feedback" id="fb-preg3"></div>
-        </div>
-
-        <!-- Pregunta 4 -->
-        <div class="pregunta" id="preg4">
-          <p>4. ¿Qué logró John Logie Baird en 1925?</p>
-          <div class="opciones">
-            <div class="opcion" data-pregunta="preg4" data-correcta="false">
-              <input type="radio" name="preg4" value="A" id="preg4a">
-              <label for="preg4a">A. Inventar la radio a color</label>
+          <div class="pregunta" id="fpreg3">
+            <p>3. ¿Qué código de auxilio usaron los operadores de radio del Titanic?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp3" value="A"><label>A. SAV y HELP</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp3" value="B"><label>B. OK y ROGER</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp3" value="C"><label>C. MAYDAY y PAN-PAN</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp3" value="D"><label>D. CQD y SOS</label></div>
             </div>
-            <div class="opcion" data-pregunta="preg4" data-correcta="false">
-              <input type="radio" name="preg4" value="B" id="preg4b">
-              <label for="preg4b">B. Enviar la primera señal transatlántica</label>
-            </div>
-            <div class="opcion" data-pregunta="preg4" data-correcta="true">
-              <input type="radio" name="preg4" value="C" id="preg4c">
-              <label for="preg4c">C. Transmitir la primera imagen de televisión</label>
-            </div>
-            <div class="opcion" data-pregunta="preg4" data-correcta="false">
-              <input type="radio" name="preg4" value="D" id="preg4d">
-              <label for="preg4d">D. Descubrir las ondas electromagnéticas</label>
-            </div>
+            <div class="feedback"></div>
           </div>
-          <div class="feedback" id="fb-preg4"></div>
-        </div>
-
-        <!-- Pregunta 5 -->
-        <div class="pregunta" id="preg5">
-          <p>5. ¿Por qué fue importante la radio durante el hundimiento del Titanic en 1912?</p>
-          <div class="opciones">
-            <div class="opcion" data-pregunta="preg5" data-correcta="false">
-              <input type="radio" name="preg5" value="A" id="preg5a">
-              <label for="preg5a">A. Porque los pasajeros pidieron ayuda con señales de humo</label>
+          <div class="pregunta" id="fpreg4">
+            <p>4. ¿Qué logró John Logie Baird en 1925?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp4" value="A"><label>A. Inventar la radio a color</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp4" value="B"><label>B. Enviar la primera señal transatlántica</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp4" value="C"><label>C. Transmitir la primera imagen de televisión</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp4" value="D"><label>D. Descubrir las ondas electromagnéticas</label></div>
             </div>
-            <div class="opcion" data-pregunta="preg5" data-correcta="true">
-              <input type="radio" name="preg5" value="B" id="preg5b">
-              <label for="preg5b">B. Porque el operador de radio del Titanic envió señales de auxilio (CQD y SOS)</label>
-            </div>
-            <div class="opcion" data-pregunta="preg5" data-correcta="false">
-              <input type="radio" name="preg5" value="C" id="preg5c">
-              <label for="preg5c">C. Porque tenían un televisor a bordo</label>
-            </div>
-            <div class="opcion" data-pregunta="preg5" data-correcta="false">
-              <input type="radio" name="preg5" value="D" id="preg5d">
-              <label for="preg5d">D. Porque el capitán llamó por teléfono a la costa</label>
-            </div>
+            <div class="feedback"></div>
           </div>
-          <div class="feedback" id="fb-preg5"></div>
+          <div class="pregunta" id="fpreg5">
+            <p>5. ¿Por qué fue importante la radio durante el hundimiento del Titanic?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp5" value="A"><label>A. Pasajeros usaron señales de humo</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp5" value="B"><label>B. El operador envió señales CQD y SOS que permitieron el rescate</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp5" value="C"><label>C. Tenían un televisor a bordo</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp5" value="D"><label>D. El capitán llamó por teléfono</label></div>
+            </div>
+            <div class="feedback"></div>
+          </div>
         </div>
-
-        <!-- ============================================================
-             SOPA DE LETRAS
-             ============================================================ -->
-        <div style="margin-top: 2rem;">
-          <h2>🔍 Sopa de letras</h2>
-          <p style="margin-bottom: 0.5rem; color: #546e7a;">
-            Encuentra las 25 palabras clave escondidas en la sopa de letras.
-            Haz clic en las letras para seleccionarlas y formar las palabras.
-            ¡Buena suerte!
-          </p>
-
-          <!-- Contenedor donde se renderizará la sopa de letras -->
+        <div class="card" style="margin-top:0;">
+          <h2>🔍 Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las 25 palabras clave relacionadas con la radio y la televisión.</p>
           <div id="sopa03"></div>
         </div>
-
-      </div><!-- /seccion-contenido 3 -->
-
+      </div>
     </article>
-
   </main>
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer>
-    Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>❤️</span> para nuestros estudiantes
-  </footer>
-
-  <!-- ============================================================
-       JAVASCRIPT
-       ============================================================ -->
-
-  <!-- Cargar el motor de la sopa de letras y el sistema progresivo -->
+  <footer>Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>❤️</span> para nuestros estudiantes</footer>
   <script src="../../js/sopa.js"></script>
   <script src="../../js/progresivo.js"></script>
-
   <script>
-    // Inicializar la sopa de letras con las 25 palabras clave
-    var palabras03 = [
-      'RADIO', 'MARCONI', 'ONDAS', 'TELEVISION', 'ANTENA',
-      'FRECUENCIA', 'AUDIO', 'IMAGEN', 'HERTZ', 'TRANSMISION',
-      'SEÑAL', 'SINTONIZAR', 'CANAL', 'EMISORA', 'RECEPTOR',
-      'PANTALLA', 'VOLUMEN', 'BOTON', 'PROGRAMA', 'NOTICIAS',
-      'COLOR', 'ENTRETENER', 'INFORMAR', 'PIONERO', 'INALAMBRICO'
-    ];
+    var palabras03 = ['RADIO','MARCONI','ONDAS','TELEVISION','ANTENA','FRECUENCIA','AUDIO','IMAGEN','HERTZ','TRANSMISION','SEÑAL','SINTONIZAR','CANAL','EMISORA','RECEPTOR','PANTALLA','VOLUMEN','BOTON','PROGRAMA','NOTICIAS','COLOR','ENTRETENER','INFORMAR','PIONERO','INALAMBRICO'];
     crearSopa('sopa03', palabras03, 20);
-
-    // Iniciar sistema de desbloqueo progresivo
-    progresivo.iniciar('sub03', {
-      preguntas: {
-        0: [{ correcta: 'B', explicacion: 'Heinrich Hertz descubrió las ondas electromagnéticas en 1887, sentando las bases para la radio y la televisión.' }],
-        1: [{ correcta: 'D', explicacion: 'Los operadores del Titanic usaron primero el código CQD y luego el nuevo código SOS para pedir auxilio.' }]
-      }
-    });
-
-    // Manejo de preguntas finales (sección 3)
     document.addEventListener('DOMContentLoaded', function() {
-      var opciones = document.querySelectorAll('.pregunta .opcion input[type="radio"]');
-      opciones.forEach(function(radio) {
-        radio.addEventListener('change', function() {
-          var opcionDiv = this.closest('.opcion');
-          var preguntaId = opcionDiv.dataset.pregunta;
-          var esCorrecta = opcionDiv.dataset.correcta === 'true';
-          var radiosPregunta = document.querySelectorAll('input[name="' + preguntaId + '"]');
-          radiosPregunta.forEach(function(r) { r.disabled = true; });
-          var feedbackDiv = document.getElementById('fb-' + preguntaId);
-          var preguntaDiv = document.getElementById(preguntaId);
-          preguntaDiv.classList.remove('correcta', 'incorrecta');
-          if (esCorrecta) {
-            preguntaDiv.classList.add('correcta');
-            if (preguntaId === 'preg5') {
-              feedbackDiv.textContent = '✅ ¡Correcto! El operador de radio del Titanic, Jack Phillips, envió señales CQD y SOS que fueron recibidas por otros barcos, permitiendo rescatar a los sobrevivientes.';
-            } else {
-              feedbackDiv.textContent = '✅ ¡Correcto! Muy bien.';
-            }
-          } else {
-            preguntaDiv.classList.add('incorrecta');
-            feedbackDiv.textContent = '❌ Revisa la lectura nuevamente.';
-          }
+      progresivo.iniciar('sub03');
+      document.querySelectorAll('#progresivo-sub03 .pregunta .opcion').forEach(function(opcion) {
+        opcion.addEventListener('click', function() {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio.disabled) return;
+          radio.checked = true;
+          var pregunta = this.closest('.pregunta');
+          var feedback = pregunta.querySelector('.feedback');
+          var correcta = this.dataset.correcta === 'true';
+          pregunta.classList.remove('correcta', 'incorrecta');
+          pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
+          if (correcta) { pregunta.classList.add('correcta'); feedback.textContent = '✅ ¡Correcto!'; }
+          else { pregunta.classList.add('incorrecta'); feedback.textContent = '❌ Revisa la lectura.'; }
+          feedback.style.display = 'block';
         });
       });
     });
   </script>
-
 </body>
 </html>
