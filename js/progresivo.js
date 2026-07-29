@@ -11,12 +11,28 @@ document.addEventListener('contextmenu', function(e) {
 const progresivo = (function() {
   const estados = {};
 
+  function barajarOpciones(contenedor) {
+    contenedor.querySelectorAll('.paso-opciones').forEach(function(grupo) {
+      var hijos = Array.from(grupo.children);
+      for (var i = hijos.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = hijos[i];
+        hijos[i] = hijos[j];
+        hijos[j] = temp;
+      }
+      hijos.forEach(function(h) { grupo.appendChild(h); });
+    });
+  }
+
   function iniciar(contenedorId) {
     const contenedor = document.getElementById(contenedorId);
     const pasos = contenedor.querySelectorAll('.paso-pagina');
     estados[contenedorId] = { pasoActual: 0 };
     pasos.forEach((p, i) => { p.style.display = i === 0 ? 'block' : 'none'; });
-    if (pasos.length > 0) pasos[0].classList.add('paso-activo');
+    if (pasos.length > 0) {
+      pasos[0].classList.add('paso-activo');
+      barajarOpciones(pasos[0]);
+    }
   }
 
   function irSiguiente(contenedorId) {
@@ -36,6 +52,7 @@ const progresivo = (function() {
       pasos[e.pasoActual].querySelectorAll('.paso-pregunta').forEach(el => el.classList.remove('paso-correcta', 'paso-incorrecta'));
       const radios = pasos[e.pasoActual].querySelectorAll('input[type="radio"]');
       radios.forEach(function(r) { r.checked = false; r.disabled = false; });
+      barajarOpciones(pasos[e.pasoActual]);
       contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
@@ -57,6 +74,7 @@ const progresivo = (function() {
       pasos[e.pasoActual].querySelectorAll('.paso-pregunta').forEach(el => el.classList.remove('paso-correcta', 'paso-incorrecta'));
       const radios = pasos[e.pasoActual].querySelectorAll('input[type="radio"]');
       radios.forEach(r => { r.checked = false; r.disabled = false; });
+      barajarOpciones(pasos[e.pasoActual]);
       contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
