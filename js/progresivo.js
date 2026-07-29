@@ -1,93 +1,82 @@
 const progresivo = (function() {
-  let estado = {};
+  const estados = {};
 
-  function iniciar(contenedorId, opts) {
-    estado[contenedorId] = {
-      seccionActual: 0,
-      preguntas: opts.preguntas || {},
-      total: document.getElementById(contenedorId).querySelectorAll('.seccion-contenido').length
-    };
-
-    const secciones = document.getElementById(contenedorId).querySelectorAll('.seccion-contenido');
-    secciones.forEach((s, i) => {
-      s.classList.add(i === 0 ? 'seccion-activa' : 'seccion-oculta');
-      s.classList.remove(i === 0 ? 'seccion-oculta' : 'seccion-activa');
-    });
-
-    actualizarBarra(contenedorId);
-  }
-
-  function verificar(contenedorId, seccionIdx, preguntaIdx, valor) {
-    const cfg = estado[contenedorId];
-    if (!cfg) return;
-
-    const preguntas = cfg.preguntas[seccionIdx];
-    if (!preguntas || !preguntas[preguntaIdx]) return;
-
-    const pregunta = preguntas[preguntaIdx];
-    const div = document.getElementById(`${contenedorId}-chk-${seccionIdx}-${preguntaIdx}`);
-    if (!div) return;
-
-    const feedback = div.querySelector('.chk-fb');
-    const correcta = valor === pregunta.correcta;
-
-    div.classList.remove('chk-ok', 'chk-err');
-    div.classList.add(correcta ? 'chk-ok' : 'chk-err');
-    feedback.textContent = correcta
-      ? '✅ ' + (pregunta.explicacion || '¡Correcto!')
-      : '❌ Vuelve a leer e intenta de nuevo.';
-    feedback.style.display = 'block';
-
-    if (correcta) {
-      div.querySelectorAll('input[type="radio"]').forEach(r => r.disabled = true);
-
-      const todasOk = preguntas.every((_, i) => {
-        const d = document.getElementById(`${contenedorId}-chk-${seccionIdx}-${i}`);
-        return d && d.classList.contains('chk-ok');
-      });
-
-      if (todasOk) {
-        const btn = document.getElementById(`${contenedorId}-sig-${seccionIdx}`);
-        if (btn) btn.classList.add('btn-visible');
-      }
-    }
-  }
-
-  function siguiente(contenedorId) {
-    const cfg = estado[contenedorId];
-    if (!cfg) return;
-
+  function iniciar(contenedorId) {
     const contenedor = document.getElementById(contenedorId);
-    const secciones = contenedor.querySelectorAll('.seccion-contenido');
+    const pasos = contenedor.querySelectorAll('.paso-pagina');
+    estados[contenedorId] = { pasoActual: 0 };
+    pasos.forEach((p, i) => { p.style.display = i === 0 ? 'block' : 'none'; });
+    if (pasos.length > 0) pasos[0].classList.add('paso-activo');
+  }
 
-    if (cfg.seccionActual < secciones.length - 1) {
-      secciones[cfg.seccionActual].classList.remove('seccion-activa');
-      secciones[cfg.seccionActual].classList.add('seccion-completada');
-      cfg.seccionActual++;
-      secciones[cfg.seccionActual].classList.remove('seccion-oculta');
-      secciones[cfg.seccionActual].classList.add('seccion-activa');
-      actualizarBarra(contenedorId);
+  function irSiguiente(contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    const pasos = contenedor.querySelectorAll('.paso-pagina');
+    const e = estados[contenedorId];
+    if (!e) return;
+    if (e.pasoActual < pasos.length - 1) {
+      pasos[e.pasoActual].classList.remove('paso-activo');
+      pasos[e.pasoActual].style.display = 'none';
+      e.pasoActual++;
+      pasos[e.pasoActual].style.display = 'block';
+      pasos[e.pasoActual].classList.add('paso-activo');
+      // Limpiar feedback previo en esta página por si se vuelve
+      const feedback = pasos[e.pasoActual].querySelector('.paso-feedback');
+      if (feedback) { feedback.style.display = 'none'; feedback.textContent = ''; }
+      pasos[e.pasoActual].querySelectorAll('.paso-pregunta').forEach(el => el.classList.remove('paso-correcta', 'paso-incorrecta'));
       contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
-  function actualizarBarra(contenedorId) {
-    const cfg = estado[contenedorId];
-    if (!cfg) return;
-
-    const pasos = document.querySelectorAll(`#${contenedorId} .paso`);
-    pasos.forEach((p, i) => {
-      p.classList.remove('paso-activo', 'paso-completado');
-      if (i < cfg.seccionActual) p.classList.add('paso-completado');
-      else if (i === cfg.seccionActual) p.classList.add('paso-activo');
-    });
-
-    const barraLlena = document.getElementById(`barra-${contenedorId}`);
-    if (barraLlena) {
-      const pct = Math.round(((cfg.seccionActual) / (cfg.total - 1)) * 100);
-      barraLlena.style.width = pct + '%';
+  function irAtras(contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    const pasos = contenedor.querySelectorAll('.paso-pagina');
+    const e = estados[contenedorId];
+    if (!e) return;
+    if (e.pasoActual > 0) {
+      pasos[e.pasoActual].classList.remove('paso-activo');
+      pasos[e.pasoActual].style.display = 'none';
+      e.pasoActual--;
+      pasos[e.pasoActual].style.display = 'block';
+      pasos[e.pasoActual].classList.add('paso-activo');
+      // Limpiar estado de la pregunta a la que se retrocede
+      const feedback = pasos[e.pasoActual].querySelector('.paso-feedback');
+      if (feedback) { feedback.style.display = 'none'; feedback.textContent = ''; }
+      pasos[e.pasoActual].querySelectorAll('.paso-pregunta').forEach(el => el.classList.remove('paso-correcta', 'paso-incorrecta'));
+      const radios = pasos[e.pasoActual].querySelectorAll('input[type="radio"]');
+      radios.forEach(r => { r.checked = false; r.disabled = false; });
+      contenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
-  return { iniciar, verificar, siguiente };
+  function responder(contenedorId, pasoIdx, valor, correcta, explicacion) {
+    const contenedor = document.getElementById(contenedorId);
+    const pasoDiv = contenedor.querySelector(`.paso-pagina[data-paso="${pasoIdx}"]`);
+    if (!pasoDiv) return;
+
+    const feedback = pasoDiv.querySelector('.paso-feedback');
+    const esCorrecta = valor === correcta;
+
+    pasoDiv.querySelectorAll('.paso-pregunta').forEach(el => el.classList.remove('paso-correcta', 'paso-incorrecta'));
+
+    if (esCorrecta) {
+      pasoDiv.querySelectorAll('.paso-pregunta').forEach(el => el.classList.add('paso-correcta'));
+      feedback.textContent = '✅ ' + explicacion;
+      feedback.style.display = 'block';
+      const btnSiguiente = pasoDiv.querySelector('.btn-siguiente');
+      if (btnSiguiente) btnSiguiente.style.display = 'inline-flex';
+      const btnReintentar = pasoDiv.querySelector('.btn-reintentar');
+      if (btnReintentar) btnReintentar.style.display = 'none';
+      const radios = pasoDiv.querySelectorAll('input[type="radio"]');
+      radios.forEach(r => r.disabled = true);
+    } else {
+      pasoDiv.querySelectorAll('.paso-pregunta').forEach(el => el.classList.add('paso-incorrecta'));
+      feedback.textContent = '❌ Incorrecto. Debes volver a leer el texto anterior.';
+      feedback.style.display = 'block';
+      const btnReintentar = pasoDiv.querySelector('.btn-reintentar');
+      if (btnReintentar) btnReintentar.style.display = 'inline-flex';
+    }
+  }
+
+  return { iniciar, irSiguiente, irAtras, responder };
 })();
