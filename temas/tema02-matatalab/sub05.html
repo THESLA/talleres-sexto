@@ -597,4 +597,70 @@
             <div class="opciones">
               <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. La velocidad</label></div>
               <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="B"><label>B. La planificacion</label></div>
-              <div class="opcion" data-correcta="false"><input type="radio" name="
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="C"><label>C. La memoria del robot</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. El volumen del aula</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg3">
+            <p>3. Que se corrige al depurar?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="A"><label>A. Los errores del programa</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="B"><label>B. Los colores de las fichas</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="C"><label>C. El tamano del tablero</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. La pila del robot</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:0;">
+          <h2>Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las palabras clave relacionadas con la lectura.</p>
+          <div id="sopa05"></div>
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    Colegio San Luis · Tecnologia e Informatica · Grado Sexto · Hecho con <span>amor</span> para nuestros estudiantes
+  </footer>
+
+  <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
+  <script>
+    crearSopa('sopa05', ['PROGRAMA','SECUENCIA','INICIO','CODIGO','ORDEN'], 10, ['PROGRAMA','SECUENCIA','INICIO','CODIGO','ORDEN']);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      progresivo.iniciar('sub05');
+
+      document.querySelectorAll('#sub05 .pregunta .opcion').forEach(function(opcion) {
+        opcion.addEventListener('click', function() {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio.disabled) return;
+          radio.checked = true;
+          var pregunta = this.closest('.pregunta');
+          var feedback = pregunta.querySelector('.feedback');
+          var correcta = this.dataset.correcta === 'true';
+          pregunta.classList.remove('correcta', 'incorrecta');
+          pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
+          if (correcta) {
+            pregunta.classList.add('correcta');
+            feedback.textContent = 'Correcto!';
+          } else {
+            pregunta.classList.add('incorrecta');
+            feedback.textContent = 'Revisa la lectura.';
+          }
+          feedback.style.display = 'block';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
