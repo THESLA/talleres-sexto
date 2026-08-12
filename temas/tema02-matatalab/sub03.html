@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-taller 3: Encender y conectar el robot — Robótica con Matatalab</title>
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .portada-svg { margin:1.5rem 0; text-align:center; }
+    .pregunta .opcion label { cursor:pointer; flex:1; }
+    .sopa-grilla { user-select:none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Robótica con <span>Matatalab</span></h1>
+    <div class="subtitulo">Tecnologia e Informatica · Grado Sexto</div>
+  </header>
+
+  <nav class="subtaller-nav">
+    <a href="../../index.html">Inicio</a>
+    <span class="separador">|</span>
+    <a href="index.html">Portada del tema</a>
+    <span class="separador">|</span>
+    <a href="sub01.html">1</a>
+    <a href="sub02.html">2</a>
+    <a href="sub03.html" class="activo">3</a>
+    <a href="sub04.html">4</a>
+    <a href="sub05.html">5</a>
+    <a href="sub06.html">6</a>
+  </nav>
+
+  <main>
+
+    <article class="card" id="sub03">
+
+      <h2 style="text-align:center;">Robótica con Matatalab</h2>
+      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Sub-taller 3</p>
+
+      <!-- PASO 0 — Portada -->
+      <div class="paso-pagina" data-paso="0">
+
+        <div class="paso-indicador">Pagina <span>1</span> de 14 — Introduccion</div>
+
+        <div class="paso-texto">
+          <div class="portada-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#fffde7;stop-opacity:1" />
+                  <stop offset="34%" style="stop-color:#fffde7;stop-opacity:1" />
+                  <stop offset="34%" style="stop-color:#e1f5fe;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#e1f5fe;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                </linearGradient>
+                <style>
+                  .st1{font-family:Nunito,sans-serif;font-size:16px;font-weight:800;fill:#2c3e50}
+                  .st2{font-family:Nunito,sans-serif;font-size:12px;font-weight:600;fill:#546e7a}
+                </style>
+              </defs>
+              <rect width="700" height="260" rx="16" fill="url(#g1)" />
+              <!-- Panel 1: Encender -->
+              <rect x="12" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="85" y="50" width="60" height="90" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5" />
+              <rect x="100" y="65" width="30" height="12" rx="4" fill="#43a047" />
+              <circle cx="115" cy="100" r="10" fill="#1e88e5" />
+              <text x="115" y="124" text-anchor="middle" style="font-size:9px;fill:#546e7a;">Luz azul</text>
+              <text x="121" y="175" text-anchor="middle" class="st1">Encender</text>
+              <text x="121" y="197" text-anchor="middle" class="st2">Mantener presionado el boton</text>
+              <text x="121" y="219" text-anchor="middle" class="st2">Hasta que suene la musica</text>
+              <!-- Panel 2: Conexion Ding-Ding -->
+              <rect x="241" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="258" y="60" width="50" height="70" rx="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5" />
+              <rect x="272" y="72" width="22" height="9" rx="4" fill="#43a047" />
+              <circle cx="283" cy="92" r="6" fill="#1e88e5" />
+              <circle cx="418" cy="98" r="20" fill="white" stroke="#b0bec5" stroke-width="2" />
+              <text x="418" y="102" text-anchor="middle" style="font-size:11px;">🤖</text>
+              <line x1="308" y1="98" x2="396" y2="98" stroke="#1e88e5" stroke-width="2" stroke-dasharray="4,4" />
+              <line x1="308" y1="86" x2="396" y2="78" stroke="#039be5" stroke-width="1.5" stroke-dasharray="3,3" />
+              <text x="350" y="118" text-anchor="middle" style="font-size:10px;fill:#01579b;font-weight:800;">Ding-Ding</text>
+              <text x="350" y="175" text-anchor="middle" class="st1">Conexion Ding-Ding</text>
+              <text x="350" y="197" text-anchor="middle" class="st2">Torre y robot parpadean</text>
+              <text x="350" y="219" text-anchor="middle" class="st2">Hasta quedar conectados</text>
+              <!-- Panel 3: Listo para programar -->
+              <rect x="470" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="490" y="55" width="180" height="85" rx="8" fill="#039be5" opacity="0.15" />
+              <rect x="505" y="72" width="36" height="36" rx="6" fill="#43a047" />
+              <text x="523" y="95" text-anchor="middle" style="font-size:16px;">⬆</text>
+              <rect x="551" y="72" width="36" height="36" rx="6" fill="#fb8c00" />
+              <text x="569" y="95" text-anchor="middle" style="font-size:16px;">⬇</text>
+              <rect x="597" y="72" width="36" height="36" rx="6" fill="#1e88e5" />
+              <text x="615" y="95" text-anchor="middle" style="font-size:16px;">▶</text>
+              <circle cx="655" cy="90" r="16" fill="white" stroke="#43a047" stroke-width="3" />
+              <text x="655" y="94" text-anchor="middle" style="font-size:7px;fill:#2e7d32;font-weight:700;">INICIO</text>
+              <text x="579" y="175" text-anchor="middle" class="st1">Listo para programar</text>
+              <text x="579" y="197" text-anchor="middle" class="st2">Tablero con fichas listas</text>
+              <text x="579" y="219" text-anchor="middle" class="st2">Presiona el boton de inicio</text>
+            </svg>
+          </div>
+          <p style="text-align:center; font-size:1.2rem; font-weight:600; color:#2c3e50; margin:1.5rem 0;">
+            En este taller vas a leer 6 textos sobre como encender y conectar MatataBot.
+          </p>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Empezar lectura 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 1 — Lectura 1: Encender la torre -->
+      <div class="paso-pagina" data-paso="1" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>2</span> de 14 — Lectura 1 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 1</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8f5e9; padding:8px;">
+              <defs><style>.l1t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1b5e20}.l1l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#2e7d32}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l1t">Encender la torre</text>
+              <rect x="155" y="32" width="50" height="60" rx="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <rect x="165" y="42" width="30" height="12" rx="4" fill="#43a047"/>
+              <circle cx="180" cy="70" r="8" fill="#1e88e5"/>
+              <text x="180" y="73" text-anchor="middle" style="font-size:6px;fill:white;font-weight:700;">LUX</text>
+              <circle cx="260" cy="68" r="14" fill="#fffde7" stroke="#ffd54f" stroke-width="1.5"/>
+              <text x="260" y="72" text-anchor="middle" style="font-size:10px;">🎵</text>
+              <text x="200" y="112" text-anchor="middle" class="l1l">Luz azul fija y musica de inicio</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Para encender la torre de mando debes mantener presionado el boton de encendido
+              durante unos segundos. No es necesario soltarlo de inmediato: se presiona y se
+              sostiene hasta escuchar una senal. Cuando la torre se enciende, el indicador de
+              estado se ilumina de color azul. En ese momento tambien suena una musica de
+              inicio que confirma que esta lista. La musica y la luz azul son la forma en que
+              la torre te avisa que ya puede trabajar. Si la luz no se enciende, revisa que
+              estes presionando el boton correcto. Es importante esperar a que la luz azul
+              quede fija antes de continuar. Con la torre encendida ya puedes conectar el
+              tablero y preparar tus programas.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Termine de leer → Pregunta 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 2 — Pregunta 1 -->
+      <div class="paso-pagina" data-paso="2" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>3</span> de 14 — Pregunta 1</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Que pasa si mantienes presionado el boton de la torre?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p1" value="A" onchange="progresivo.responder('sub03',2,this.value,'A','Cuando la torre se enciende, el indicador se ilumina de azul y suena la musica de inicio.')"> A. Se enciende la luz azul y suena la musica de inicio</label>
+            <label><input type="radio" name="sub03-p1" value="B" onchange="progresivo.responder('sub03',2,this.value,'A','Cuando la torre se enciende, el indicador se ilumina de azul y suena la musica de inicio.')"> B. Se apaga la torre inmediatamente</label>
+            <label><input type="radio" name="sub03-p1" value="C" onchange="progresivo.responder('sub03',2,this.value,'A','Cuando la torre se enciende, el indicador se ilumina de azul y suena la musica de inicio.')"> C. Suena la musica de apagado</label>
+            <label><input type="radio" name="sub03-p1" value="D" onchange="progresivo.responder('sub03',2,this.value,'A','Cuando la torre se enciende, el indicador se ilumina de azul y suena la musica de inicio.')"> D. No pasa nada, el boton no funciona</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 3 — Lectura 2: Apagar la torre -->
+      <div class="paso-pagina" data-paso="3" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>4</span> de 14 — Lectura 2 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 2</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e3f2fd; padding:8px;">
+              <defs><style>.l2t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#0d47a1}.l2l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#1565c0}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l2t">Apagar la torre</text>
+              <rect x="155" y="35" width="50" height="55" rx="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <circle cx="180" cy="62" r="7" fill="#b0bec5"/>
+              <text x="180" y="65" text-anchor="middle" style="font-size:6px;fill:white;font-weight:700;">OFF</text>
+              <rect x="240" y="45" width="110" height="35" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="1.5"/>
+              <text x="295" y="67" text-anchor="middle" style="font-size:8px;fill:#795548;">Se mantiene presionado</text>
+              <text x="200" y="112" text-anchor="middle" class="l2l">Suena la musica de apagado y la luz se apaga</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Para apagar la torre se hace lo mismo que para encenderla: se mantiene
+              presionado el boton de encendido durante unos segundos. Al soltar, la torre
+              reproduce una musica de apagado diferente a la de inicio. Esta musica te avisa
+              que la torre se esta cerrando correctamente. Despues de la musica, la luz azul
+              se apaga por completo. Apagar la torre es importante para ahorrar bateria y
+              cuidar el equipo. Cuando termines de trabajar, apaga la torre antes de guardar
+              el kit en su caja. Si la torre no responde al apagarse, puedes esperar unos
+              segundos y volver a intentarlo. Un buen habito es verificar que la luz quede
+              apagada antes de guardar todo.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Termine de leer → Pregunta 2
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 4 — Pregunta 2 -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>5</span> de 14 — Pregunta 2</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Como se apaga la torre?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p2" value="A" onchange="progresivo.responder('sub03',4,this.value,'C','Se mantiene presionado el boton hasta escuchar la musica de apagado y la luz se apaga.')"> A. Tocando dos veces el tablero</label>
+            <label><input type="radio" name="sub03-p2" value="B" onchange="progresivo.responder('sub03',4,this.value,'C','Se mantiene presionado el boton hasta escuchar la musica de apagado y la luz se apaga.')"> B. Sacando las fichas del tablero</label>
+            <label><input type="radio" name="sub03-p2" value="C" onchange="progresivo.responder('sub03',4,this.value,'C','Se mantiene presionado el boton hasta escuchar la musica de apagado y la luz se apaga.')"> C. Manteniendo presionado el boton hasta que suene la musica de apagado</label>
+            <label><input type="radio" name="sub03-p2" value="D" onchange="progresivo.responder('sub03',4,this.value,'C','Se mantiene presionado el boton hasta escuchar la musica de apagado y la luz se apaga.')"> D. Esperando unos minutos sola</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 5 — Lectura 3: La conexion Ding-Ding -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>6</span> de 14 — Lectura 3 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 3</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e0f7fa; padding:8px;">
+              <defs><style>.l3t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#006064}.l3l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#00838f}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l3t">La conexion Ding-Ding</text>
+              <rect x="115" y="40" width="45" height="55" rx="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <circle cx="137" cy="67" r="6" fill="#1e88e5"/>
+              <circle cx="280" cy="68" r="18" fill="white" stroke="#b0bec5" stroke-width="2"/>
+              <text x="280" y="72" text-anchor="middle" style="font-size:10px;">🤖</text>
+              <line x1="160" y1="68" x2="260" y2="68" stroke="#1e88e5" stroke-width="2" stroke-dasharray="4,4"/>
+              <line x1="160" y1="58" x2="260" y2="52" stroke="#039be5" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <text x="200" y="102" text-anchor="middle" style="font-size:11px;fill:#00838f;font-weight:800;">Ding-Ding</text>
+              <text x="200" y="114" text-anchor="middle" class="l3l">Torre y robot se buscan y conectan</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              La conexion entre la torre y MatataBot es automatica cuando ambos estan
+              encendidos. Al iniciar la conexion, los indicadores de la torre y del robot
+              empiezan a parpadear al mismo tiempo. Mientras parpadean suena una melodia
+              corta que se conoce como "Ding-Ding". Ese sonido indica que la torre y el
+              robot se estan comunicando entre si. Cuando la conexion termina, los
+              indicadores dejan de parpadear y quedan fijos. Es importante esperar a que
+              termine el parpadeo antes de empezar a programar. Si el robot esta lejos de
+              la torre, acercalo para que la conexion sea rapida. La conexion Ding-Ding
+              confirma que el robot recibira las instrucciones del tablero.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Termine de leer → Pregunta 3
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 6 — Pregunta 3 -->
+      <div class="paso-pagina" data-paso="6" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>7</span> de 14 — Pregunta 3</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Que sonido indica que la torre y el robot se estan conectando?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p3" value="A" onchange="progresivo.responder('sub03',6,this.value,'B','Al iniciar la conexion suena una melodia corta conocida como Ding-Ding.')"> A. Un timbre largo</label>
+            <label><input type="radio" name="sub03-p3" value="B" onchange="progresivo.responder('sub03',6,this.value,'B','Al iniciar la conexion suena una melodia corta conocida como Ding-Ding.')"> B. Ding-Ding</label>
+            <label><input type="radio" name="sub03-p3" value="C" onchange="progresivo.responder('sub03',6,this.value,'B','Al iniciar la conexion suena una melodia corta conocida como Ding-Ding.')"> C. Una alarma fuerte</label>
+            <label><input type="radio" name="sub03-p3" value="D" onchange="progresivo.responder('sub03',6,this.value,'B','Al iniciar la conexion suena una melodia corta conocida como Ding-Ding.')"> D. Ningun sonido</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 7 — Lectura 4: Encender a MatataBot -->
+      <div class="paso-pagina" data-paso="7" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>8</span> de 14 — Lectura 4 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 4</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fff3e0; padding:8px;">
+              <defs><style>.l4t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#e65100}.l4l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#ef6c00}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l4t">Encender a MatataBot</text>
+              <circle cx="200" cy="66" r="30" fill="white" stroke="#b0bec5" stroke-width="2"/>
+              <circle cx="189" cy="58" r="3.5" fill="#37474f"/>
+              <circle cx="211" cy="58" r="3.5" fill="#37474f"/>
+              <path d="M191,73 Q200,79 209,73" fill="none" stroke="#37474f" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="186" y="86" width="28" height="10" rx="5" fill="#43a047"/>
+              <text x="200" y="94" text-anchor="middle" style="font-size:5px;fill:white;font-weight:700;">BOTON</text>
+              <line x1="200" y1="26" x2="200" y2="36" stroke="#ef6c00" stroke-width="2" stroke-dasharray="2,2"/>
+              <text x="200" y="24" text-anchor="middle" style="font-size:8px;fill:#e65100;">PARTE BAJA</text>
+              <text x="200" y="114" text-anchor="middle" class="l4l">El boton esta debajo del robot, cerca de las ruedas</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              MatataBot se enciende con un boton que se encuentra en su parte inferior,
+              cerca de las ruedas. Para encenderlo debes levantar el robot y presionar ese
+              boton durante unos segundos. Cuando el robot se enciende, sus indicadores
+              empiezan a parpadear mientras busca conectarse con la torre. En ese momento
+              el robot tambien puede emitir sonidos de confirmacion. Es normal que las
+              luces parpadeen durante la conexion: significa que esta trabajando. Cuando
+              los indicadores quedan fijos, el robot esta listo para recibir programas.
+              Si el robot no enciende, revisa que la bateria este cargada. Recuerda apagar
+              a MatataBot cuando termines para cuidar sus baterias.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Termine de leer → Pregunta 4
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 8 — Pregunta 4 -->
+      <div class="paso-pagina" data-paso="8" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>9</span> de 14 — Pregunta 4</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Donde se encuentra el boton de encendido del robot?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p4" value="A" onchange="progresivo.responder('sub03',8,this.value,'D','MatataBot se enciende con un boton que se encuentra en su parte inferior, cerca de las ruedas.')"> A. En la parte superior del robot</label>
+            <label><input type="radio" name="sub03-p4" value="B" onchange="progresivo.responder('sub03',8,this.value,'D','MatataBot se enciende con un boton que se encuentra en su parte inferior, cerca de las ruedas.')"> B. En el tablero de programacion</label>
+            <label><input type="radio" name="sub03-p4" value="C" onchange="progresivo.responder('sub03',8,this.value,'D','MatataBot se enciende con un boton que se encuentra en su parte inferior, cerca de las ruedas.')"> C. En la torre de mando</label>
+            <label><input type="radio" name="sub03-p4" value="D" onchange="progresivo.responder('sub03',8,this.value,'D','MatataBot se enciende con un boton que se encuentra en su parte inferior, cerca de las ruedas.')"> D. En la parte inferior del robot</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 9 — Lectura 5: El boton de inicio -->
+      <div class="paso-pagina" data-paso="9" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>10</span> de 14 — Lectura 5 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 5</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8eaf6; padding:8px;">
+              <defs><style>.l5t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#283593}.l5l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#3949ab}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l5t">El boton de inicio</text>
+              <rect x="105" y="40" width="185" height="48" rx="8" fill="#039be5" opacity="0.15"/>
+              <rect x="118" y="50" width="32" height="28" rx="5" fill="#43a047"/>
+              <text x="134" y="68" text-anchor="middle" style="font-size:14px;">⬆</text>
+              <rect x="158" y="50" width="32" height="28" rx="5" fill="#43a047"/>
+              <text x="174" y="68" text-anchor="middle" style="font-size:14px;">⬆</text>
+              <rect x="198" y="50" width="32" height="28" rx="5" fill="#1e88e5"/>
+              <text x="214" y="68" text-anchor="middle" style="font-size:14px;">▶</text>
+              <rect x="238" y="50" width="32" height="28" rx="5" fill="#fb8c00"/>
+              <text x="254" y="68" text-anchor="middle" style="font-size:14px;">⬆</text>
+              <circle cx="320" cy="64" r="20" fill="white" stroke="#43a047" stroke-width="3"/>
+              <text x="320" y="68" text-anchor="middle" style="font-size:7px;fill:#2e7d32;font-weight:700;">INICIO</text>
+              <text x="200" y="112" text-anchor="middle" class="l5l">Ejecuta el programa formado con las fichas</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Despues de colocar las fichas sobre el tablero, debes presionar el boton de
+              inicio para ejecutar el programa. El boton de inicio se encuentra en el
+              tablero de programacion, junto a la torre. Al presionarlo, la torre lee la
+              secuencia de fichas de izquierda a derecha. Luego transfiere las
+              instrucciones al robot y el robot comienza a moverse. Si presionas el boton
+              sin colocar fichas, el robot no hara nada. El boton de inicio se presiona
+              cada vez que quieras ejecutar un programa. Despues de cada ejecucion puedes
+              cambiar las fichas y presionar de nuevo el boton. El orden de las fichas
+              debe estar bien antes de presionar inicio.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Termine de leer → Pregunta 5
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 10 — Pregunta 5 -->
+      <div class="paso-pagina" data-paso="10" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>11</span> de 14 — Pregunta 5</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Para que sirve el boton de inicio del tablero?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p5" value="A" onchange="progresivo.responder('sub03',10,this.value,'B','Al presionar el boton de inicio, la torre lee la secuencia de fichas y el robot la ejecuta.')"> A. Para apagar la torre</label>
+            <label><input type="radio" name="sub03-p5" value="B" onchange="progresivo.responder('sub03',10,this.value,'B','Al presionar el boton de inicio, la torre lee la secuencia de fichas y el robot la ejecuta.')"> B. Para ejecutar el programa que se formo con las fichas</label>
+            <label><input type="radio" name="sub03-p5" value="C" onchange="progresivo.responder('sub03',10,this.value,'B','Al presionar el boton de inicio, la torre lee la secuencia de fichas y el robot la ejecuta.')"> C. Para encender a MatataBot</label>
+            <label><input type="radio" name="sub03-p5" value="D" onchange="progresivo.responder('sub03',10,this.value,'B','Al presionar el boton de inicio, la torre lee la secuencia de fichas y el robot la ejecuta.')"> D. Para cambiar el color de las fichas</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 11 — Lectura 6: Solucion de problemas -->
+      <div class="paso-pagina" data-paso="11" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>12</span> de 14 — Lectura 6 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 6</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fce4ec; padding:8px;">
+              <defs><style>.l6t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#880e4f}.l6l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#ad1457}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l6t">Solucion de problemas</text>
+              <rect x="70" y="36" width="260" height="20" rx="10" fill="white" stroke="#f48fb1" stroke-width="1.5"/>
+              <text x="84" y="50" style="font-size:9px;fill:#880e4f;font-weight:700;">1. Revisar el encendido</text>
+              <rect x="70" y="60" width="260" height="20" rx="10" fill="white" stroke="#f48fb1" stroke-width="1.5"/>
+              <text x="84" y="74" style="font-size:9px;fill:#880e4f;font-weight:700;">2. Verificar las fichas</text>
+              <rect x="70" y="84" width="260" height="20" rx="10" fill="white" stroke="#f48fb1" stroke-width="1.5"/>
+              <text x="84" y="98" style="font-size:9px;fill:#880e4f;font-weight:700;">3. Reiniciar y probar de nuevo</text>
+              <text x="200" y="114" text-anchor="middle" class="l6l">Apagar y encender si el robot no responde</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Si el robot no responde, hay pasos sencillos para solucionarlo. Primero
+              revisa que la torre y el robot esten encendidos: ambos deben tener sus
+              indicadores fijos. Segundo, verifica que las fichas esten bien colocadas
+              sobre el tablero y en el orden correcto. Tercero, revisa que la torre este
+              bien unida al tablero. Si todo parece correcto, intenta reiniciar: apaga la
+              torre y el robot, espera unos segundos y vuelve a encenderlos. Despues de
+              reiniciar, vuelve a colocar las fichas y presiona inicio otra vez. La mayoria
+              de los problemas se resuelven revisando la conexion y el encendido. Si el
+              problema continua, pide ayuda a tu docente.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub03')">
+            Termine de leer → Pregunta 6
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 12 — Pregunta 6 -->
+      <div class="paso-pagina" data-paso="12" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>13</span> de 14 — Pregunta 6</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Si el robot no responde, que debes hacer primero?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub03-p6" value="A" onchange="progresivo.responder('sub03',12,this.value,'C','Primero se revisa que la torre y el robot esten encendidos con sus indicadores fijos.')"> A. Cambiar las fichas de lugar</label>
+            <label><input type="radio" name="sub03-p6" value="B" onchange="progresivo.responder('sub03',12,this.value,'C','Primero se revisa que la torre y el robot esten encendidos con sus indicadores fijos.')"> B. Comprar otro robot</label>
+            <label><input type="radio" name="sub03-p6" value="C" onchange="progresivo.responder('sub03',12,this.value,'C','Primero se revisa que la torre y el robot esten encendidos con sus indicadores fijos.')"> C. Verificar que la torre y el robot esten encendidos</label>
+            <label><input type="radio" name="sub03-p6" value="D" onchange="progresivo.responder('sub03',12,this.value,'C','Primero se revisa que la torre y el robot esten encendidos con sus indicadores fijos.')"> D. Presionar el boton muchas veces</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub03')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub03')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 13 — Pagina final -->
+      <div class="paso-pagina" data-paso="13" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>14</span> de 14 — Final</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Preguntas de comprension finales</h3>
+          <p style="color:#78909c; margin-bottom:1.2rem;">Responde todas las preguntas para completar el taller.</p>
+
+          <div class="pregunta" id="fpreg1">
+            <p>1. De que color es el indicador cuando la torre se enciende?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg1" value="A"><label>A. Azul</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="B"><label>B. Rojo</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="C"><label>C. Verde</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="D"><label>D. Naranja</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg2">
+            <p>2. Que se escucha al conectar la torre y el robot?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. Un pitido largo</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="B"><label>B. Ding-Ding</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="C"><label>C. Una cancion completa</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. Ningun sonido</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg3">
+            <p>3. Que indica la musica de inicio?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="A"><label>A. Que el robot se apago</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="B"><label>B. Que la bateria esta baja</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="C"><label>C. Que la torre se encendio</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. Que las fichas estan mal colocadas</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:0;">
+          <h2>Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las palabras clave relacionadas con la lectura.</p>
+          <div id="sopa03"></div>
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    Colegio San Luis · Tecnologia e Informatica · Grado Sexto · Hecho con <span>amor</span> para nuestros estudiantes
+  </footer>
+
+  <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
+  <script>
+    crearSopa('sopa03', ['ENCENDER','CONEXION','MUSICA','AZUL','BOTON'], 10, ['ENCENDER','CONEXION','MUSICA','AZUL','BOTON']);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      progresivo.iniciar('sub03');
+
+      document.querySelectorAll('#sub03 .pregunta .opcion').forEach(function(opcion) {
+        opcion.addEventListener('click', function() {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio.disabled) return;
+          radio.checked = true;
+          var pregunta = this.closest('.pregunta');
+          var feedback = pregunta.querySelector('.feedback');
+          var correcta = this.dataset.correcta === 'true';
+          pregunta.classList.remove('correcta', 'incorrecta');
+          pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
+          if (correcta) {
+            pregunta.classList.add('correcta');
+            feedback.textContent = 'Correcto!';
+          } else {
+            pregunta.classList.add('incorrecta');
+            feedback.textContent = 'Revisa la lectura.';
+          }
+          feedback.style.display = 'block';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

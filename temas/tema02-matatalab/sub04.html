@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-taller 4: Bloques de movimiento y giro — Robótica con Matatalab</title>
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .portada-svg { margin:1.5rem 0; text-align:center; }
+    .pregunta .opcion label { cursor:pointer; flex:1; }
+    .sopa-grilla { user-select:none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Robótica con <span>Matatalab</span></h1>
+    <div class="subtitulo">Tecnologia e Informatica · Grado Sexto</div>
+  </header>
+
+  <nav class="subtaller-nav">
+    <a href="../../index.html">Inicio</a>
+    <span class="separador">|</span>
+    <a href="index.html">Portada del tema</a>
+    <span class="separador">|</span>
+    <a href="sub01.html">1</a>
+    <a href="sub02.html">2</a>
+    <a href="sub03.html">3</a>
+    <a href="sub04.html" class="activo">4</a>
+    <a href="sub05.html">5</a>
+    <a href="sub06.html">6</a>
+  </nav>
+
+  <main>
+
+    <article class="card" id="sub04">
+
+      <h2 style="text-align:center;">Robótica con Matatalab</h2>
+      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Sub-taller 4</p>
+
+      <!-- PASO 0 — Portada -->
+      <div class="paso-pagina" data-paso="0">
+
+        <div class="paso-indicador">Pagina <span>1</span> de 14 — Introduccion</div>
+
+        <div class="paso-texto">
+          <div class="portada-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#ffebee;stop-opacity:1" />
+                  <stop offset="34%" style="stop-color:#ffebee;stop-opacity:1" />
+                  <stop offset="34%" style="stop-color:#fff3e0;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#fff3e0;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#e8f5e9;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#e8f5e9;stop-opacity:1" />
+                </linearGradient>
+                <style>
+                  .st1{font-family:Nunito,sans-serif;font-size:16px;font-weight:800;fill:#2c3e50}
+                  .st2{font-family:Nunito,sans-serif;font-size:12px;font-weight:600;fill:#546e7a}
+                </style>
+              </defs>
+              <rect width="700" height="260" rx="16" fill="url(#g1)" />
+              <!-- Panel 1: Adelante y atras -->
+              <rect x="12" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="70" y="55" width="70" height="55" rx="8" fill="#43a047" />
+              <text x="105" y="88" text-anchor="middle" style="font-size:26px;fill:white;">⬆️</text>
+              <text x="105" y="128" text-anchor="middle" style="font-size:9px;fill:#2e7d32;font-weight:700;">Adelante</text>
+              <rect x="150" y="55" width="70" height="55" rx="8" fill="#fb8c00" />
+              <text x="185" y="88" text-anchor="middle" style="font-size:26px;fill:white;">⬇️</text>
+              <text x="185" y="128" text-anchor="middle" style="font-size:9px;fill:#e65100;font-weight:700;">Atras</text>
+              <rect x="55" y="145" width="165" height="36" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="1.5"/>
+              <text x="137" y="168" text-anchor="middle" style="font-size:11px;fill:#795548;font-weight:700;">10 cm por paso</text>
+              <text x="121" y="210" text-anchor="middle" class="st1">Adelante y atras</text>
+              <text x="121" y="232" text-anchor="middle" class="st2">Fichas de direccion</text>
+              <!-- Panel 2: Giros de 90 grados -->
+              <rect x="241" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <circle cx="330" cy="95" r="34" fill="white" stroke="#b0bec5" stroke-width="2" />
+              <text x="330" y="100" text-anchor="middle" style="font-size:16px;">🤖</text>
+              <rect x="255" y="60" width="44" height="44" rx="8" fill="#1e88e5" />
+              <text x="277" y="87" text-anchor="middle" style="font-size:20px;fill:white;">▶️</text>
+              <rect x="361" y="60" width="44" height="44" rx="8" fill="#e53935" />
+              <text x="383" y="87" text-anchor="middle" style="font-size:20px;fill:white;">◀️</text>
+              <text x="330" y="160" text-anchor="middle" style="font-size:11px;fill:#1565c0;font-weight:700;">Giro derecha: 90 grados</text>
+              <text x="330" y="180" text-anchor="middle" style="font-size:11px;fill:#c62828;font-weight:700;">Giro izquierda: 90 grados</text>
+              <text x="350" y="210" text-anchor="middle" class="st1">Giros de 90 grados</text>
+              <text x="350" y="232" text-anchor="middle" class="st2">Rota sin desplazarse</text>
+              <!-- Panel 3: Secuencias -->
+              <rect x="470" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="493" y="60" width="150" height="60" rx="8" fill="#039be5" opacity="0.15" />
+              <rect x="505" y="72" width="34" height="34" rx="6" fill="#43a047" />
+              <text x="522" y="95" text-anchor="middle" style="font-size:16px;">⬆</text>
+              <rect x="546" y="72" width="34" height="34" rx="6" fill="#1e88e5" />
+              <text x="563" y="95" text-anchor="middle" style="font-size:16px;">▶</text>
+              <rect x="587" y="72" width="34" height="34" rx="6" fill="#43a047" />
+              <text x="604" y="95" text-anchor="middle" style="font-size:16px;">⬆</text>
+              <circle cx="665" cy="90" r="15" fill="white" stroke="#43a047" stroke-width="3" />
+              <text x="665" y="94" text-anchor="middle" style="font-size:6px;fill:#2e7d32;font-weight:700;">INICIO</text>
+              <text x="579" y="160" text-anchor="middle" class="st1">Secuencias</text>
+              <text x="579" y="183" text-anchor="middle" class="st2">Fichas en fila</text>
+              <text x="579" y="205" text-anchor="middle" class="st2">Se leen de izquierda a derecha</text>
+              <text x="579" y="232" text-anchor="middle" class="st2">Presiona inicio para ejecutar</text>
+            </svg>
+          </div>
+          <p style="text-align:center; font-size:1.2rem; font-weight:600; color:#2c3e50; margin:1.5rem 0;">
+            En este taller vas a leer 6 textos sobre los bloques de movimiento de MatataBot.
+          </p>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Empezar lectura 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 1 — Lectura 1: El bloque Adelante -->
+      <div class="paso-pagina" data-paso="1" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>2</span> de 14 — Lectura 1 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 1</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8f5e9; padding:8px;">
+              <defs><style>.l1t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1b5e20}.l1l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#2e7d32}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l1t">El bloque Adelante</text>
+              <rect x="55" y="40" width="80" height="55" rx="8" fill="#43a047"/>
+              <text x="95" y="72" text-anchor="middle" style="font-size:26px;fill:white;">⬆️</text>
+              <text x="95" y="108" text-anchor="middle" style="font-size:8px;fill:#2e7d32;font-weight:700;">Ficha verde</text>
+              <rect x="180" y="45" width="170" height="40" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="1.5"/>
+              <text x="265" y="69" text-anchor="middle" style="font-size:11px;fill:#795548;font-weight:700;">Avance: 10 cm por paso</text>
+              <text x="200" y="114" text-anchor="middle" class="l1l">Una casilla por cada ficha de adelante</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              La ficha de Adelante es de color verde y tiene una flecha hacia arriba.
+              Cuando el robot recibe esta ficha, avanza una casilla hacia adelante. Cada
+              paso de adelante equivale a 10 centimetros sobre el tapete. Si quieres que
+              el robot avance dos casillas, debes usar dos fichas de Adelante seguidas.
+              Tres fichas de Adelante hacen que el robot avance tres casillas. La flecha
+              hacia arriba te recuerda la direccion que va a tomar el robot. Esta ficha
+              es la mas usada en todos los desafios. Con ella se construyen caminos en
+              linea recta hacia las metas.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Termine de leer → Pregunta 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 2 — Pregunta 1 -->
+      <div class="paso-pagina" data-paso="2" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>3</span> de 14 — Pregunta 1</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Cuanto avanza el robot con una ficha de Adelante?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p1" value="A" onchange="progresivo.responder('sub04',2,this.value,'C','Cada paso de adelante equivale a 10 centimetros sobre el tapete.')"> A. 1 centimetro</label>
+            <label><input type="radio" name="sub04-p1" value="B" onchange="progresivo.responder('sub04',2,this.value,'C','Cada paso de adelante equivale a 10 centimetros sobre el tapete.')"> B. 100 centimetros</label>
+            <label><input type="radio" name="sub04-p1" value="C" onchange="progresivo.responder('sub04',2,this.value,'C','Cada paso de adelante equivale a 10 centimetros sobre el tapete.')"> C. 10 centimetros</label>
+            <label><input type="radio" name="sub04-p1" value="D" onchange="progresivo.responder('sub04',2,this.value,'C','Cada paso de adelante equivale a 10 centimetros sobre el tapete.')"> D. 5 centimetros</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 3 — Lectura 2: El bloque Atras -->
+      <div class="paso-pagina" data-paso="3" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>4</span> de 14 — Lectura 2 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 2</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fff3e0; padding:8px;">
+              <defs><style>.l2t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#e65100}.l2l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#ef6c00}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l2t">El bloque Atras</text>
+              <rect x="55" y="40" width="80" height="55" rx="8" fill="#fb8c00"/>
+              <text x="95" y="72" text-anchor="middle" style="font-size:26px;fill:white;">⬇️</text>
+              <text x="95" y="108" text-anchor="middle" style="font-size:8px;fill:#e65100;font-weight:700;">Ficha naranja</text>
+              <circle cx="255" cy="62" r="20" fill="white" stroke="#fb8c00" stroke-width="2.5"/>
+              <text x="225" y="66" text-anchor="middle" style="font-size:12px;">🤖</text>
+              <path d="M238,88 L242,105 L248,88" fill="none" stroke="#ef6c00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="273" y="105" text-anchor="middle" style="font-size:8px;fill:#e65100;">Volver al inicio</text>
+              <text x="200" y="114" text-anchor="middle" class="l2l">Retrocede 10 cm manteniendo la direccion</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              La ficha de Atras es de color naranja y tiene una flecha hacia abajo.
+              Cuando el robot recibe esta ficha, retrocede una casilla, es decir, se
+              mueve 10 centimetros hacia atras. Es muy util para volver al punto de
+              partida o para corregir un camino. Si el robot se alejo demasiado, la
+              ficha de Atras lo trae de regreso. Es importante recordar que retroceder
+              no cambia la direccion en la que apunta el robot. La flecha hacia abajo
+              indica el movimiento de regreso. Usa esta ficha cuando el robot deba
+              volver sobre sus pasos.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Termine de leer → Pregunta 2
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 4 — Pregunta 2 -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>5</span> de 14 — Pregunta 2</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Que ficha hace que el robot retroceda?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p2" value="A" onchange="progresivo.responder('sub04',4,this.value,'B','La ficha naranja de Atras hace que el robot retroceda 10 centimetros.')"> A. La ficha de Adelante</label>
+            <label><input type="radio" name="sub04-p2" value="B" onchange="progresivo.responder('sub04',4,this.value,'B','La ficha naranja de Atras hace que el robot retroceda 10 centimetros.')"> B. La ficha de Atras</label>
+            <label><input type="radio" name="sub04-p2" value="C" onchange="progresivo.responder('sub04',4,this.value,'B','La ficha naranja de Atras hace que el robot retroceda 10 centimetros.')"> C. La ficha de giro a la derecha</label>
+            <label><input type="radio" name="sub04-p2" value="D" onchange="progresivo.responder('sub04',4,this.value,'B','La ficha naranja de Atras hace que el robot retroceda 10 centimetros.')"> D. La ficha de giro a la izquierda</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 5 — Lectura 3: Giro a la derecha -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>6</span> de 14 — Lectura 3 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 3</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e3f2fd; padding:8px;">
+              <defs><style>.l3t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#0d47a1}.l3l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#1565c0}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l3t">Giro a la derecha</text>
+              <rect x="55" y="40" width="80" height="55" rx="8" fill="#1e88e5"/>
+              <text x="95" y="72" text-anchor="middle" style="font-size:26px;fill:white;">▶️</text>
+              <text x="95" y="108" text-anchor="middle" style="font-size:8px;fill:#1565c0;font-weight:700;">Ficha azul</text>
+              <path d="M190,80 A40,40 0 0 1 265,55" fill="none" stroke="#1e88e5" stroke-width="3" stroke-linecap="round"/>
+              <polygon points="265,55 253,57 260,68" fill="#1e88e5"/>
+              <circle cx="205" cy="55" r="14" fill="white" stroke="#90a4ae" stroke-width="2"/>
+              <text x="205" y="59" text-anchor="middle" style="font-size:9px;">🤖</text>
+              <text x="280" y="90" text-anchor="middle" style="font-size:10px;fill:#0d47a1;font-weight:700;">90 grados</text>
+              <text x="200" y="114" text-anchor="middle" class="l3l">Un cuarto de vuelta sobre su propio eje</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              La ficha de giro a la derecha es de color azul. Cuando el robot recibe
+              esta ficha, rota 90 grados hacia la derecha sobre su propio eje. Esto
+              significa que gira sin moverse del lugar: no avanza ni retrocede. Despues
+              de girar, el robot queda apuntando hacia una nueva direccion. La flecha
+              apunta hacia la derecha para mostrar el sentido del giro. Si el robot
+              debe doblar en una esquina, esta ficha es la indicada. Recuerda que un
+              giro de 90 grados es un cuarto de vuelta completa. Solo se cambia la
+              direccion, no la posicion en la casilla.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Termine de leer → Pregunta 3
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 6 — Pregunta 3 -->
+      <div class="paso-pagina" data-paso="6" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>7</span> de 14 — Pregunta 3</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Cuanto rota el robot con un giro a la derecha?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p3" value="A" onchange="progresivo.responder('sub04',6,this.value,'A','El giro a la derecha rota al robot 90 grados sobre su propio eje.')"> A. 90 grados</label>
+            <label><input type="radio" name="sub04-p3" value="B" onchange="progresivo.responder('sub04',6,this.value,'A','El giro a la derecha rota al robot 90 grados sobre su propio eje.')"> B. 45 grados</label>
+            <label><input type="radio" name="sub04-p3" value="C" onchange="progresivo.responder('sub04',6,this.value,'A','El giro a la derecha rota al robot 90 grados sobre su propio eje.')"> C. 180 grados</label>
+            <label><input type="radio" name="sub04-p3" value="D" onchange="progresivo.responder('sub04',6,this.value,'A','El giro a la derecha rota al robot 90 grados sobre su propio eje.')"> D. 10 grados</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 7 — Lectura 4: Giro a la izquierda -->
+      <div class="paso-pagina" data-paso="7" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>8</span> de 14 — Lectura 4 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 4</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fce4ec; padding:8px;">
+              <defs><style>.l4t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#880e4f}.l4l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#ad1457}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l4t">Giro a la izquierda</text>
+              <rect x="55" y="40" width="80" height="55" rx="8" fill="#e53935"/>
+              <text x="95" y="72" text-anchor="middle" style="font-size:26px;fill:white;">◀️</text>
+              <text x="95" y="108" text-anchor="middle" style="font-size:8px;fill:#c62828;font-weight:700;">Ficha roja</text>
+              <path d="M290,80 A40,40 0 0 0 215,55" fill="none" stroke="#e53935" stroke-width="3" stroke-linecap="round"/>
+              <polygon points="215,55 227,57 220,68" fill="#e53935"/>
+              <circle cx="275" cy="55" r="14" fill="white" stroke="#90a4ae" stroke-width="2"/>
+              <text x="275" y="59" text-anchor="middle" style="font-size:9px;">🤖</text>
+              <text x="200" y="100" text-anchor="middle" style="font-size:10px;fill:#880e4f;font-weight:700;">90 grados</text>
+              <text x="200" y="114" text-anchor="middle" class="l4l">Sentido contrario al giro a la derecha</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              La ficha de giro a la izquierda es de color rojo. Cuando el robot recibe
+              esta ficha, rota 90 grados hacia la izquierda sobre su propio eje. El
+              giro es exactamente igual al anterior pero en el sentido contrario. La
+              flecha apunta hacia la izquierda para indicar la direccion del giro. Al
+              girar, el robot permanece en la misma casilla del tapete. Con esta ficha
+              y la del giro a la derecha puedes orientar al robot en las cuatro
+              direcciones. Combinala con las fichas de adelante para recorrer cualquier
+              camino. Asi trabajas las direcciones y la percepcion espacial.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Termine de leer → Pregunta 4
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 8 — Pregunta 4 -->
+      <div class="paso-pagina" data-paso="8" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>9</span> de 14 — Pregunta 4</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Hacia donde apunta la flecha de la ficha de giro izquierdo?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p4" value="A" onchange="progresivo.responder('sub04',8,this.value,'D','La ficha de giro a la izquierda tiene una flecha que apunta hacia la izquierda.')"> A. Hacia arriba</label>
+            <label><input type="radio" name="sub04-p4" value="B" onchange="progresivo.responder('sub04',8,this.value,'D','La ficha de giro a la izquierda tiene una flecha que apunta hacia la izquierda.')"> B. Hacia abajo</label>
+            <label><input type="radio" name="sub04-p4" value="C" onchange="progresivo.responder('sub04',8,this.value,'D','La ficha de giro a la izquierda tiene una flecha que apunta hacia la izquierda.')"> C. Hacia la derecha</label>
+            <label><input type="radio" name="sub04-p4" value="D" onchange="progresivo.responder('sub04',8,this.value,'D','La ficha de giro a la izquierda tiene una flecha que apunta hacia la izquierda.')"> D. Hacia la izquierda</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 9 — Lectura 5: Girar no es avanzar -->
+      <div class="paso-pagina" data-paso="9" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>10</span> de 14 — Lectura 5 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 5</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8eaf6; padding:8px;">
+              <defs><style>.l5t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#283593}.l5l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#3949ab}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l5t">Girar no es avanzar</text>
+              <rect x="125" y="32" width="70" height="60" rx="6" fill="white" stroke="#90a4ae" stroke-width="1.5"/>
+              <rect x="203" y="32" width="70" height="60" rx="6" fill="white" stroke="#cfd8dc" stroke-width="1.5"/>
+              <circle cx="160" cy="62" r="16" fill="#fff8e1" stroke="#ffb300" stroke-width="2"/>
+              <text x="160" y="66" text-anchor="middle" style="font-size:9px;">🤖</text>
+              <path d="M172,72 A22,22 0 0 1 172,52" fill="none" stroke="#3949ab" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3,2"/>
+              <polygon points="172,47 176,55 168,55" fill="#3949ab"/>
+              <text x="160" y="104" text-anchor="middle" style="font-size:8px;fill:#546e7a;font-weight:600;">Rota pero no se mueve</text>
+              <text x="270" y="106" text-anchor="middle" style="font-size:8px;fill:#546e7a;font-weight:600;">Sigue en su casilla</text>
+              <text x="200" y="118" text-anchor="middle" class="l5l">Solo cambia hacia donde apunta</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Es muy importante entender que un giro no es un desplazamiento. Cuando el
+              robot gira 90 grados, solamente rota sobre su propio eje: permanece en la
+              misma casilla. Girar no acerca al robot a la meta ni lo aleja de ella,
+              solo cambia hacia donde apunta. Muchos retos fallan porque se confunde
+              girar con avanzar. Si el robot esta en la casilla uno y gira, sigue en la
+              casilla uno pero mirando hacia otro lado. Para moverte de casilla debes
+              usar las fichas de Adelante y de Atras. Los giros se usan para preparar el
+              siguiente movimiento. Esta idea es clave para resolver los desafios del
+              tapete.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Termine de leer → Pregunta 5
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 10 — Pregunta 5 -->
+      <div class="paso-pagina" data-paso="10" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>11</span> de 14 — Pregunta 5</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Un giro implica desplazamiento?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p5" value="A" onchange="progresivo.responder('sub04',10,this.value,'B','Un giro solo rota al robot sobre su eje: no hay desplazamiento.')"> A. Si, avanza una casilla</label>
+            <label><input type="radio" name="sub04-p5" value="B" onchange="progresivo.responder('sub04',10,this.value,'B','Un giro solo rota al robot sobre su eje: no hay desplazamiento.')"> B. No, el robot rota pero permanece en la misma casilla</label>
+            <label><input type="radio" name="sub04-p5" value="C" onchange="progresivo.responder('sub04',10,this.value,'B','Un giro solo rota al robot sobre su eje: no hay desplazamiento.')"> C. Si, retrocede una casilla</label>
+            <label><input type="radio" name="sub04-p5" value="D" onchange="progresivo.responder('sub04',10,this.value,'B','Un giro solo rota al robot sobre su eje: no hay desplazamiento.')"> D. No, pero suena una alarma</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 11 — Lectura 6: Combinar movimientos -->
+      <div class="paso-pagina" data-paso="11" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>12</span> de 14 — Lectura 6 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 6</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e0f7fa; padding:8px;">
+              <defs><style>.l6t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#006064}.l6l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#00838f}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l6t">Combinar movimientos</text>
+              <rect x="30" y="38" width="70" height="48" rx="8" fill="#43a047"/>
+              <text x="65" y="67" text-anchor="middle" style="font-size:22px;fill:white;">⬆️</text>
+              <text x="65" y="94" text-anchor="middle" style="font-size:8px;fill:#006064;font-weight:700;">1</text>
+              <rect x="112" y="38" width="70" height="48" rx="8" fill="#43a047"/>
+              <text x="147" y="67" text-anchor="middle" style="font-size:22px;fill:white;">⬆️</text>
+              <text x="147" y="94" text-anchor="middle" style="font-size:8px;fill:#006064;font-weight:700;">2</text>
+              <rect x="194" y="38" width="70" height="48" rx="8" fill="#1e88e5"/>
+              <text x="229" y="67" text-anchor="middle" style="font-size:22px;fill:white;">▶️</text>
+              <text x="229" y="94" text-anchor="middle" style="font-size:8px;fill:#006064;font-weight:700;">3</text>
+              <rect x="276" y="38" width="70" height="48" rx="8" fill="#43a047"/>
+              <text x="311" y="67" text-anchor="middle" style="font-size:22px;fill:white;">⬆️</text>
+              <text x="311" y="94" text-anchor="middle" style="font-size:8px;fill:#006064;font-weight:700;">4</text>
+              <text x="200" y="114" text-anchor="middle" class="l6l">2 adelante + giro derecha + 1 adelante</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Para mover el robot por un camino debes combinar las fichas en una
+              secuencia. Por ejemplo, puedes colocar dos fichas de Adelante, luego una
+              ficha de giro a la derecha y finalmente una ficha de Adelante. El robot
+              avanzara dos casillas, girara a la derecha y avanzara una casilla mas.
+              Antes de colocar las fichas, planifica el recorrido en tu mente. Revisa
+              que cada giro apunte en la direccion correcta. Despues de ejecutar el
+              programa, observa donde quedo el robot. Si no llego a la meta, corrige
+              las fichas y prueba de nuevo. Planificar, probar y corregir es la forma
+              de programar con exito.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub04')">
+            Termine de leer → Pregunta 6
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 12 — Pregunta 6 -->
+      <div class="paso-pagina" data-paso="12" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>13</span> de 14 — Pregunta 6</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Para avanzar 3 casillas en linea recta, que fichas colocas?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub04-p6" value="A" onchange="progresivo.responder('sub04',12,this.value,'C','Cada ficha de Adelante avanza una casilla, asi que se colocan tres seguidas.')"> A. Tres fichas de Atras</label>
+            <label><input type="radio" name="sub04-p6" value="B" onchange="progresivo.responder('sub04',12,this.value,'C','Cada ficha de Adelante avanza una casilla, asi que se colocan tres seguidas.')"> B. Dos fichas de Adelante y un giro</label>
+            <label><input type="radio" name="sub04-p6" value="C" onchange="progresivo.responder('sub04',12,this.value,'C','Cada ficha de Adelante avanza una casilla, asi que se colocan tres seguidas.')"> C. Tres fichas de Adelante seguidas</label>
+            <label><input type="radio" name="sub04-p6" value="D" onchange="progresivo.responder('sub04',12,this.value,'C','Cada ficha de Adelante avanza una casilla, asi que se colocan tres seguidas.')"> D. Una ficha de Adelante y dos giros</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub04')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub04')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 13 — Pagina final -->
+      <div class="paso-pagina" data-paso="13" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>14</span> de 14 — Final</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Preguntas de comprension finales</h3>
+          <p style="color:#78909c; margin-bottom:1.2rem;">Responde todas las preguntas para completar el taller.</p>
+
+          <div class="pregunta" id="fpreg1">
+            <p>1. Que representa cada ficha de color?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg1" value="A"><label>A. Una instruccion</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="B"><label>B. Un juguete decorativo</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="C"><label>C. Un sonido del robot</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="D"><label>D. Un color para pintar</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg2">
+            <p>2. Cuanto mide un paso del robot?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. 5 centimetros</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="B"><label>B. 1 metro</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="C"><label>C. 10 centimetros</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. 2 centimetros</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg3">
+            <p>3. Que hacen los giros de 90 grados?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="A"><label>A. Hacen avanzar al robot</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="B"><label>B. Hacen retroceder al robot</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="C"><label>C. Rotan el robot sin desplazarlo</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. Apagan al robot</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:0;">
+          <h2>Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las palabras clave relacionadas con la lectura.</p>
+          <div id="sopa04"></div>
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    Colegio San Luis · Tecnologia e Informatica · Grado Sexto · Hecho con <span>amor</span> para nuestros estudiantes
+  </footer>
+
+  <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
+  <script>
+    crearSopa('sopa04', ['ADELANTE','ATRAS','GIRO','GRADO','CAMINO'], 10, ['ADELANTE','ATRAS','GIRO','GRADO','CAMINO']);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      progresivo.iniciar('sub04');
+
+      document.querySelectorAll('#sub04 .pregunta .opcion').forEach(function(opcion) {
+        opcion.addEventListener('click', function() {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio.disabled) return;
+          radio.checked = true;
+          var pregunta = this.closest('.pregunta');
+          var feedback = pregunta.querySelector('.feedback');
+          var correcta = this.dataset.correcta === 'true';
+          pregunta.classList.remove('correcta', 'incorrecta');
+          pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
+          if (correcta) {
+            pregunta.classList.add('correcta');
+            feedback.textContent = 'Correcto!';
+          } else {
+            pregunta.classList.add('incorrecta');
+            feedback.textContent = 'Revisa la lectura.';
+          }
+          feedback.style.display = 'block';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

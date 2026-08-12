@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-taller 1: Conociendo a MatataBot — Robótica con Matatalab</title>
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .portada-svg { margin:1.5rem 0; text-align:center; }
+    .pregunta .opcion label { cursor:pointer; flex:1; }
+    .sopa-grilla { user-select:none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Robótica con <span>Matatalab</span></h1>
+    <div class="subtitulo">Tecnologia e Informatica · Grado Sexto</div>
+  </header>
+
+  <nav class="subtaller-nav">
+    <a href="../../index.html">Inicio</a>
+    <span class="separador">|</span>
+    <a href="index.html">Portada del tema</a>
+    <span class="separador">|</span>
+    <a href="sub01.html" class="activo">1</a>
+    <a href="sub02.html">2</a>
+    <a href="sub03.html">3</a>
+    <a href="sub04.html">4</a>
+    <a href="sub05.html">5</a>
+    <a href="sub06.html">6</a>
+  </nav>
+
+  <main>
+
+    <article class="card" id="sub01">
+
+      <h2 style="text-align:center;">Robótica con Matatalab</h2>
+      <p style="text-align:center; color:#78909c; margin-bottom:1.5rem;">Sub-taller 1</p>
+
+      <!-- PASO 0 — Portada -->
+      <div class="paso-pagina" data-paso="0">
+
+        <div class="paso-indicador">Pagina <span>1</span> de 14 — Introduccion</div>
+
+        <div class="paso-texto">
+          <div class="portada-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#e8f5e9;stop-opacity:1" />
+                  <stop offset="34%" style="stop-color:#e8f5e9;stop-opacity:1" />
+                  <stop offset="34%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                  <stop offset="66%" style="stop-color:#fff3e0;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#fff3e0;stop-opacity:1" />
+                </linearGradient>
+                <style>
+                  .st1{font-family:Nunito,sans-serif;font-size:16px;font-weight:800;fill:#2c3e50}
+                  .st2{font-family:Nunito,sans-serif;font-size:12px;font-weight:600;fill:#546e7a}
+                </style>
+              </defs>
+              <rect width="700" height="260" rx="16" fill="url(#g1)" />
+              <!-- Panel 1: Que es MatataBot -->
+              <rect x="12" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <circle cx="122" cy="70" r="30" fill="white" stroke="#b0bec5" stroke-width="2" />
+              <circle cx="110" cy="62" r="4" fill="#37474f" />
+              <circle cx="134" cy="62" r="4" fill="#37474f" />
+              <path d="M112,80 Q122,88 132,80" fill="none" stroke="#37474f" stroke-width="2" stroke-linecap="round" />
+              <circle cx="122" cy="120" r="24" fill="white" stroke="#b0bec5" stroke-width="2" />
+              <rect x="96" y="135" width="24" height="16" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5" />
+              <rect x="124" y="135" width="24" height="16" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5" />
+              <text x="122" y="190" text-anchor="middle" class="st1">MatataBot</text>
+              <text x="122" y="212" text-anchor="middle" class="st2">Robot educativo sin pantalla</text>
+              <text x="122" y="232" text-anchor="middle" class="st2">Programa con bloques</text>
+              <!-- Panel 2: Bloques y tablero -->
+              <rect x="241" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="270" y="55" width="160" height="70" rx="8" fill="#039be5" opacity="0.15" />
+              <rect x="285" y="70" width="36" height="36" rx="6" fill="#43a047" />
+              <rect x="331" y="70" width="36" height="36" rx="6" fill="#fb8c00" />
+              <rect x="377" y="70" width="36" height="36" rx="6" fill="#e53935" />
+              <text x="285" y="92" text-anchor="middle" style="font-size:16px;">▲</text>
+              <text x="331" y="92" text-anchor="middle" style="font-size:16px;">◀</text>
+              <text x="377" y="92" text-anchor="middle" style="font-size:16px;">▶</text>
+              <text x="350" y="160" text-anchor="middle" class="st1">Tablero de codigo</text>
+              <text x="350" y="185" text-anchor="middle" class="st2">Fichas de direccion</text>
+              <text x="350" y="205" text-anchor="middle" class="st2">Adelante, atras y giros</text>
+              <text x="350" y="228" text-anchor="middle" class="st2">Avance: 10 cm por paso</text>
+              <!-- Panel 3: Torre y conexion -->
+              <rect x="470" y="12" width="218" height="236" rx="14" fill="white" fill-opacity="0.6" />
+              <rect x="520" y="45" width="70" height="14" rx="7" fill="#78909c" />
+              <rect x="535" y="60" width="40" height="60" rx="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5" />
+              <circle cx="555" cy="75" r="5" fill="#1e88e5" />
+              <text x="555" y="86" text-anchor="middle" style="font-size:7px;fill:#546e7a;">Luz azul</text>
+              <line x1="555" y1="120" x2="555" y2="150" stroke="#1e88e5" stroke-width="2" stroke-dasharray="3,3" />
+              <circle cx="555" cy="160" r="14" fill="white" stroke="#b0bec5" stroke-width="2" />
+              <text x="555" y="164" text-anchor="middle" style="font-size:9px;">🤖</text>
+              <text x="579" y="195" text-anchor="middle" class="st1">Torre de mando</text>
+              <text x="579" y="218" text-anchor="middle" class="st2">Enciende la conexion</text>
+              <text x="579" y="238" text-anchor="middle" class="st2">Envia el programa al robot</text>
+            </svg>
+          </div>
+          <p style="text-align:center; font-size:1.2rem; font-weight:600; color:#2c3e50; margin:1.5rem 0;">
+            En este taller vas a leer 6 textos sobre el robot MatataBot y como programarlo sin pantallas.
+          </p>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Empezar lectura 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 1 — Lectura 1: Que es MatataBot -->
+      <div class="paso-pagina" data-paso="1" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>2</span> de 14 — Lectura 1 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 1</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8f5e9; padding:8px;">
+              <defs><style>.l1t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#1b5e20}.l1l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#2e7d32}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l1t">MatataBot: que es y como funciona</text>
+              <circle cx="150" cy="62" r="22" fill="white" stroke="#b0bec5" stroke-width="2"/>
+              <circle cx="142" cy="56" r="3" fill="#37474f"/>
+              <circle cx="158" cy="56" r="3" fill="#37474f"/>
+              <path d="M144,70 Q150,75 156,70" fill="none" stroke="#37474f" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="150" cy="90" r="14" fill="white" stroke="#b0bec5" stroke-width="2"/>
+              <rect x="136" y="98" width="12" height="8" rx="4" fill="#eceff1"/>
+              <rect x="152" y="98" width="12" height="8" rx="4" fill="#eceff1"/>
+              <rect x="205" y="40" width="150" height="45" rx="8" fill="#039be5" opacity="0.15"/>
+              <rect x="215" y="50" width="30" height="26" rx="5" fill="#43a047"/>
+              <rect x="252" y="50" width="30" height="26" rx="5" fill="#fb8c00"/>
+              <rect x="289" y="50" width="30" height="26" rx="5" fill="#e53935"/>
+              <text x="215" y="66" text-anchor="middle" style="font-size:14px;">▲</text>
+              <text x="252" y="66" text-anchor="middle" style="font-size:14px;">◀</text>
+              <text x="289" y="66" text-anchor="middle" style="font-size:14px;">▶</text>
+              <text x="280" y="102" text-anchor="middle" class="l1l">Se programa con bloques fisicos</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              MatataBot es un robot educativo fabricado por la empresa Matatalab. Es un robot
+              especial porque no tiene pantallas: no necesita celulares, tabletas ni computadoras
+              para funcionar. Se programa colocando bloques fisicos de colores sobre un tablero.
+              Cada bloque representa una instruccion, como avanzar, retroceder o girar.
+              Al presionar un boton, el robot lee la secuencia de bloques y la ejecuta moviendose
+              por el suelo. MatataBot esta pensado para que cualquier persona pueda aprender a
+              programar jugando. Con el desarrollamos el pensamiento computacional: la capacidad
+              de organizar ideas y pasos para resolver problemas. Tambien trabajamos direcciones,
+              percepcion espacial, secuencias y lenguaje de programacion simple. Es la puerta de
+              entrada perfecta al mundo de la robotica y la programacion.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 1
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 2 — Pregunta 1 -->
+      <div class="paso-pagina" data-paso="2" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>3</span> de 14 — Pregunta 1</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Como se programa el robot MatataBot?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p1" value="A" onchange="progresivo.responder('sub01',2,this.value,'B','Se programa colocando bloques fisicos de colores sobre el tablero, sin pantallas.')"> A. Con un celular</label>
+            <label><input type="radio" name="sub01-p1" value="B" onchange="progresivo.responder('sub01',2,this.value,'B','Se programa colocando bloques fisicos de colores sobre el tablero, sin pantallas.')"> B. Con bloques fisicos sobre un tablero</label>
+            <label><input type="radio" name="sub01-p1" value="C" onchange="progresivo.responder('sub01',2,this.value,'B','Se programa colocando bloques fisicos de colores sobre el tablero, sin pantallas.')"> C. Con una computadora portatil</label>
+            <label><input type="radio" name="sub01-p1" value="D" onchange="progresivo.responder('sub01',2,this.value,'B','Se programa colocando bloques fisicos de colores sobre el tablero, sin pantallas.')"> D. Dibujando un codigo en papel</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 3 — Lectura 2: Componentes del kit -->
+      <div class="paso-pagina" data-paso="3" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>4</span> de 14 — Lectura 2 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 2</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e3f2fd; padding:8px;">
+              <defs><style>.l2t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#0d47a1}.l2l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#1565c0}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l2t">El kit de Matatalab</text>
+              <rect x="40" y="40" width="60" height="55" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <text x="70" y="70" text-anchor="middle" style="font-size:20px;">🗼</text>
+              <text x="70" y="88" text-anchor="middle" style="font-size:8px;fill:#546e7a;">Torre</text>
+              <rect x="130" y="40" width="60" height="55" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <text x="160" y="70" text-anchor="middle" style="font-size:20px;">⬜</text>
+              <text x="160" y="88" text-anchor="middle" style="font-size:8px;fill:#546e7a;">Tablero</text>
+              <rect x="220" y="40" width="60" height="55" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <text x="250" y="70" text-anchor="middle" style="font-size:20px;">🤖</text>
+              <text x="250" y="88" text-anchor="middle" style="font-size:8px;fill:#546e7a;">Robot</text>
+              <rect x="310" y="40" width="60" height="55" rx="8" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <text x="340" y="70" text-anchor="middle" style="font-size:20px;">🟩🟧</text>
+              <text x="340" y="88" text-anchor="middle" style="font-size:8px;fill:#546e7a;">Fichas</text>
+              <text x="200" y="112" text-anchor="middle" class="l2l">4 componentes: torre, tablero, robot y fichas</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              El kit de Matatalab viene con varios componentes que trabajan juntos. En primer
+              lugar esta la torre de mando: una pieza con un boton de encendido y una luz que
+              se enciende de color azul cuando esta activa. En segundo lugar esta el tablero de
+              programacion, la base donde se colocan los bloques. En tercer lugar esta el robot
+              MatataBot, la pieza que se mueve por el suelo siguiendo las instrucciones. Por
+              ultimo estan las fichas o bloques de codificacion: piezas de colores que representan
+              cada instruccion. Para programar se une la torre al tablero, se colocan las fichas
+              formando la secuencia de pasos y se presiona el boton de inicio. La torre envia el
+              programa al robot y el robot lo ejecuta. Todos los componentes se conectan
+              facilmente y se guardan en su caja cuando se termina la actividad.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 2
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 4 — Pregunta 2 -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>5</span> de 14 — Pregunta 2</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Cual de estos NO es parte del kit de Matatalab?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p2" value="A" onchange="progresivo.responder('sub01',4,this.value,'D','El kit incluye torre, tablero, robot y fichas, pero no un control remoto.')"> A. La torre de mando</label>
+            <label><input type="radio" name="sub01-p2" value="B" onchange="progresivo.responder('sub01',4,this.value,'D','El kit incluye torre, tablero, robot y fichas, pero no un control remoto.')"> B. El tablero de programacion</label>
+            <label><input type="radio" name="sub01-p2" value="C" onchange="progresivo.responder('sub01',4,this.value,'D','El kit incluye torre, tablero, robot y fichas, pero no un control remoto.')"> C. Las fichas de codificacion</label>
+            <label><input type="radio" name="sub01-p2" value="D" onchange="progresivo.responder('sub01',4,this.value,'D','El kit incluye torre, tablero, robot y fichas, pero no un control remoto.')"> D. Un control remoto</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 5 — Lectura 3: La torre de mando -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>6</span> de 14 — Lectura 3 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 3</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fff3e0; padding:8px;">
+              <defs><style>.l3t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#e65100}.l3l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#ef6c00}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l3t">La torre de mando</text>
+              <rect x="175" y="30" width="50" height="60" rx="6" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+              <rect x="185" y="40" width="30" height="12" rx="4" fill="#43a047"/>
+              <circle cx="200" cy="70" r="8" fill="#1e88e5"/>
+              <text x="200" y="73" text-anchor="middle" style="font-size:7px;fill:white;font-weight:700;">ON</text>
+              <text x="200" y="95" text-anchor="middle" style="font-size:8px;fill:#546e7a;">Boton encendido</text>
+              <rect x="270" y="45" width="90" height="35" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="1.5"/>
+              <text x="315" y="67" text-anchor="middle" style="font-size:8px;fill:#795548;">Se mantiene presionado</text>
+              <text x="200" y="114" text-anchor="middle" class="l3l">La luz azul indica que esta encendida</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              La torre de mando es el cerebro del kit. Se enciende y se apaga manteniendo
+              presionado el boton de encendido. Cuando la torre se enciende, el indicador de
+              estado se ilumina de color azul y se reproduce una musica de inicio. Cuando se
+              apaga, suena una musica diferente de apagado. La torre siempre se una al tablero
+              de programacion: ese conjunto es el lugar donde se construye el programa. Cuando
+              presionas el boton de inicio del tablero, la torre lee los bloques colocados y
+              transfiere la instruccion a MatataBot para que la ejecute. Sin la torre no existe
+              conexion entre el programa y el robot. Por eso es importante saber encenderla y
+              apagarla correctamente, y cuidar que sus indicadores funcionen siempre.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 3
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 6 — Pregunta 3 -->
+      <div class="paso-pagina" data-paso="6" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>7</span> de 14 — Pregunta 3</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Como se enciende la torre de mando?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p3" value="A" onchange="progresivo.responder('sub01',6,this.value,'B','Se mantiene presionado el boton hasta que la luz azul se enciende y suena la musica.')"> A. Se agita dos veces</label>
+            <label><input type="radio" name="sub01-p3" value="B" onchange="progresivo.responder('sub01',6,this.value,'B','Se mantiene presionado el boton hasta que la luz azul se enciende y suena la musica.')"> B. Manteniendo presionado el boton de encendido</label>
+            <label><input type="radio" name="sub01-p3" value="C" onchange="progresivo.responder('sub01',6,this.value,'B','Se mantiene presionado el boton hasta que la luz azul se enciende y suena la musica.')"> C. Tocando la pantalla</label>
+            <label><input type="radio" name="sub01-p3" value="D" onchange="progresivo.responder('sub01',6,this.value,'B','Se mantiene presionado el boton hasta que la luz azul se enciende y suena la musica.')"> D. Conectando un cable USB</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 7 — Lectura 4: Los bloques de programacion -->
+      <div class="paso-pagina" data-paso="7" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>8</span> de 14 — Lectura 4 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 4</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fce4ec; padding:8px;">
+              <defs><style>.l4t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#880e4f}.l4l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#ad1457}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l4t">Fichas de direccion</text>
+              <rect x="30" y="40" width="70" height="50" rx="8" fill="#43a047"/>
+              <text x="65" y="70" text-anchor="middle" style="font-size:22px;fill:white;">⬆️</text>
+              <text x="65" y="106" text-anchor="middle" style="font-size:8px;fill:#2e7d32;">Adelante</text>
+              <rect x="120" y="40" width="70" height="50" rx="8" fill="#fb8c00"/>
+              <text x="155" y="70" text-anchor="middle" style="font-size:22px;fill:white;">⬇️</text>
+              <text x="155" y="106" text-anchor="middle" style="font-size:8px;fill:#e65100;">Atras</text>
+              <rect x="210" y="40" width="70" height="50" rx="8" fill="#1e88e5"/>
+              <text x="245" y="70" text-anchor="middle" style="font-size:22px;fill:white;">➡️</text>
+              <text x="245" y="106" text-anchor="middle" style="font-size:8px;fill:#1565c0;">Giro dcha.</text>
+              <rect x="300" y="40" width="70" height="50" rx="8" fill="#e53935"/>
+              <text x="335" y="70" text-anchor="middle" style="font-size:22px;fill:white;">⬅️</text>
+              <text x="335" y="106" text-anchor="middle" style="font-size:8px;fill:#c62828;">Giro izq.</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Las fichas o bloques de codificacion son las piezas que representan cada orden.
+              En el kit basico existen cuatro tipos de fichas de movimiento. La ficha de
+              adelante ordena al robot avanzar una casilla. La ficha de atras lo hace retroceder
+              una casilla. La ficha de giro a la derecha y la ficha de giro a la izquierda hacen
+              que el robot rote 90 grados sobre su propio eje. Por cada paso de adelante o de
+              atras el robot se mueve 10 centimetros en esa direccion. Cada giro, tanto a la
+              derecha como a la izquierda, es de 90 grados. Los giros no implican desplazamiento:
+              el robot rota pero permanece en la misma casilla. Con estas cuatro fichas se puede
+              construir cualquier camino sobre un tapete cuadriculado.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 4
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 8 — Pregunta 4 -->
+      <div class="paso-pagina" data-paso="8" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>9</span> de 14 — Pregunta 4</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Cuanto avanza el robot con una ficha de adelante?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p4" value="A" onchange="progresivo.responder('sub01',8,this.value,'C','Por cada paso de adelante o atras el robot se mueve 10 centimetros.')"> A. 1 centimetro</label>
+            <label><input type="radio" name="sub01-p4" value="B" onchange="progresivo.responder('sub01',8,this.value,'C','Por cada paso de adelante o atras el robot se mueve 10 centimetros.')"> B. 100 centimetros</label>
+            <label><input type="radio" name="sub01-p4" value="C" onchange="progresivo.responder('sub01',8,this.value,'C','Por cada paso de adelante o atras el robot se mueve 10 centimetros.')"> C. 10 centimetros</label>
+            <label><input type="radio" name="sub01-p4" value="D" onchange="progresivo.responder('sub01',8,this.value,'C','Por cada paso de adelante o atras el robot se mueve 10 centimetros.')"> D. 5 centimetros</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 9 — Lectura 5: Como programar -->
+      <div class="paso-pagina" data-paso="9" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>10</span> de 14 — Lectura 5 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 5</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8eaf6; padding:8px;">
+              <defs><style>.l5t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#283593}.l5l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#3949ab}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l5t">Secuencia de programacion</text>
+              <rect x="20" y="35" width="55" height="40" rx="6" fill="#43a047"/>
+              <text x="47" y="60" text-anchor="middle" style="font-size:20px;fill:white;">⬆️</text>
+              <rect x="85" y="35" width="55" height="40" rx="6" fill="#43a047"/>
+              <text x="112" y="60" text-anchor="middle" style="font-size:20px;fill:white;">⬆️</text>
+              <rect x="150" y="35" width="55" height="40" rx="6" fill="#1e88e5"/>
+              <text x="177" y="60" text-anchor="middle" style="font-size:20px;fill:white;">➡️</text>
+              <rect x="215" y="35" width="55" height="40" rx="6" fill="#43a047"/>
+              <text x="242" y="60" text-anchor="middle" style="font-size:20px;fill:white;">⬆️</text>
+              <circle cx="330" cy="55" r="26" fill="white" stroke="#43a047" stroke-width="3"/>
+              <text x="330" y="60" text-anchor="middle" style="font-size:9px;fill:#2e7d32;font-weight:700;">INICIO</text>
+              <text x="200" y="112" text-anchor="middle" class="l5l">Se lee de izquierda a derecha: 2 adelante, giro, adelante</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Programar MatataBot es muy sencillo: se colocan las fichas una tras otra en el
+              tablero, de izquierda a derecha, en el orden en que deben ejecutarse. Ese orden
+              es la secuencia del programa. Despues se presiona el boton de inicio y la torre
+              transfiere las instrucciones al robot. El robot comienza a moverse siguiendo la
+              secuencia completa. Si quieres que el robot avance dos casillas, colocas dos
+              fichas de adelante seguidas. Si luego debe girar, agregas la ficha de giro, y asi
+              sucesivamente. La programacion puede ser enchufada, usando las fichas y el robot,
+              o desenchufada, dibujando o escribiendo la secuencia en papel antes de programar.
+              Esta segunda forma desarrolla la planificacion: pensar el camino antes de mover
+              el robot. Con practica, los estudiantes aprenden a organizar pasos logicos,
+              prever resultados y corregir errores.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 5
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 10 — Pregunta 5 -->
+      <div class="paso-pagina" data-paso="10" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>11</span> de 14 — Pregunta 5</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">En que orden se leen las fichas colocadas en el tablero?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p5" value="A" onchange="progresivo.responder('sub01',10,this.value,'B','Se colocan una tras otra de izquierda a derecha, en el orden en que deben ejecutarse.')"> A. De derecha a izquierda</label>
+            <label><input type="radio" name="sub01-p5" value="B" onchange="progresivo.responder('sub01',10,this.value,'B','Se colocan una tras otra de izquierda a derecha, en el orden en que deben ejecutarse.')"> B. De izquierda a derecha</label>
+            <label><input type="radio" name="sub01-p5" value="C" onchange="progresivo.responder('sub01',10,this.value,'B','Se colocan una tras otra de izquierda a derecha, en el orden en que deben ejecutarse.')"> C. De arriba hacia abajo</label>
+            <label><input type="radio" name="sub01-p5" value="D" onchange="progresivo.responder('sub01',10,this.value,'B','Se colocan una tras otra de izquierda a derecha, en el orden en que deben ejecutarse.')"> D. En orden aleatorio</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 11 — Lectura 6: Que desarrollamos -->
+      <div class="paso-pagina" data-paso="11" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>12</span> de 14 — Lectura 6 de 6</div>
+
+        <div class="paso-texto">
+          <span class="paso-numero">Lectura 6</span>
+
+          <div style="display:flex; justify-content:center; margin:0 0 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e0f7fa; padding:8px;">
+              <defs><style>.l6t{font-family:Nunito,sans-serif;font-size:11px;font-weight:700;fill:#006064}.l6l{font-family:Nunito,sans-serif;font-size:9px;font-weight:600;fill:#00838f}</style></defs>
+              <text x="200" y="16" text-anchor="middle" class="l6t">Pensamiento computacional</text>
+              <circle cx="90" cy="60" r="30" fill="#4fc3f7" opacity="0.3"/>
+              <text x="90" y="65" text-anchor="middle" style="font-size:18px;">🧠</text>
+              <circle cx="185" cy="60" r="30" fill="#81c784" opacity="0.3"/>
+              <text x="185" y="65" text-anchor="middle" style="font-size:18px;">🗺️</text>
+              <circle cx="280" cy="60" r="30" fill="#ffb74d" opacity="0.3"/>
+              <text x="280" y="65" text-anchor="middle" style="font-size:18px;">🤝</text>
+              <text x="90" y="105" text-anchor="middle" style="font-size:8px;fill:#546e7a;font-weight:600;">Pensar</text>
+              <text x="185" y="105" text-anchor="middle" style="font-size:8px;fill:#546e7a;font-weight:600;">Planificar</text>
+              <text x="280" y="105" text-anchor="middle" style="font-size:8px;fill:#546e7a;font-weight:600;">Trabajar en equipo</text>
+            </svg>
+          </div>
+
+          <div class="paso-contenido-lectura">
+            <p>
+              Trabajar con MatataBot no solo enseña a programar: desarrolla habilidades muy
+              valiosas. Se aprende el pensamiento computacional, que es la capacidad de dividir
+              un problema en pasos pequenos y ordenados para resolverlo. Tambien se trabaja la
+              percepcion espacial, porque hay que imaginar el recorrido del robot sobre el
+              tapete. Se practican direcciones, secuencias y vocabulario significativo al
+              identificar imagenes. El trabajo se hace en equipo: organizarse, llegar a acuerdos
+              y respetar las ideas de los companeros es parte del reto. La robotica despierta la
+              curiosidad, impulsa la motivacion y desarrolla habilidades STEAM: ciencia,
+              tecnologia, ingenieeria, arte y matematicas. En resumen, con bloques de colores
+              aprendemos a pensar mejor y a trabajar mejor con los demas.
+            </p>
+          </div>
+        </div>
+
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub01')">
+            Termine de leer → Pregunta 6
+          </button>
+        </div>
+
+      </div>
+
+      <!-- PASO 12 — Pregunta 6 -->
+      <div class="paso-pagina" data-paso="12" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>13</span> de 14 — Pregunta 6</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Pregunta sobre la lectura anterior</h3>
+          <p class="paso-enunciado">Que es el pensamiento computacional?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub01-p6" value="A" onchange="progresivo.responder('sub01',12,this.value,'C','Es la capacidad de dividir un problema en pasos pequenos y ordenados para resolverlo.')"> A. Usar la computadora mas rapido</label>
+            <label><input type="radio" name="sub01-p6" value="B" onchange="progresivo.responder('sub01',12,this.value,'C','Es la capacidad de dividir un problema en pasos pequenos y ordenados para resolverlo.')"> B. Memorizar muchos codigos</label>
+            <label><input type="radio" name="sub01-p6" value="C" onchange="progresivo.responder('sub01',12,this.value,'C','Es la capacidad de dividir un problema en pasos pequenos y ordenados para resolverlo.')"> C. Dividir un problema en pasos pequenos y ordenados</label>
+            <label><input type="radio" name="sub01-p6" value="D" onchange="progresivo.responder('sub01',12,this.value,'C','Es la capacidad de dividir un problema en pasos pequenos y ordenados para resolverlo.')"> D. Escribir textos largos</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub01')">Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub01')">Siguiente</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PASO 13 — Pagina final -->
+      <div class="paso-pagina" data-paso="13" style="display:none">
+
+        <div class="paso-indicador">Pagina <span>14</span> de 14 — Final</div>
+
+        <div class="paso-pregunta-card">
+          <h3>Preguntas de comprension finales</h3>
+          <p style="color:#78909c; margin-bottom:1.2rem;">Responde todas las preguntas para completar el taller.</p>
+
+          <div class="pregunta" id="fpreg1">
+            <p>1. Que necesita MatataBot para funcionar?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg1" value="A"><label>A. Solo bloques fisicos y la torre</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="B"><label>B. Un celular conectado</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="C"><label>C. Una computadora portatil</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg1" value="D"><label>D. Internet siempre</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg2">
+            <p>2. Cada giro del robot, a la derecha o a la izquierda, es de:</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="A"><label>A. 10 grados</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg2" value="B"><label>B. 90 grados</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="C"><label>C. 180 grados</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg2" value="D"><label>D. 360 grados</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+
+          <div class="pregunta" id="fpreg3">
+            <p>3. La torre de mando transfiere el programa a:</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="A"><label>A. Las fichas</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="B"><label>B. El tablero</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fpreg3" value="C"><label>C. El robot MatataBot</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fpreg3" value="D"><label>D. La caja del kit</label></div>
+            </div>
+            <div class="feedback" style="display:none"></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:0;">
+          <h2>Sopa de Letras</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las palabras clave relacionadas con la lectura.</p>
+          <div id="sopa01"></div>
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    Colegio San Luis · Tecnologia e Informatica · Grado Sexto · Hecho con <span>amor</span> para nuestros estudiantes
+  </footer>
+
+  <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
+  <script>
+    crearSopa('sopa01', ['MATATABOT','TORRE','TABLERO','FICHA','ROBOT'], 10, ['MATATABOT','TORRE','TABLERO','FICHA','ROBOT']);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      progresivo.iniciar('sub01');
+
+      document.querySelectorAll('#sub01 .pregunta .opcion').forEach(function(opcion) {
+        opcion.addEventListener('click', function() {
+          var radio = this.querySelector('input[type="radio"]');
+          if (radio.disabled) return;
+          radio.checked = true;
+          var pregunta = this.closest('.pregunta');
+          var feedback = pregunta.querySelector('.feedback');
+          var correcta = this.dataset.correcta === 'true';
+          pregunta.classList.remove('correcta', 'incorrecta');
+          pregunta.querySelectorAll('.opcion input').forEach(function(r) { r.disabled = true; });
+          if (correcta) {
+            pregunta.classList.add('correcta');
+            feedback.textContent = 'Correcto!';
+          } else {
+            pregunta.classList.add('incorrecta');
+            feedback.textContent = 'Revisa la lectura.';
+          }
+          feedback.style.display = 'block';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
