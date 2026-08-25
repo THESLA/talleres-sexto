@@ -116,7 +116,6 @@
       <div id="resultado" style="display:none;">
         <h2 style="text-align:center;">🏁 Resultado de la evaluación</h2>
         <div id="detalleResultado"></div>
-        <div class="review-box" id="reviewBox"></div>
         <div style="text-align:center; margin-top:1.2rem;">
           <a href="index.html" class="btn btn-secundario">🏠 Volver al inicio</a>
         </div>
@@ -186,7 +185,6 @@
     var progresoEl = document.getElementById('progresoEval');
     var preguntaActualEl = document.getElementById('preguntaActual');
     var detalleEl = document.getElementById('detalleResultado');
-    var reviewEl = document.getElementById('reviewBox');
 
     var timerInterval = null;
     var examenActual = [];
@@ -329,11 +327,14 @@
     }
 
     function calcularNota(porc) {
-      if (porc >= 90) return { nota: '5.0', mensaje: '¡Excelente! Dominas la historia de la conectividad.' };
-      if (porc >= 80) return { nota: '4.0', mensaje: 'Muy bien, gran dominio del tema.' };
-      if (porc >= 70) return { nota: '3.0', mensaje: 'Bien, vas por buen camino.' };
-      if (porc >= 60) return { nota: '2.0', mensaje: 'Suficiente, repasa algunos temas.' };
-      return { nota: '1.0', mensaje: 'Necesitas repasar los talleres de conectividad.' };
+      var nota = Math.round((1 + (porc / 100) * 9) * 10) / 10; // escala de 1 a 10
+      var mensaje;
+      if (porc >= 90) mensaje = '¡Excelente! Dominas la historia de la conectividad.';
+      else if (porc >= 80) mensaje = 'Muy bien, gran dominio del tema.';
+      else if (porc >= 70) mensaje = 'Bien, vas por buen camino.';
+      else if (porc >= 60) mensaje = 'Suficiente, repasa algunos temas.';
+      else mensaje = 'Necesitas repasar los talleres de conectividad.';
+      return { nota: nota.toFixed(1), mensaje: mensaje };
     }
 
     function colorPorc(porc) {
@@ -349,29 +350,16 @@
       resultadoEl.style.display = 'block';
 
       var color = colorPorc(d.porc);
+      var fallos = d.total - d.aciertos;
       var html = '';
       html += '<p class="mensaje-nota">' + (d.timeUp ? '⏱️ Se acabó el tiempo. ' : '') + d.mensaje + '</p>';
       html += '<div class="nota-grande" style="color:' + color + ';">' + d.nota + '</div>';
-      html += '<p style="text-align:center; color:#546e7a; margin-top:-0.3rem;">Calificación (escala de 1 a 5)</p>';
+      html += '<p style="text-align:center; color:#546e7a; margin-top:-0.3rem;">Puntuación (escala de 1 a 10)</p>';
       html += '<div style="text-align:center; font-size:1.3rem; font-weight:800; color:' + color + ';">' + d.porc + '% de aciertos</div>';
       html += '<div class="barra-porc"><div style="width:' + d.porc + '%; background:' + color + ';"></div></div>';
-      html += '<p style="text-align:center; color:#546e7a;">Respondiste correctamente <strong>' + d.aciertos + '</strong> de <strong>' + d.total + '</strong> preguntas.</p>';
+      html += '<p style="text-align:center; color:#546e7a; font-size:1.1rem;">Respondiste bien <strong style="color:#2e7d32;">' + d.aciertos + '</strong> y mal <strong style="color:#e53935;">' + fallos + '</strong> de <strong>' + d.total + '</strong> preguntas.</p>';
       html += '<p style="text-align:center; color:#9e9e9e; font-size:0.9rem; margin-top:1rem;">Esta evaluación ya fue realizada y no puede repetirse.</p>';
       detalleEl.innerHTML = html;
-
-      // Repaso: muestra cada pregunta con la respuesta correcta
-      var rev = '';
-      examenActual.forEach(function(item, i) {
-        var ok = (respuestas[i] !== null && parseInt(respuestas[i], 10) === item.c);
-        var clase = ok ? 'acierto' : 'fallo';
-        var tuResp = (respuestas[i] === null)
-          ? '<div class="tu-resp mal">Sin responder</div>'
-          : '<div class="tu-resp' + (ok ? '' : ' mal') + '">Tu respuesta: ' + LETRAS[parseInt(respuestas[i], 10)] + '. ' + item.a[parseInt(respuestas[i], 10)] + '</div>';
-        rev += '<div class="eval-bloque ' + clase + '"><p class="preg">' + (i + 1) + '. ' + item.q + '</p>'
-             + tuResp
-             + '<div class="correcta-txt">Correcta: ' + LETRAS[item.c] + '. ' + item.a[item.c] + '</div></div>';
-      });
-      reviewEl.innerHTML = rev;
     }
 
     // ----- Eventos -----
