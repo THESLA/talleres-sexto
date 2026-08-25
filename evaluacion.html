@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Conectividad — Tecnología · Sexto</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .eval-timer {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: #1a73e8;
+      color: white;
+      padding: 0.7rem;
+      border-radius: 0 0 14px 14px;
+      letter-spacing: 1px;
+    }
+    .eval-timer.alerta { background: #e53935; animation: parpadeo 1s infinite; }
+    @keyframes parpadeo { 50% { opacity: 0.6; } }
+    .eval-bloque {
+      background: #f7faff;
+      border: 2px solid #e3f2fd;
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .eval-bloque p.preg {
+      font-weight: 700;
+      color: #1a237e;
+      margin-bottom: 0.7rem;
+    }
+    .eval-bloque label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.7rem;
+      margin-bottom: 0.4rem;
+      background: white;
+      border: 1.5px solid #d6e4ff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.98rem;
+    }
+    .eval-bloque label:hover { border-color: #1a73e8; }
+    .eval-bloque input[type="radio"] { transform: scale(1.2); }
+    .eval-bloque.acierto label.sel { border-color: #2e7d32; background: #e8f5e9; }
+    .eval-bloque.fallo label.sel { border-color: #e53935; background: #ffebee; }
+    .eval-bloque .correcta-txt { color: #2e7d32; font-weight: 700; margin-top: 0.3rem; }
+    .nota-grande { font-size: 3rem; font-weight: 800; text-align: center; }
+    .mensaje-nota { text-align: center; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .barra-porc { height: 18px; background: #e0e0e0; border-radius: 9px; overflow: hidden; margin: 0.8rem 0; }
+    .barra-porc > div { height: 100%; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📝 Evaluación de <span>Conectividad</span></h1>
+    <div class="subtitulo">Colegio San Luis · Grado Sexto</div>
+  </header>
+
+  <nav class="subtaller-nav">
+    <a href="index.html">🏠 Inicio</a>
+    <span class="separador">|</span>
+    <a href="temas/tema01-conectividad/">📋 Tema Conectividad</a>
+  </nav>
+
+  <main>
+    <article class="card" id="eval">
+
+      <!-- PANTALLA DE INICIO -->
+      <div id="inicio">
+        <h2 style="text-align:center;">📝 Evaluación de Conectividad</h2>
+        <p style="text-align:center; color:#546e7a; max-width:620px; margin:0 auto 1rem;">
+          Esta evaluación revisa lo aprendido en los primeros cuatro talleres de Conectividad
+          (comunicación antigua, telégrafo y teléfono, radio y televisión, e internet).
+        </p>
+        <div style="background:#fff8e1; border-radius:14px; padding:1rem; max-width:620px; margin:0 auto 1.2rem; color:#795548;">
+          <p style="margin:0 0 0.4rem;"><strong>📌 Reglas:</strong></p>
+          <ul style="margin:0; padding-left:1.2rem;">
+            <li>Máximo <strong>35 preguntas</strong> de opción múltiple.</li>
+            <li>El orden de las preguntas y de las respuestas es <strong>aleatorio</strong>.</li>
+            <li>Solo tienes <strong>un intento</strong>. Una vez enviada, no se puede repetir.</li>
+            <li>Tiempo máximo: <strong>30 minutos</strong>. Si se acaba, se cierra y se califica automáticamente.</li>
+          </ul>
+        </div>
+        <div style="text-align:center;">
+          <button id="btnIniciar" class="btn btn-primario">▶ Comenzar evaluación</button>
+        </div>
+      </div>
+
+      <!-- PANTALLA DE EXAMEN -->
+      <div id="examen" style="display:none;">
+        <div id="temporizador" class="eval-timer">⏱️ Tiempo restante: 30:00</div>
+        <div id="listaPreguntas" style="margin-top:1rem;"></div>
+        <div style="text-align:center; margin-top:1.5rem;">
+          <button id="btnFinalizar" class="btn btn-primario">✅ Finalizar evaluación</button>
+        </div>
+      </div>
+
+      <!-- PANTALLA DE RESULTADO -->
+      <div id="resultado" style="display:none;">
+        <h2 style="text-align:center;">🏁 Resultado de la evaluación</h2>
+        <div id="detalleResultado"></div>
+        <div style="text-align:center; margin-top:1.2rem;">
+          <a href="index.html" class="btn btn-secundario">🏠 Volver al inicio</a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    Colegio San Luis · Tecnología e Informática · Grado Sexto · Hecho con <span>amor</span> para nuestros estudiantes
+  </footer>
+
+  <script>
+    // ===== Banco de preguntas (máximo 35) basadas en los 4 primeros talleres =====
+    var POOL = [
+      { q:'¿Cuál fue la primera forma de comunicación a distancia que se menciona en los talleres?', a:['Las señales de humo y las palomas mensajeras','El correo electrónico','El teléfono celular','Las redes sociales'], c:0 },
+      { q:'¿Quién demostró el telégrafo eléctrico en 1844?', a:['Alexander Graham Bell','Samuel Morse','Guglielmo Marconi','Tim Berners-Lee'], c:1 },
+      { q:'¿Quién inventó el teléfono en el año 1876?', a:['Samuel Morse','Thomas Edison','Alexander Graham Bell','Nikola Tesla'], c:2 },
+      { q:'¿Quién inventó la radio en 1895?', a:['Guglielmo Marconi','Samuel Morse','Alexander Graham Bell','Tim Berners-Lee'], c:0 },
+      { q:'¿Cuál fue el precursor de internet creado en 1969?', a:['La World Wide Web','ARPANET','El telégrafo','Google'], c:1 },
+      { q:'¿Quién creó la World Wide Web en 1989?', a:['Vint Cerf','Tim Berners-Lee','Marc Andreessen','Robert Kahn'], c:1 },
+      { q:'¿Cómo llevaban las palomas mensajeras los mensajes?', a:['En una mochila','Atados a una de sus patas','Dentro de un tubo de metal','En la cabeza'], c:1 },
+      { q:'El código Morse representa las letras mediante:', a:['Colores','Puntos y rayas','Números del 1 al 10','Dibujos'], c:1 },
+      { q:'¿Qué aparato transmite la voz humana mediante señales eléctricas?', a:['El telégrafo','La radio','El teléfono','La televisión'], c:2 },
+      { q:'¿Qué problema resolvió el telégrafo?', a:['Hablar con voz a distancia','Enviar mensajes rápidos a larga distancia','Ver imágenes en movimiento','Navegar por internet'], c:1 },
+      { q:'¿Qué utiliza el código Morse para representar las letras y los números?', a:['Puntos y rayas','Letras mayúsculas','Símbolos matemáticos','Emojis'], c:0 },
+      { q:'¿Entre qué dos ciudades se envió el primer mensaje telegráfico en 1844?', a:['Nueva York y Boston','Washington y Baltimore','Londres y París','Madrid y Barcelona'], c:1 },
+      { q:'¿Quién patentó el teléfono en 1876?', a:['Samuel Morse','Alexander Graham Bell','Guglielmo Marconi','Almon Strowger'], c:1 },
+      { q:'¿Qué hacían las operadoras en las primeras centrales telefónicas?', a:['Vendían los teléfonos','Conectaban los cables manualmente','Escribían telegramas','Reparaban las antenas'], c:1 },
+      { q:'¿En qué año se instaló el primer cable telegráfico transatlántico?', a:['1844','1866','1876','1895'], c:1 },
+      { q:'La señal de auxilio SOS en código Morse es:', a:['... --- ...','--- ... ---','. . .','--- --- ---'], c:0 },
+      { q:'¿Qué transporta hoy el cable submarino que conecta continentes?', a:['Electricidad','Agua dulce','Fibra óptica','Petróleo'], c:2 },
+      { q:'¿Qué decía el primer mensaje telegráfico enviado en 1844?', a:['Hello world','What hath God wrought','Hola mundo','Eureka'], c:1 },
+      { q:'¿Quién predijo matemáticamente la existencia de las ondas electromagnéticas en 1865?', a:['Heinrich Hertz','James Clerk Maxwell','Guglielmo Marconi','Edwin Armstrong'], c:1 },
+      { q:'¿En qué año Marconi logró transmitir la letra S a través del océano Atlántico?', a:['1887','1895','1901','1925'], c:2 },
+      { q:'¿Qué significa la sigla FM en la radio?', a:['Frecuencia Máxima','Frecuencia Modulada','Frecuencia Mínima','Forma Modular'], c:1 },
+      { q:'¿Quién demostró la primera televisión mecánica en 1925?', a:['Vladimir Zworykin','Philo Farnsworth','John Logie Baird','Guglielmo Marconi'], c:2 },
+      { q:'¿Qué inventó Vladimir Zworykin?', a:['La radio','El iconoscopio','El código Morse','La World Wide Web'], c:1 },
+      { q:'¿Cómo se llama la televisión que tiene internet integrado?', a:['TV digital','Smart TV','HD TV','TV 4K'], c:1 },
+      { q:'¿A qué velocidad viajan las ondas electromagnéticas?', a:['Velocidad del sonido','Velocidad de la luz','100 km/h','1000 km/h'], c:1 },
+      { q:'La radio FM tiene mejor calidad de sonido porque:', a:['Usa más energía','Es más barata','Tiene menos interferencias','Llega más lejos'], c:2 },
+      { q:'¿Qué motivó la creación de una red de computadoras descentralizada?', a:['La Guerra Fría','La radio','El teléfono','La televisión'], c:0 },
+      { q:'¿Cuántas universidades conectaba ARPANET al inicio, en 1969?', a:['2','4','10','50'], c:1 },
+      { q:'¿Qué función cumple el protocolo TCP/IP?', a:['Es un navegador web','Es un cable de conexión','Es un protocolo que conecta redes','Es un lenguaje de programación'], c:2 },
+      { q:'¿Dónde trabajaba Tim Berners-Lee cuando creó la Web?', a:['En Estados Unidos','En el CERN, Suiza','En Inglaterra','En Francia'], c:1 },
+      { q:'¿Cuál fue el primer navegador web gráfico?', a:['Mosaic','Netscape','Internet Explorer','Google Chrome'], c:0 },
+      { q:'¿En qué año nació el buscador Google?', a:['1989','1993','1995','1998'], c:3 },
+      { q:'¿Cuál fue el primer mensaje enviado por ARPANET?', a:['LO','LOGIN','HELLO','HOLA'], c:0 },
+      { q:'Tim Berners-Lee inventó, entre otras cosas:', a:['El teléfono','HTML, HTTP y las URLs','La radio','El código Morse'], c:1 },
+      { q:'¿Qué permitió el protocolo TCP/IP a las distintas redes?', a:['Navegar por imágenes','Conectarse entre sí','Ver videos','Enviar solo correos'], c:1 }
+    ];
+
+    var TIEMPO_MAX = 30 * 60; // 30 minutos en segundos
+    var KEY_DONE = 'eval_conectividad_done';
+    var KEY_START = 'eval_conectividad_start';
+    var KEY_EXAM = 'eval_conectividad_exam';
+
+    var inicioEl = document.getElementById('inicio');
+    var examenEl = document.getElementById('examen');
+    var resultadoEl = document.getElementById('resultado');
+    var btnIniciar = document.getElementById('btnIniciar');
+    var btnFinalizar = document.getElementById('btnFinalizar');
+    var temporizadorEl = document.getElementById('temporizador');
+    var listaEl = document.getElementById('listaPreguntas');
+    var detalleEl = document.getElementById('detalleResultado');
+
+    var timerInterval = null;
+
+    // ----- Utilidades -----
+    function barajar(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
+    }
+
+    function construirExamen() {
+      var orden = barajar(POOL);
+      var examen = orden.map(function(item) {
+        var idx = barajar([0,1,2,3]);
+        var opciones = idx.map(function(k) { return item.a[k]; });
+        var correctaNueva = idx.indexOf(item.c);
+        return { q: item.q, a: opciones, c: correctaNueva };
+      });
+      return examen;
+    }
+
+    function obtenerExamen() {
+      var guardado = localStorage.getItem(KEY_EXAM);
+      if (guardado) {
+        try { return JSON.parse(guardado); } catch(e) {}
+      }
+      var ex = construirExamen();
+      localStorage.setItem(KEY_EXAM, JSON.stringify(ex));
+      return ex;
+    }
+
+    function tiempoRestante() {
+      var start = parseInt(localStorage.getItem(KEY_START), 10);
+      if (!start) return TIEMPO_MAX;
+      var transcurrido = Math.floor((Date.now() - start) / 1000);
+      return Math.max(0, TIEMPO_MAX - transcurrido);
+    }
+
+    function formato(t) {
+      var m = Math.floor(t / 60);
+      var s = t % 60;
+      return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    // ----- Render del examen -----
+    var examenActual = [];
+
+    function renderExamen() {
+      examenActual = obtenerExamen();
+      listaEl.innerHTML = '';
+      examenActual.forEach(function(item, i) {
+        var bloque = document.createElement('div');
+        bloque.className = 'eval-bloque';
+        bloque.id = 'bloque' + i;
+        var html = '<p class="preg">' + (i + 1) + '. ' + item.q + '</p>';
+        var letras = ['A','B','C','D'];
+        item.a.forEach(function(op, k) {
+          html += '<label><input type="radio" name="q' + i + '" value="' + k + '"> ' + letras[k] + '. ' + op + '</label>';
+        });
+        bloque.innerHTML = html;
+        listaEl.appendChild(bloque);
+      });
+    }
+
+    function actualizarTimer() {
+      var rest = tiempoRestante();
+      temporizadorEl.textContent = '⏱️ Tiempo restante: ' + formato(rest);
+      if (rest <= 60) temporizadorEl.classList.add('alerta');
+      if (rest <= 0) finalizar(true);
+    }
+
+    function iniciar() {
+      if (localStorage.getItem(KEY_DONE)) { mostrarResultado(JSON.parse(localStorage.getItem(KEY_DONE))); return; }
+      if (!localStorage.getItem(KEY_START)) {
+        localStorage.setItem(KEY_START, String(Date.now()));
+      }
+      inicioEl.style.display = 'none';
+      resultadoEl.style.display = 'none';
+      examenEl.style.display = 'block';
+      renderExamen();
+      actualizarTimer();
+      timerInterval = setInterval(actualizarTimer, 1000);
+    }
+
+    // ----- Finalizar y calificar -----
+    function finalizar(timeUp) {
+      if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+      var aciertos = 0;
+      var total = examenActual.length;
+      examenActual.forEach(function(item, i) {
+        var bloque = document.getElementById('bloque' + i);
+        var sel = bloque.querySelector('input[type="radio"]:checked');
+        var radios = bloque.querySelectorAll('input[type="radio"]');
+        for (var r = 0; r < radios.length; r++) radios[r].disabled = true;
+        if (sel) {
+          var val = parseInt(sel.value, 10);
+          var labelSel = sel.closest('label');
+          labelSel.classList.add('sel');
+          if (val === item.c) {
+            aciertos++;
+            bloque.classList.add('acierto');
+          } else {
+            bloque.classList.add('fallo');
+            var correctaLabel = bloque.querySelectorAll('label')[item.c];
+            var aviso = document.createElement('div');
+            aviso.className = 'correcta-txt';
+            aviso.textContent = 'Respuesta correcta: ' + ['A','B','C','D'][item.c] + '. ' + item.a[item.c];
+            bloque.appendChild(aviso);
+          }
+        } else {
+          bloque.classList.add('fallo');
+          var correctaLabel2 = bloque.querySelectorAll('label')[item.c];
+          var aviso2 = document.createElement('div');
+          aviso2.className = 'correcta-txt';
+          aviso2.textContent = 'Respuesta correcta: ' + ['A','B','C','D'][item.c] + '. ' + item.a[item.c];
+          bloque.appendChild(aviso2);
+        }
+      });
+
+      var porc = total > 0 ? Math.round((aciertos / total) * 100) : 0;
+      var nota = calcularNota(porc);
+      var datos = { aciertos: aciertos, total: total, porc: porc, nota: nota.nota, mensaje: nota.mensaje, timeUp: !!timeUp };
+      localStorage.setItem(KEY_DONE, JSON.stringify(datos));
+      mostrarResultado(datos);
+    }
+
+    function calcularNota(porc) {
+      if (porc >= 90) return { nota: '5.0', mensaje: '¡Excelente! Dominas la historia de la conectividad.' };
+      if (porc >= 80) return { nota: '4.0', mensaje: 'Muy bien, gran dominio del tema.' };
+      if (porc >= 70) return { nota: '3.0', mensaje: 'Bien, vas por buen camino.' };
+      if (porc >= 60) return { nota: '2.0', mensaje: 'Suficiente, repasa algunos temas.' };
+      return { nota: '1.0', mensaje: 'Necesitas repasar los talleres de conectividad.' };
+    }
+
+    function colorPorc(porc) {
+      if (porc >= 70) return '#2e7d32';
+      if (porc >= 60) return '#f9a825';
+      return '#e53935';
+    }
+
+    function mostrarResultado(d) {
+      if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+      inicioEl.style.display = 'none';
+      examenEl.style.display = 'none';
+      resultadoEl.style.display = 'block';
+      var color = colorPorc(d.porc);
+      var html = '';
+      html += '<p class="mensaje-nota">' + (d.timeUp ? '⏱️ Se acabó el tiempo. ' : '') + d.mensaje + '</p>';
+      html += '<div class="nota-grande" style="color:' + color + ';">' + d.nota + '</div>';
+      html += '<p style="text-align:center; color:#546e7a; margin-top:-0.3rem;">Calificación (escala de 1 a 5)</p>';
+      html += '<div style="text-align:center; font-size:1.3rem; font-weight:800; color:' + color + ';">' + d.porc + '% de aciertos</div>';
+      html += '<div class="barra-porc"><div style="width:' + d.porc + '%; background:' + color + ';"></div></div>';
+      html += '<p style="text-align:center; color:#546e7a;">Respondiste correctamente <strong>' + d.aciertos + '</strong> de <strong>' + d.total + '</strong> preguntas.</p>';
+      html += '<p style="text-align:center; color:#9e9e9e; font-size:0.9rem; margin-top:1rem;">Esta evaluación ya fue realizada y no puede repetirse.</p>';
+      detalleEl.innerHTML = html;
+    }
+
+    // ----- Eventos -----
+    btnIniciar.addEventListener('click', iniciar);
+    btnFinalizar.addEventListener('click', function() { finalizar(false); });
+
+    // Si ya está hecho, mostrar resultado al abrir
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem(KEY_DONE)) {
+        mostrarResultado(JSON.parse(localStorage.getItem(KEY_DONE)));
+      }
+    });
+  </script>
+
+</body>
+</html>
