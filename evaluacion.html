@@ -380,7 +380,7 @@
       if (doneGuardado) {
         var datosGuardados = JSON.parse(doneGuardado);
         var hoy = new Date().toISOString().split('T')[0];
-        if (datosGuardados.fecha && datosGuardados.fecha !== hoy) {
+        if (!datosGuardados.fecha || datosGuardados.fecha !== hoy) {
           // Es otro día: desbloquear todo
           localStorage.removeItem(KEY_DONE);
           localStorage.removeItem(KEY_START);
