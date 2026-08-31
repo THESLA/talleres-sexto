@@ -321,7 +321,7 @@
 
       var porc = total > 0 ? Math.round((aciertos / total) * 100) : 0;
       var nota = calcularNota(porc);
-      var datos = { aciertos: aciertos, total: total, porc: porc, nota: nota.nota, mensaje: nota.mensaje, timeUp: !!timeUp };
+      var datos = { aciertos: aciertos, total: total, porc: porc, nota: nota.nota, mensaje: nota.mensaje, timeUp: !!timeUp, fecha: new Date().toISOString().split('T')[0] };
       localStorage.setItem(KEY_DONE, JSON.stringify(datos));
       mostrarResultado(datos);
     }
@@ -374,12 +374,25 @@
     });
     btnFinalizar.addEventListener('click', function() { finalizar(false); });
 
-    // Si ya está hecho, mostrar resultado al abrir
+    // Si ya está hecho, verificar si es otro día para desbloquear
     document.addEventListener('DOMContentLoaded', function() {
-      if (localStorage.getItem(KEY_DONE)) {
+      var doneGuardado = localStorage.getItem(KEY_DONE);
+      if (doneGuardado) {
+        var datosGuardados = JSON.parse(doneGuardado);
+        var hoy = new Date().toISOString().split('T')[0];
+        if (datosGuardados.fecha && datosGuardados.fecha !== hoy) {
+          // Es otro día: desbloquear todo
+          localStorage.removeItem(KEY_DONE);
+          localStorage.removeItem(KEY_START);
+          localStorage.removeItem(KEY_EXAM);
+          localStorage.removeItem(KEY_RESP);
+          // Mostrar pantalla de inicio normal (no hacer nada más)
+          return;
+        }
+        // Mismo día: mostrar resultado (bloqueado)
         examenActual = obtenerExamen();
         respuestas = obtenerRespuestas(examenActual.length);
-        mostrarResultado(JSON.parse(localStorage.getItem(KEY_DONE)));
+        mostrarResultado(datosGuardados);
       }
     });
   </script>
