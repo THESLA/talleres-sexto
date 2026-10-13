@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-taller 2: Suplantación y phishing · Sexto</title>
+  <link rel="stylesheet" href="../../css/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>🎭 Suplantación y <span>phishing</span></h1>
+    <div class="subtitulo">Ciberseguridad y Ciudadanía Digital · Sub-taller 2</div>
+  </header>
+  <nav class="subtaller-nav">
+    <a href="../../index.html">🏠 Inicio</a><span class="separador">|</span>
+    <a href="index.html">📋 Portada del tema</a><span class="separador">|</span>
+    <a href="sub01.html">1</a><a href="sub02.html" class="activo">2</a><a href="sub03.html">3</a>
+    <a href="sub04.html">4</a><a href="sub05.html">5</a><a href="sub06.html">6</a>
+  </nav>
+  <main>
+    <article class="card" id="sub02">
+
+      <!-- PÁGINA 0 — PREVIEW -->
+      <div class="paso-pagina" data-paso="0">
+        <div class="paso-indicador">Página <span>1</span> de 14 — Introducción</div>
+        <div class="paso-texto" style="text-align:center;">
+          <span class="paso-numero">🎯 Lo que vas a aprender</span>
+          <div style="margin:1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" style="width:100%; max-width:700px; border-radius:16px; display:block; margin:0 auto;">
+              <defs>
+                <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1"/>
+                  <stop offset="50%" style="stop-color:#ffebee;stop-opacity:1"/>
+                  <stop offset="100%" style="stop-color:#e8eaf6;stop-opacity:1"/>
+                </linearGradient>
+              </defs>
+              <rect width="700" height="260" rx="16" fill="url(#g2)"/>
+              <!-- Panel 1: Anatomía del engaño -->
+              <rect x="15" y="15" width="216" height="230" rx="12" fill="white" opacity="0.75"/>
+              <text x="123" y="45" text-anchor="middle" style="font-size:22px;">🎣</text>
+              <text x="123" y="70" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#37474f;">Anatomía del engaño</text>
+              <rect x="30" y="85" width="186" height="28" rx="8" fill="#ffcdd2"/>
+              <text x="123" y="103" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#c62828;">❌ Urgencia falsa</text>
+              <rect x="30" y="118" width="186" height="28" rx="8" fill="#ffe0b2"/>
+              <text x="123" y="136" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#e65100;">❌ Remitente falso</text>
+              <rect x="30" y="151" width="186" height="28" rx="8" fill="#fff9c4"/>
+              <text x="123" y="169" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#f9a825;">❌ Enlace sospechoso</text>
+              <rect x="30" y="184" width="186" height="28" rx="8" fill="#e1bee7"/>
+              <text x="123" y="202" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#6a1b9a;">❌ Premio falso</text>
+              <text x="123" y="233" text-anchor="middle" style="font-size:10px;fill:#607d8b;">Un impostor copia tu confianza</text>
+              <!-- Panel 2: Canales -->
+              <rect x="242" y="15" width="216" height="230" rx="12" fill="white" opacity="0.75"/>
+              <text x="350" y="45" text-anchor="middle" style="font-size:22px;">📬</text>
+              <text x="350" y="70" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#37474f;">Por dónde llega</text>
+              <rect x="258" y="88" width="184" height="30" rx="8" fill="#e3f2fd"/>
+              <text x="350" y="108" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#0d47a1;">📧 Correo electrónico</text>
+              <rect x="258" y="124" width="184" height="30" rx="8" fill="#e8f5e9"/>
+              <text x="350" y="144" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#1b5e20;">📱 Mensaje SMS / WhatsApp</text>
+              <rect x="258" y="160" width="184" height="30" rx="8" fill="#fff3e0"/>
+              <text x="350" y="180" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#e65100;">🎮 Juego o app gratis</text>
+              <rect x="258" y="196" width="184" height="30" rx="8" fill="#fce4ec"/>
+              <text x="350" y="216" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#880e4f;">📞 Llamada de "banco"</text>
+              <!-- Panel 3: Defensa -->
+              <rect x="469" y="15" width="216" height="230" rx="12" fill="white" opacity="0.75"/>
+              <text x="577" y="45" text-anchor="middle" style="font-size:22px;">🛡️</text>
+              <text x="577" y="70" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#37474f;">Cómo defenderte</text>
+              <rect x="482" y="88" width="190" height="32" rx="8" fill="#e8f5e9"/>
+              <text x="577" y="108" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#1b5e20;">✅ Verifica el remitente</text>
+              <rect x="482" y="126" width="190" height="32" rx="8" fill="#e3f2fd"/>
+              <text x="577" y="146" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#0d47a1;">✅ No hagas clic en Surfing</text>
+              <rect x="482" y="164" width="190" height="32" rx="8" fill="#fff3e0"/>
+              <text x="577" y="184" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#e65100;">✅ Contraseña nunca por correo</text>
+              <rect x="482" y="202" width="190" height="32" rx="8" fill="#fce4ec"/>
+              <text x="577" y="222" text-anchor="middle" style="font-size:11px;font-weight:700;fill:#880e4f;">✅ Ante duda, pregunta</text>
+            </svg>
+          </div>
+          <p style="color:#78909c;">En este taller vas a leer 6 textos sobre engaños en internet. Cada texto tiene una pregunta. Al final, una sopa de letras.</p>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Empezar lectura 1</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 1 — TEXTO 1 -->
+      <div class="paso-pagina" data-paso="1" style="display:none">
+        <div class="paso-indicador">Página <span>2</span> de 14 — Lectura 1 de 6</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 1. ¿Qué es el phishing?</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fff3e0; padding:8px;">
+              <rect x="20" y="20" width="360" height="80" rx="10" fill="white" stroke="#ffb74d"/>
+              <text x="38" y="40" style="font-size:9px;fill:#607d8b;">De:</text>
+              <text x="70" y="40" style="font-size:9px;font-weight:700;fill:#1a237e;">servicio-seguridad@banco-falso.com</text>
+              <text x="38" y="56" style="font-size:9px;fill:#607d8b;">Asunto:</text>
+              <text x="70" y="56" style="font-size:9px;font-weight:700;fill:#c62828;">⚠️ URGENTE: tu cuenta será bloqueada HOY</text>
+              <text x="38" y="74" style="font-size:9px;fill:#37474f;">Hola, verifica tu contraseña inmediatamente o perderás tu dinero...</text>
+              <rect x="60" y="82" width="130" height="16" rx="5" fill="#ffe0b2"/>
+              <text x="125" y="94" text-anchor="middle" style="font-size:8px;font-weight:700;fill:#e65100;">🔗 "Verificar ahora"</text>
+              <text x="200" y="114" text-anchor="middle" style="font-size:9px;font-weight:600;fill:#c62828;">Un impostor que se hace pasar por alguien de confianza</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>El phishing es un tipo de engaño en el que un atacante se hace pasar por una empresa, un banco o una persona que conoces, para robarte datos. La palabra viene del inglés "fishing", pescar, porque el atacante es el pescador: lanza el anzuelo y tú eres el pez. Funciona así: recibes un correo, un mensaje o una llamada que parece legítima y te pide información confidencial como tu contraseña, tu número de tarjeta o un código de verificación. El atacante no rompe la seguridad del sitio: te engaña a ti para que se la entregues voluntariamente. Por eso es tan importante que nunca escribas tu contraseña en un correo ni en un mensaje. Ningún banco te la pedirá jamás por esos medios.</p>
+          </div>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Terminé de leer → Pregunta 1</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 2 — PREGUNTA 1 -->
+      <div class="paso-pagina" data-paso="2" style="display:none">
+        <div class="paso-indicador">Página <span>3</span> de 14 — Pregunta 1</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta 1</h3>
+          <p class="paso-enunciado">¿Qué es el phishing?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub02-p1" value="A" onchange="progresivo.responder('sub02',2,this.value,'B','Es engañarte para que entregues tus datos confidentiales voluntariamente.')"> A. Un virus que borra archivos</label>
+            <label><input type="radio" name="sub02-p1" value="B" onchange="progresivo.responder('sub02',2,this.value,'B','Es engañarte para que entregues tus datos confidentiales voluntariamente.')"> B. Un engaño para robarte datos haciéndose pasar por alguien de confianza</label>
+            <label><input type="radio" name="sub02-p1" value="C" onchange="progresivo.responder('sub02',2,this.value,'B','Es engañarte para que entregues tus datos confidentiales voluntariamente.')"> C. Una red wifi muy rápida</label>
+            <label><input type="radio" name="sub02-p1" value="D" onchange="progresivo.responder('sub02',2,this.value,'B','Es engañarte para que entregues tus datos confidentiales voluntariamente.')"> D. Una contraseña muy larga</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub02')">📖 Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub02')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PÁGINA 3 — TEXTO 2 -->
+      <div class="paso-pagina" data-paso="3" style="display:none">
+        <div class="paso-indicador">Página <span>4</span> de 14 — Lectura 2 de 6</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 2. Las señales de alerta</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#ffebee; padding:8px;">
+              <rect x="25" y="18" width="170" height="85" rx="10" fill="#fff" stroke="#ef9a9a"/>
+              <text x="110" y="36" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#c62828;">🚩 Señales de alerta</text>
+              <text x="38" y="52" style="font-size:8px;fill:#c62828;">⚠️ Urgencia: "actúa ya o pierdes..."</text>
+              <text x="38" y="66" style="font-size:8px;fill:#c62828;">⚠️ Premio o regalo inesperado</text>
+              <text x="38" y="80" style="font-size:8px;fill:#c62828;">⚠️ Remitente con nombre raro</text>
+              <text x="38" y="94" style="font-size:8px;fill:#c62828;">⚠️ Enlace que no coincide</text>
+              <rect x="205" y="18" width="170" height="85" rx="10" fill="#fff" stroke="#a5d6a7"/>
+              <text x="290" y="36" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#1b5e20;">🔍 Verifica antes de actuar</text>
+              <text x="218" y="52" style="font-size:8px;fill:#1b5e20;">✅ El remitente es real</text>
+              <text x="218" y="66" style="font-size:8px;fill:#1b5e20;">✅ El dominio termina en .com/.edu</text>
+              <text x="218" y="80" style="font-size:8px;fill:#1b5e20;">✅ No te piden tu contraseña</text>
+              <text x="218" y="94" style="font-size:8px;fill:#1b5e20;">✅ No hay prisa en la vida real</text>
+              <text x="200" y="115" text-anchor="middle" style="font-size:8px;font-weight:600;fill:#37474f;">Regla: si te piden tu clave, es phishing</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>Un correo o mensaje de phishing casi siempre trae señales de alerta. La primera es la urgencia: "tu cuenta será bloqueada hoy", "actúa en las próximas 2 horas". Los atacantes te presionan para que no pienses y actúes rápido. La segunda es un premio o regalo que no esperabas. La tercera es el remitente: puede decir "Soporte Banco XYZ" pero el correo real vendría de una dirección rara como soporte-gratis-2026@gmail.com. La cuarta es el enlace: si el texto dice "BancaXYZ" pero al pasar el mouse la dirección real dice otra cosa, es falso. Antes de hacer clic, pregúntate: ¿esta persona me pediría esto por correo? La respuesta casi siempre es no.</p>
+          </div>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Terminé de leer → Pregunta 2</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 4 — PREGUNTA 2 -->
+      <div class="paso-pagina" data-paso="4" style="display:none">
+        <div class="paso-indicador">Página <span>5</span> de 14 — Pregunta 2</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta 2</h3>
+          <p class="paso-enunciado">¿Cuál de estas es una señal de alerta de phishing?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub02-p2" value="A" onchange="progresivo.responder('sub02',4,this.value,'D','La urgencia y el premio inesperado son señales típicas de phishing.')"> A. Que tenga un logo de la empresa</label>
+            <label><input type="radio" name="sub02-p2" value="B" onchange="progresivo.responder('sub02',4,this.value,'D','La urgencia y el premio inesperado son señales típicas de phishing.')"> B. Que esté escrito en español</label>
+            <label><input type="radio" name="sub02-p2" value="C" onchange="progresivo.responder('sub02',4,this.value,'D','La urgencia y el premio inesperado son señales típicas de phishing.')"> C. Que tenga un botón azul</label>
+            <label><input type="radio" name="sub02-p2" value="D" onchange="progresivo.responder('sub02',4,this.value,'D','La urgencia y el premio inesperado son señales típicas de phishing.')"> D. Te presiona con urgencia y te ofrece un premio</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub02')">📖 Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub02')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PÁGINA 5 — TEXTO 3 -->
+      <div class="paso-pagina" data-paso="5" style="display:none">
+        <div class="paso-indicador">Página <span>6</span> de 14 — Lectura 3 de 6</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 3. Suplantar a alguien que conoces</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e8eaf6; padding:8px;">
+              <circle cx="90" cy="45" r="28" fill="#e1bee7" stroke="#8e24aa"/>
+              <text x="90" y="52" text-anchor="middle" style="font-size:20px;">😀</text>
+              <text x="90" y="88" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#6a1b9a;">Tu amigo real</text>
+              <circle cx="310" cy="45" r="28" fill="#fff59d" stroke="#fbc02d"/>
+              <text x="310" y="52" text-anchor="middle" style="font-size:20px;">🎭</text>
+              <text x="310" y="88" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#f57f17;">El impostor</text>
+              <rect x="145" y="28" width="110" height="34" rx="8" fill="#ffcdd2"/>
+              <text x="200" y="42" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#c62828;">"Hola, me robaron"</text>
+              <text x="200" y="56" text-anchor="middle" style="font-size:8px;fill:#c62828;">"préstame 50.000 ya"</text>
+              <text x="200" y="105" text-anchor="middle" style="font-size:9px;font-weight:600;fill:#6a1b9a;">Si hayutexto nuevo, verifica por otra vía (llamada)</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>La suplantación es cuando alguien crea una cuenta falsa con el nombre y la foto de una persona que tú conoces, un amigo o un familiar, y te escribe como si fuera ella. El mensaje típico es: "Hola, me cambiaron el celular, necesito que me envíes 50.000 porque estoy en una emergencia", o "No le digas a mis papás". Las redes sociales están llenas de estos casos porque la confianza es su herramienta: si te escribe "tu amigo", bajas la guardia. La defensa es sencilla: si un amigo te pide dinero o datos por mensaje, no respondas por ahí. Llámalo directamente a su número de siempre o escríbele por otro medio. Y aktif la verificación en dos pasos en tus cuentas: así, aunque te roben la contraseña, no podrán entrar sin el segundo código.</p>
+          </div>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Terminé de leer → Pregunta 3</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 6 — PREGUNTA 3 -->
+      <div class="paso-pagina" data-paso="6" style="display:none">
+        <div class="paso-indicador">Página <span>7</span> de 14 — Pregunta 3</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta 3</h3>
+          <p class="paso-enunciado">Un "amigo" te escribe pidiendo dinero urgente. ¿Qué haces?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub02-p3" value="A" onchange="progresivo.responder('sub02',6,this.value,'B','Verificar por otra vía, como llamarlo a su número de siempre.')"> A. Le envías el dinero rápido</label>
+            <label><input type="radio" name="sub02-p3" value="B" onchange="progresivo.responder('sub02',6,this.value,'B','Verificar por otra vía, como llamarlo a su número de siempre.')"> B. Lo llamas a su número de siempre para verificar</label>
+            <label><input type="radio" name="sub02-p3" value="C" onchange="progresivo.responder('sub02',6,this.value,'B','Verificar por otra vía, como llamarlo a su número de siempre.')"> C. Le mandas tu contraseña para comprobar</label>
+            <label><input type="radio" name="sub02-p3" value="D" onchange="progresivo.responder('sub02',6,this.value,'B','Verificar por otra vía, como llamarlo a su número de siempre.')"> D. Le respondes preguntando su apodo</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub02')">📖 Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub02')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PÁGINA 7 — TEXTO 4 -->
+      <div class="paso-pagina" data-paso="7" style="display:none">
+        <div class="paso-indicador">Página <span>8</span> de 14 — Lectura 4 de 6</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 4. El fraude por teléfono</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#fce4ec; padding:8px;">
+              <text x="200" y="25" text-anchor="middle" style="font-size:22px;">📞</text>
+              <rect x="30" y="35" width="160" height="70" rx="10" fill="#fff" stroke="#f48fb1"/>
+              <text x="110" y="52" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#c62828;">❌ Falso "del banco"</text>
+              <text x="42" y="68" style="font-size:8px;fill:#880e4f;">"TeTransferimos a cuenta falsa"</text>
+              <text x="42" y="80" style="font-size:8px;fill:#880e4f;">"Te pedimos el código SMS"</text>
+              <text x="42" y="92" style="font-size:8px;fill:#880e4f;">"Cancélala de inmediato"</text>
+              <rect x="210" y="35" width="160" height="70" rx="10" fill="#fff" stroke="#a5d6a7"/>
+              <text x="290" y="52" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#1b5e20;">✅ Tu banco de verdad</text>
+              <text x="222" y="68" style="font-size:8px;fill:#1b5e20;">NUNCA pide tu clave</text>
+              <text x="222" y="80" style="font-size:8px;fill:#1b5e20;">NUNCA pide un código SMS</text>
+              <text x="222" y="92" style="font-size:8px;fill:#1b5e20;">Colgar y llamar al número oficial</text>
+              <text x="200" y="116" text-anchor="middle" style="font-size:8px;font-weight:600;fill:#880e4f;">Si te llama "el banco", cuelga y marca tú el número</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>El fraude por teléfono sigue muy vigente. Un impostor llama diciendo ser del banco, del operador o de la Kensho y te dice que detectaron un problema en tu cuenta: "vamos a transferirte a una cuenta segura" o "necesito el código que te llegará por SMS". Aquí está la regla más importante de todas: tu banco NUNCA te va a pedir por teléfono tu contraseña, tu número completo de tarjeta ni un código de verificación que recibas por mensaje. Ningún banco real necesita que le digas eso. Si alguien te llama con esa historia, cuelga de inmediato y llama tú directamente al número oficial que aparece en tu tarjeta o en la página web del banco. Nunca uses el número que te dio el supuesto empleado.</p>
+          </div>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Terminé de leer → Pregunta 4</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 8 — PREGUNTA 4 -->
+      <div class="paso-pagina" data-paso="8" style="display:none">
+        <div class="paso-indicador">Página <span>9</span> de 14 — Pregunta 4</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta 4</h3>
+          <p class="paso-enunciado">Te llama alguien que dice ser del banco y te pide un código de SMS. ¿Qué haces?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub02-p4" value="A" onchange="progresivo.responder('sub02',8,this.value,'D','Cuelgas y llamas tú al número oficial del banco.')"> A. Le dictas el código para ayudar</label>
+            <label><input type="radio" name="sub02-p4" value="B" onchange="progresivo.responder('sub02',8,this.value,'D','Cuelgas y llamas tú al número oficial del banco.')"> B. Le das los últimos 4 dígitos de tu tarjeta</label>
+            <label><input type="radio" name="sub02-p4" value="C" onchange="progresivo.responder('sub02',8,this.value,'D','Cuelgas y llamas tú al número oficial del banco.')"> C. Le dices tu contraseña, es "de confianza"</label>
+            <label><input type="radio" name="sub02-p4" value="D" onchange="progresivo.responder('sub02',8,this.value,'D','Cuelgas y llamas tú al número oficial del banco.')"> D. Cuelgas y llamas al número oficial que tú buscas</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub02')">📖 Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub02')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PÁGINA 9 — TEXTO 5 -->
+      <div class="paso-pagina" data-paso="9" style="display:none">
+        <div class="paso-indicador">Página <span>10</span> de 14 — Lectura 5 de 6</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 5. Phishing en juegos y apps</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#f3e5f5; padding:8px;">
+              <rect x="30" y="25" width="85" height="70" rx="10" fill="#e1bee7"/>
+              <text x="72" y="48" text-anchor="middle" style="font-size:20px;">🎮</text>
+              <text x="72" y="68" text-anchor="middle" style="font-size:9px;font-weight:700;fill:#6a1b9a;">🎁</text>
+              <text x="72" y="82" text-anchor="middle" style="font-size:8px;fill:#6a1b9a;">Gana 100</text>
+              <text x="72" y="92" text-anchor="middle" style="font-size:8px;fill="#6a1b9a">skins</text>
+              <rect x="157" y="25" width="85" height="70" rx="10" fill="#ffcdd2"/>
+              <text x="199" y="48" text-anchor="middle" style="font-size:20px;">📧</text>
+              <text x="199" y="66" text-anchor="middle" style="font-size:8px;font-weight:700;fill:#c62828;">Clic aquí</text>
+              <text x="199" y="78" text-anchor="middle" style="font-size:8px;fill:#c62828">"Reclama tu</text>
+              <text x="199" y="89" text-anchor="middle" style="font-size:8px;fill:#c62828">recompensa"</text>
+              <rect x="284" y="25" width="85" height="70" rx="10" fill="#ffcdd2"/>
+              <text x="326" y="48" text-anchor="middle" style="font-size:20px;">💀</text>
+              <text x="326" y="66" text-anchor="middle" style="font-size:8px;font-weight:700;fill:#c62828">Roba tus</text>
+              <text x="326" y="78" text-anchor="middle" style="font-size:8px;fill:#c62828">datos de</text>
+              <text x="326" y="89" text-anchor="middle" style="font-size:8px;fill:#c62828">la cuenta</text>
+              <text x="200" y="115" text-anchor="middle" style="font-size:8px;font-weight:600;fill:#6a1b9a;">En juegos, regalar skins o V-bucks es el cebo más común</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>El phishing también entra por los juegos y las aplicaciones. Es muy común recibir en Roblox, Fortnite o TikTok el mensaje "te regalamos 100 skins" o "v-bucks gratis". El enlace lleva a una página falsa que imita el juego y te pide iniciar sesión para "reclamar" el premio. Si pones tu contraseña ahí, el atacante la captura y entra a tu cuenta, roba tus objetos virtuales e incluso los regala desde tu cuenta a sus amigos. Recuerda: ninguna plataforma regala monedas o objetos reales por un enlace que te mandan en un chat. Recuerda verificar que el enlace sea de la página oficial del juego. Y activa la verificación en dos pasos: con eso, aunque el atacante tenga tu contraseña, no podrá entrar a tu cuenta sin el segundo código. Mejor perder un premio que perder tu cuenta.</p>
+          </div>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Terminé de leer → Pregunta 5</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 10 — PREGUNTA 5 -->
+      <div class="paso-pagina" data-paso="10" style="display:none">
+        <div class="paso-indicador">Página <span>11</span> de 14 — Pregunta 5</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta 5</h3>
+          <p class="paso-enunciado">En un juego te ofrecen "V-bucks gratis" por un enlace. ¿Qué haces?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub02-p5" value="A" onchange="progresivo.responder('sub02',10,this.value,'B','Verificar que el enlace sea de la página oficial del juego.')"> A. Inicio sesión rápido para no perderlo</label>
+            <label><input type="radio" name="sub02-p5" value="B" onchange="progresivo.responder('sub02',10,this.value,'B','Verificar que el enlace sea de la página oficial del juego.')"> B. Verifico que el enlace sea de la página oficial del juego</label>
+            <label><input type="radio" name="sub02-p5" value="C" onchange="progresivo.responder('sub02',10,this.value,'B','Verificar que el enlace sea de la página oficial del juego.')"> C. Le paso el enlace a un amigo</label>
+            <label><input type="radio" name="sub02-p5" value="D" onchange="progresivo.responder('sub02',10,this.value,'B','Verificar que el enlace sea de la página oficial del juego.')"> D. Le doy mis datos para "reclamar"</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub02')">📖 Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub02')">➡️ Siguiente texto</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PÁGINA 11 — TEXTO 6 -->
+      <div class="paso-pagina" data-paso="11" style="display:none">
+        <div class="paso-indicador">Página <span>12</span> de 14 — Lectura 6 de 6</div>
+        <div class="paso-texto">
+          <span class="paso-numero">📖 6. Qué hacer si eres víctima</span>
+          <div style="display:flex; justify-content:center; margin:0 0 1rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" style="width:100%; max-width:400px; border-radius:12px; background:#e3f2fd; padding:8px;">
+              <rect x="20" y="20" width="360" height="85" rx="10" fill="white" stroke="#64b5f6"/>
+              <text x="200" y="38" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#0d47a1;">🚨 Si caíste en phishing, actúa rápido</text>
+              <text x="40" y="55" style="font-size:9px;fill:#0d47a1;">1️⃣ Cambia tu contraseña de inmediato</text>
+              <text x="40" y="69" style="font-size:9px;fill:#0d47a1;">2️⃣ Activa la verificación en dos pasos</text>
+              <text x="40" y="83" style="font-size:9px;fill:#0d47a1;">3️⃣ Cierra sesión en todos los dispositivos</text>
+              <text x="40" y="97" style="font-size:9px;fill:#0d47a1;">4️⃣ Avisa a un adulto y reporta el mensaje</text>
+              <text x="200" y="116" text-anchor="middle" style="font-size:8px;font-weight:600;fill:#c62828">No te avergonzes: le pasa a adultos Experts también</text>
+            </svg>
+          </div>
+          <div class="paso-contenido-lectura">
+            <p>¿Ya diste tu contraseña o tus datos? No pasa nada si actúas rápido y no te avergonzas: le ha pasado a personas Gemma y expertas en tecnología. Lo primero es cambiar la contraseña de esa cuenta inmediatamente, desde un dispositivo seguro. Activa la verificación en dos pasos para que nadie más pueda entrar. Cierra sesión en todos los dispositivos desde los ajustes de seguridad de la cuenta, así el atacante pierde el acceso. Si compartiste datos de tarjeta o de documento, avisa de inmediato a tu tarjeta de crédito o al banco para que la bloqueen y cambien tu documento. Y cuéntale a un adulto de confianza: un profesor o tus papás. Nunca intentes arreglarlo en silencio, eso solo le da ventaja al atacante. La honestidad es tu mejor defensa.</p>
+          </div>
+        </div>
+        <div class="paso-botones">
+          <button class="btn btn-primario" onclick="progresivo.irSiguiente('sub02')">📖 Terminé de leer → Pregunta 6</button>
+        </div>
+      </div>
+
+      <!-- PÁGINA 12 — PREGUNTA 6 -->
+      <div class="paso-pagina" data-paso="12" style="display:none">
+        <div class="paso-indicador">Página <span>13</span> de 14 — Pregunta 6</div>
+        <div class="paso-pregunta-card">
+          <h3>❓ Pregunta 6</h3>
+          <p class="paso-enunciado">Si entregaste tu contraseña en un phishing, ¿cuál es el PRIMER paso?</p>
+          <div class="paso-opciones">
+            <label><input type="radio" name="sub02-p6" value="A" onchange="progresivo.responder('sub02',12,this.value,'C','Cambiar la contraseña de inmediato es lo más urgente.')"> A. Borrar el correo recibido</label>
+            <label><input type="radio" name="sub02-p6" value="B" onchange="progresivo.responder('sub02',12,this.value,'C','Cambiar la contraseña de inmediato es lo más urgente.')"> B. Esperar a ver si vuelven a escribir</label>
+            <label><input type="radio" name="sub02-p6" value="C" onchange="progresivo.responder('sub02',12,this.value,'C','Cambiar la contraseña de inmediato es lo más urgente.')"> C. Cambiar tu contraseña de inmediato</label>
+            <label><input type="radio" name="sub02-p6" value="D" onchange="progresivo.responder('sub02',12,this.value,'C','Cambiar la contraseña de inmediato es lo más urgente.')"> D. No decir nada a nadie</label>
+          </div>
+          <div class="paso-feedback"></div>
+          <div class="paso-botones">
+            <button class="btn btn-secundario btn-reintentar" onclick="progresivo.irAtras('sub02')">📖 Volver a leer</button>
+            <button class="btn btn-primario btn-siguiente" onclick="progresivo.irSiguiente('sub02')">➡️ Ir a preguntas finales</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PÁGINA 13 — FINAL + SOPA -->
+      <div class="paso-pagina" data-paso="13" style="display:none">
+        <div class="paso-indicador">Página <span>14</span> de 14 — Final</div>
+        <div class="paso-pregunta-card">
+          <h3>📝 Preguntas finales</h3>
+          <div class="pregunta" id="fpreg1">
+            <p>1. ¿Por qué los atacantes usan la urgencia en el phishing?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp1" value="A"><label>A. Para que se lean más rápido</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp1" value="B"><label>B. Para que actúes sin pensar</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp1" value="C"><label>C. Para que el correo llegue antes</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp1" value="D"><label>D. Para usar menos internet</label></div>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <div class="pregunta" id="fpreg2">
+            <p>2. ¿Qué dato NUNCA te pide un banco de verdad por teléfono?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp2" value="A"><label>A. Tu número de teléfono</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp2" value="B"><label>B. Tu nombre completo</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp2" value="C"><label>C. Tu contraseña y el código SMS</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp2" value="D"><label>D. El nombre del banco</label></div>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <div class="pregunta" id="fpreg3">
+            <p>3. ¿Qué debes hacer si un enlace te pide tu contraseña?</p>
+            <div class="opciones">
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp3" value="A"><label>A. Escribirla rápido</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp3" value="B"><label>B. Reenviar el enlace a un amigo</label></div>
+              <div class="opcion" data-correcta="true"><input type="radio" name="fp3" value="C"><label>C. No escribirla y verificar la página oficial</label></div>
+              <div class="opcion" data-correcta="false"><input type="radio" name="fp3" value="D"><label>D. Poner una contraseña falsa</label></div>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:0;">
+          <h2>🔍 Sopa de letras — Nivel 1</h2>
+          <p style="color:#78909c; margin-bottom:1rem;">Encuentra las 10 palabras.</p>
+          <div id="sopa02"></div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>Colegio San Luis · Tecnología e Informática · Grado Sexto</footer>
+  <script src="../../js/sopa.js"></script>
+  <script src="../../js/progresivo.js"></script>
+  <script>
+    crearSopa('sopa02', ['PHISHING','SUPLANTAR','ENGAÑO','REMITENTE','ENLACE','VERIFICAR','ALERTA','BANCO','IMPOSTOR','SMS'], 12, ['PHISHING','SUPLANTAR','ENGAÑO','REMITENTE','ENLACE','VERIFICAR','ALERTA','BANCO','IMPOSTOR','SMS']);
+    document.addEventListener('DOMContentLoaded', function() {
+      progresivo.iniciar('sub02');
+      document.querySelectorAll('#sub02 .pregunta .opcion').forEach(function(o) {
+        o.addEventListener('click', function() {
+          var r = this.querySelector('input[type="radio"]');
+          if (r.disabled) return;
+          r.checked = true;
+          var p = this.closest('.pregunta');
+          var f = p.querySelector('.feedback');
+          var c = this.dataset.correcta === 'true';
+          p.classList.remove('correcta','incorrecta');
+          p.querySelectorAll('.opcion input').forEach(function(x) { x.disabled = true; });
+          if (c) { p.classList.add('correcta'); f.textContent = '✅ Correcto'; }
+          else { p.classList.add('incorrecta'); f.textContent = '❌ Revisa la lectura.'; }
+          f.style.display = 'block';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
